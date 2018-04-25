@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>{{ page.title }}</title>
+  <meta name="description" content="{{ page.description | truncatewords: 200 | strip_newlines | escape_once }}">
+  <meta NAME="robots" CONTENT="all">
+
+  <!-- <meta property="fb:app_id" content="561640150629636" />
+  <meta property="og:title" content="{{ page.title }} | L'actualités de h-training.fr" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="http://www.h-training.fr/actualites{{ page.url }}" />
+  <meta property="og:image" content="http://www.h-training.fr/images/{{ page.image }}" />
+  <meta property="og:description" content="{{ page.description | truncatewords: 200 | strip_newlines | escape_once }}" />
+  <meta property="og:site_name" content="Travaillez tous les facteurs de la performance et bénéficiez d’un service de preparation physique de haut niveau" /> -->
+
+  <!-- syntax highlighting CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+  <link rel="stylesheet" href="/actualites/css/screen.css">
+
+  <!-- Typekit -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <link rel="javascript" href="/actualites/js/screen.js">
+
+  <link href='//fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700' rel='stylesheet' type='text/css'>
+</head>
+<body>
+
+  <header>
+    <nav class='navbar navbar-default navbar-fixed-top navbar-transparent' role='navigation'>
+      <div class='container'>
+      <!-- Brand and toggle get grouped for better mobile display -->
+        <div class='navbar-header'>
+          <button class='navbar-toggle' data-target='#bs-example-navbar-collapse-1' data-toggle='collapse' type='button'>
+            <span class='fa fa-bars'></span>
+          </button>
+          <a title="Homepage de H-training" class="navbar-brand" href="/">
+            <img alt="logo h-training" height="50px" id="log" class="display-mobile" src="https://s3.eu-west-3.amazonaws.com/h-training/logo-h-training-white.png" />
+            <img alt="logo h-training" height="50px" id="log" class="display-screen" src="https://s3.eu-west-3.amazonaws.com/h-training/logo-h-training-black.png" />
+          </a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class='collapse navbar-collapse' id='bs-example-navbar-collapse-1'>
+          <ul class='nav navbar-nav navbar-center'>
+            <li class='nav-item'>
+              <a title="H-training" class="false" href="/h-training">H-training</a>
+            </li>
+            <li class='nav-item'>
+              <a title="Services" class="false" href="/services">Services</a>
+            </li>
+            <li class='nav-item'>
+              <a title="Actualités" class="false" href="/actualites">Actualités</a>
+            </li>
+            <li class='nav-item'>
+              <a title="Réservation" class="false" href="/reservation">Réservation</a>
+            </li>
+            <li class='nav-item'>
+              <a title="Espace Perso" class="false" href="/espace-perso">Espace Perso</a>
+            </li>
+          </ul>
+          <ul class='nav navbar-nav navbar-right'>
+              <li class='nav-item'>
+                <a target="_blank" title="Facebook h-training" href="https://www.facebook.com/h.training.fr/"><i class='fab fa-2x fa-facebook-square'></i></a>
+              </li>
+              <li class='nav-item'>
+                <a target="_blank" title="Instagram h-training" href="https://www.instagram.com/h.training/"><i class='fab fa-2x fa-instagram'></i></a>
+              </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  {{ content }}
+
+  <div class="btn-scroll-top fadeInUp animated" style="bottom: 0px;">
+    <span>
+      <i class="fas fa-chevron-up fa-2x"></i>
+    </span>
+  </div>
+  <footer>
+    <div class="container">
+      <div class="text-right">
+        © Copyright 2018 &nbsp; h-training
+        |
+        <a title="contact" href="/contact">contact</a>
+        |
+        <a title="mentions légales" href="/mentions-legales">mentions légales</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

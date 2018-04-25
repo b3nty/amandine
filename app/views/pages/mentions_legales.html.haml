@@ -1,0 +1,30 @@
+- content_for :title do
+  H-training | Mentions Légales
+- content_for :meta do
+  %meta{:content => "Entrer en contact avec H-training", :name => "description"}/
+  %meta{:content => "contact", :name => "keywords"}/
+  %meta{:content => "all", :name => "robots"}/
+
+.wrapper5
+  .container
+    %section
+      %h1.text-center.text-uppercase
+        Mentions Légales
+        %span .
+
+.wrapper-general
+  .container
+    .justify
+      Le présent site web est édité par Madame Amandine Hostynek (26, rue Michel Bégon 17000 La Rochelle; 06.58.10.45.68), et en cours d'inscription au répertoire des métiers de La Rochelle.
+      %br
+      %br
+      %h3 Crédit
+      La directrice de la publication est Madame Amandine Hostynek.
+      %hr
+      L’hébergeur du Site est la société Heroku, Inc. dont le siège social est au 650 7th Street San Francisco, CA 94103.
+      = link_to 'Contact Heroku.', "https://www.heroku.com/contact", title: "Contact serveur Heroku", :target => "_blank"
+      La société Heroku dispose de Data-Centers hautement sécurisés situés en Europe, offrant d’importantes garanties de sécurité et respecte la législation européenne concernant les données personnelles. Pour en savoir plus sur la sécurité mise en œuvre :
+      = link_to 'Sécurité.', "https://www.heroku.com/policy/security", title: "Sécurité serveur Heroku", :target => "_blank"
+      %br/
+      %br/
+      %p Toute reproduction, représentation, traduction, adaptation, ou citation qu'elle soit intégrale ou partielle, quelqu'en soit le procédé, est strictement interdite sans autorisation expresse de Amandine Hostynek. Les marques citées sont la propriété de leurs détenteurs respectifs.

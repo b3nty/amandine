@@ -1,0 +1,519 @@
+/*
+ *= require_self
+ *= require flat-ui
+ *= require jquery-ui
+ *= require ladda-themeless
+ */
+
+@import "bootstrap-sprockets"
+@import "bootstrap"
+@import "font-awesome-sprockets"
+@import "font-awesome"
+
+html
+  :height 100% !important
+body
+  font-family: 'Arial', sans-serif !important
+  color: #ffffff !important
+  :position relative !important
+  :min-height 100% !important
+  font-size: 14px
+
+.navbar-transparent
+  font-family: 'Montserrat', sans-serif !important
+  font-weight: 500 !important
+  min-height: 78px !important
+.navbar-default
+  background: none
+  border: none
+  .navbar-nav li a
+    color: #ffffff
+.navbar-brand
+  text-decoration: none !important
+  .brand
+    margin-top: -35px !important
+.navbar-center, .navbar-right
+  padding-top: 14px
+  li a
+    text-decoration: none !important
+    :cursor pointer
+    &:hover
+      color: #cc2127 !important
+    &:active
+      color: #cc2127 !important
+  li a.active
+    color: #cc2127 !important
+.navbar-center
+  margin-left: 150px
+.navbar-right
+  li
+    padding: 0 10px
+.navbar-header
+  min-height: 78px !important
+.navbar-toggle
+  margin-top: 18px
+
+h1
+  font-family: 'Open Sans Condensed', sans-serif !important
+  font-weight: 700 !important
+h2
+  font-family: 'Open Sans Condensed', sans-serif !important
+  font-weight: 700 !important
+h3
+  font-family: 'Open Sans Condensed', sans-serif !important
+  font-weight: 700 !important
+h4
+  font-family: 'Open Sans Condensed', sans-serif !important
+  font-weight: 700 !important
+
+.vcenter
+  display: flex
+  align-items: center
+
+textarea:focus
+  border-color: #fff !important
+  -webkit-box-shadow: none
+  -moz-box-shadow: none
+  box-shadow: none
+
+input
+  &[type="text"]:focus, &[type="password"]:focus, &[type="datetime"]:focus, &[type="datetime-local"]:focus, &[type="date"]:focus, &[type="month"]:focus, &[type="time"]:focus, &[type="week"]:focus, &[type="number"]:focus, &[type="email"]:focus, &[type="url"]:focus, &[type="search"]:focus, &[type="tel"]:focus, &[type="color"]:focus
+    border-color: #fff !important
+    -webkit-box-shadow: none
+    -moz-box-shadow: none
+    box-shadow: none
+
+.uneditable-input:focus
+  border-color: #fff !important
+  -webkit-box-shadow: none
+  -moz-box-shadow: none
+  box-shadow: none
+
+.wrapper-home
+  background: #222222
+  padding-bottom: 100px
+  section
+    margin-top: 10%
+    width: 65%
+    margin-left: auto
+    margin-right: auto
+    span
+      color: #cc2127
+    h1 span
+      color: #cc2127
+    .btn-contact
+      background: #cc2127 !important
+      color: #fff
+      border: none
+      padding: 5.5px 12px !important
+      &:hover
+        background: #fff !important
+        color: #222222
+
+    input[type="email"]
+      padding: 8px 0 12px 10px !important
+      background-color: transparent
+      color: #fff !important
+      display: inline-block
+      border: none
+      border-radius: 0
+      border-bottom: 2px solid #cc2127
+    .form-control
+      height: 36px !important
+    @mixin placeholder()
+      input::-webkit-input-placeholder
+        @content
+      input:-moz-placeholder
+        @content
+      input::-moz-placeholder
+        @content
+      input:-ms-input-placeholder
+        @content
+    @include placeholder()
+      color: #fff
+
+  .carousel-fade
+    width: 70%
+    margin-left: auto
+    margin-right: auto
+    .carousel-inner
+      .item
+        opacity: 0
+        transition-property: opacity
+      .active
+        opacity: 1
+        &.left, &.right
+          left: 0
+          opacity: 0
+          z-index: 1
+      .next.left, .prev.right
+        opacity: 1
+      img
+        filter: grayscale(100%)
+        -webkit-filter: grayscale(100%)
+        -moz-filter: grayscale(100%)
+        -ms-filter: grayscale(100%)
+        -o-filter: grayscale(100%)
+    .carousel-control
+      z-index: 2
+
+  .wrapper-carousel #quote-carousel .item blockquote p:before
+    display: none !important
+
+  @media all and (transform-3d), (-webkit-transform-3d)
+    .carousel-fade .carousel-inner > .item
+      &.next, &.active.right, &.prev, &.active.left
+        opacity: 0
+        -webkit-transform: translate3d(0, 0, 0)
+        transform: translate3d(0, 0, 0)
+      &.next.left, &.prev.right, &.active
+        opacity: 1
+        -webkit-transform: translate3d(0, 0, 0)
+        transform: translate3d(0, 0, 0)
+
+.wrapper1
+  box-shadow: 0 0 2em #1e3b75
+  background-color: #1e3b75
+  padding: 60px 0
+  h2 span
+    color: #cc2127
+  section
+    color: white
+    .row
+      padding-top: 60px
+      h3
+        padding: 20px 0
+
+.wrapper2
+  background: #222222
+  padding-bottom: 30px
+  section
+    margin-top: 10%
+    width: 65%
+    margin-left: auto
+    margin-right: auto
+    h1 span
+      color: #cc2127
+    .bloc-citation
+      padding: 10px 0
+      hr
+        width: 20%
+
+.wrapper3
+  background-color: #1e3b75
+  box-shadow: 0 0 2em #1e3b75
+  padding: 60px 0 50px 0
+  h2 span
+    color: #cc2127
+  section
+    color: white
+    .btn-contact
+      background: #222222 !important
+      color: #fff
+      border: none
+      padding: 5.5px 12px !important
+      &:hover
+        background: #fff !important
+        color: #222222 !important
+
+    input
+      padding: 8px 0 12px 10px !important
+      background-color: transparent
+      color: #fff !important
+      display: inline-block
+      border: none
+      border-radius: 0
+      border-bottom: 2px solid #222222
+    @mixin placeholder()
+      input::-webkit-input-placeholder
+        @content
+      input:-moz-placeholder
+        @content
+      input::-moz-placeholder
+        @content
+      input:-ms-input-placeholder
+        @content
+    @include placeholder()
+      color: #fff
+    .form-control
+      height: 36px
+    #form_services_message
+      background-color: #fff !important
+      border: 2px solid #222222 !important
+      color: #222222 !important
+      &:focus
+        border-color: none
+        -webkit-box-shadow: none
+        box-shadow: none
+        border: 2px solid #ffffff !important
+
+.service-contact
+  .form-inputs
+    padding: 40px
+    select
+      float: left
+      background: transparent
+      margin: 0 0 10px -12px
+      display: block
+      height: 34px
+      padding: 6px 12px
+      font-size: 14px
+      line-height: 1.42857143
+      border: none
+      border-radius: 0px
+    #contact_special_request
+      background: transparent
+      border: none
+      border-radius: 0px
+      box-shadow: none
+      color: #fff
+      height: 100px
+    @mixin placeholder()
+      textarea::-webkit-input-placeholder
+        @content
+      textarea:-moz-placeholder
+        @content
+      textarea::-moz-placeholder
+        @content
+      textarea:-ms-input-placeholder
+        @content
+    @include placeholder()
+      color: #fff
+
+
+
+.wrapper4
+  background-color: #FFF
+  padding: 60px 0 50px 0
+  section
+    color: #222222
+    a
+      color: #222222 !important
+  .nav-tabs
+    margin-left: 100px
+    border-bottom: none
+  .nav-tabs > li.active > a
+    border: none
+    &:hover, &:focus
+      border: none
+  .tab-content
+    padding-top: 20px
+  #down
+    display: none
+  #angle-down
+    text-decoration: none
+    cursor: pointer
+
+.wrapper5
+  background: #222222
+  padding-bottom: 30px
+  section
+    margin-top: 10%
+    margin-left: auto
+    margin-right: auto
+    h1 span
+      color: #cc2127
+    .row
+      display: -webkit-box
+      display: -webkit-flex
+      display: -ms-flexbox
+      display: flex
+      > [class*='col-']
+        display: flex
+        flex-direction: column
+    .menu-service
+      margin: 60px 0 30px
+      a
+        text-decoration: none
+        color: #cc2127
+      .card
+        padding: 30px 10px 0 10px
+        overflow: hidden
+      .border-right
+        border-right: 1px solid #eee
+      .border-bottom
+        border-bottom: 1px solid #eee
+      .border-right-bottom
+        border-right: 1px solid #eee
+        border-bottom: 1px solid #eee
+      .slide-up
+        position: relative
+        transition: all .5s ease 0s
+      .slide-up-title
+        h3
+          color: #fff
+          margin-top: 5px
+        position: relative
+        transition: all .5s ease 0s
+      .slide-down
+        position: relative
+        transition: all .5s ease 0s
+        top: 60px
+        p
+          margin-bottom: 30px
+          color: #fff
+      .translatey
+        transform: translateY(-50px)
+      .translateyp
+        transform: translateY(-100px)
+      .opacity
+        opacity: 0
+
+.wrapper6
+  background-color: #FFF
+  padding: 60px 0 50px 0
+  color: #222222
+  h2 span
+    color: #cc2127
+  section
+    .grey
+      background: #ededed
+      box-shadow: 0 0 2em #ededed
+    article
+      padding: 86px 0
+      span
+        font-size: 28px
+      .green
+        color: green
+        margin-left: 10px
+
+/* button scroll top
+
+.btn-scroll-top
+  padding: 14px 10px 12px 10px
+  position: fixed
+  bottom: -62px
+  right: 60px
+  width: 60px
+  height: 60px
+  text-align: center
+  cursor: pointer
+  background-color: #ffffff
+  border: solid 1px #dde0e5
+  border-radius: 2px 2px 0 0
+  i
+    color: #dde0e5 !important
+
+/* Carousel
+
+.wrapper-carousel
+  padding: 40px 0
+  #quote-carousel
+    padding: 0 10px 30px 10px
+    margin-top: 30px
+    /* Control buttons
+    /* Previous button
+    /* Next button
+    /* Changes the position of the indicators
+    /* Changes the color of the indicators
+    p, h4
+      color: #333
+    .carousel-control
+      background: none
+      color: #CACACA
+      font-size: 2.3em
+      text-shadow: none
+      margin-top: 30px
+      &.left
+        left: -60px
+      &.right
+        right: -60px
+    .carousel-indicators
+      right: 50%
+      top: auto
+      bottom: 0px
+      margin-right: -19px
+      li
+        width: 50px
+        height: 50px
+        margin: 5px
+        cursor: pointer
+        border: 4px solid #CCC
+        border-radius: 50px
+        opacity: 0.4
+        overflow: hidden
+        transition: all 0.4s
+      .active
+        background: #333333
+        width: 128px
+        height: 128px
+        border-radius: 100px
+        border-color: #f33
+        opacity: 1
+        overflow: hidden
+
+    .carousel-inner
+      min-height: 300px
+
+    .item blockquote
+      border-left: none
+      margin: 0
+      p:before
+        content: "\f10d"
+        font-family: 'Fontawesome'
+        float: left
+        margin-right: 10px
+
+.red
+  color: #cc2127 !important
+
+.wrapper-general
+  color: #222222
+  padding: 60px 0
+
+footer
+  color: #222222 !important
+  background-color: #fff !important
+  padding: 10px 0 !important
+  a
+    color: #222222 !important
+    font-weight: 100 !important
+    :cursor pointer
+    &:hover
+      color: #cc2127 !important
+    &:active
+      color: #cc2127 !important
+
+@media (min-width: 768px)
+  .display-screen
+    display: none !important
+
+@media (max-width: 767px)
+  .display-mobile
+    display: none !important
+  .navbar
+    margin-bottom: 0px
+  .navbar-fixed-top
+    position: inherit
+  .navbar-right
+    margin-left: 0px
+    li
+      text-align: center
+      a
+        color: #222222 !important
+  .navbar .nav li a
+    padding: 5px 15px 17px !important
+  .navbar-toggle .fa-bars
+    color: #222222
+  .navbar-center
+    margin-left: 0px
+    li
+      text-align: center
+      a
+        color: #222222 !important
+  .wrapper-home section
+    margin-top: 25%
+    width: 90%
+  .wrapper-home .carousel-fade
+    width: 100%
+  .wrapper1 .container
+    width: 70%
+  .wrapper1 section .col-md-3
+    margin: 20px 0 40px
+  .wrapper-carousel #quote-carousel .carousel-indicators
+    top: 80%
+  .wrapper2 section
+    width: 90%
+  .wrapper5 .container
+    padding-left: 0px
+    padding-right: 0px

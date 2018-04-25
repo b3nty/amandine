@@ -1,0 +1,28 @@
+!!!
+%html
+  %head
+    %title= content_for?(:title) ? yield(:title) : "H-training"
+
+    %meta{:charset => "utf-8"}/
+    %meta{:content => "IE=edge", "http-equiv" => "X-UA-Compatible"}/
+    %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
+
+    %link{:href => "/apple-touch-icon.png", :rel => "apple-touch-icon", :sizes => "180x180"}/
+    %link{:href => "/favicon-32x32.png", :rel => "icon", :sizes => "32x32", :type => "image/png"}/
+    %link{:href => "/favicon-16x16.png", :rel => "icon", :sizes => "16x16", :type => "image/png"}/
+    %link{:href => "/site.webmanifest", :rel => "manifest"}/
+    %link{:color => "#5bbad5", :href => "/safari-pinned-tab.svg", :rel => "mask-icon"}/
+    %meta{:content => "#ffffff", :name => "msapplication-TileColor"}/
+    %meta{:content => "#ffffff", :name => "theme-color"}/
+
+    - if content_for?(:meta)
+      = yield(:meta)
+
+    = stylesheet_link_tag 'application', '//fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', media: 'all', "data-turbolinks-track" => true
+    = csrf_meta_tags
+
+  %body
+    = render 'layouts/header'
+    = yield
+    = render 'layouts/footer'

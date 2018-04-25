@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+ <title>L'actualités de h-training.fr</title>
+ <link href="http%3A%2F%2Fh-training.fr%2Fatom.xml" rel="self"/>
+ <link href="http%3A%2F%2Fh-training.fr"/>
+ <updated>2018-04-25T15:20:05+02:00</updated>
+ <id>http%3A%2F%2Fh-training.fr%2Factualites</id>
+ <author>
+   <name>Amandine de h-training.fr</name>
+ </author>
+
+ 
+
+</feed>

@@ -1,0 +1,132 @@
+- content_for :title do
+  H-training | Votre futur commence aujourd’hui
+- content_for :meta do
+  %meta{:content => "Travaillez tous les facteurs de la performance et bénéficiez d’un service de preparation physique de haut niveau et personnalisé", :name => "description"}/
+  %meta{:content => "Performance, preparation physique, objectif, optimisation, haut-niveau, sportifs, expertise, potentiel - physique, motivation, planification, analyse", :name => "keywords"}/
+  %meta{:content => "all", :name => "robots"}/
+
+  -# %meta{:content => "561640150629636", :property => "fb:app_id"}/
+  -# %meta{:content => "fr_FR", :property => "og:locale"}/
+  -# %meta{:content => "Mettez votre boxon chez nous", :property => "og:title"}/
+  -# %meta{:content => "article", :property => "og:type"}/
+  -# %meta{:content => "https://www.meetboxon.com", :property => "og:url"}/
+  -# %meta{:content => "https://s3-eu-west-1.amazonaws.com/boxon/Tag-Facebook_3.jpg", :property => "og:image"}/
+  -# %meta{:content => "Libérez-vous de l'espace. Nous récupérons vos affaires, les stockons et les retournons sur demande. ✓ À partir de 5,99€/M ✓ Sécurisé ✓ Assurance incluse", :property => "og:description"}/
+  -# %meta{:content => "Boxon, le garde-meuble est mort", :property => "og:site_name"}/
+  -# %meta{:content => "summary_large_image", :name => "twitter:card"}/
+  -# %meta{:content => "Mettez votre boxon chez nous", :name => "twitter:title"}/
+  -# %meta{:content => "Libérez-vous de l'espace. Nous récupérons vos affaires, les stockons et les retournons sur demande. ✓ À partir de 5,99€/M ✓ Sécurisé ✓ Assurance incluse", :name => "twitter:description"}/
+  -# %meta{:content => "@MeetBoxon", :name => "twitter:creator"}/
+  -# %meta{:content => "https://s3-eu-west-1.amazonaws.com/boxon/Tag-Facebook_3.jpg", :name => "twitter:image:src"}/
+
+.wrapper-home
+  .container
+    %section
+      %h1.text-center.text-uppercase
+        Votre futur commence aujourd'hui
+        %span .
+      %p.text-center{style: "padding: 30px 0;"}
+        Un service de préparation physique
+        %br
+        incontournable pour le sportif
+        qui prépare une échéance sportive, pour le particulier
+        qui cherche à satisfaire des besoins personnels, pour le chef d’entreprise
+        moderne qui identifie le sport comme un levier de performance économique
+
+      = simple_form_for(:contact, html: { class: 'form-horizontal' }) do |f|
+        .form-inputs.text-center
+          %ul.list-unstyled.list-inline
+            %li.barre
+              = f.input :email, required: false, label: false, placeholder: "Votre adresse e-mail", autofocus: true
+            %li.barre
+              &nbsp;
+            %li.barre
+              %span#button-newsletter.btn.btn-contact{:type => "button"} Je m'informe
+            #okidokki
+            #notoki
+
+    .carousel-home.slide.carousel-fade{"data-ride" => "carousel"}
+      .carousel-inner{:role => "listbox"}
+        .item.active
+          = image_tag("h-training-alpinisme.jpg", :alt => "training alpinisme")
+        .item
+          = image_tag("h-training-athletisme.jpg", :alt => "training athletisme")
+        .item
+          = image_tag("h-training-footing.jpg", :alt => "training footing")
+        .item
+          = image_tag("h-training-natation.jpg", :alt => "training natation")
+        .item
+          = image_tag("h-training-preparation.jpg", :alt => "training preparation")
+        .item
+          = image_tag("h-training-sport.jpg", :alt => "training sport")
+
+.wrapper1
+  .container
+    %section.text-center
+      %h2
+        NOS AVANTAGES
+        %span .
+      .row
+        .col-md-3
+          %i.fa.fa-4x.fa-users
+          %h3 Travailler tous les facteurs de la performance
+          %p Une équipe pluridisciplinaire vous encadre vers l’atteinte de vos objectifs
+        .col-md-3
+          %i.fa.fa-4x.fa-key
+          %h3 S’entrainer dans des conditions optimales
+          %p Du matériel de haut niveau et l’expertise des intervenants mis à votre disposition
+        .col-md-3
+          %i.fa.fa-4x.fa-chart-line
+          %h3 Avoir accès à un service sur-mesure
+          %p Profitez du suivi individualisé pour se rapprocher au plus près de vos besoins
+        .col-md-3
+          %i.fa.fa-4x.fa-sign-language
+          %h3 Evoluer dans un environnement favorable
+          %p Appartenez à une communauté de sportifs pour entretenir votre motivation et dépasser vos limites
+
+.wrapper-carousel
+  .container
+    .row
+      .col-md-12{"data-wow-delay" => "0.2s"}
+        #quote-carousel.carousel.slide{"data-ride" => "carousel"}
+          / Bottom Carousel Indicators
+          %ol.carousel-indicators
+            %li.active{"data-slide-to" => "0", "data-target" => "#quote-carousel"}
+              = image_tag("eastern-suburbs-rufc-logo.png", :alt => "Eastern Suburbs RUFC Logo", :class => "img-responsive")
+            %li{"data-slide-to" => "1", "data-target" => "#quote-carousel"}
+              = image_tag("jasmine-mesics.jpg", :alt => "Jasmine MESICS", :class => "img-responsive")
+            %li{"data-slide-to" => "2", "data-target" => "#quote-carousel"}
+              = image_tag("herry.jpg", :alt => "François Herry", :class => "img-responsive")
+          / Carousel Slides / Quotes
+          .carousel-inner.text-center
+            / Quote 1
+            .item.active
+              %blockquote
+                .row
+                  .col-sm-8.col-sm-offset-2
+                    %span{style: "color:#333333"}
+                      I have thoroughly enjoyed working with Amandine. In a short space of time she became a truly valuable asset to our team. She is honest, dependable, a fast learner and incredibly hard-working. Beyond that, she is an impressive Strength Coach who is always able to get the best from our athletes.
+                    %small Head Strength and Conditioning Coach, Eastern Suburbs Rugby Union (Sydney, Aus.)
+                    %h4 Dan Bradley
+            / Quote 2
+            .item
+              %blockquote
+                .row
+                  .col-sm-8.col-sm-offset-2
+                    %span{style: "color:#333333"}
+                      I really have to say I reeeeeally like the workouts its so much better than using boring machines and I THINK I can feel results already. You were sooo right.
+                      %br
+                      A highly motivated, caring, kind and understanding coach who turned my world upsidedown.
+                    %small Particulier
+                    %h4 Jasmine MESICS
+            / Quote 3
+            .item
+              %blockquote
+                .row
+                  .col-sm-8.col-sm-offset-2
+                    %span{style: "color:#333333"}
+                      Preparateur physique tres technique
+                      = link_to "Amandine Hostynek", h_training_path, title: "Amandine Hostynek"
+                      je recommande fortement elle m’a permis de progresser et de franchir un cap
+                    %small Joueur de rugby professionnel à l’USON Nevers (PROD2), anciennement Stade Rochelais (TOP14)
+                    %h4 François Herry

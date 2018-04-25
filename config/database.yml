@@ -1,0 +1,7 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: db_training
+  pool: 5
+  username: benty
+  password:

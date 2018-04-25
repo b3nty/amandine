@@ -1,0 +1,176 @@
+- content_for :title do
+  H-training | Préparation Physique et Performance
+- content_for :meta do
+  %meta{:content => "De par son caractère multifactoriel, la performance naît de l’entrainement (...) athlètes vers leurs objectifs au sein d’une équipe pluridisciplinaire et dédiée", :name => "description"}/
+  %meta{:content => "Préparation physique, objectifs, sportifs, training", :name => "keywords"}/
+  %meta{:content => "all", :name => "robots"}/
+
+.wrapper2
+  .container
+    %section
+      %h1.text-center.text-uppercase
+        H-TRAINING
+        %span .
+      %h4.text-center
+        La continuité logique d’un parcours professionnel
+        %br
+        qui a traversé les océans pour revenir à son point d’accroche,
+        %br
+        La Rochelle, là où tout a commencé.
+      .bloc-citation
+        %hr
+        %p.text-center
+          %i.fa.fa-2x.fa-quote-left
+        %p.text-justify
+          De par son caractère multifactoriel, la performance naît de l’entrainement des différentes composantes qui la caractérisent. Les aspects technique, tactique, physique et mental, représentent les caractéristiques du sportif qui doivent être envisagées dans un système complexe où chacune interagit avec l’autre. C’est la raison pour laquelle je me préoccupe d’accompagner mes athlètes vers leurs objectifs au sein d’une équipe pluridisciplinaire et dédiée.
+        %p.text-justify
+          Passionnée par l’entrainement sportif et les sciences qui y sont appliquées, je m’intéresse quotidiennement aux dernières études scientifiques pour proposer l’entrainement le plus adapté au profil et aux besoins individuels de mes athlètes afin qu’ils atteignent leur meilleur niveau. La transmission du savoir à travers la pratique est ma priorité.
+        %p.text-justify
+          Du golf au rugby, du sport amateur au sport professionnel de haut niveau, en France jusqu’en Australie, la diversité de mes expériences antérieures et les multiples échanges avec les professionnels du milieu m’ont amené à développer un esprit critique et à affiner ma vision de l’entrainement que je souhaite mettre au service de nos athlètes.
+        %p.text-center
+          %i.fa.fa-2x.fa-quote-right
+        %hr
+        %p.text-center Amandine H.
+
+.wrapper3
+  .container
+    %section.text-center
+      %h4
+        Rejoignez H-TRAINING pour profiter d’un service sur-mesure.
+        %br
+        Votre futur commence aujourd’hui.
+      %br
+      = simple_form_for(:contact, html: { class: 'form-horizontal' }) do |f|
+        .form-inputs.text-center
+          %ul.list-unstyled.list-inline
+            %li.barre
+              = f.input :email, required: false, label: false, placeholder: "Votre adresse e-mail", autofocus: false
+            %li.barre
+              &nbsp;
+            %li.barre
+              %span#button-newsletter.btn.btn-contact{:type => "button"} Je m'informe
+            #okidokki
+            #notoki
+
+.wrapper4
+  .container
+    %section
+      .row
+        .col-md-4.text-center
+          = image_tag("amandine-hostynek.jpg", :alt => "Amandine Hostynek", :class => "img-circle")
+          %br
+          %br
+          %h4
+            AMANDINE HOSTYNEK
+          %i Préparatrice Physique
+        .col-md-8
+          %ul.nav.nav-tabs.text-center{:role => "tablist"}
+            %li.active{:role => "presentation"}
+              %a{"aria-controls" => "home", "data-toggle" => "tab", :href => "#home", :role => "tab"}
+                %h4
+                  %i.fa.fa-star
+                  Domaines de compétences
+            %li{:role => "presentation"}
+              %a{"aria-controls" => "profile", "data-toggle" => "tab", :href => "#profile", :role => "tab"}
+                %h4
+                  %i.fa.fa-graduation-cap
+                  Qualifications
+            %li{:role => "presentation"}
+              %a{"aria-controls" => "messages", "data-toggle" => "tab", :href => "#messages", :role => "tab"}
+                %h4
+                  %i.fa.fa-briefcase
+                  Expérience
+
+          .tab-content
+            #home.tab-pane.active{:role => "tabpanel"}
+              %ul
+                %li
+                  %p.text-justify
+                    %strong Programmation d’entrainement individualisé :
+                    Maximiser le potentiel physique du sportif – salle et terrain
+                %li
+                  %p.text-justify
+                    %strong Planification et gestion de la charge d’entrainement :
+                    mise en relation des stratégies de périodisation et du retour subjectif du joueur
+                %li
+                  %p.text-justify
+                    %strong Prévention de blessure et réathlétisation :
+                    approche holistique : analyse du mouvement, mobilité, déséquilibre musculaire
+                %li
+                  %p.text-justify
+                    %strong Analyse des données et statistiques :
+                    suivi de la performance et bilan des données quantitatives
+                %li
+                  %p.text-justify
+                    %strong Préparation Physique spécifique :
+                    Développement des qualités physiques en fonction de l’exigence de la discipline, du poste et des caractéristiques du joueur
+            #profile.tab-pane{:role => "tabpanel"}
+              %ul
+                %li
+                  %p.text-justify
+                    %strong MASTER STAPS "Préparation Physique et Réathlétisation"
+                %li
+                  %p.text-justify
+                    %strong LICENCE STAPS "Entrainement sportif", mention rugby XV
+                %li
+                  %p.text-justify
+                    %strong BPJEPS AGFF, mention D :
+                    Brevet Professionnel de la Jeunesse, de l’Education Populaire et du Sport, Activités Gymniques de la Forme et de la Force, mention "Haltères, musculation et forme sur plateau"
+                %li
+                  %p.text-justify
+                    %strong
+                      Membre de l’
+                      %a{href:'http://www.ereps.eu', target:"_blank"}EREPS
+                      , Niveau 6 : Entraineur, Spécialiste avancé de la santé et de l’exercice :
+                    EREPS : European Register of Exercise Professionals, EQF Level 6 : Personal Trainer, Advanced Health and Exercise Specialist
+            #messages.tab-pane{:role => "tabpanel"}
+              %ul
+                %li
+                  %p.text-justify
+                    = link_to('https://www.olweb.fr/fr/', title: "Olympique Lyonnais (Ligue 1)", target: '_blank') do
+                      %strong Olympique Lyonnais (Ligue 1)
+                    \: 1 semaine en immersion, 2017
+                %li
+                  %p.text-justify
+                    = link_to('http://www.eastsrugby.com.au', title: "Eastern Suburbs Rugby Union", target: '_blank') do
+                      %strong Eastern Suburbs Rugby Union (Shute Shield)
+                    \: Sydney, Australie, 2017
+                %li
+                  %p.text-justify
+                    = link_to('https://www.staderochelais.com', title: "Stade Rochelais", target: '_blank') do
+                      %strong Stade Rochelais (TOP14)
+                    \: La Rochelle, 2015-2016
+                %li
+                  %p.text-justify
+                    = link_to('http://stagesnk22.com', title: "Stages Handball Nikola Karabatic", target: '_blank') do
+                      %strong Stages Handball Nikola Karabatic (F/M)
+                    \: Montpellier, 2015, 2016
+                #down
+                  %li
+                    %p.text-justify
+                      = link_to('https://www.montpellierhandball.com', title: "Pôle Espoirs Handball", target: '_blank') do
+                        %strong Pôle Espoirs Handball (M)
+                      \: Montpellier, 2014-2015
+                  %li
+                    %p.text-justify
+                      = link_to('http://www.montpellier-rugby.com/home', title: "Montpellier Herault Rugby", target: '_blank') do
+                        %strong Montpellier Herault Rugby (U19M)
+                      \: Montpellier, 2013-2014
+                  %li
+                    %p.text-justify
+                      = link_to('http://www.lycee-mermoz.net/joomla/index.php/vie-lyceenne/vie-sportive/section-rugby', title: "Section Sportive Lycée Jean Mermoz", target: '_blank') do
+                        %strong Section Sportive Lycée Jean Mermoz (F/M)
+                      \: Montpellier, 2013-2014
+                  %li
+                    %p.text-justify
+                      = link_to('https://www.creps-montpellier.org/haut-niveau.fiches?poles-espoirs.golf', title: "Pôle Espoirs Golf", target: '_blank') do
+                        %strong Pôle Espoirs Golf (F/M)
+                      \: Montpellier, 2012-2013
+                  %li
+                    %p.text-justify
+                      = link_to('https://www.rov-mc.com', title: "Rugby Olympique Védasien", target: '_blank') do
+                        %strong Rugby Olympique Védasien (U16M)
+                      \: Montpellier 2012-2013
+                %a#angle-down
+                  %i.fa.fa-angle-down
+                  &nbsp; plus
