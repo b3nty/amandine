@@ -1,11 +1,4 @@
-/*****************************************************************************/
-/*
-/* Common
-/*
-/*****************************************************************************/
-
-/* Global Reset */
-
+/* line 14, /Users/benty/rails_project/h-training/app/assets/stylesheets/application.css.sass */
 html {
   height: 100% !important;
 }
@@ -34,11 +27,8 @@ body {
 /* line 30, /Users/benty/rails_project/h-training/app/assets/stylesheets/application.css.sass */
 .navbar-default .navbar-nav li a {
   color: #ffffff;
+  text-shadow: none;
   padding: 14px 15px 17px;
-  text-shadow: none !important;
-}
-
-.navbar {
   font-size: 18px;
 }
 
@@ -147,69 +137,6 @@ input[type="text"]:focus, input[type="password"]:focus, input[type="datetime"]:f
   box-shadow: none;
 }
 
-/* line 93, /Users/benty/rails_project/h-training/app/assets/stylesheets/application.css.sass */
-.wrapper-home {
-  background: #222222;
-  padding-bottom: 100px;
-}
-/* line 96, /Users/benty/rails_project/h-training/app/assets/stylesheets/application.css.sass */
-.wrapper-home section {
-  margin-top: 10%;
-  width: 65%;
-  margin-left: auto;
-  margin-right: auto;
-}
-/* line 101, /Users/benty/rails_project/h-training/app/assets/stylesheets/application.css.sass */
-.wrapper-home section span {
-  color: #cc2127;
-}
-/* line 103, /Users/benty/rails_project/h-training/app/assets/stylesheets/application.css.sass */
-.wrapper-home section h1 span {
-  color: #cc2127;
-}
-/* line 105, /Users/benty/rails_project/h-training/app/assets/stylesheets/application.css.sass */
-.wrapper-home section .btn-contact {
-  background: #cc2127 !important;
-  color: #fff;
-  border: none;
-  padding: 5.5px 12px !important;
-}
-/* line 110, /Users/benty/rails_project/h-training/app/assets/stylesheets/application.css.sass */
-.wrapper-home section .btn-contact:hover {
-  background: #fff !important;
-  color: #222222;
-}
-/* line 114, /Users/benty/rails_project/h-training/app/assets/stylesheets/application.css.sass */
-.wrapper-home section input[type="email"] {
-  padding: 8px 0 12px 10px !important;
-  background-color: transparent;
-  color: #fff !important;
-  display: inline-block;
-  border: none;
-  border-radius: 0;
-  border-bottom: 2px solid #cc2127;
-}
-/* line 122, /Users/benty/rails_project/h-training/app/assets/stylesheets/application.css.sass */
-.wrapper-home section .form-control {
-  height: 36px !important;
-}
-/* line 125, /Users/benty/rails_project/h-training/app/assets/stylesheets/application.css.sass */
-.wrapper-home section input::-webkit-input-placeholder {
-  color: #fff;
-}
-/* line 127, /Users/benty/rails_project/h-training/app/assets/stylesheets/application.css.sass */
-.wrapper-home section input:-moz-placeholder {
-  color: #fff;
-}
-/* line 129, /Users/benty/rails_project/h-training/app/assets/stylesheets/application.css.sass */
-.wrapper-home section input::-moz-placeholder {
-  color: #fff;
-}
-/* line 131, /Users/benty/rails_project/h-training/app/assets/stylesheets/application.css.sass */
-.wrapper-home section input:-ms-input-placeholder {
-  color: #fff;
-}
-
 /* button scroll top */
 /* line 383, /Users/benty/rails_project/h-training/app/assets/stylesheets/application.css.sass */
 .btn-scroll-top {
@@ -230,85 +157,170 @@ input[type="text"]:focus, input[type="password"]:focus, input[type="datetime"]:f
   color: #dde0e5 !important;
 }
 
+/* line 458, /Users/benty/rails_project/h-training/app/assets/stylesheets/application.css.sass */
+.red {
+  color: #cc2127 !important;
+}
+
+/* line 308, /Users/benty/rails_project/h-training/app/assets/stylesheets/application.css.sass */
+/* line 93, /Users/benty/rails_project/h-training/app/assets/stylesheets/application.css.sass */
+.wrapper-actu {
+  background: #222222;
+  padding-bottom: 100px;
+}
+/* line 96, /Users/benty/rails_project/h-training/app/assets/stylesheets/application.css.sass */
+.wrapper-actu section {
+  margin-top: 10%;
+  width: 65%;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 101, /Users/benty/rails_project/h-training/app/assets/stylesheets/application.css.sass */
+.wrapper-actu section span {
+  color: #cc2127;
+}
+/* line 103, /Users/benty/rails_project/h-training/app/assets/stylesheets/application.css.sass */
+.wrapper-actu section h1 span {
+  color: #cc2127;
+}
+
+/* line 465, /Users/benty/rails_project/h-training/app/assets/stylesheets/application.css.sass */
 footer {
   color: #222222 !important;
   background-color: #fff !important;
   padding: 10px 0 !important;
-  font-size: 15px;
 }
-
+/* line 469, /Users/benty/rails_project/h-training/app/assets/stylesheets/application.css.sass */
 footer a {
   color: #222222 !important;
   font-weight: 100 !important;
   cursor: pointer;
 }
-
+/* line 473, /Users/benty/rails_project/h-training/app/assets/stylesheets/application.css.sass */
 footer a:hover {
   color: #cc2127 !important;
-  text-decoration: none;
+}
+/* line 475, /Users/benty/rails_project/h-training/app/assets/stylesheets/application.css.sass */
+footer a:active {
+  color: #cc2127 !important;
 }
 
 @media (min-width: 768px) {
-  /* line 482, /Users/benty/rails_project/h-training/app/assets/stylesheets/application.css.sass */
+  /* line 479, /Users/benty/rails_project/h-training/app/assets/stylesheets/application.css.sass */
   .display-screen {
     display: none !important;
   }
 }
 @media (max-width: 767px) {
-  /* line 486, /Users/benty/rails_project/h-training/app/assets/stylesheets/application.css.sass */
+  /* line 483, /Users/benty/rails_project/h-training/app/assets/stylesheets/application.css.sass */
   .display-mobile {
     display: none !important;
   }
 
-  /* line 488, /Users/benty/rails_project/h-training/app/assets/stylesheets/application.css.sass */
+  /* line 485, /Users/benty/rails_project/h-training/app/assets/stylesheets/application.css.sass */
   .navbar {
     margin-bottom: 0px;
   }
 
-  /* line 490, /Users/benty/rails_project/h-training/app/assets/stylesheets/application.css.sass */
+  /* line 487, /Users/benty/rails_project/h-training/app/assets/stylesheets/application.css.sass */
   .navbar-fixed-top {
     position: inherit;
   }
 
-  /* line 492, /Users/benty/rails_project/h-training/app/assets/stylesheets/application.css.sass */
+  /* line 489, /Users/benty/rails_project/h-training/app/assets/stylesheets/application.css.sass */
   .navbar-right {
     margin-left: 0px;
   }
-  /* line 494, /Users/benty/rails_project/h-training/app/assets/stylesheets/application.css.sass */
+  /* line 491, /Users/benty/rails_project/h-training/app/assets/stylesheets/application.css.sass */
   .navbar-right li {
     text-align: center;
   }
-  /* line 496, /Users/benty/rails_project/h-training/app/assets/stylesheets/application.css.sass */
+  /* line 493, /Users/benty/rails_project/h-training/app/assets/stylesheets/application.css.sass */
   .navbar-right li a {
     color: #222222 !important;
   }
 
-  /* line 498, /Users/benty/rails_project/h-training/app/assets/stylesheets/application.css.sass */
+  /* line 495, /Users/benty/rails_project/h-training/app/assets/stylesheets/application.css.sass */
   .navbar .nav li a {
     padding: 5px 15px 17px !important;
   }
 
-  /* line 500, /Users/benty/rails_project/h-training/app/assets/stylesheets/application.css.sass */
+  /* line 497, /Users/benty/rails_project/h-training/app/assets/stylesheets/application.css.sass */
   .navbar-toggle .fa-bars {
     color: #222222;
   }
 
-  /* line 502, /Users/benty/rails_project/h-training/app/assets/stylesheets/application.css.sass */
+  /* line 499, /Users/benty/rails_project/h-training/app/assets/stylesheets/application.css.sass */
   .navbar-center {
     margin-left: 0px;
   }
-  /* line 504, /Users/benty/rails_project/h-training/app/assets/stylesheets/application.css.sass */
+  /* line 501, /Users/benty/rails_project/h-training/app/assets/stylesheets/application.css.sass */
   .navbar-center li {
     text-align: center;
   }
-  /* line 506, /Users/benty/rails_project/h-training/app/assets/stylesheets/application.css.sass */
+  /* line 503, /Users/benty/rails_project/h-training/app/assets/stylesheets/application.css.sass */
   .navbar-center li a {
     color: #222222 !important;
   }
 
-  /* line 508, /Users/benty/rails_project/h-training/app/assets/stylesheets/application.css.sass */
+  /* line 505, /Users/benty/rails_project/h-training/app/assets/stylesheets/application.css.sass */
   .wrapper-home section {
     margin-top: 25%;
     width: 90%;
   }
 }
+
+
+/*****************************************************************************/
+/*
+/* Posts
+/*
+/*****************************************************************************/
+
+#post {
+
+}
+
+  /* standard */
+
+  #post pre {
+    border: 1px solid #ddd;
+    background-color: #eef;
+    padding: 0 .4em;
+  }
+
+  #post ul,
+  #post ol {
+    margin-left: 1.35em;
+  }
+
+  #post code {
+    border: 1px solid #ddd;
+    background-color: #eef;
+    font-size: 85%;
+    padding: 0 .2em;
+  }
+
+    #post pre code {
+      border: none;
+    }
+
+  /* terminal */
+
+  #post pre.terminal {
+    border: 1px solid black;
+    background-color: #333;
+    color: white;
+  }
+
+  #post pre.terminal code {
+    background-color: #333;
+  }
+
+#related {
+  margin-top: 2em;
+}
+
+  #related h2 {
+    margin-bottom: 1em;
+  }

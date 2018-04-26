@@ -1,0 +1,8 @@
+markdown: rdiscount
+permalink: /:title.html
+destination: ../../public/actualites
+auto: true
+exclude:
+  - Rakefile
+  - Gemfile
+  - .gitignore

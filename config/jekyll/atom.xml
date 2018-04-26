@@ -1,0 +1,26 @@
+---
+layout: nil
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+ <title>L'actualités de H-training.fr</title>
+ <link href="http%3A%2F%2Fh-training.fr%2Fatom.xml" rel="self"/>
+ <link href="http%3A%2F%2Fh-training.fr"/>
+ <updated>{{ site.time | date_to_xmlschema }}</updated>
+ <id>http%3A%2F%2Fh-training.fr%2Factualites</id>
+ <author>
+   <name>Amandine de H-training</name>
+ </author>
+
+ {% for post in site.posts %}
+ <entry>
+   <title>{{ post.title }}</title>
+   <link href="http%3A%2F%2Fh-training.fr{{ post.url }}"/>
+   <updated>{{ post.date | date_to_xmlschema }}</updated>
+   <id>http%3A%2F%2Fh-training.fr%2Factualites{{ post.id }}</id>
+   <content type="html">{{ post.content | xml_escape }}</content>
+ </entry>
+ {% endfor %}
+
+</feed>

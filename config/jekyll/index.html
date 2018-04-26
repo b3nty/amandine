@@ -1,0 +1,32 @@
+---
+layout: default
+title: L'actualités de H-training.fr destiné à la préparation physique
+description: Nous vous donnons nos dernières actualités, nos astuces et nos coups de coeur du moment.
+---
+
+<div class="wrapper-actu">
+  <div class="container">
+    <section>
+      <h1 class="text-center text-uppercase">
+        Actualités
+        <span>.</span>
+      </h1>
+    </section>
+    {% if page.is_post? %}
+    <div class="row">
+      <div class="col-md-3 text-center"></div>
+      <div class="col-md-6 col-sm-12 text-center">
+        <a href="/blog{{ post.url }}" title="article d'actualités">
+          <img src="/images/{{ post.filename }}" class="imageblog" alt="{{ post.filename }}"></img>
+        </a>
+        <br>
+        <small>{{ post.date | date_to_string }}</small> - <small>{{ post.author }}</small>
+        <h2><a href="/blog{{ post.url }}" title="article d'actualités">{{ post.title }}</a></h2>
+        <p>{{ post.content | strip_html | truncatewords: 50 }}</p>
+        <div class="text-right"><a href="/blog{{ post.url }}" title="article d'actualités">--> Lire la suite</a></div>
+      </div>
+      <div class="col-md-3 text-center"></div>
+    </div>
+    {% endif %}
+  </div>
+</div>

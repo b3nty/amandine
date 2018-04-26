@@ -16,6 +16,8 @@
           %li.nav-item
             = link_to 'Services', services_path, title: "Services", :class => current_page?(services_path) && 'active'
           %li.nav-item
+            = link_to 'Actualités', actualites_path, title: "Actualités", :class => current_page?(actualites_path) && 'active'
+          %li.nav-item
             = link_to 'Réservation', reservation_path, title: "Réservation", :class => current_page?(reservation_path) && 'active'
           %li.nav-item
             = link_to 'Espace Perso', espace_perso_path, title: "Espace Perso", :class => current_page?(espace_perso_path) && 'active'
