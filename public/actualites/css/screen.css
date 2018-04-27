@@ -186,13 +186,13 @@ input[type="text"]:focus, input[type="password"]:focus, input[type="datetime"]:f
 
 /* line 465, /Users/benty/rails_project/h-training/app/assets/stylesheets/application.css.sass */
 footer {
-  color: #222222 !important;
+  color: #777777 !important;
   background-color: #fff !important;
-  padding: 10px 0 !important;
+  padding: 30px 0 10px !important;
 }
 /* line 469, /Users/benty/rails_project/h-training/app/assets/stylesheets/application.css.sass */
 footer a {
-  color: #222222 !important;
+  color: #777777 !important;
   font-weight: 100 !important;
   cursor: pointer;
 }

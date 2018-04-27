@@ -56,30 +56,38 @@
   .container
     %section
       .row
-        .col-md-4.text-center
-          = image_tag("amandine-hostynek.jpg", :alt => "Amandine Hostynek", :class => "img-circle")
+        .col-lg-10.col-lg-offset-1
+          #cover-image
+            .cover-image
+              = image_tag("cover-image.jpg", :alt => "Amandine Hostynek cover", width: "100%", height: "100%")
+          #profile-image
+            .profile-image
+              = image_tag("amandine-hostynek.png", :alt => "Amandine Hostynek", :class => "img-circle")
+          .title-image.text-center
+            %br
+            %br
+            %h4
+              AMANDINE HOSTYNEK
+            %i Préparatrice Physique
           %br
           %br
-          %h4
-            AMANDINE HOSTYNEK
-          %i Préparatrice Physique
-        .col-md-8
-          %ul.nav.nav-tabs.text-center{:role => "tablist"}
-            %li.active{:role => "presentation"}
-              %a{"aria-controls" => "home", "data-toggle" => "tab", :href => "#home", :role => "tab"}
-                %h4
-                  %i.fa.fa-star
-                  Domaines de compétences
-            %li{:role => "presentation"}
-              %a{"aria-controls" => "profile", "data-toggle" => "tab", :href => "#profile", :role => "tab"}
-                %h4
-                  %i.fa.fa-graduation-cap
-                  Qualifications
-            %li{:role => "presentation"}
-              %a{"aria-controls" => "messages", "data-toggle" => "tab", :href => "#messages", :role => "tab"}
-                %h4
-                  %i.fa.fa-briefcase
-                  Expérience
+          .text-center
+            %ul.nav.nav-tabs.text-center{:role => "tablist"}
+              %li.active{:role => "presentation"}
+                %a{"aria-controls" => "home", "data-toggle" => "tab", :href => "#home", :role => "tab"}
+                  %h4
+                    %i.fa.fa-star
+                    Domaines de compétences
+              %li{:role => "presentation"}
+                %a{"aria-controls" => "profile", "data-toggle" => "tab", :href => "#profile", :role => "tab"}
+                  %h4
+                    %i.fa.fa-graduation-cap
+                    Qualifications
+              %li{:role => "presentation"}
+                %a{"aria-controls" => "messages", "data-toggle" => "tab", :href => "#messages", :role => "tab"}
+                  %h4
+                    %i.fa.fa-briefcase
+                    Expérience
 
           .tab-content
             #home.tab-pane.active{:role => "tabpanel"}

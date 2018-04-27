@@ -10,17 +10,18 @@
           = image_tag("logo-h-training-black.png", :alt => "logo h-training", :height => "50px", :id => "log", :class => "display-screen")
       / Collect the nav links, forms, and other content for toggling
       #bs-example-navbar-collapse-1.collapse.navbar-collapse
-        %ul.nav.navbar-nav.navbar-center
-          %li.nav-item
-            = link_to 'H-training', h_training_path, title: "H-training", :class => current_page?(h_training_path) && 'active'
-          %li.nav-item
-            = link_to 'Services', services_path, title: "Services", :class => current_page?(services_path) && 'active'
-          %li.nav-item
-            = link_to 'Actualités', actualites_path, title: "Actualités", :class => current_page?(actualites_path) && 'active'
-          %li.nav-item
-            = link_to 'Réservation', reservation_path, title: "Réservation", :class => current_page?(reservation_path) && 'active'
-          %li.nav-item
-            = link_to 'Espace Perso', espace_perso_path, title: "Espace Perso", :class => current_page?(espace_perso_path) && 'active'
+        .text-center
+          %ul.nav.navbar-nav.navbar-center
+            %li.nav-item
+              = link_to 'H-training', h_training_path, title: "H-training", :class => current_page?(h_training_path) && 'active'
+            %li.nav-item
+              = link_to 'Services', services_path, title: "Services", :class => current_page?(services_path) && 'active'
+            %li.nav-item
+              = link_to 'Actualités', actualites_path, title: "Actualités", :class => current_page?(actualites_path) && 'active'
+            %li.nav-item
+              = link_to 'Réservation', reservation_path, title: "Réservation", :class => current_page?(reservation_path) && 'active'
+            %li.nav-item
+              = link_to 'Espace Perso', espace_perso_path, title: "Espace Perso", :class => current_page?(espace_perso_path) && 'active'
         %ul.nav.navbar-nav.navbar-right
           %li.nav-item
             = link_to('https://www.facebook.com/h.training.fr/', target: "_blank", title: "Facebook h-training") do
