@@ -1,7 +1,6 @@
 markdown: rdiscount
-permalink: /:title.html
+permalink: /:categories/:title/
 destination: ../../public/actualites
-auto: true
 exclude:
   - Rakefile
   - Gemfile

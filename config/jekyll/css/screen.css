@@ -183,6 +183,14 @@ input[type="text"]:focus, input[type="password"]:focus, input[type="datetime"]:f
 .wrapper-actu section h1 span {
   color: #cc2127;
 }
+#posts small, #posts p {color:#222222;}
+#posts h2 {color:#cc2127;}
+.imageblog {width:100%;}
+#posts a {text-decoration: none;color: #cc2127;}
+.archives {background: #EDEDED;padding:0 30px}
+#archives .archive-group h3.category-head {color:#222222}
+#archives  .archive-group .archive-item h4 {color:#203d73}
+.row-actu {padding: 60px 0;}
 
 /* line 465, /Users/benty/rails_project/h-training/app/assets/stylesheets/application.css.sass */
 footer {
@@ -278,7 +286,8 @@ footer a:active {
 /*****************************************************************************/
 
 #post {
-
+  color:#222222;
+  margin-top:20px
 }
 
   /* standard */
@@ -315,12 +324,4 @@ footer a:active {
 
   #post pre.terminal code {
     background-color: #333;
-  }
-
-#related {
-  margin-top: 2em;
-}
-
-  #related h2 {
-    margin-bottom: 1em;
   }
