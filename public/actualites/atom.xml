@@ -77,7 +77,7 @@
  <title>L'actualités de H-training.fr</title>
  <link href="http%3A%2F%2Fh-training.fr%2Fatom.xml" rel="self"/>
  <link href="http%3A%2F%2Fh-training.fr"/>
- <updated>2018-06-04T18:43:10+02:00</updated>
+ <updated>2018-06-04T18:52:23+02:00</updated>
  <id>http%3A%2F%2Fh-training.fr%2Factualites</id>
  <author>
    <name>Amandine de H-training</name>
@@ -86,9 +86,9 @@
  
  <entry>
    <title>Rencontre Paul Hubert</title>
-   <link href="http%3A%2F%2Fh-training.fr/athl%C3%A8tes/rencontre-paul-hubert/"/>
+   <link href="http%3A%2F%2Fh-training.fr/actualites/athl%C3%A8tes/rencontre-paul-hubert/"/>
    <updated>2018-06-04T00:00:00+02:00</updated>
-   <id>http%3A%2F%2Fh-training.fr%2Factualites/athl%C3%A8tes/rencontre-paul-hubert</id>
+   <id>http%3A%2F%2Fh-training.fr%2Factualites/actualites/athl%C3%A8tes/rencontre-paul-hubert</id>
    <content type="html">&lt;p&gt;&lt;strong&gt;Bonjour Paul, en quelques mots, quel est ton parcours sportif ?&lt;/strong&gt;&lt;br&gt;
 Passionné de basket j'ai pas mal tâté des playgrounds de Charente maritime pendant plusieures années. Depuis 2 ans j'ai du arrêter et rien ne me démange plus que de reprendre en forme!&lt;/p&gt;
 
@@ -137,9 +137,9 @@ On récupère le cardio la!&lt;/p&gt;
  
  <entry>
    <title>Rencontre Margaux Peyrussan</title>
-   <link href="http%3A%2F%2Fh-training.fr/athl%C3%A8tes/rencontre-margaux-peyrussan/"/>
+   <link href="http%3A%2F%2Fh-training.fr/actualites/athl%C3%A8tes/rencontre-margaux-peyrussan/"/>
    <updated>2018-06-04T00:00:00+02:00</updated>
-   <id>http%3A%2F%2Fh-training.fr%2Factualites/athl%C3%A8tes/rencontre-margaux-peyrussan</id>
+   <id>http%3A%2F%2Fh-training.fr%2Factualites/actualites/athl%C3%A8tes/rencontre-margaux-peyrussan</id>
    <content type="html">&lt;p&gt;&lt;strong&gt;Bonjour Margaux, en quelques mots, décris nous ton parcours ?&lt;/strong&gt;&lt;br&gt;
 J’ai commencé le rugby à l’âge de 14ans à Gaillac (Dans le tarn ce n’est pas très grand mais c’est un pays de rugby, je pense que les amateurs reconnaitront le pays de Laporte ou Moscato). J’ai joué en cadettes (moins de 18 ans) et je suis rentrée au Pôle Espoir à Jolimont pour ma dernière année en U18. J’ai effectué une année avec l’effectif senior pour ensuite rejoindre le Stade Rochelais POC’ettes depuis maintenant 2ans.&lt;/p&gt;
 
@@ -170,9 +170,9 @@ Ton aventure avec H-TRAINING :  Focus&lt;/p&gt;
  
  <entry>
    <title>Récupération</title>
-   <link href="http%3A%2F%2Fh-training.fr/sciences/r%C3%A9cup%C3%A9ration/"/>
+   <link href="http%3A%2F%2Fh-training.fr/actualites/sciences/r%C3%A9cup%C3%A9ration/"/>
    <updated>2018-06-03T00:00:00+02:00</updated>
-   <id>http%3A%2F%2Fh-training.fr%2Factualites/sciences/récupération</id>
+   <id>http%3A%2F%2Fh-training.fr%2Factualites/actualites/sciences/récupération</id>
    <content type="html">&lt;p&gt;L'immersion en eau froide est largement utilisée comme un mode de récupération dans les populations sportives afin d'accélérer la récupération.&lt;/p&gt;
 
 &lt;p&gt;Comparaison entre 3 protocoles :
