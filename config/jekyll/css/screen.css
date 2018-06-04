@@ -290,6 +290,8 @@ footer a:active {
   margin-top:20px
 }
 
+#post span {color: #cc2127 !important;}
+
   /* standard */
 
   #post pre {

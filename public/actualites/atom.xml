@@ -77,7 +77,7 @@
  <title>L'actualités de H-training.fr</title>
  <link href="http%3A%2F%2Fh-training.fr%2Fatom.xml" rel="self"/>
  <link href="http%3A%2F%2Fh-training.fr"/>
- <updated>2018-06-04T22:18:18+02:00</updated>
+ <updated>2018-06-04T22:52:05+02:00</updated>
  <id>http%3A%2F%2Fh-training.fr%2Factualites</id>
  <author>
    <name>Amandine de H-training</name>
@@ -169,24 +169,51 @@ Ton aventure avec H-TRAINING :  Focus&lt;/p&gt;
  </entry>
  
  <entry>
+   <title>Préparation physique</title>
+   <link href="http%3A%2F%2Fh-training.fr/sciences/preparation-physique/"/>
+   <updated>2018-06-04T00:00:00+02:00</updated>
+   <id>http%3A%2F%2Fh-training.fr%2Factualites/sciences/preparation-physique</id>
+   <content type="html">&lt;p&gt;Une séance d'&lt;strong&gt;entraînement en résistance&lt;/strong&gt; dont la charge est faible  et de type puissance entraîne des &lt;strong&gt;améliorations&lt;/strong&gt; modérées à importantes de la &lt;strong&gt;performance explosive&lt;/strong&gt; 1 et 2 jours plus tard.&lt;/p&gt;
+
+&lt;p&gt;&lt;span style=&quot;color: #cc2127;&quot;&gt;Conseil :&lt;/span&gt;&lt;br&gt;
+Utiliser des exercices basés sur la vélocité 1 à 2 jours avant le jour J voire jusqu’à 4 à 6 heures avant le coup d'envoi de la compétition pour améliorer la performance neuromusculaire et optimiser la performance en situation de compétition pour les sports dont l’effort est basé sur la vitesse.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Exemple d’exercices :&lt;/strong&gt;&lt;br&gt;
+Squat Jump (SJ), Contre-Mouvement Jump (CMJ), Drop Jump (DJ), sprints courts, lancers de médecine balls.&lt;/p&gt;
+
+&lt;p&gt;&lt;span style=&quot;color: #cc2127;&quot;&gt;Conseil :&lt;/span&gt;&lt;br&gt;
+Utiliser les mêmes exercices chaque semaine pour ne pas créer de douleurs musculaires inutiles.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Apprenez chaque mois davantage grâce à un extrait du Performance Digest rédigé par &lt;a href=&quot;https://www.scienceforsport.com/&quot; target=&quot;_blank&quot;&gt;ScienceforSport&lt;/a&gt;, choisi minutieusement par H-TRAINING.&lt;/strong&gt;&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
    <title>Récupération</title>
    <link href="http%3A%2F%2Fh-training.fr/sciences/r%C3%A9cup%C3%A9ration/"/>
    <updated>2018-06-03T00:00:00+02:00</updated>
    <id>http%3A%2F%2Fh-training.fr%2Factualites/sciences/récupération</id>
    <content type="html">&lt;p&gt;L'immersion en eau froide est largement utilisée comme un mode de récupération dans les populations sportives afin d'accélérer la récupération.&lt;/p&gt;
 
-&lt;p&gt;Comparaison entre 3 protocoles :
-intermittent : 2 x 4 min en immersion (14°) avec 1' de repos entre les immersions
-continu : immersion (14°) pendant 12 min
-contrôle : récupération passive&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Comparaison entre 3 protocoles :&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;La douleur est significativement réduite avec l’utilisation d’un protocole d’immersion (0, 24 et 48h après) mais aucune difference n’est relevée entre les deux protocoles. La performance au Contre Mouvement Jump (CMJ) et le volume de la cuisse n’ont pas changés quel que soit le protocole.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;intermittent : 2 x 4 min en immersion (14°) avec 1' de repos entre les immersions&lt;/li&gt;
+&lt;li&gt;continu : immersion (14°) pendant 12 min&lt;/li&gt;
+&lt;li&gt;contrôle : récupération passive&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;p&gt;Conseil : Utiliser potentiellement l’immersion en eau froide pour diminuer la perception de la douleur, quel que soit le protocole (continu ou intermittent).&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Résultats :&lt;/strong&gt;&lt;br&gt;
+La douleur est significativement réduite avec l’utilisation d’un protocole d’immersion (0, 24 et 48h après) mais aucune difference n’est relevée entre les deux protocoles. La performance au Contre Mouvement Jump (CMJ) et le volume de la cuisse n’ont pas changés quel que soit le protocole.&lt;/p&gt;
+
+&lt;p&gt;&lt;span style=&quot;color: #cc2127;&quot;&gt;Conseil :&lt;/span&gt;&lt;br&gt;
+Utiliser potentiellement l’immersion en eau froide pour diminuer la perception de la douleur, quel que soit le protocole (continu ou intermittent).&lt;/p&gt;
 
 &lt;p&gt;Les praticiens recommandent l’utilisation d’un protocole d’immersion avant entrainement ou competition pour diminuer la perception de douleur mais ne precise pas combien de temps avant. Néanmoins il est largement associé à une baisse de performance de la fonction musculaire dû à l’inhibition de la conduction nerveuse.&lt;/p&gt;
 
-&lt;p&gt;Conseil: Selon la discipline sportive, il peut être intéressant ou non de l’utiliser : évaluer le ratio coûts-bénéfices.&lt;/p&gt;
+&lt;p&gt;&lt;span style=&quot;color: #cc2127;&quot;&gt;Conseil :&lt;/span&gt;&lt;br&gt;
+Selon la discipline sportive, il peut être intéressant ou non de l’utiliser : évaluer le ratio coûts-bénéfices.&lt;/p&gt;
 </content>
  </entry>
  
