@@ -27,8 +27,8 @@ description: Nous vous donnons nos dernières actualités, nos astuces et nos co
             <img src="/images/{{ post.filename }}" class="imageblog" alt="{{ post.filename }}"></img>
           </a>
           <br>
-          <small>{{ post.date | date_to_string }}</small> - <small>{{ post.author }}</small>
-          <h2><a href="{{ site.baseurl }}/actualites/{{ post.url }}" title="article d'actualités">{{ post.title }}</a></h2>
+          <h2><a href="{{ site.baseurl }}actualites/{{ post.url }}" title="article d'actualités">{{ post.title }}</a></h2>
+          <small>{{ post.date | date_to_string }}</small>
           <p>{{ post.content | strip_html | truncatewords: 50 }}</p>
           <div class="text-right"><a href="{{ site.baseurl }}actualites/{{ post.url }}" title="article d'actualités">--> Lire la suite</a></div>
           <br>
@@ -51,7 +51,7 @@ description: Nous vous donnons nos dernières actualités, nos astuces et nos co
                 {% for post in site.categories[category_name] %}
                 <li>
                   <article class="archive-item">
-                    <h4><a href="{{ site.baseurl }}actualites/{{ post.url }}">{{post.title}}</a></h4>
+                    <h4><a href="www.h-training.fr/actualites{{ post.url }}">{{post.title}}</a></h4>
                   </article>
                 </li>
                 {% endfor %}
