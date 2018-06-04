@@ -1,5 +1,5 @@
 markdown: rdiscount
-permalink: /actualites/:categories/:title/
+permalink: /:categories/:title/
 destination: ../../public/actualites
 exclude:
   - Rakefile
