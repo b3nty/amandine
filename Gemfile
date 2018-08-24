@@ -59,7 +59,6 @@ gem 'email_validator'
 gem 'responders'
 gem 'ladda-bootstrap-rails', :git => 'git://github.com/vendji/ladda-bootstrap-rails.git'
 
-gem 'bloggy'
 gem 'yajl-ruby'
 
 group :development, :test do
