@@ -88,6 +88,14 @@ $( document ).on('turbolinks:load', function() {
     $('#down').toggle();
   });
 
+  $('#angle-down1').click(function() {
+    $('#down1').toggle();
+  });
+
+  $('#angle-down2').click(function() {
+    $('#down2').toggle();
+  });
+
   $('.menu-service a').mouseenter(function() {
       $(this).children('.slide-up').addClass('translatey opacity');
       $(this).children('.slide-up-title').addClass('translatey');
