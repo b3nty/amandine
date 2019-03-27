@@ -57,7 +57,7 @@
                 %h3 H-2O
               .slide-down.opacity.translatey.display-mobile
                 %p
-                  110 € / mois *
+                  110 € / mois
                   %br
                   Dépassez vous au sein d’un groupe
                 %i En savoir plus
@@ -69,7 +69,7 @@
                 %h3 H-PERF
               .slide-down.opacity.translatey.display-mobile
                 %p
-                  260 € (1 mois)
+                  À parir de 130 € / mois
                   %br
                   Offrez vous un entrainement personnalisé
                 %i En savoir plus
@@ -80,7 +80,7 @@
                 %h3 H-PRO
               .slide-down.opacity.translatey.display-mobile
                 %p
-                  280 € / mois
+                  À parir de 71 € / mois
                   %br
                   Amenez vos sportifs à leur meilleur niveau
                 %i En savoir plus
@@ -128,12 +128,12 @@
                 %li.barre
                   = f.input :name, required: true, label: false, placeholder: "Nom / Raison sociale", autofocus: false
                 %li.barre
-                  = f.input :message, label: false, required: false, as: :text, placeholder: "Message", input_html: {rows: 4}
+                  = f.input :message, label: false, required: false, as: :text, placeholder: "Votre message", input_html: {rows: 4}
                 %li.barre
                   &nbsp;
                 %li.barre
                   #button-services.btn.btn-contact.ladda-button{:type => "button", "data-style" => "expand-left" }
-                    %span.ladda-label Envoyer
+                    %span.ladda-label Je demande un devis
                 #okidokki
                 #notoki
 
@@ -211,9 +211,9 @@
             %h3 H-2O
             %h4 Dépassez vous au sein d’un groupe
             %span
-              110 € / mois *
+              110 € / mois
           .col-xs-8.text-justify
-            Rejoignez les séances collectives destinées à celles et ceux qui souhaitent développer leur potentiel physique au sein d’un groupe et dans un environnement convivial. Mené par un encadrement qualifié, l’entrainement sollicite le corps entier, en vue de vous rendre plus fort, d’améliorer votre condition physique et de travailler votre silhouette, selon votre profil.
+            Rejoignez les séances collectives destinées à celles et ceux qui souhaitent développer leur potentiel physique et athlétique au sein d’un groupe et dans un environnement convivial. Mené par un encadrement qualifié, l’entrainement sollicite le corps entier, en vue de vous rendre plus fort, d’améliorer votre condition physique et de travailler votre silhouette, selon votre profil.
             Chaque séance est considérée comme une unité indépendante offrant de la diversité à votre entrainement.
             %br
             Votre offre comprend :
@@ -232,7 +232,11 @@
             %h3 H-PERF
             %h4 Offrez vous un entrainement personnalisé
             %span
-              260 € (1 mois)
+              À partir de 130 € / mois
+            %br
+            %br
+            .btn.btn-contact.tarif-button{:type => "button"}
+              = link_to "Tarifs H-PERF", "https://s3.eu-west-3.amazonaws.com/h-training/H-PERF.pdf", :target => "_blank"
           .col-xs-8.text-justify
             S’engager dans le service d’accompagnement personnalisé c’est s’offrir l’opportunité d’atteindre ses objectifs. La planification de l’entrainement est réalisée de façon minutieuse selon votre profil et vos besoins. La souplesse des horaires s’adapte à vos contraintes pour vous permettre d’équilibrer au mieux vos temps de vie.
             Quel que soit votre objectif (gain de force, réathlétisation, perte de masse grasse…), notre équipe qualifiée saura vous conduire vers l’atteinte de vos objectifs.
@@ -241,7 +245,7 @@
             %ul.list-unstyled
               %li
                 %i.fas.fa-check.green
-                séances d’entrainement  individualisées pendant 1 mois
+                séances d’entrainement individualisées pendant 1 mois
               %li
                 %i.fas.fa-check.green
                 échanges par emails
@@ -259,7 +263,11 @@
             %h3 H-PRO
             %h4 Amenez vos sportifs à leur meilleur niveau
             %span
-              280 € / mois
+              À partir de 71 € / mois
+            %br
+            %br
+            .btn.btn-contact.tarif-button{:type => "button"}
+              = link_to "Tarifs H-PRO", "https://s3.eu-west-3.amazonaws.com/h-training/H-PRO.pdf", :target => "_blank"
           .col-xs-8.text-justify
             H-PRO offre l’opportunité pour un club de profiter d’un environnement propice au développement des qualités physiques de ses sportifs en externalisant son staff.
             Un entrainement sur-mesure est proposé à vos athlètes et concerne les différents aspects de la performance : le développement des qualités physiques et des systèmes énergétiques spécifiques,  la prévention de blessures, la récupération, la construction de nouvelles habiletés motrices, la mobilité et la flexibilité, du travail spécifique des mouvements fonctionnels en rapport avec l’activité et transférable en situation de compétition.
@@ -278,8 +286,6 @@
               %li
                 %i.fas.fa-check.green
                 avantages "membre"
-            %br
-            %i À partir de 280 € / mois (1 fois / semaine), 360 € (2 fois / semaine)
         #card7
     %article
       .container
