@@ -32,17 +32,19 @@
       %h2.text-left.font-italic
         Optez pour une solution tout-en-un
       .text-left
-        %span.btn.btn-contact{:type => "button"}
-          Choisissez H-Training
-          &nbsp;
-          %i.fas.fa-arrow-right
+        = link_to(contact_path, title: "Choisissez H-Training") do
+          %span.btn.btn-contact{:type => "button"}
+            Choisissez H-Training
+            &nbsp;
+            %i.fas.fa-arrow-right
       %br
       %br
       %br
       %br
       %br
       %br
-
+.wrapper
+  .container
 .wrapper
   .container
     %h2.text-center
@@ -107,7 +109,8 @@
     %br
     %br
     .text-center
-      %span.btn.btn-contact{:type => "button"}
-        Accéder à la galerie photos
-        &nbsp;
-        %i.fas.fa-arrow-right
+      = link_to(media_path, title: "Accéder à la galerie photos") do
+        %span.btn.btn-contact{:type => "button"}
+          Accéder à la galerie photos
+          &nbsp;
+          %i.fas.fa-arrow-right

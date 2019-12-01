@@ -129,6 +129,7 @@ h4
   height: 2px
   background: #cc2127
   transition: .1s
+  margin-top: 5px
 
 .vcenter
   display: flex
@@ -510,136 +511,31 @@ footer
     color: #000
     padding-bottom: 30px
 
-.col-centered
-  float: none
-  margin: 0 auto
-
-.carousel-control
-  width: 8%
-  width: 0px
-
-  &.left, &.right
-    margin-right: 40px
-    margin-left: 32px
-    background-image: none
-    opacity: 1
-
-  > a > span
-    color: white
-    font-size: 29px !important
-
-.carousel-col
-  position: relative
-  min-height: 1px
-  padding: 5px
-  float: left
-
-.active > div
-  display: none
-
-  &:first-child
-    display: block
-
-/*xs
-@media (max-width: 767px)
+.multi-item-carousel
   .carousel-inner
-    .active
-      &.left
-        left: -50%
-
-      &.right
-        left: 50%
-
-    .next
-      left: 50%
-
-    .prev
-      left: -50%
-
-  .carousel-col
-    width: 50%
-
-  .active > div:first-child + div
-    display: block
-
-/*sm
-@media (min-width: 768px) and (max-width: 991px)
-  .carousel-inner
-    .active
-      &.left
-        left: -50%
-
-      &.right
-        left: 50%
-
-    .next
-      left: 50%
-
-    .prev
-      left: -50%
-
-  .carousel-col
-    width: 50%
-
-  .active > div:first-child + div
-    display: block
-
-/*md
-@media (min-width: 992px) and (max-width: 1199px)
-  .carousel-inner
+    .item
+      transition: 500ms ease-in-out left
+      .col-xs-4
+        padding: 0
     .active
       &.left
         left: -33%
-
       &.right
         left: 33%
-
     .next
       left: 33%
-
     .prev
       left: -33%
+    @media all and (transform-3d), (-webkit-transform-3d)
+    > .item
+      // use your favourite prefixer here
+      transition: 500ms ease-in-out left
+      transition: 500ms ease-in-out all
+      backface-visibility: visible
+      transform: none !important
 
-  .carousel-col
-    width: 33%
-
-  .active > div:first-child + div
-    display: block
-
-    + div
-      display: block
-
-/*lg
-@media (min-width: 1200px)
-  .carousel-inner
-    .active
-      &.left
-        left: -25%
-
-      &.right
-        left: 25%
-
-    .next
-      left: 25%
-
-    .prev
-      left: -25%
-
-  .carousel-col
-    width: 25%
-
-  .active > div:first-child + div
-    display: block
-
-    + div
-      display: block
-
-      + div
-        display: block
-.block
-  width: 306px
-  height: 230px
-
+  .carouse-control.left, .carouse-control.right
+      background-image: none !important
 
 @media (min-width: 768px)
   .display-screen
