@@ -1,11 +1,20 @@
 %footer
   .container
-
     .text-center
-      = image_tag("logo-h-training-black.png", :alt => "logo h-training", :height => "50px", style: "opacity:0.7")
+      = image_tag("new-logo-h-training.png", :alt => "logo h-training", :height => "120px", :id => "log", :class => "display-mobile")
+      .barre
       %br
-      %br
-      © Copyright 2018 &nbsp; H-training, tous droits réservés
+      %ul.nav.navbar-nav
+        %li.nav-item
+          = link_to('https://www.facebook.com/h.training.fr/', target: "_blank", title: "Facebook h-training") do
+            %i.fab.fa-2x.fa-facebook-square
+        %li.nav-item
+          = link_to('https://www.instagram.com/h.training/', target: "_blank", title: "Instagram h-training") do
+            %i.fab.fa-2x.fa-instagram
+        %li.nav-item
+          = link_to('https://www.linkedin.com/company/h-training-fr/', target: "_blank", title: "Linkedin h-training") do
+            %i.fab.fa-2x.fa-linkedin
+      © Copyright 2018-2019 &nbsp; H-Training, tous droits réservés
       |
       = link_to 'contact', contact_path, title: "contact"
       |

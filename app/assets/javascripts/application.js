@@ -30,38 +30,58 @@ ga('send', 'pageview');
 setTimeout("ga('send','event','Temps passé sur la page','15 seconds')",15000);
 
 $( document ).on('turbolinks:load', function() {
-  $('.carousel-home').carousel({
-    interval: 3000,
-    pause: null,
-    wrap: true
-  })
 
-  $(window).scroll(function() {
-    var loc = window.location.pathname;
-    if($(window).scrollTop() > 78) {
-      $(".navbar-transparent").css("background-color", "rgba(248, 248, 248, 0.8)").fadeIn('slow');
-      $(".navbar-default .navbar-nav li a").css("color", "#222").fadeIn('slow');
-      $(".navbar-transparent").css("box-shadow", "0 2px 0 rgba(0, 0, 0, 0.2)").fadeIn('slow');
-      $("#log").attr("src", "https://s3.eu-west-3.amazonaws.com/h-training/logo-h-training-black.png").fadeIn('slow');
-      $('.navbar-transparent .navbar-nav li').find('a').each(function() {
-        if($(this).attr('href') == loc){
-          $(this).addClass('active');
-        }
-      });
-    }
+  $('.carousel[data-type="multi"] .item').each(function() {
+  	var next = $(this).next();
+  	if (!next.length) {
+  		next = $(this).siblings(':first');
+  	}
+  	next.children(':first-child').clone().appendTo($(this));
+
+  	for (var i = 0; i < 2; i++) {
+  		next = next.next();
+  		if (!next.length) {
+  			next = $(this).siblings(':first');
+  		}
+
+  		next.children(':first-child').clone().appendTo($(this));
+  	}
   });
-  $(window).scroll(function() {
-    var loc = window.location.pathname;
-    if($(window).scrollTop() < 78) {
-      $(".navbar-transparent").css("background-color", "transparent");
-      $(".navbar-transparent").css("box-shadow", "0 0 0 rgba(0, 0, 0, 0.2)");
-      $(".navbar-default .navbar-nav li a").css("color", "#fff").fadeIn('slow');
-      $("#log").attr("src", "https://s3.eu-west-3.amazonaws.com/h-training/logo-h-training-white.png");
-      $('.navbar-transparent').find('a').each(function() {
-        $(this).toggleClass('active', $(this).attr('href') == loc);
-      });
+
+  var $animation_elements = $('.animation-element');
+  var $window = $(window);
+
+  function check_if_in_view() {
+    var window_height = $window.height();
+    var window_top_position = $window.scrollTop();
+    var window_bottom_position = (window_top_position + window_height);
+
+    $.each($animation_elements, function() {
+      var $element = $(this);
+      var element_height = $element.outerHeight();
+      var element_top_position = $element.offset().top;
+      var element_bottom_position = (element_top_position + element_height);
+
+      //check to see if this current container is within viewport
+      if ((element_bottom_position >= window_top_position) &&
+          (element_top_position <= window_bottom_position)) {
+        $element.addClass('in-view');
+      } else {
+        $element.removeClass('in-view');
+      }
+    });
+  }
+
+  $window.on('scroll resize', check_if_in_view);
+  $window.trigger('scroll');
+
+  function offsetAnchor() {
+    if(location.hash.length !== 0) {
+        window.scrollTo(window.scrollX, window.scrollY - 150);
     }
-  });
+  }
+  window.addEventListener("hashchange", offsetAnchor);
+  window.setTimeout(offsetAnchor, 1);
 
   $(window).scroll(function() {
     if($(window).scrollTop() > 300) {

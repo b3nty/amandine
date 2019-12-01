@@ -19,109 +19,95 @@
   -# %meta{:content => "@MeetBoxon", :name => "twitter:creator"}/
   -# %meta{:content => "https://s3-eu-west-1.amazonaws.com/boxon/Tag-Facebook_3.jpg", :name => "twitter:image:src"}/
 
-.wrapper-home
+.wrapper.image-training
   .container
     %section
-      %h1.text-center.text-uppercase
-        Préparation physique et performance
+      %h1.text-left.text-uppercase
+        VOTRE STRUCTURE D'ACCOMPAGNEMENT
+        %br
+        À LA
+        %span PERFORMANCE
+        SPORTIVE
         %span .
-      %p.text-center{style: "padding: 30px 0;"}
-        \- Amandine Hostynek - La Rochelle -
+      %h2.text-left.font-italic
+        Optez pour une solution tout-en-un
+      .text-left
+        %span.btn.btn-contact{:type => "button"}
+          Choisissez H-Training
+          &nbsp;
+          %i.fas.fa-arrow-right
+      %br
+      %br
+      %br
+      %br
+      %br
+      %br
 
-      = simple_form_for(:contact, html: { class: 'form-horizontal' }) do |f|
-        .form-inputs.text-center
-          %ul.list-unstyled.list-inline
-            %li.barre
-              = f.input :email, required: false, label: false, placeholder: "Votre adresse e-mail", autofocus: true
-            %li.barre
-              &nbsp;
-            %li.barre
-              %span#button-newsletter.btn.btn-contact{:type => "button"} Recevoir la news
-            #okidokki
-            #notoki
-
-    .carousel-home.slide.carousel-fade{"data-ride" => "carousel"}
-      .carousel-inner{:role => "listbox"}
-        .item.active
-          = image_tag("h-training-alpinisme.jpg", :alt => "training alpinisme")
-        .item
-          = image_tag("h-training-athletisme.jpg", :alt => "training athletisme")
-        .item
-          = image_tag("h-training-footing.jpg", :alt => "training footing")
-        .item
-          = image_tag("h-training-natation.jpg", :alt => "training natation")
-        .item
-          = image_tag("h-training-preparation.jpg", :alt => "training preparation")
-        .item
-          = image_tag("h-training-sport.jpg", :alt => "training sport")
-
+.wrapper
+  .container
+    %h2.text-center
+      Tout ce dont vous avez besoin... Et même plus
 .wrapper1
   .container
-    %section.text-center
-      %h2
-        NOS AVANTAGES
-        %span .
-      .row
-        .col-md-3
-          %i.fa.fa-4x.fa-users
-          %h3 Travailler tous les facteurs de la performance
-          %p Une équipe pluridisciplinaire pour vous encadrer vers l’atteinte de vos objectifs
-        .col-md-3
-          %i.fa.fa-4x.fa-key
-          %h3 S’entrainer dans des conditions optimales
-          %p Du matériel de haut niveau et l’expertise des intervenants mis à votre disposition
-        .col-md-3
-          %i.fa.fa-4x.fa-chart-line
-          %h3 Avoir accès à un service sur-mesure
-          %p Profitez du suivi individualisé pour se rapprocher au plus près de vos besoins
-        .col-md-3
-          %i.fa.fa-4x.fa-sign-language
-          %h3 Evoluer dans un environnement favorable
-          %p Appartenez à une communauté de sportifs pour entretenir votre motivation et dépasser vos limites
-
-.wrapper-carousel
-  .container
+    %br
+    %br
+    %hr.text-center.hr-red
+    %br
+    %br
     .row
-      .col-md-12{"data-wow-delay" => "0.2s"}
-        #quote-carousel.carousel.slide{"data-ride" => "carousel"}
-          / Bottom Carousel Indicators
-          %ol.carousel-indicators
-            %li.active{"data-slide-to" => "0", "data-target" => "#quote-carousel"}
-              = image_tag("eastern-suburbs-rufc-logo.png", :alt => "Eastern Suburbs RUFC Logo", :class => "img-responsive")
-            %li{"data-slide-to" => "1", "data-target" => "#quote-carousel"}
-              = image_tag("jasmine-mesics.jpg", :alt => "Jasmine MESICS", :class => "img-responsive")
-            %li{"data-slide-to" => "2", "data-target" => "#quote-carousel"}
-              = image_tag("herry.jpg", :alt => "François Herry", :class => "img-responsive")
-          / Carousel Slides / Quotes
-          .carousel-inner.text-center
-            / Quote 1
-            .item.active
-              %blockquote
-                .row
-                  .col-sm-8.col-sm-offset-2
-                    %span{style: "color:#333333"}
-                      I have thoroughly enjoyed working with Amandine. In a short space of time she became a truly valuable asset to our team. She is honest, dependable, a fast learner and incredibly hard-working. Beyond that, she is an impressive Strength Coach who is always able to get the best from our athletes.
-                    %small Head Strength and Conditioning Coach, Eastern Suburbs Rugby Union (Sydney, Aus.)
-                    %h4 Dan Bradley
-            / Quote 2
-            .item
-              %blockquote
-                .row
-                  .col-sm-8.col-sm-offset-2
-                    %span{style: "color:#333333"}
-                      I really have to say I reeeeeally like the workouts its so much better than using boring machines and I THINK I can feel results already. You were sooo right.
-                      %br
-                      A highly motivated, caring, kind and understanding coach who turned my world upsidedown.
-                    %small Particulier
-                    %h4 Jasmine MESICS
-            / Quote 3
-            .item
-              %blockquote
-                .row
-                  .col-sm-8.col-sm-offset-2
-                    %span{style: "color:#333333"}
-                      Preparateur physique tres technique
-                      = link_to "Amandine Hostynek", h_training_path, title: "Amandine Hostynek"
-                      je recommande fortement elle m’a permis de progresser et de franchir un cap
-                    %small Joueur de rugby professionnel à l’USON Nevers (PROD2), anciennement Stade Rochelais (TOP14)
-                    %h4 François Herry
+      .col-md-3.text-center
+        %i.fa.fa-4x.fa-users.black
+        %h3.padding-10 Travailler tous les facteurs de la performance
+        %p Une équipe pluridisciplinaire pour vous encadrer vers l’atteinte de vos objectifs
+      .col-md-3.text-center
+        %i.fa.fa-4x.fa-key.black
+        %h3.padding-10 S’entrainer dans des conditions optimales
+        %p Du matériel de haut niveau et l’expertise des intervenants mis à votre disposition
+      .col-md-3.text-center
+        %i.fa.fa-4x.fa-chart-line.black
+        %h3.padding-10 Avoir accès à un service sur-mesure
+        %p Profitez du suivi individualisé pour se rapprocher au plus près de vos besoins
+      .col-md-3.text-center
+        %i.fa.fa-4x.fa-sign-language.black
+        %h3.padding-10 Evoluer dans un environnement favorable
+        %p Appartenez à une communauté de sportifs pour entretenir votre motivation et dépasser vos limites
+
+.wrapper1
+  %hr.hr-grey
+  %br
+  %br
+  %br
+  .container
+    %h2.text-center
+    .row
+      .col-md-3.marge_b30
+        = image_tag("beach-session.jpg", :alt => "Beach session", :class => "img-responsive")
+      .col-md-3.marge_b30
+        = image_tag("rugby-preparation-physique.jpg", :alt => "Rugby préparation physique", :class => "img-responsive")
+      .col-md-3.marge_b30
+        = image_tag("rugby-step-up.jpg", :alt => "Rugby step-up", :class => "img-responsive")
+      .col-md-3.marge_b30
+        = image_tag("track-and-field.jpg", :alt => "Track & field", :class => "img-responsive")
+      .col-md-3.marge_b30
+        = image_tag("push-press.jpg", :alt => "Push press.jpg", :class => "img-responsive")
+      .col-md-3.marge_b30
+        = image_tag("medaille-athlete.jpg", :alt => "Médaille athlète", :class => "img-responsive")
+      .col-md-3.marge_b30
+        = image_tag("wattbike-preparation-physique.jpg", :alt => "Wattbike préparation physique", :class => "img-responsive")
+      .col-md-3.marge_b30
+        = image_tag("gym-work-out.jpg", :alt => "Gym work-out.jpg", :class => "img-responsive")
+      .col-md-3.marge_b30
+        = image_tag("athletes-sailing.jpg", :alt => "Athlètes sailing", :class => "img-responsive")
+      .col-md-3.marge_b30
+        = image_tag("athlete-sailing.jpg", :alt => "Athlète-sailing", :class => "img-responsive")
+      .col-md-3.marge_b30
+        = image_tag("work-out.jpg", :alt => "Work-out", :class => "img-responsive")
+      .col-md-3.marge_b30
+        = image_tag("preparation-physique-olympique.jpg", :alt => "Préparation physique olympique", :class => "img-responsive")
+    %br
+    %br
+    .text-center
+      %span.btn.btn-contact{:type => "button"}
+        Accéder à la galerie photos
+        &nbsp;
+        %i.fas.fa-arrow-right

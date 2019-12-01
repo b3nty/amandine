@@ -1,34 +1,108 @@
 %header
-  %nav.navbar.navbar-default.navbar-fixed-top.navbar-transparent{:role => "navigation"}
+  %nav.navbar.navbar-fixed-top{:role => "navigation"}
     .container
       / Brand and toggle get grouped for better mobile display
       .navbar-header
         %button.navbar-toggle{"data-target" => "#bs-example-navbar-collapse-1", "data-toggle" => "collapse", :type => "button"}
           %span.fa.fa-bars
         = link_to('/', title: "Homepage de H-training", class: "navbar-brand") do
-          = image_tag("logo-h-training-white.png", :alt => "logo h-training", :height => "50px", :id => "log", :class => "display-mobile")
-          = image_tag("logo-h-training-black.png", :alt => "logo h-training", :height => "50px", :id => "log", :class => "display-screen")
+          = image_tag("new-logo-h-training.png", :alt => "logo h-training", :height => "120px", :id => "log", :class => "display-mobile")
       / Collect the nav links, forms, and other content for toggling
       #bs-example-navbar-collapse-1.collapse.navbar-collapse
         .text-center
-          %ul.nav.navbar-nav.navbar-center
+          %ul.nav.navbar-nav.navbar-left
             %li.nav-item
-              = link_to 'H-training', h_training_path, title: "H-training", :class => current_page?(h_training_path) && 'active'
+              = link_to 'Notre mission', notre_mission_path, title: "Notre mission", :class => current_page?(notre_mission_path) && 'active'
+            %li.nav-item.dropdown
+              = link_to 'Services', services_path, title: "Services", :class => current_page?(services_path) && 'active', class: "nav-link dropdown-toggle", id:"navbarDropdownMenuLink", aria: {haspopup: true, expanded: true}
+              .dropdown-menu.text-xs-center.display-mobile{ aria: {labelledby: "navbarDropdownMenuLink"}, role:"menu"}
+                .container.wrapper-dropdown
+                  .row
+                    .col-md-4
+                      %span SERVICES
+                      %ul
+                        %li.dropdown-item
+                          = link_to 'H-PERF', services_path(anchor: 'hperf'), title: "Services : H-PERF", class: "dropdown-item"
+                        %li.dropdown-item
+                          = link_to 'H-REHAB', services_path(anchor: 'hrehab'), title: "Services : H-REHAB", class: "dropdown-item"
+                        %li.dropdown-item
+                          = link_to 'H-PRO', services_path(anchor: 'hpro'), title: "Services : H-PRO", class: "dropdown-item"
+                        %li.dropdown-item
+                          = link_to 'H-2O', services_path(anchor: 'h2o'), title: "Services : H-2O", class: "dropdown-item"
+                        %li.dropdown-item
+                          = link_to 'H-&Co', services_path(anchor: 'handco'), title: "Services : H-&Co", class: "dropdown-item"
+                    .col-md-4
+                      %span SERVICES ++
+                      %ul
+                        %li.dropdown-item
+                          = link_to 'SUIVI & ANALYSE DATA GPS', services_path(anchor: 'suivi'), title: "Services+ : SUIVI & ANALYSE DATA GPS"
+                        %li.dropdown-item
+                          = link_to 'RÉCUPÉRATION : SOIN & PRESSOTHÉRAPIE', services_path(anchor: 'recuperation'), title: "Services+ : RÉCUPÉRATION : SOIN & PRESSOTHÉRAPIE"
+            %li.nav-item.dropdown
+              = link_to 'Effectif', effectif_path, title: "effectif", :class => current_page?(effectif_path) && 'active', class: "nav-link dropdown-toggle", id:"navbarDropdownMenuLink1", aria: {haspopup: true, expanded: true}
+              .dropdown-menu.text-xs-center.display-mobile{ aria: {labelledby: "navbarDropdownMenuLink1"}, role:"menu"}
+                .container.wrapper-dropdown
+                  .row
+                    .col-md-4
+                      %span STAFF
+                      %ul
+                        %li.dropdown-item
+                          = link_to 'SPORTIF', effectif_path(anchor: 'sportif'), title: "Effectif : SPORTIF"
+                        %li.dropdown-item
+                          = link_to 'MÉDICAL', effectif_path(anchor: 'medical'), title: "Effectif : MÉDICAL"
+                    .col-md-4
+                      %span ATHLÈTE
+                      %ul
+                        %li.dropdown-item
+                          = link_to 'ATHLÈTES', effectif_path(anchor: 'athletes'), title: "Effectif : ATHLÈTES"
+                        %li.dropdown-item
+                          = link_to 'INTERVIEWS', effectif_path(anchor: 'interviews'), title: "Effectif : INTERVIEWS"
+                        %li.dropdown-item
+                          = link_to 'TÉMOIGNAGES', effectif_path(anchor: 'temoignages'), title: "Effectif : TÉMOIGNAGES"
+          %ul.nav.navbar-nav.navbar-right
+            %li.nav-item.dropdown
+              = link_to 'Partenaires', partenaires_path, title: "Partenaires", :class => current_page?(partenaires_path) && 'active', class: "nav-link dropdown-toggle", id:"navbarDropdownMenuLink2", aria: {haspopup: true, expanded: true}
+              .dropdown-menu.text-xs-center.display-mobile{ aria: {labelledby: "navbarDropdownMenuLink2"}, role:"menu"}
+                .container.wrapper-dropdown
+                  .row
+                    .col-md-4
+                      %ul
+                        %li.dropdown-item
+                          = link_to 'LISTE PARTENAIRES', partenaires_path(anchor: 'liste'), title: "Partenaires : LISTE PARTENAIRES"
+                        %li.dropdown-item
+                          = link_to 'DEVENIR PARTENAIRE', partenaires_path(anchor: 'devenir'), title: "Partenaires : DEVENIR PARTENAIRE"
+
+            %li.nav-item.dropdown
+              = link_to 'Media', media_path, title: "Media", :class => current_page?(media_path) && 'active', class: "nav-link dropdown-toggle", id:"navbarDropdownMenuLink3", aria: {haspopup: true, expanded: true}
+              .dropdown-menu.text-xs-center.display-mobile{ aria: {labelledby: "navbarDropdownMenuLink3"}, role:"menu"}
+                .container.wrapper-dropdown
+                  .row
+                    .col-md-4
+                      %span PHOTOTHÈQUE
+                      %ul
+                        %li.dropdown-item
+                          = link_to 'CENTRE D\'ENTRAINEMENT', media_path(anchor: 'centre'), title: "Media : CENTRE D'ENTRAINEMENT"
+                        %li.dropdown-item
+                          = link_to 'AU CŒUR DE L\'ACTION', media_path(anchor: 'coeur1'), title: "Media : AU CŒUR DE L'ACTION"
+                        %li.dropdown-item
+                          = link_to 'DÉLOCALISATION', media_path(anchor: 'delocalisation'), title: "Media : DÉLOCALISATION"
+                    .col-md-4
+                      %span VIDEOTHÈQUE
+                      %ul
+                        %li.dropdown-item
+                          = link_to 'INTERVIEWS', media_path(anchor: 'interviews'), title: "Media : INTERVIEWS"
+                        %li.dropdown-item
+                          = link_to 'AU CŒUR DE L\'ACTION', media_path(anchor: 'coeur2'), title: "Media : AU CŒUR DE L'ACTION"
             %li.nav-item
-              = link_to 'Services', services_path, title: "Services", :class => current_page?(services_path) && 'active'
-            %li.nav-item
-              = link_to 'Actualités', actualites_path, title: "Actualités", :class => current_page?(actualites_path) && 'active'
-            %li.nav-item
-              = link_to 'Réservation', reservation_path, title: "Réservation", :class => current_page?(reservation_path) && 'active'
-            %li.nav-item
-              = link_to 'Espace Perso', espace_perso_path, title: "Espace Perso", :class => current_page?(espace_perso_path) && 'active'
-        %ul.nav.navbar-nav.navbar-right
-          %li.nav-item
-            = link_to('https://www.facebook.com/h.training.fr/', target: "_blank", title: "Facebook h-training") do
-              %i.fab.fa-2x.fa-facebook-square
-          %li.nav-item
-            = link_to('https://www.instagram.com/h.training/', target: "_blank", title: "Instagram h-training") do
-              %i.fab.fa-2x.fa-instagram
-          %li.nav-item
-            = link_to('https://www.linkedin.com/company/h-training-fr/', target: "_blank", title: "Linkedin h-training") do
-              %i.fab.fa-2x.fa-linkedin
+              = link_to 'Boutique', boutique_path, title: "Boutique", :class => current_page?(boutique_path) && 'active'
+
+        -# %ul.nav.navbar-nav.navbar-right
+        -#   %li.nav-item
+        -#     = link_to('https://www.facebook.com/h.training.fr/', target: "_blank", title: "Facebook h-training") do
+        -#       %i.fab.fa-2x.fa-facebook-square
+        -#   %li.nav-item
+        -#     = link_to('https://www.instagram.com/h.training/', target: "_blank", title: "Instagram h-training") do
+        -#       %i.fab.fa-2x.fa-instagram
+        -#   %li.nav-item
+        -#     = link_to('https://www.linkedin.com/company/h-training-fr/', target: "_blank", title: "Linkedin h-training") do
+        -#       %i.fab.fa-2x.fa-linkedin

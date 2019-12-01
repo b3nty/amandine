@@ -5,52 +5,35 @@
   %meta{:content => "Préparation physique, objectifs, sportifs, training", :name => "keywords"}/
   %meta{:content => "all", :name => "robots"}/
 
-.wrapper2
+.wrapper
   .container
     %section
-      %h1.text-center.text-uppercase
-        H-TRAINING
+      %h1.text-left.text-uppercase
+        Notre mission
         %span .
-      %h4.text-center
-        La continuité logique d’un parcours professionnel
-        %br
-        qui a traversé les océans pour revenir à son point d’accroche,
-        %br
-        La Rochelle, là où tout a commencé.
-      .bloc-citation
-        %hr
-        %p.text-center
-          %i.fa.fa-2x.fa-quote-left
-        %p.text-center
-          De par son caractère multifactoriel, la performance naît de l’entrainement des différentes composantes qui la caractérisent. Les aspects technique, tactique, physique et mental, représentent les caractéristiques du sportif qui doivent être envisagées dans un système complexe où chacune interagit avec l’autre. C’est la raison pour laquelle je me préoccupe d’accompagner mes athlètes vers leurs objectifs au sein d’une équipe pluridisciplinaire et dédiée.
-        %p.text-center
-          Passionnée par l’entrainement sportif et les sciences qui y sont appliquées, je m’intéresse quotidiennement aux dernières études scientifiques pour proposer l’entrainement le plus adapté au profil et aux besoins individuels de mes athlètes afin qu’ils atteignent leur meilleur niveau. La transmission du savoir à travers la pratique est ma priorité.
-        %p.text-center
-          Du golf au rugby, du sport amateur au sport professionnel de haut niveau, en France jusqu’en Australie, la diversité de mes expériences antérieures et les multiples échanges avec les professionnels du milieu m’ont amené à développer un esprit critique et à affiner ma vision de l’entrainement que je souhaite mettre au service de nos athlètes.
-        %p.text-center
-          %i.fa.fa-2x.fa-quote-right
-        %hr
-        %p.text-center Amandine H.
-
-.wrapper3
-  .container
-    %section.text-center
-      %h4
-        Rejoignez H-TRAINING pour profiter d’un service sur-mesure.
-        %br
-        Votre futur commence aujourd’hui.
       %br
-      = simple_form_for(:contact, html: { class: 'form-horizontal' }) do |f|
-        .form-inputs.text-center
-          %ul.list-unstyled.list-inline
-            %li.barre
-              = f.input :email, required: false, label: false, placeholder: "Votre adresse e-mail", autofocus: false
-            %li.barre
-              &nbsp;
-            %li.barre
-              %span#button-newsletter.btn.btn-contact{:type => "button"} Recevoir la news
-            #okidokki
-            #notoki
+      %br
+      .row.vcenter
+        .col-md-6
+          %p.text-left
+            %i.fa.fa-2x.fa-quote-left
+            %br
+            %br
+            De par son caractère multifactoriel, la performance naît de l’entrainement de différentes composantes :  technique, tactique, physique, mentale …
+            %br
+            %br
+            Toutes les caractéristiques du sportif doivent être envisagées dans un système complexe où chacune interagit avec l’autre. C’est la raison pour laquelle je me préoccupe depuis les débuts du projet H-TRAINING d’unir des forces et de construire progressivement une équipe pluridisciplinaire afin d’accompagner nos athlètes.
+            %br
+            %br
+            Passionnée par l’entrainement et les sciences qui y sont appliquées, je m’intéresse quotidiennement aux dernières études scientifiques pour proposer l’entrainement le plus adapté au profil et aux besoins individuels de mes athlètes afin qu’ils atteignent leur meilleur niveau. La transmission du savoir à travers leur pratique est ma priorité.
+            %br
+            %br
+            Du golf au rugby, du sport amateur au sport professionnel de haut niveau, en France jusqu’en Australie, la diversité de mes expériences antérieures et les multiples échanges avec les professionnels du milieu m’ont amené à développer un esprit critique et à affiner ma vision de l’entrainement que je souhaite mettre au service de nos athlètes.
+            %br
+            %br
+            %i.fa.fa-2x.fa-quote-right
+        .col-md-6
+          = image_tag("portrait-site.png", :alt => "Notre mission", :class => "img-responsive")
 
 .wrapper4
   .container
@@ -88,7 +71,6 @@
                   %h4
                     %i.fa.fa-briefcase
                     Expérience
-
           .tab-content.text-center
             #home.tab-pane.active{:role => "tabpanel"}
               %ul.list-unstyled
@@ -134,6 +116,10 @@
                     %br
                     EREPS : European Register of Exercise Professionals, EQF Level 6 : Personal Trainer, Advanced Health and Exercise Specialist
             #messages.tab-pane{:role => "tabpanel"}
+              %i
+                Avant la création H-TRAINING :
+              %br
+              %br
               %ul.list-unstyled
                 %li
                   %p.text-center

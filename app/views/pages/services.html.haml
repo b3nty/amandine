@@ -5,344 +5,256 @@
   %meta{:content => "Préparation Physique spécifique, Suivi de la performance, Réathlétisation, Prévention de blessure, séances, individuelles, collectives", :name => "keywords"}/
   %meta{:content => "all", :name => "robots"}/
 
-.wrapper5
+.wrapper
   .container
     %section
-      %h1.text-center.text-uppercase
-        Services
+      %h1.text-left.text-uppercase
+        SERVICES
         %span .
-      %h4.text-center
-        Une solution pour chaque besoin.
-      %br
-      .row.menu-service
-        .col-lg-10.col-lg-offset-1.col-xs-12
-          .row.pad-sides
-            %a.col-xs-3.card.text-center.border-right-bottom{:href=>"#card1"}
-              .slide-up
-                %i.fa.fa-2x.fa-thumbs-up
-              .slide-up-title
-                %h3 H-SOLO
-              .slide-down.opacity.translatey.display-mobile
-                %p
-                  49 €
-                  %br
-                  Découvrez l’entrainement sur mesure
-                %i En savoir plus
-            %a.col-xs-3.card.text-center.border-right-bottom{:href=>"#card2"}
-              .slide-up
-                %i.fa.fa-2x.fa-hand-peace
-              .slide-up-title
-                %h3 H-DUO
-              .slide-down.opacity.translatey.display-mobile
-                %p
-                  37 € / pers
-                  %br
-                  Partagez une séance avec un(e) ami(e)
-                %i En savoir plus
-            %a.col-xs-3.card.text-center.border-right-bottom{:href=>"#card3"}
-              .slide-up
-                %i.fa.fa-2x.fa-hand-spock
-              .slide-up-title
-                %h3 H-TRIO
-              .slide-down.opacity.translatey.display-mobile
-                %p
-                  29 € / pers
-                  %br
-                  Partagez une séance avec deux ami(e)s
-                %i En savoir plus
-            %a.col-xs-3.card.text-center.border-bottom{:href=>"#card4"}
-              .slide-up
-                %i.fa.fa-2x.fa-tint
-              .slide-up-title
-                %h3 H-2O
-              .slide-down.opacity.translatey.display-mobile
-                %p
-                  110 € / mois
-                  %br
-                  Dépassez vous au sein d’un groupe
-                %i En savoir plus
-          .row.pad-sides
-            %a.col-xs-3.card.text-center.border-right{:href=>"#card5"}
-              .slide-up
-                %i.fa.fa-2x.fa-trophy
-              .slide-up-title
-                %h3 H-PERF
-              .slide-down.opacity.translatey.display-mobile
-                %p
-                  À parir de 130 € / mois
-                  %br
-                  Offrez vous un entrainement personnalisé
-                %i En savoir plus
-            %a.col-xs-3.card.text-center.border-right{:href=>"#card6"}
-              .slide-up
-                %i.fa.fa-2x.fa-football-ball
-              .slide-up-title
-                %h3 H-PRO
-              .slide-down.opacity.translatey.display-mobile
-                %p
-                  À parir de 71 € / mois
-                  %br
-                  Amenez vos sportifs à leur meilleur niveau
-                %i En savoir plus
-            %a.col-xs-3.card.text-center.border-right{:href=>"#card7"}
-              .slide-up
-                %i.fa.fa-2x.fa-child
-              .slide-up-title
-                %h3 H-18
-              .slide-down.opacity.translatey.display-mobile
-                %p
-                  210 € (1 mois)
-                  %br
-                  Parions sur nos jeunes athlètes
-                %i En savoir plus
-            %a.col-xs-3.card.text-center{:href=>"#card8"}
-              .slide-up
-                %i.fab.fa-2x.fa-slideshare
-              .slide-up-title
-                %h3 H-&Co
-              .slide-down.opacity.translatey.display-mobile
-                %p
-                  280 € / mois
-                  %br
-                  Faites bougez votre entreprise
-                %i En savoir plus
+      %i
+        H TRAINING est une structure d’accueil pour tous les sportifs qui recherchent un accompagnement au quotidien par une équipe d’experts pluridisciplinaires, afin de travailler sur chacun des facteurs de la performance : physique, mental, récupération, nutrition… Chaque objectif est considéré par l’encadrement avec la même attention.
 
-.wrapper3.service-contact
+#hperf
+.animation-element.slide-left.service
+  .header
+    .left
+      %h2.text-left.text-uppercase.blank
+        H-PERF
+    .right
+  .content
+    .row.vcenter
+      .col-md-6.col-xs-6
+        .text-justify
+          S’engager dans le service d’accompagnement personnalisé c’est s’offrir l’opportunité d’atteindre ses objectifs. La planification de l’entraînement est réalisée de façon minutieuse selon votre profil et vos besoins. La souplesse des horaires s’adapte à vos contraintes pour vous permettre d’équilibrer au mieux vos temps de vie. Quel que soit votre objectif, notre équipe qualifiée saura vous conduire vers l’atteinte de vos objectifs.
+      .col-md-6.col-xs-6
+        .text-center
+          %h3
+            Offrez vous un entraînement personnalisé
+          %br
+          %iframe{:allow => "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture", :allowfullscreen => "", :frameborder => "0", :height => "250", :src => "https://www.youtube.com/embed/cJPRr7laO8A", :width => "100%"}
+    .row
+      .col-md-12
+        .text-left
+          À partir de 130 €/mois
+          &nbsp;
+          = link_to("https://h-training.s3.eu-west-3.amazonaws.com/H-PERF.pdf", target: "_blank", title: "Service H-PERF", style: "text-decoration: none;") do
+            %span.btn.btn-contact{:type => "button"}
+              TARIFS H-PERF
+              &nbsp;
+              %i.fas.fa-arrow-right
+
+.wrapper
   .container
-    %section.text-center
-      %h2
-        Personnalisez votre offre
-        %span .
-      %br
-      .row
-        .col-lg-6.col-lg-offset-3
-          = simple_form_for(:form_services, html: { class: 'form-horizontal' }) do |f|
-            .form-inputs.text-center
-              %ul.list-unstyled
-                %li.barre
-                  = f.select :status,  options_for_select(FormService::STATUS), as: :radio_button, selected: "Large", label: false, required: true
-                %li.barre
-                  = f.input :email, required: true, label: false, placeholder: "Votre adresse e-mail", autofocus: false
-                %li.barre
-                  = f.input :phone, required: true, label: false, placeholder: "Votre numéro de téléphone", autofocus: false
-                %li.barre
-                  = f.input :name, required: true, label: false, placeholder: "Nom / Raison sociale", autofocus: false
-                %li.barre
-                  = f.input :message, label: false, required: false, as: :text, placeholder: "Votre message", input_html: {rows: 4}
-                %li.barre
-                  &nbsp;
-                %li.barre
-                  #button-services.btn.btn-contact.ladda-button{:type => "button", "data-style" => "expand-left" }
-                    %span.ladda-label Je demande un devis
-                #okidokki
-                #notoki
 
-.wrapper6
-  %section
-    %h2.text-center
-      Détails des services
-      %span .
-    %br
-    #card1
-    %article
-      .container
-        .row.vcenter
-          .col-xs-4.text-center.article-title
-            %h3 H-SOLO
-            %h4 Découvrez l’entrainement sur mesure
-            %span
-              49 €
-          .col-xs-8
-            Entrainez vous sans vous engager, sous l’œil et le coaching d’un encadrement qualifié
-            %br
-            Votre offre comprend :
-            %ul.list-unstyled
-              %li
-                %i.fas.fa-check.green
-                un échange pour identifier vos besoins
-              %li
-                %i.fas.fa-check.green
-                une séance privée et sur mesure pour 1 personne
-          #card2
-    %article.grey
-      .container
-        .row.vcenter
-          .col-xs-4.text-center.article-title
-            %h3 H-DUO
-            %h4 Partagez une séance avec un(e) ami(e)
-            %span
-              37 € / pers
-          .col-xs-8
-            Entrainez vous sans vous engager, sous l’œil et le coaching d’un encadrement qualifié
-            %br
-            Votre offre comprend :
-            %ul.list-unstyled
-              %li
-                %i.fas.fa-check.green
-                un échange pour identifier vos besoins
-              %li
-                %i.fas.fa-check.green
-                une séance privée et sur-mesure à partager avec un(e) ami(e)
-          #card3
-    %article
-      .container
-        .row.vcenter
-          .col-xs-4.text-center.article-title
-            %h3 H-TRIO
-            %h4 Partagez une séance avec deux ami(e)s
-            %span
-              29 € / pers
-          .col-xs-8.text-justify
-            Entrainez vous sans vous engager, sous l’œil et le coaching d’un encadrement qualifié
-            %br
-            Votre offre comprend :
-            %ul.list-unstyled
-              %li
-                %i.fas.fa-check.green
-                un échange pour identifier vos besoins
-              %li
-                %i.fas.fa-check.green
-                une séance privée et sur-mesure à partager avec deux ami(e)s
-          #card4
-    %article.grey
-      .container
-        .row.vcenter
-          .col-xs-4.text-center.article-title
-            %h3 H-2O
-            %h4 Dépassez vous au sein d’un groupe
-            %span
-              110 € / mois
-          .col-xs-8.text-justify
-            Rejoignez les séances collectives destinées à celles et ceux qui souhaitent développer leur potentiel physique et athlétique au sein d’un groupe et dans un environnement convivial. Mené par un encadrement qualifié, l’entrainement sollicite le corps entier, en vue de vous rendre plus fort, d’améliorer votre condition physique et de travailler votre silhouette, selon votre profil.
-            Chaque séance est considérée comme une unité indépendante offrant de la diversité à votre entrainement.
-            %br
-            Votre offre comprend :
-            %ul.list-unstyled
-              %li
-                %i.fas.fa-check.green
-                accès illimité aux séances collectives
-              %li
-                %i.fas.fa-check.green
-                avantages "membre"
-        #card5
-    %article
-      .container
-        .row.vcenter
-          .col-xs-4.text-center.article-title
-            %h3 H-PERF
-            %h4 Offrez vous un entrainement personnalisé
-            %span
-              À partir de 130 € / mois
-            %br
-            %br
-            .btn.btn-contact.tarif-button{:type => "button"}
-              = link_to "Tarifs H-PERF", "https://s3.eu-west-3.amazonaws.com/h-training/H-PERF.pdf", :target => "_blank"
-          .col-xs-8.text-justify
-            S’engager dans le service d’accompagnement personnalisé c’est s’offrir l’opportunité d’atteindre ses objectifs. La planification de l’entrainement est réalisée de façon minutieuse selon votre profil et vos besoins. La souplesse des horaires s’adapte à vos contraintes pour vous permettre d’équilibrer au mieux vos temps de vie.
-            Quel que soit votre objectif (gain de force, réathlétisation, perte de masse grasse…), notre équipe qualifiée saura vous conduire vers l’atteinte de vos objectifs.
-            %br
-            Votre offre comprend :
-            %ul.list-unstyled
-              %li
-                %i.fas.fa-check.green
-                séances d’entrainement individualisées pendant 1 mois
-              %li
-                %i.fas.fa-check.green
-                échanges par emails
-              %li
-                %i.fas.fa-check.green
-                avantages "membre"
-              %li
-                %i.fas.fa-check.green
-                espace personnel de suivi (à venir)
-          #card6
-    %article.grey
-      .container
-        .row.vcenter
-          .col-xs-4.text-center.article-title
-            %h3 H-PRO
-            %h4 Amenez vos sportifs à leur meilleur niveau
-            %span
-              À partir de 71 € / mois
-            %br
-            %br
-            .btn.btn-contact.tarif-button{:type => "button"}
-              = link_to "Tarifs H-PRO", "https://s3.eu-west-3.amazonaws.com/h-training/H-PRO.pdf", :target => "_blank"
-          .col-xs-8.text-justify
-            H-PRO offre l’opportunité pour un club de profiter d’un environnement propice au développement des qualités physiques de ses sportifs en externalisant son staff.
-            Un entrainement sur-mesure est proposé à vos athlètes et concerne les différents aspects de la performance : le développement des qualités physiques et des systèmes énergétiques spécifiques,  la prévention de blessures, la récupération, la construction de nouvelles habiletés motrices, la mobilité et la flexibilité, du travail spécifique des mouvements fonctionnels en rapport avec l’activité et transférable en situation de compétition.
-            %br
-            Votre offre comprend :
-            %ul.list-unstyled
-              %li
-                %i.fas.fa-check.green
-                séances collectives sur-mesure
-              %li
-                %i.fas.fa-check.green
-                suivi de la performance
-              %li
-                %i.fas.fa-check.green
-                échange mails
-              %li
-                %i.fas.fa-check.green
-                avantages "membre"
-        #card7
-    %article
-      .container
-        .row.vcenter
-          .col-xs-4.text-center.article-title
-            %h3 H-18
-            %h4 Parions sur nos jeunes athlètes
-            %span
-              210 € (1 mois)
-          .col-xs-8.text-justify
-            L’offre H-18 aide les espoirs du sport français (de – 18ans) à se construire des fondations solides pour exceller dans leur discipline sportive.
-            Chaque séance concerne un aspect de la performance ou une combinaison de plusieurs d’entre eux : la mobilité, la force, la vitesse, l’agilité, l’endurance… On porte attention à la technique de chaque mouvement et on les aide à développer des patterns moteurs en vue d’atteindre leur plus haut potentiel physique tout en réduisant les risques de blessures.
-            La taille du groupe (inférieure à 6 sportifs) assure le déroulement de l’entrainement en toute sécurité et que chacun reçoive une attention particulière.
-            %br
-            Votre offre comprend :
-            %ul.list-unstyled
-              %li
-                %i.fas.fa-check.green
-                séances d’entrainement  individualisées pendant 1 mois (dans la limite de 3 par semaine)
-              %li
-                %i.fas.fa-check.green
-                échange mails
-              %li
-                %i.fas.fa-check.green
-                avantages "membre"
-              %li
-                %i.fas.fa-check.green
-                espace personnel de suivi (à venir)
-          #card8
-    %article.grey
-      .container
-        .row.vcenter
-          .col-xs-4.text-center.article-title
-            %h3 H-&Co
-            %h4 Faites bougez votre entreprise
-            %span
-              280 € / mois
-          .col-xs-8.text-justify
-            Des arguments en faveur de la pratique physique et collective pour votre entreprise ? L’entrainement collectif optimisera les relations entre les collègues et la hiérarchie, valorisera l’image de votre entreprise en véhiculant une image moderne, renforcera l’esprit de groupe, augmentera le sentiment d’adhésion au sein de l’équipe, optimisera la performance professionnelle, diminuera les coûts de santé en prévenant les problèmes liés à la sédentarité, luttera contre le stress de vos employés, tout en améliorant leur concentration et la gestion de la fatigue.
-            Ces arguments seront d’autant plus intéressants pour les métiers soumis au stress ou sous pression permanente de rentabilité, dont la cohésion entre salariés est un déterminant  de la performance, favorisant la sédentarité (bureau, conducteurs de transports), ou à activité répétitive (usine).
-            %br
-            Votre offre comprend :
-            %ul.list-unstyled
-              %li
-                %i.fas.fa-check.green
-                séances collectives sur-mesure
-              %li
-                %i.fas.fa-check.green
-                échange mails
-              %li
-                %i.fas.fa-check.green
-                avantages "membre"
-            %br
-            %i À partir de 280 € / mois (1 fois / semaine), 360 € (2 fois / semaine)
-        #card9
+#hrehab
+.animation-element.slide-left.service
+  .header
+    .left
+      %h2.text-left.text-uppercase.blank
+        H-REHAB
+    .right
+  .content
+    .row.vcenter
+      .col-md-6.col-xs-6
+        .text-justify
+          Une blessure peut être vécue comme un coup d’arrêt, mais H-TRAINING s’efforcera de vous faire comprendre, et que vous l’intégriez, que la période de réathlétisation lors d’une blessure est aussi un moment opportun pour travailler sur ses points faibles et renforcer ses points forts quand parfois la densité du calendrier ne permet plus de “fatiguer” les organismes en période compétition...
+      .col-md-6.col-xs-6
+        .text-center
+          %h3
+            Revenez meilleur après votre blessure
+          %br
+          %br
+          %br
+          %br
+          %br
+          %br
+          %br
+          %br
+          %br
+          %br
+          %br
+          %br
+          %br
+    .row
+      .col-md-12
+        .text-left
+          À partir de 130 €/mois
+          &nbsp;
+          = link_to("https://h-training.s3.eu-west-3.amazonaws.com/H-REHAB+pre%CC%81sentation.pdf", target: "_blank", title: "Service H-REHAB", style: "text-decoration: none;") do
+            %span.btn.btn-contact{:type => "button"}
+              Service H-REHAB
+              &nbsp;
+              %i.fas.fa-arrow-right
+
+.wrapper
+  .container
+
+#hpro
+.animation-element.slide-left.service
+  .header
+    .left
+      %h2.text-left.text-uppercase.blank
+        H-PRO
+    .right
+  .content
+    .row.vcenter
+      .col-md-6.col-xs-6
+        .text-justify
+          H-PRO offre l’opportunité pour un club de profiter d’un environnement propice au développement des qualités physiques de ses sportifs en externalisant son staff. Un entrainement sur-mesure est proposé à vos athlètes et concerne les différents aspects de la performance : le développement des qualités physiques et des systèmes énergétiques spécifiques, la prévention de blessures, la récupération, la construction de nouvelles habiletés motrices, la mobilité et la flexibilité, du travail spécifique des mouvements fonctionnels en rapport avec l’activité et transférable en situation de compétition.
+      .col-md-6.col-xs-6
+        .text-center
+          %h3
+            Amenez vos sportifs à leurs meilleurs niveaux
+          %br
+          %iframe{:allow => "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture", :allowfullscreen => "", :frameborder => "0", :height => "250", :src => "https://www.youtube.com/embed/VMbQ52h86A4", :width => "100%"}
+    .row
+      .col-md-12
+        .text-left
+          = link_to(contact_path, title: "contact") do
+            %span.btn.btn-contact{:type => "button"}
+              Demander un devis
+              &nbsp;
+              %i.fas.fa-arrow-right
+
+.wrapper
+  .container
+
+#h2o
+.animation-element.slide-left.service
+  .header
+    .left
+      %h2.text-left.text-uppercase.blank
+        H-(2)O
+    .right
+  .content
+    .row.vcenter
+      .col-md-6.col-xs-6
+        .text-justify
+          Rejoignez les séances collectives destinées à celles et ceux qui souhaitent développer leur potentiel physique et athlétique au sein d’un groupe et dans un environnement convivial. Mené par un encadrement qualifié, l’entraînement sollicite le corps entier, en vue de vous rendre plus fort, d’améliorer votre condition physique et de travailler votre silhouette, selon votre profil. Chaque séance est considérée comme une unité indépendante offrant de la diversité à votre entraînement.
+      .col-md-6.col-xs-6
+        .text-center
+          %h3
+            Dépassez vous au sein d’un groupe
+          %br
+          %iframe{:allow => "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture", :allowfullscreen => "", :frameborder => "0", :height => "250", :src => "https://www.youtube.com/embed/3krdRuj0LX0", :width => "100%"}
+    .row
+      .col-md-12
+        .text-left
+          À partir de 75 €/mois
+          &nbsp;
+          = link_to("https://h-training.s3.eu-west-3.amazonaws.com/H-(2)O+.pdf", target: "_blank", title: "Service H-PRO", style: "text-decoration: none;") do
+            %span.btn.btn-contact{:type => "button"}
+              TARIFS H-(2)O
+              &nbsp;
+              %i.fas.fa-arrow-right
+
+.wrapper
+  .container
+
+#handco
+.animation-element.slide-left.service
+  .header
+    .left
+      %h2.text-left.text-uppercase.blank
+        H-&Co
+    .right
+  .content
+    .row.vcenter
+      .col-md-6.col-xs-6
+        .text-justify
+          L’entrainement collectif optimisera les relations entre les collègues et la hiérarchie, valorisera l’image de votre entreprise en véhiculant une image moderne, renforcera l’esprit de groupe, augmentera le sentiment d’adhésion au sein de l’équipe, optimisera la performance professionnelle, diminuera les coûts de santé en prévenant les problèmes liés à la sédentarité, luttera contre le stress de vos employés, tout en améliorant leur concentration et la gestion de la fatigue. Ces arguments seront d’autant plus intéressants pour les métiers soumis au stress ou sous pression permanente de rentabilité, dont la cohésion entre salariés est un déterminant  de la performance, favorisant la sédentarité (bureau, conducteurs de transports), ou à activité répétitive (usine).
+      .col-md-6.col-xs-6
+        .text-center
+          %h3
+            Faites bouger votre entreprise
+          %br
+          %br
+          %br
+          %br
+          %br
+          %br
+          %br
+          %br
+          %br
+          %br
+          %br
+          %br
+          %br
+    .row
+      .col-md-12
+        .text-left
+
+.wrapper
+  .container
+.wrapper
+  .container
+    %hr.hr-grey
+
+.wrapper
+  .container
+    %h2.text-left.text-uppercase
+      SERVICES
+      %span ++
+
+#suivi
+.animation-element.slide-right.service
+  .header
+    .right
+      %h2.text-right.text-uppercase.blank
+        Suivi et Analyse Data GPS
+    .left
+  .content
+    .row.vcenter
+      .col-md-6.col-xs-6
+        .text-center
+          %h3
+            Offrez vous un entraînement personnalisé
+          %br
+          = image_tag("service-suivi-analyse.jpg", :alt => "Suivi et Analyse Data GPS", :class => "img-responsive")
+      .col-md-6.col-xs-6
+        .text-justify
+          S’engager dans le service d’accompagnement personnalisé c’est s’offrir l’opportunité d’atteindre ses objectifs. La planification de l’entraînement est réalisée de façon minutieuse selon votre profil et vos besoins. La souplesse des horaires s’adapte à vos contraintes pour vous permettre d’équilibrer au mieux vos temps de vie. Quel que soit votre objectif, notre équipe qualifiée saura vous conduire vers l’atteinte de vos objectifs.
+    .row
+      .col-md-12
+        .text-right
+          -# = link_to("https://h-training.s3.eu-west-3.amazonaws.com/H-(2)O+.pdf", target: "_blank", title: "Service H-PRO", style: "text-decoration: none;") do
+          -#   %span.btn.btn-contact{:type => "button"}
+          -#     %i.fas.fa-arrow-left
+          -#     &nbsp;
+          -#     SERVICE Suivi et Analyse
+          -# &nbsp;
+          À partir de 50 €/mois
 
 
 
+.wrapper
+  .container
 
-= render 'layouts/js_btn_scrolltop'
+#h2o
+.animation-element.slide-right.service
+  .header
+    .right
+      %h2.text-right.text-uppercase.blank
+        Récupération : soins et pressothérapie
+    .left
+  .content
+    .row.vcenter
+      .col-md-6.col-xs-6
+        .text-center
+          %h3
+            Bien s’entraîner c’est aussi bien récupérer !
+          %br
+          = image_tag("service-soins-et-recuperation.jpg", :alt => "Récupération : soins et pressothérapie", :class => "img-responsive")
+      .col-md-6.col-xs-6
+        .text-justify
+          La structure H-TRAINING a souhaité vous mettre à disposition des soins quotidiens sur place grâce à la présence d’un professionnel de santé parmi son staff, kinésithérapeute, qui se déplace au centre d’entraînement 3 fois par mois.
+          %br
+          Les bottes de pressothérapie NORMATEC peuvent être utilisées en complément de façon illimitée selon disponibilité après vos séances d’entraînement.
+    .row
+      .col-md-12
+        .text-right
+          À partir de 50 €/mois
+
+
+.wrapper
+  .container

@@ -5,35 +5,59 @@
   %meta{:content => "contact", :name => "keywords"}/
   %meta{:content => "all", :name => "robots"}/
 
-.wrapper5
+.wrapper
   .container
     %section
       %h1.text-center.text-uppercase
         Contact
         %span .
 
-.wrapper-general
-  .container
+.container.service-contact
+  .text-center
     .row
-      .col-lg-10.col-lg-offset-1
-        .row.vcenter
-          .col-lg-4
-            %h4
-              Tel
+      .col-lg-6.col-lg-offset-3
+        = simple_form_for(:form_services, html: { class: 'form-horizontal' }) do |f|
+          .form-inputs.text-center
             %ul.list-unstyled
-              %li +33 6 58 10 45 68
-            %h4
-              Mail
-            %ul.list-unstyled
-              %li
-                %a{:href => "mailto:amandine@h-training.fr"}amandine@h-training.fr
-            %h4
-              H-training
-            %ul.list-unstyled
-              %li Atlantic Stadium Multisports
-              %li 24 Avenue Paul Langevin
-              %li 17180 Perigny
-            %br
-            = image_tag("atlantic-stadium-multisports-h-training.jpg", :alt => "Atlantic Stadium Multisports", style: "max-width:100%")
-          .col-lg-8
-            %iframe{:allowfullscreen => "", :frameborder => "0", :height => "450", :src => "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2763.4141543340174!2d-1.0939237844190357!3d46.162410879115434!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48014d9ce9ef1733%3A0xc8abe0e18d00cfeb!2s24+Avenue+Paul+Langevin%2C+17180+Perigny!5e0!3m2!1sfr!2sfr!4v1524818603378", :style => "border:0", :width => "600"}
+              %li.barre
+                = f.select :status,  options_for_select(FormService::STATUS), as: :radio_button, selected: "Large", label: false, required: true
+              %li.barre
+                = f.input :email, required: true, label: false, placeholder: "Votre adresse e-mail", autofocus: false
+              %li.barre
+                = f.input :phone, required: true, label: false, placeholder: "Votre numéro de téléphone", autofocus: false
+              %li.barre
+                = f.input :name, required: true, label: false, placeholder: "Nom / Raison sociale", autofocus: false
+              %li.barre
+                = f.input :message, label: false, required: false, as: :text, placeholder: "Votre message", input_html: {rows: 4}
+              %li.barre
+                &nbsp;
+              %li.barre
+                %span#button-services.btn.btn-contact{:type => "button", "data-style" => "expand-left" }
+                  %span.ladda-label Je prends contact
+              #okidokki
+              #notoki
+
+.container
+  .row
+    .col-lg-10.col-lg-offset-1
+      .row.vcenter
+        .col-lg-4
+          %h4
+            Tel
+          %ul.list-unstyled
+            %li +33 6 58 10 45 68
+          %h4
+            Mail
+          %ul.list-unstyled
+            %li
+              %a{:href => "mailto:amandine@h-training.fr"}amandine@h-training.fr
+          %h4
+            H-training
+          %ul.list-unstyled
+            %li Atlantic Stadium Multisports
+            %li 24 Avenue Paul Langevin
+            %li 17180 Perigny
+          %br
+          = image_tag("atlantic-stadium-multisports-h-training.jpg", :alt => "Atlantic Stadium Multisports", style: "max-width:100%")
+        .col-lg-8
+          %iframe{:allowfullscreen => "", :frameborder => "0", :height => "450", :src => "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2763.4141543340174!2d-1.0939237844190357!3d46.162410879115434!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48014d9ce9ef1733%3A0xc8abe0e18d00cfeb!2s24+Avenue+Paul+Langevin%2C+17180+Perigny!5e0!3m2!1sfr!2sfr!4v1524818603378", :style => "border:0", :width => "600"}
