@@ -11,7 +11,7 @@
       %h1.text-left.text-uppercase
         Effectif
         %span .
-      %h2.text-left.title-section
+      %h2.text-left.title-section#athletes
         Athlètes
 
 .wrapper
@@ -49,6 +49,51 @@
         = image_tag("pernelle-michon-voila-laser-radial.png", :alt => "Pernelle Michon septembre 2018", :class => "img-responsive zoom")
       .col-md-2
         = image_tag("maxime-bernard-padel-tennis.png", :alt => "Maxime Bernard juillet 2018", :class => "img-responsive zoom")
+
+.wrapper
+  .container
+    %hr.hr-grey
+
+.wrapper
+  .container
+    %h2.text-left.title-section#temoignages
+      Témoignages
+    %br
+    %br
+    .container
+      .row
+        .col-md-8.col-md-offset-2
+          #carousel-example-generic.carousel.slide{"data-ride" => "carousel"}
+            %ol.carousel-indicators
+              %li.active{"data-slide-to" => "0", "data-target" => "#carousel-example-generic"}
+              %li{"data-slide-to" => "1", "data-target" => "#carousel-example-generic"}
+              %li{"data-slide-to" => "2", "data-target" => "#carousel-example-generic"}
+              %li{"data-slide-to" => "3", "data-target" => "#carousel-example-generic"}
+              %li{"data-slide-to" => "4", "data-target" => "#carousel-example-generic"}
+              %li{"data-slide-to" => "5", "data-target" => "#carousel-example-generic"}
+              %li{"data-slide-to" => "6", "data-target" => "#carousel-example-generic"}
+            / Wrapper for slides
+            .carousel-inner{:role => "listbox"}
+              .item.active
+                = image_tag("temoignage-francois-herry.jpg", :alt => "Témoignage de François Herry", :class => "img-responsive")
+              .item
+                = image_tag("temoignage-lucie-anastassiou.jpg", :alt => "Témoignage de Lucie Anastassiou", :class => "img-responsive")
+              .item
+                = image_tag("temoignage-maxime-rochet.jpg", :alt => "Témoignage de Maxime Rochet", :class => "img-responsive")
+              .item
+                = image_tag("temoignage-maxime-bernard.jpg", :alt => "Témoignage de Maxime Bernard", :class => "img-responsive")
+              .item
+                = image_tag("temoignage-elodie-bld.jpg", :alt => "Témoignage de Elodie Bld", :class => "img-responsive")
+              .item
+                = image_tag("temoignage-pernelle-michon.jpg", :alt => "Témoignage de Pernelle Michon", :class => "img-responsive")
+              .item
+                = image_tag("temoignage-dan-bradley.jpg", :alt => "Témoignage de Dan Bradley", :class => "img-responsive")
+            %a.left.carousel-control{"data-slide" => "prev", :href => "#carousel-example-generic", :role => "button"}
+              %span.glyphicon.glyphicon-chevron-left{"aria-hidden" => "true"}
+              %span.sr-only Previous
+            %a.right.carousel-control{"data-slide" => "next", :href => "#carousel-example-generic", :role => "button"}
+              %span.glyphicon.glyphicon-chevron-right{"aria-hidden" => "true"}
+              %span.sr-only Next
 
 .wrapper
   .container
