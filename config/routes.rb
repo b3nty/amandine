@@ -11,7 +11,8 @@ Rails.application.routes.draw do
   match '/media', :to => 'pages#media', :via => [:get]
   match '/boutique', :to => 'pages#boutique', :via => [:get]
   match '/newsletter', :to => 'pages#newsletter', :via => [:get]
-  match '/form-services', :to => 'pages#form_services', :via => [:get]
+  match '/form-contact', :to => 'pages#form_contact', :via => [:get]
+  match '/form-boutique', :to => 'pages#form_boutique', :via => [:get]
   match '/contact', :to => 'pages#contact', :via => [:get]
   match '/mentions-legales', :to => 'pages#mentions_legales', :via => [:get]
 

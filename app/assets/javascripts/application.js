@@ -31,9 +31,10 @@ setTimeout("ga('send','event','Temps passé sur la page','15 seconds')",15000);
 
 $( document ).on('turbolinks:load', function() {
 
-  // Instantiate the Bootstrap carousel
-  $('.multi-item-carousel').carousel({
-    interval: false
+  $('#theCarousel').carousel({
+    interval: 3000,
+    pause: null,
+    wrap: true
   });
 
   // for every slide in carousel, copy the next slide's item in the slide.
@@ -82,6 +83,7 @@ $( document ).on('turbolinks:load', function() {
   function offsetAnchor() {
     if(location.hash.length !== 0) {
         window.scrollTo(window.scrollX, window.scrollY - 150);
+        window.location.reload(true);
     }
   }
   window.addEventListener("hashchange", offsetAnchor);

@@ -417,7 +417,7 @@ footer
       textarea:-ms-input-placeholder
         @content
     @include placeholder()
-      color: #000
+      color: #ccc
     input
       padding: 8px 0 12px 10px !important
       background-color: #eee
@@ -436,7 +436,7 @@ footer
       input:-ms-input-placeholder
         @content
     @include placeholder()
-      color: #222
+      color: #ccc
     .form-control
       height: 36px
     #form_services_message
@@ -534,9 +534,6 @@ footer
       backface-visibility: visible
       transform: none !important
 
-  .carouse-control.left, .carouse-control.right
-      background-image: none !important
-
 .bloc-effectif
   .zoom
     -webkit-transition: all 0.35s ease-in-out
@@ -554,6 +551,10 @@ footer
       position: relative
       z-index: 100
       background: #fff
+
+#carousel-example-generic
+  .carousel-control
+    opacity: 0
 
 @media (min-width: 768px)
   .display-screen
