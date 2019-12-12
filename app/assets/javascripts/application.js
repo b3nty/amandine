@@ -199,12 +199,12 @@ $( document ).on('turbolinks:load', function() {
       type: "GET",
       success: function(data) {
         if(data.status == true) {
-          $('#okidokki').html('<li><i style="font-size:16px;color:#5cb85c;margin-bottom:10px;" class="fa fa-check-circle"> Formulaire envoyé</i></li>');
+          $('#okidokki').html('<li style="list-style: none;"><i style="font-size:16px;color:#5cb85c;margin-bottom:10px;" class="fa fa-check-circle"> Formulaire envoyé</i></li>');
           $('.barre').css('display', 'none');
           $('#notoki').css('display', 'none');
         }
         if(data.status == false) {
-          $('#notoki').html('<li><i style="font-size: 16px;color:#ea5656;margin-bottom:10px;margin-top:10px;" class="fa fa-exclamation-circle"> L\'un des champs est manquant ou incorrect</i></li>');
+          $('#notoki').html('<li style="list-style: none;"><i style="font-size: 16px;color:#ea5656;margin-bottom:10px;margin-top:10px;" class="fa fa-exclamation-circle"> L\'un des champs est manquant ou incorrect</i></li>');
           l.stop();
         }
       }
@@ -228,12 +228,15 @@ $( document ).on('turbolinks:load', function() {
       type: "GET",
       success: function(data) {
         if(data.status == true) {
-          $('#okidokki').html('<li><i style="font-size:16px;color:#5cb85c;margin-bottom:10px;" class="fa fa-check-circle"> Vous serez contacté quand votre achat sera disponible au centre d\'entrainement</i></li>');
+          $('#okidokki').html('<li style="list-style: none;"><i style="font-size:16px;color:#5cb85c;margin-bottom:10px;" class="fa fa-check-circle"> Vous serez contacté quand votre achat sera disponible au centre d\'entrainement</i></li>');
           $('.barre').css('display', 'none');
           $('#notoki').css('display', 'none');
+          setTimeout(function(){
+            $('#exampleModal').close();
+          }, 5000);
         }
         if(data.status == false) {
-          $('#notoki').html('<li><i style="font-size: 16px;color:#ea5656;margin-bottom:10px;margin-top:10px;" class="fa fa-exclamation-circle"> L\'un des champs est manquant ou incorrect</i></li>');
+          $('#notoki').html('<li style="list-style: none;"><i style="font-size: 16px;color:#ea5656;margin-bottom:10px;margin-top:10px;" class="fa fa-exclamation-circle"> L\'un des champs est manquant ou incorrect</i></li>');
           l.stop();
         }
       }
