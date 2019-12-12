@@ -88,7 +88,7 @@
       .col-md-3.marge_b30
         = image_tag("rugby-step-up.jpg", :alt => "Rugby step-up", :class => "img-responsive")
       .col-md-3.marge_b30
-        = image_tag("track-and-field.jpg", :alt => "Track & field", :class => "img-responsive")
+        = image_tag("preparation-physique-olympique.jpg", :alt => "Préparation physique olympique", :class => "img-responsive")
       .col-md-3.marge_b30
         = image_tag("push-press.jpg", :alt => "Push press.jpg", :class => "img-responsive")
       .col-md-3.marge_b30
@@ -96,20 +96,5 @@
       .col-md-3.marge_b30
         = image_tag("wattbike-preparation-physique.jpg", :alt => "Wattbike préparation physique", :class => "img-responsive")
       .col-md-3.marge_b30
-        = image_tag("gym-work-out.jpg", :alt => "Gym work-out.jpg", :class => "img-responsive")
-      .col-md-3.marge_b30
-        = image_tag("athletes-sailing.jpg", :alt => "Athlètes sailing", :class => "img-responsive")
-      .col-md-3.marge_b30
-        = image_tag("athlete-sailing.jpg", :alt => "Athlète-sailing", :class => "img-responsive")
-      .col-md-3.marge_b30
-        = image_tag("work-out.jpg", :alt => "Work-out", :class => "img-responsive")
-      .col-md-3.marge_b30
-        = image_tag("preparation-physique-olympique.jpg", :alt => "Préparation physique olympique", :class => "img-responsive")
-    %br
-    %br
-    .text-center
-      = link_to(media_path, title: "Accéder à la galerie photos") do
-        %span.btn.btn-contact{:type => "button"}
-          Accéder à la galerie photos
-          &nbsp;
-          %i.fas.fa-arrow-right
+        = link_to(media_path, title: "Accéder à la galerie photos") do
+          = image_tag("athlete-sailing.jpg", :alt => "Athlète-sailing", :class => "img-responsive")
