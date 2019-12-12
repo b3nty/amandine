@@ -61,35 +61,26 @@ class PagesController < ApplicationController
     end
   end
 
-  def services
-  end
-
-  def form_contact
-    @form_contact = FormContact.new
-    @form_contact.status = params[:value1]
-    @form_contact.email = params[:value2]
-    @form_contact.phone = params[:value3]
-    @form_contact.name = params[:value4]
-    @form_contact.message = params[:value5]
-    if ( !@form_contact.status.blank? && EmailValidator.valid?(params[:value2]) && !@form_contact.phone.blank? && !@form_contact.name.blank? && !@form_contact.message.blank? )
+  def form_service
+    @form_service = FormService.new
+    @form_service.status = params[:value1]
+    @form_service.email = params[:value2]
+    @form_service.phone = params[:value3]
+    @form_service.name = params[:value4]
+    @form_service.message = params[:value5]
+    if ( !@form_service.status.blank? && EmailValidator.valid?(params[:value2]) && !@form_service.phone.blank? && !@form_service.name.blank? && !@form_service.message.blank? )
       result = {:status => true}
-      @form_contact.save
+      @form_service.save
       respond_to do |format|
         format.json { render :json => result.to_json }
       end
-      UserMailer.contact(@form_contact).deliver
+      UserMailer.contact(@form_service).deliver
     else
       result = {:status => false}
       respond_to do |format|
         format.json { render :json => result.to_json }
       end
     end
-  end
-
-  def reservation
-  end
-
-  def espace_perso
   end
 
   def contact

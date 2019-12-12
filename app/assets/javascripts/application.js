@@ -83,7 +83,6 @@ $( document ).on('turbolinks:load', function() {
   function offsetAnchor() {
     if(location.hash.length !== 0) {
         window.scrollTo(window.scrollX, window.scrollY - 150);
-        window.location.reload(true);
     }
   }
   window.addEventListener("hashchange", offsetAnchor);
@@ -185,17 +184,17 @@ $( document ).on('turbolinks:load', function() {
     if ( e.which == 13 ) return false;
   });
 
-  $("#button-services").click(function() {
+  $("#button-service").click(function() {
     var l = Ladda.create(this);
     l.start();
     $.ajax({
-      url: 'form-services',
+      url: 'form-service',
       data: {
-          value1: $('#form_services_status').val(),
-          value2: $('#form_services_email').val(),
-          value3: $('#form_services_phone').val(),
-          value4: $('#form_services_name').val(),
-          value5: $('#form_services_message').val()
+          value1: $('#form_service_status').val(),
+          value2: $('#form_service_email').val(),
+          value3: $('#form_service_phone').val(),
+          value4: $('#form_service_name').val(),
+          value5: $('#form_service_message').val()
       },
       type: "GET",
       success: function(data) {
@@ -211,7 +210,46 @@ $( document ).on('turbolinks:load', function() {
       }
     });
   });
-  $('#button-services').keypress(function(e){
+  $('#button-service').keypress(function(e){
     if ( e.which == 13 ) return false;
   });
+  $("#button-boutique").click(function() {
+    var l = Ladda.create(this);
+    l.start();
+    $.ajax({
+      url: 'form-boutique',
+      data: {
+          value1: $('#form_boutique_status').val(),
+          value2: $('#form_boutique_email').val(),
+          value3: $('#form_boutique_phone').val(),
+          value4: $('#form_boutique_name').val(),
+          value5: $('#form_boutique_message').val()
+      },
+      type: "GET",
+      success: function(data) {
+        if(data.status == true) {
+          $('#okidokki').html('<li><i style="font-size:16px;color:#5cb85c;margin-bottom:10px;" class="fa fa-check-circle"> Vous serez contacté quand votre achat sera disponible au centre d\'entrainement</i></li>');
+          $('.barre').css('display', 'none');
+          $('#notoki').css('display', 'none');
+        }
+        if(data.status == false) {
+          $('#notoki').html('<li><i style="font-size: 16px;color:#ea5656;margin-bottom:10px;margin-top:10px;" class="fa fa-exclamation-circle"> L\'un des champs est manquant ou incorrect</i></li>');
+          l.stop();
+        }
+      }
+    });
+  });
+  $('#button-boutique').keypress(function(e){
+    if ( e.which == 13 ) return false;
+  });
+  $('#exampleModal').on('show.bs.modal', function (event) {
+    var button = $(event.relatedTarget) // Button that triggered the modal
+    var recipient = button.data('whatever') // Extract info from data-* attributes
+    var message = button.data('message')
+    // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+    // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+    var modal = $(this)
+    modal.find('.modal-title').text('Ma commande : ' + recipient)
+    modal.find('.modal-body textarea').val(message)
+  })
 });

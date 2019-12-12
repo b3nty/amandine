@@ -16,7 +16,7 @@
   .text-center
     .row
       .col-lg-6.col-lg-offset-3
-        = simple_form_for(:form_contact, html: { class: 'form-horizontal' }) do |f|
+        = simple_form_for(:form_service, html: { class: 'form-horizontal' }) do |f|
           .form-inputs.text-center
             %ul.list-unstyled
               %li.barre
@@ -32,7 +32,7 @@
               %li.barre
                 &nbsp;
               %li.barre
-                %span#button-services.btn.btn-contact{:type => "button", "data-style" => "expand-left" }
+                %span#button-service.btn.btn-contact{:type => "button", "data-style" => "expand-left" }
                   %span.ladda-label Je prends contact
               #okidokki
               #notoki

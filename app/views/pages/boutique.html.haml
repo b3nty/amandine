@@ -61,55 +61,51 @@
       .col-md-4.text-center
         = image_tag("image-shop-t-shirt-f.png", :alt => "Boutique : T-shirt femme", class: " img-responsive")
         %h3 T-shirt Femme
-        %i XS/S/M/L/XL/XXL/XXXL
+        %i XS-XXXL
         %br
-        = link_to(boutique_path(anchor: 'boutique'), title: "Je commande") do
-          %span.btn.btn-contact#t-shirt_f{:type => "button"}
-            Je commande
+        %span.marge_t10.btn.btn-contact#t-shirt_f{"data-target" => "#exampleModal", "data-toggle" => "modal", "data-whatever" => "T-shirt Femme", "data-message" => "T-shirt Femme ; quantité = 1 ; Taille : S", :type => "button"}
+          Je commande
       .col-md-4.text-center
         = image_tag("image-site-shop-t-shirt-h.png", :alt => "Boutique : T-shirt homme", class: " img-responsive")
         %h3 T-shirt Homme
-        %i XS/S/M/L/XL/XXL/XXXL
+        %i XS-XXXL
         %br
-        = link_to(boutique_path(anchor: 'boutique'), title: "Je commande") do
-          %span.btn.btn-contact#t-shirt_h{:type => "button"}
-            Je commande
+        %span.marge_t10.btn.btn-contact#t-shirt_h{"data-target" => "#exampleModal", "data-toggle" => "modal", "data-whatever" => "T-shirt Homme", "data-message" => "T-shirt Homme ; quantité = 1 ; Taille : S", :type => "button"}
+          Je commande
       .col-md-4.text-center
         = image_tag("Image-shop-sac.png", :alt => "Boutique : sac", class: " img-responsive")
         %h3 Sac
         %i Taille unique
         %br
-        = link_to(boutique_path(anchor: 'boutique'), title: "Je commande") do
-          %span.btn.btn-contact#sac{:type => "button"}
-            Je commande
+        %span.marge_t10.btn.btn-contact#sac{"data-target" => "#exampleModal", "data-toggle" => "modal", "data-whatever" => "Sac", "data-message" => "Sac ; quantité = 1", :type => "button"}
+          Je commande
 
-.wrapper
-  .container
-.wrapper
-  .container
-    %hr.hr-grey
-
-.wrapper.service-contact
-  .container
-    .row
-      .col-md-6.col-md-offset-3#boutique
-        = simple_form_for(:form_boutique, html: { class: 'form-horizontal' }) do |f|
-          .form-inputs.text-center
-            %ul.list-unstyled
-              %li.barre
-                = f.select :status,  options_for_select(FormService::STATUS), as: :radio_button, selected: "Large", label: false, required: true
-              %li.barre
-                = f.input :email, required: true, label: false, placeholder: "Votre adresse e-mail", autofocus: false
-              %li.barre
-                = f.input :phone, required: true, label: false, placeholder: "Votre numéro de téléphone", autofocus: false
-              %li.barre
-                = f.input :name, required: true, label: false, placeholder: "Nom / Raison sociale", autofocus: false
-              %li.barre
-                = f.input :message, label: false, required: false, as: :text, placeholder: "Votre commande (produit, quantité, taille...)", input_html: {rows: 4}
-              %li.barre
-                &nbsp;
-              %li.barre
-                %span#button-services.btn.btn-contact{:type => "button", "data-style" => "expand-left" }
-                  %span.ladda-label Je passe commande
-              #okidokki
-              #notoki
+#exampleModal.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "exampleModalLabel", :role => "dialog", :tabindex => "-1"}
+  .modal-dialog{:role => "document"}
+    .modal-content
+      .modal-header
+        %h5#exampleModalLabel.modal-title Je commande :
+        %button.close{"aria-label" => "Close", "data-dismiss" => "modal", :type => "button"}
+          %span{"aria-hidden" => "true"} ×
+      .modal-body
+        .container-fluid
+          = simple_form_for(:form_boutique, html: { class: 'form-horizontal' }) do |f|
+            .form-inputs.text-center
+              %ul.list-unstyled
+                %li.barre
+                  = f.select :status,  options_for_select(FormBoutique::STATUS), as: :radio_button, selected: "Large", label: false, required: true
+                %li.barre
+                  &nbsp;
+                %li.barre
+                  = f.input :email, required: true, label: false, placeholder: "Votre adresse e-mail", autofocus: false
+                %li.barre
+                  = f.input :phone, required: true, label: false, placeholder: "Votre numéro de téléphone", autofocus: false
+                %li.barre
+                  = f.input :name, required: true, label: false, placeholder: "Nom / Raison sociale", autofocus: false
+                %li.barre
+                  = f.input :message, label: false, required: false, as: :text, input_html: {rows: 4}
+          #okidokki
+          #notoki
+      .modal-footer
+        %span#button-boutique.btn.btn-contact{:type => "button", "data-style" => "expand-left" }
+          %span.ladda-label Je passe commande

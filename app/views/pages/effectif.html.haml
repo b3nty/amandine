@@ -50,10 +50,6 @@
 
 .wrapper
   .container
-    %hr.hr-grey
-
-.wrapper
-  .container
     %h2.text-left.title-section#temoignages
       Témoignages
     %br
@@ -98,11 +94,19 @@
     %hr.hr-grey
 
 .wrapper
-  .container
-    %h2.text-left.title-section#sportif#medical
+  .container.bloc-effectif
+    %h2.text-left.text-uppercase.title-section
       Staff
-    .row
-      .col-md-4
-        = image_tag("amandine-hostynek-responsable-preparation-physique.png", :alt => "Amandine Hostynek la responsable de la préparation physique", :class => "img-responsive zoom")
-      .col-md-4
-        = image_tag("romain-kinesitherapeute.png", :alt => "Romain Kinésithérapeute", :class => "img-responsive zoom")
+    .container
+      %h2.text-left#sportif
+        Sportif
+      .row
+        .col-md-2.col-xs-4
+          = image_tag("amandine-hostynek-responsable-preparation-physique.png", :alt => "Amandine Hostynek la responsable de la préparation physique", :class => "img-responsive zoom")
+
+    .container
+      %h2.text-left#sportif
+        Médical
+      .row
+        .col-md-2.col-xs-4
+          = image_tag("romain-kinesitherapeute.png", :alt => "Romain Kinésithérapeute", :class => "img-responsive zoom")
