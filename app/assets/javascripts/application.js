@@ -232,7 +232,7 @@ $( document ).on('turbolinks:load', function() {
           $('.barre').css('display', 'none');
           $('#notoki').css('display', 'none');
           setTimeout(function(){
-            $('#exampleModal').close();
+            location.reload();
           }, 5000);
         }
         if(data.status == false) {
