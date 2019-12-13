@@ -44,16 +44,10 @@ gem 'jbuilder', '~> 2.5'
 
 gem 'html5-rails'
 gem 'simple_form', git: "https://github.com/plataformatec/simple_form"
-gem 'devise'
-gem 'devise-i18n'
 
 gem 'font-awesome-sass'
 
 gem 'figaro'
-
-gem "rmagick"
-gem "carrierwave"
-gem 'fog'
 
 gem 'gibbon'
 gem 'email_validator'
