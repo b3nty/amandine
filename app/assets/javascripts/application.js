@@ -37,6 +37,25 @@ $( document ).on('turbolinks:load', function() {
     wrap: true
   });
 
+  $('#Carousel_coeur').carousel({
+    interval: 3000,
+    pause: true,
+    wrap: true
+  });
+
+  $('#Carousel_centre').carousel({
+    interval: 3000,
+    pause: true,
+    wrap: true
+  });
+
+  $('#Carousel_delocalisation').carousel({
+    interval: 3000,
+    pause: true,
+    wrap: true
+  });
+
+
   // for every slide in carousel, copy the next slide's item in the slide.
   // Do the same for the next, next item.
   $('.multi-item-carousel .item').each(function(){
