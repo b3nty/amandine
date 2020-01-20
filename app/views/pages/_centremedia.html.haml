@@ -1,0 +1,54 @@
+.row
+  .col-lg-3.col-sm-4.col-xs-6
+    = image_tag("centre-entrainement-accueil.jpg", :alt => "galerie photos centre entrainement", class: "thumbnail img-responsive")
+  .col-lg-3.col-sm-4.col-xs-6
+    = image_tag("centre-entrainement.jpg", :alt => "galerie photos centre entrainement", class: "thumbnail img-responsive")
+  .col-lg-3.col-sm-4.col-xs-6
+    = image_tag("centre-entrainement-h-training.jpg", :alt => "galerie photos centre entrainement", class: "thumbnail img-responsive")
+  .col-lg-3.col-sm-4.col-xs-6
+    = image_tag("centre-entrainement-velo.jpg", :alt => "galerie photos centre entrainement", class: "thumbnail img-responsive")
+  .col-lg-3.col-sm-4.col-xs-6
+    = image_tag("centre-entrainement-tapis-course.jpg", :alt => "galerie photos centre entrainement", class: "thumbnail img-responsive")
+  .col-lg-3.col-sm-4.col-xs-6
+    = image_tag("centre-entrainement-structure.jpg", :alt => "galerie photos centre entrainement", class: "thumbnail img-responsive")
+  .col-lg-3.col-sm-4.col-xs-6
+    = image_tag("centre-entrainement-rigueur.jpg", :alt => "galerie photos centre entrainement", class: "thumbnail img-responsive")
+  .col-lg-3.col-sm-4.col-xs-6
+    = image_tag("centre-entrainement-repetition.jpg", :alt => "galerie photos centre entrainement", class: "thumbnail img-responsive")
+  .col-lg-3.col-sm-4.col-xs-6
+    = image_tag("centre-entrainement-recuperation.jpg", :alt => "galerie photos centre entrainement", class: "thumbnail img-responsive")
+  .col-lg-3.col-sm-4.col-xs-6
+    = image_tag("centre-entrainement-progression.jpg", :alt => "galerie photos centre entrainement", class: "thumbnail img-responsive")
+  .col-lg-3.col-sm-4.col-xs-6
+    = image_tag("centre-entrainement-preparation.jpg", :alt => "galerie photos centre entrainement", class: "thumbnail img-responsive")
+  .col-lg-3.col-sm-4.col-xs-6
+    = image_tag("centre-entrainement-personnalise.jpg", :alt => "galerie photos centre entrainement", class: "thumbnail img-responsive")
+  .col-lg-3.col-sm-4.col-xs-6
+    = image_tag("centre-entrainement-parcours.jpg", :alt => "galerie photos centre entrainement", class: "thumbnail img-responsive")
+  .col-lg-3.col-sm-4.col-xs-6
+    = image_tag("centre-entrainement-materiel.jpg", :alt => "galerie photos centre entrainement", class: "thumbnail img-responsive")
+  .col-lg-3.col-sm-4.col-xs-6
+    = image_tag("centre-entrainement-installation.jpg", :alt => "galerie photos centre entrainement", class: "thumbnail img-responsive")
+  .col-lg-3.col-sm-4.col-xs-6
+    = image_tag("centre-entrainement-focus.jpg", :alt => "galerie photos centre entrainement", class: "thumbnail img-responsive")
+  .col-lg-3.col-sm-4.col-xs-6
+    = image_tag("centre-entrainement-encouragement.jpg", :alt => "galerie photos centre entrainement", class: "thumbnail img-responsive")
+  .col-lg-3.col-sm-4.col-xs-6
+    = image_tag("centre-entrainement-elastique.jpg", :alt => "galerie photos centre entrainement", class: "thumbnail img-responsive")
+  .col-lg-3.col-sm-4.col-xs-6
+    = image_tag("centre-entrainement-coaching.jpg", :alt => "galerie photos centre entrainement", class: "thumbnail img-responsive")
+#myModal.modal{:role => "dialog"}
+  .modal-dialog
+  .modal-content
+    .modal-header
+      %button.close{"data-dismiss" => "modal", :type => "button"} ×
+      %h3.modal-title
+    .modal-body
+      #modalCarousel.carousel
+        .carousel-inner
+        %a.carousel-control.left{"data-slide" => "prev", :href => "#modalCarousel"}
+          %i.glyphicon.glyphicon-chevron-left
+        %a.carousel-control.right{"data-slide" => "next", :href => "#modalCarousel"}
+          %i.glyphicon.glyphicon-chevron-right
+    .modal-footer
+      %button.btn.btn-default{"data-dismiss" => "modal"} Close
