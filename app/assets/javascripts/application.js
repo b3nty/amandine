@@ -31,25 +31,16 @@ setTimeout("ga('send','event','Temps passé sur la page','15 seconds')",15000);
 
 $( document ).on('turbolinks:load', function() {
 
-  $('#theCarousel').carousel({
-    interval: 3000,
-    pause: null,
-    wrap: true
-  });
-
   /***************************   centre   *******************************************/
   /* copy loaded thumbnails into carousel  */
-  $('#gallery_centre .row .thumbnail').on('load', function() {
-  }).each(function(i) {
-    if(this.complete) {
-    	var item_centre = $('<div class="item item_centre"></div>');
-      var itemDiv_centre = $(this).parents('div');
+  $('#gallery_centre .row .thumbnail').each(function(i) {
+    var item_centre = $('<div class="item item_centre"></div>');
+    var itemDiv_centre = $(this).parents('div');
 
-    	$(itemDiv_centre.html()).appendTo(item_centre);
-    	item_centre.appendTo('.carousel-inner_centre');
-      if (i==0){ // set first item active
-       item_centre.addClass('active');
-      }
+    $(itemDiv_centre.html()).appendTo(item_centre);
+    item_centre.appendTo('.carousel-inner_centre');
+    if (i==0){ // set first item active
+     item_centre.addClass('active');
     }
   });
   /* activate the carousel */
@@ -68,17 +59,14 @@ $( document ).on('turbolinks:load', function() {
 
   /*****************************   Coeur    *****************************************/
   /* copy loaded thumbnails into carousel */
-  $('#gallery_coeur .row .thumbnail').on('load', function() {
-  }).each(function(i) {
-    if(this.complete) {
-    	var item_coeur = $('<div class="item item_coeur"></div>');
-      var itemDiv_coeur = $(this).parents('div');
+  $('#gallery_coeur .row .thumbnail').each(function(i) {
+  	var item_coeur = $('<div class="item item_coeur"></div>');
+    var itemDiv_coeur = $(this).parents('div');
 
-    	$(itemDiv_coeur.html()).appendTo(item_coeur);
-    	item_coeur.appendTo('.carousel-inner_coeur');
-      if (i==0){ // set first item active
-       item_coeur.addClass('active');
-      }
+  	$(itemDiv_coeur.html()).appendTo(item_coeur);
+  	item_coeur.appendTo('.carousel-inner_coeur');
+    if (i==0){ // set first item active
+     item_coeur.addClass('active');
     }
   });
   /* activate the carousel */
@@ -97,17 +85,14 @@ $( document ).on('turbolinks:load', function() {
 
   /***************************   Deloc   *******************************************/
   /* copy loaded thumbnails into carousel  */
-  $('#gallery_deloc .row .thumbnail').on('load', function() {
-  }).each(function(i) {
-    if(this.complete) {
-    	var item_deloc = $('<div class="item item_deloc"></div>');
-      var itemDiv_deloc = $(this).parents('div');
+  $('#gallery_deloc .row .thumbnail').each(function(i) {
+  	var item_deloc = $('<div class="item item_deloc"></div>');
+    var itemDiv_deloc = $(this).parents('div');
 
-    	$(itemDiv_deloc.html()).appendTo(item_deloc);
-    	item_deloc.appendTo('.carousel-inner_deloc');
-      if (i==0){ // set first item active
-       item_deloc.addClass('active');
-      }
+  	$(itemDiv_deloc.html()).appendTo(item_deloc);
+  	item_deloc.appendTo('.carousel-inner_deloc');
+    if (i==0){ // set first item active
+     item_deloc.addClass('active');
     }
   });
   /* activate the carousel */
@@ -139,6 +124,13 @@ $( document ).on('turbolinks:load', function() {
     	$(this).siblings(':first').children(':first-child').clone().appendTo($(this));
     }
   });
+
+  $('#theCarousel').carousel({
+    interval: 3000,
+    pause: null,
+    wrap: true
+  });
+
 
   var $animation_elements = $('.animation-element');
   var $window = $(window);
