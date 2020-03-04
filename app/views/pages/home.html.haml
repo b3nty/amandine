@@ -30,15 +30,15 @@
         %span .
       %h2.text-left.font-italic
         Optez pour une solution tout-en-un
+      %br
+      %br
+      %br
       .text-left
         = link_to(contact_path, title: "Choisissez H-Training") do
           %span.btn.btn-contact{:type => "button"}
             Choisissez H-Training
             &nbsp;
             %i.fas.fa-arrow-right
-      %br
-      %br
-      %br
       %br
       %br
       %br
@@ -50,7 +50,6 @@
       Tout ce dont vous avez besoin... Et même plus
 .wrapper1
   .container
-    %br
     %br
     %hr.text-center.hr-red
     %br
@@ -67,7 +66,7 @@
       .col-md-3.text-center
         %i.fa.fa-4x.fa-chart-line.black
         %h3.padding-10 Avoir accès à un service sur-mesure
-        %p Profitez du suivi individualisé pour se rapprocher au plus près de vos besoins
+        %p Profitez du suivi individualisé pour atteindre vos objectif
       .col-md-3.text-center
         %i.fa.fa-4x.fa-sign-language.black
         %h3.padding-10 Evoluer dans un environnement favorable
@@ -98,3 +97,40 @@
       .col-md-3.marge_b30
         = link_to(media_path, title: "Accéder à la galerie photos") do
           = image_tag("athlete-sailing.jpg", :alt => "Athlète-sailing", :class => "img-responsive")
+
+.wrapper
+  %hr.hr-grey
+  %br
+  %br
+  %br
+  .container
+    .row
+      .col-md-8.col-md-offset-2
+        #carousel-example-generic.carousel.slide{"data-ride" => "carousel"}
+          .carousel-inner{:role => "listbox"}
+            .item.active
+              = image_tag("temoignage-francois-herry.jpg", :alt => "Témoignage de François Herry", :class => "img-responsive")
+            .item
+              = image_tag("temoignage-lucie-anastassiou.jpg", :alt => "Témoignage de Lucie Anastassiou", :class => "img-responsive")
+            .item
+              = image_tag("temoignage-maxime-rochet.jpg", :alt => "Témoignage de Maxime Rochet", :class => "img-responsive")
+            .item
+              = image_tag("temoignage-maxime-bernard.jpg", :alt => "Témoignage de Maxime Bernard", :class => "img-responsive")
+            .item
+              = image_tag("temoignage-elodie-bld.jpg", :alt => "Témoignage de Elodie Bld", :class => "img-responsive")
+            .item
+              = image_tag("temoignage-pernelle-michon.jpg", :alt => "Témoignage de Pernelle Michon", :class => "img-responsive")
+            .item
+              = image_tag("temoignage-dan-bradley.jpg", :alt => "Témoignage de Dan Bradley", :class => "img-responsive")
+          %a.left.carousel-control{"data-slide" => "prev", :href => "#carousel-example-generic", :role => "button"}
+            %span.glyphicon.glyphicon-chevron-left{"aria-hidden" => "true"}
+            %span.sr-only Previous
+          %a.right.carousel-control{"data-slide" => "next", :href => "#carousel-example-generic", :role => "button"}
+            %span.glyphicon.glyphicon-chevron-right{"aria-hidden" => "true"}
+            %span.sr-only Next
+  .text-center
+    = link_to("https://g.page/h-training-fr/review?rc", title: "Laissez nous votre avis sur Google") do
+      %span.btn.btn-contact{:type => "button"}
+        Laissez nous votre avis sur Google
+        &nbsp;
+        %i.fas.fa-arrow-right
