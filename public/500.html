@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <link rel="stylesheet" href="/actualites/css/screen.css" type="text/css" media="screen, projection" />
-  <link href='//fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" media="all" href="//fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700" data-turbolinks-track="true" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
 
@@ -41,6 +41,180 @@
     display:table-cell;
     vertical-align:middle;
   }
+  body {
+  	font-family: 'Open Sans', sans-serif !important;
+  	color: #000 !important;
+  	position: relative !important;
+  	min-height: 100% !important;
+  	font-size: 18px !important;
+  	overflow-x: hidden;
+  	line-height: 1.611em !important;
+  }
+
+  #log {
+  	height: 120px;
+  }
+
+  .navbar {
+  	font-family: 'Roboto', sans-serif !important;
+  	font-weight: 500 !important;
+  	min-height: 78px !important;
+  	background: #fff;
+  	border: none;
+  	box-shadow: 0px 5px 5px #777777;
+  }
+
+  .navbar .navbar-nav li.dropdown {
+  	position: initial !important;
+  }
+
+  .navbar .navbar-nav li a {
+  	color: #000;
+  }
+
+  .navbar .navbar-collapse {
+  	border-top: 2px solid #777777;
+  	margin-top: -75px;
+  	margin-bottom: 15px;
+  }
+
+  .navbar .navbar-collapse #nav-space {
+  	width: 132px;
+  }
+
+  .navbar .nav ul a {
+  	padding: 0px !important;
+  }
+
+  .navbar-brand {
+  	text-decoration: none !important;
+  	margin: 0 auto !important;
+  	float: none;
+  	padding: 0;
+  }
+
+  .navbar-brand img {
+  	margin: 0 auto;
+  	background-color: #fff;
+  	position: relative;
+  	z-index: 0;
+  }
+
+  .navbar-nav {
+  	padding-top: 14px;
+  }
+
+  .navbar-nav li a {
+  	text-decoration: none !important;
+  	text-transform: uppercase !important;
+  	cursor: pointer;
+  }
+
+  .navbar-nav li a:hover {
+  	color: #cc2127 !important;
+  }
+
+  .navbar-nav li a:active {
+  	color: #cc2127 !important;
+  }
+
+  .navbar-nav li a.active {
+  	color: #cc2127 !important;
+  }
+
+  .navbar-right {
+  	margin-right: 0px !important;
+  }
+
+  .navbar-header {
+  	min-height: 78px !important;
+  	float: none !important;
+  }
+
+  .navbar-toggle {
+  	margin-top: 18px;
+  }
+
+  .dropdown:hover .dropdown-menu {
+  	display: block;
+  	width: 100%;
+  	margin-top: -1px;
+  	border: none;
+  	box-shadow: none;
+  	border-radius: 0;
+  	color: #000 !important;
+  	top: 81% !important;
+  	padding: 20px 0;
+  	background: #eee;
+  }
+
+  .dropdown:hover .dropdown-menu .wrapper-dropdown {
+  	width: 70%;
+  }
+
+  .dropdown:hover .dropdown-menu .wrapper-dropdown span {
+  	font-size: 16px;
+  	padding: 10px 0;
+  	font-weight: 700;
+  	color: #cc2127 !important;
+  }
+
+  .dropdown:hover .dropdown-menu .wrapper-dropdown span:after {
+  	display: block;
+  	content: '';
+  	width: 70px;
+  	height: 2px;
+  	background: #cc2127;
+  	position: absolute;
+  	top: 22px;
+  	left: 15px;
+  	transition: .1s;
+  	z-index: 2;
+  }
+
+  .dropdown:hover .dropdown-menu .wrapper-dropdown ul {
+  	opacity: 1;
+  	position: relative;
+  	width: 100%;
+  	padding: 0;
+  	border-radius: 0;
+  	left: -12px;
+  	z-index: 1;
+  	margin-top: 10px;
+  }
+
+  .dropdown:hover .dropdown-menu .wrapper-dropdown ul li.dropdown-item {
+  	background-color: #eee;
+  }
+
+  .dropdown:hover .dropdown-menu .wrapper-dropdown ul li.dropdown-item a {
+  	color: #000;
+  }
+
+  .dropdown:hover .dropdown-menu .wrapper-dropdown ul li.dropdown-item a:hover {
+  	background-color: #eee;
+  }
+
+  h1 {
+  	font-family: 'Open Sans Condensed', sans-serif !important;
+  	font-weight: 700 !important;
+  }
+
+  h2 {
+  	font-family: 'Open Sans Condensed', sans-serif !important;
+  	font-weight: 700 !important;
+  }
+
+  h3 {
+  	font-family: 'Open Sans Condensed', sans-serif !important;
+  	font-weight: 700 !important;
+  }
+
+  h4 {
+  	font-family: 'Open Sans Condensed', sans-serif !important;
+  	font-weight: 500 !important;
+  }
+
   h1,h2,h3{
     color: #fff;
     text-align: center;
@@ -60,49 +234,153 @@
 
 <body>
   <header>
-    <nav class="navbar navbar-default navbar-fixed-top navbar-transparent" role="navigation" style="background-color: transparent; box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 0px;">
-      <div class="container">
-      <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-          <button class="navbar-toggle" data-target="#bs-example-navbar-collapse-1" data-toggle="collapse" type="button">
-            <span class="fa fa-bars"></span>
-          </button>
-          <a title="Homepage de H-training" class="navbar-brand" href="/">
-            <img alt="logo h-training" height="50px" id="log" class="display-mobile" src="https://s3.eu-west-3.amazonaws.com/h-training/logo-h-training-white.png">
-            <img alt="logo h-training" height="50px" id="log" class="display-screen" src="https://s3.eu-west-3.amazonaws.com/h-training/logo-h-training-black.png">
-          </a>
-        </div>
-      <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-          <ul class="nav navbar-nav navbar-center">
-            <li class="nav-item">
-              <a title="H-training" class="false" href="/h-training" style="color: rgb(255, 255, 255);">H-training</a>
-            </li>
-            <li class="nav-item">
-              <a title="Services" class="false" href="/services" style="color: rgb(255, 255, 255);">Services</a>
-            </li>
-            <li class="nav-item">
-              <a title="Actualités" class="false" href="/actualites" style="color: rgb(255, 255, 255);">Actualités</a>
-            </li>
-            <li class="nav-item">
-              <a title="Réservation" class="false" href="/reservation" style="color: rgb(255, 255, 255);">Réservation</a>
-            </li>
-            <li class="nav-item">
-              <a title="Espace Perso" class="false" href="/espace-perso" style="color: rgb(255, 255, 255);">Espace Perso</a>
-            </li>
-          </ul>
-          <ul class="nav navbar-nav navbar-right">
-            <li class="nav-item">
-              <a target="_blank" title="Facebook h-training" href="https://www.facebook.com/h.training.fr/" style="color: rgb(255, 255, 255);"><i class="fab fa-2x fa-facebook-square"></i>
-            </a></li>
-            <li class="nav-item">
-              <a target="_blank" title="Instagram h-training" href="https://www.instagram.com/h.training/" style="color: rgb(255, 255, 255);"><i class="fab fa-2x fa-instagram"></i>
-            </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+    <nav class="navbar navbar-fixed-top" role="navigation">
+<div class="container">
+<!-- Brand and toggle get grouped for better mobile display -->
+<div class="navbar-header">
+<button class="navbar-toggle" data-target="#bs-example-navbar-collapse-1" data-toggle="collapse" type="button">
+<span class="fa fa-bars"></span>
+</button>
+<a title="Homepage de H-training" class="navbar-brand" href="/"><img alt="logo h-training" id="log" src="/assets/new-logo-h-training-38ba4d8db14780df3522846a4f899bf8203600f248da4739191317c2b0a6ef2b.png">
+</a></div>
+<!-- Collect the nav links, forms, and other content for toggling -->
+<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+<div class="text-center">
+<ul class="nav navbar-nav navbar-left">
+<li class="nav-item">
+<a title="Notre mission" class="false" href="/notre-mission">Notre mission</a>
+</li>
+<li class="nav-item dropdown">
+<a title="Services" class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" aria-haspopup="true" aria-expanded="true" href="/services">Services</a>
+<div aria-labelledby="navbarDropdownMenuLink" class="dropdown-menu text-xs-center display-mobile" role="menu">
+<div class="container wrapper-dropdown">
+<div class="row">
+<div class="col-md-4">
+<span>SERVICES</span>
+<ul>
+<li class="dropdown-item">
+<a title="Services : H-PERF" class="dropdown-item" href="/services#hperf">H-PERF</a>
+</li>
+<li class="dropdown-item">
+<a title="Services : H-REHAB" class="dropdown-item" href="/services#hrehab">H-REHAB</a>
+</li>
+<li class="dropdown-item">
+<a title="Services : H-PRO" class="dropdown-item" href="/services#hpro">H-PRO</a>
+</li>
+<li class="dropdown-item">
+<a title="Services : H-2O" class="dropdown-item" href="/services#h2o">H-2O</a>
+</li>
+<li class="dropdown-item">
+<a title="Services : H-&amp;Co" class="dropdown-item" href="/services#handco">H-&amp;Co</a>
+</li>
+</ul>
+</div>
+<div class="col-md-4">
+<span>SERVICES ++</span>
+<ul>
+<li class="dropdown-item">
+<a title="Services+ : SUIVI &amp; ANALYSE DATA GPS" href="/services#suivi">SUIVI &amp; ANALYSE DATA GPS</a>
+</li>
+<li class="dropdown-item">
+<a title="Services+ : RÉCUPÉRATION : SOIN &amp; PRESSOTHÉRAPIE" href="/services#recuperation">RÉCUPÉRATION : SOIN &amp; PRESSOTHÉRAPIE</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</li>
+<li class="nav-item dropdown">
+<a title="effectif" class="false nav-link dropdown-toggle" id="navbarDropdownMenuLink1" aria-haspopup="true" aria-expanded="true" href="/effectif">Effectif</a>
+<div aria-labelledby="navbarDropdownMenuLink1" class="dropdown-menu text-xs-center display-mobile" role="menu">
+<div class="container wrapper-dropdown">
+<div class="row">
+<div class="col-md-4">
+<span>ATHLÈTES</span>
+<ul>
+<li class="dropdown-item">
+<a title="Effectif : ATHLÈTES" href="/effectif#athletes">ATHLÈTES</a>
+</li>
+</ul>
+</div>
+<div class="col-md-4">
+<span>STAFF</span>
+<ul>
+<li class="dropdown-item">
+<a title="Effectif : SPORTIF" href="/effectif#sportif">SPORTIF</a>
+</li>
+<li class="dropdown-item">
+<a title="Effectif : MÉDICAL" href="/effectif#medical">MÉDICAL</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</li>
+</ul>
+<ul class="nav navbar-nav navbar-right">
+<li class="nav-item dropdown">
+<a title="Partenaires" class="false nav-link dropdown-toggle" id="navbarDropdownMenuLink2" aria-haspopup="true" aria-expanded="true" href="/partenaires">Partenaires</a>
+<div aria-labelledby="navbarDropdownMenuLink2" class="dropdown-menu text-xs-center display-mobile" role="menu">
+<div class="container wrapper-dropdown">
+<div class="row">
+<div class="col-md-4">
+<ul>
+<li class="dropdown-item">
+<a title="Partenaires : LISTE PARTENAIRES" href="/partenaires#liste">LISTE PARTENAIRES</a>
+</li>
+<li class="dropdown-item">
+<a title="Partenaires : DEVENIR PARTENAIRE" href="/partenaires#devenir">DEVENIR PARTENAIRE</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</li>
+<li class="nav-item dropdown">
+<a title="Media" class="false nav-link dropdown-toggle" id="navbarDropdownMenuLink3" aria-haspopup="true" aria-expanded="true" href="/media">Media</a>
+<div aria-labelledby="navbarDropdownMenuLink3" class="dropdown-menu text-xs-center display-mobile" role="menu">
+<div class="container wrapper-dropdown">
+<div class="row">
+<div class="col-md-4">
+<span>PHOTOTHÈQUE</span>
+<ul>
+<li class="dropdown-item">
+<a title="Media : CENTRE D'ENTRAINEMENT" href="/media#centre">CENTRE D'ENTRAINEMENT</a>
+</li>
+<li class="dropdown-item">
+<a title="Media : AU CŒUR DE L'ACTION" href="/media#coeur1">AU CŒUR DE L'ACTION</a>
+</li>
+<li class="dropdown-item">
+<a title="Media : DÉLOCALISATION" href="/media#delocalisation">DÉLOCALISATION</a>
+</li>
+</ul>
+</div>
+<div class="col-md-4">
+<span>VIDEOTHÈQUE</span>
+<ul>
+<li class="dropdown-item">
+<a title="Media : INTERVIEWS" href="/media#interviews">INTERVIEWS</a>
+</li>
+<li class="dropdown-item">
+<a title="Media : AU CŒUR DE L'ACTION" href="/media#coeur2">AU CŒUR DE L'ACTION</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</li>
+<li class="nav-item">
+<a title="Boutique" class="false" href="/boutique">Boutique</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</nav>
   </header>
   <br>
   <br>
