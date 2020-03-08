@@ -167,25 +167,16 @@ $( document ).on('turbolinks:load', function() {
   window.addEventListener("hashchange", offsetAnchor);
   window.setTimeout(offsetAnchor, 1);
 
-  $(window).scroll(function() {
-    if($(window).scrollTop() > 300) {
-      $('.btn-scroll-top').removeClass("animated fadeOutDown");
-      $('.btn-scroll-top').css("bottom", "0px");
-      $('.btn-scroll-top').addClass("animated fadeInUp");
+  $(window).scroll(function(){
+    if($(window).scrollTop() + $(window).height() > $(document).height() - 100) {
+      $('.social-btn').removeClass("animated fadeInUp");
+      $('.social-btn').css("bottom", "-62px");
+      $('.social-btn').addClass("animated fadeOutDown");
+    }else{
+      $('.social-btn').removeClass("animated fadeOutDown");
+      $('.social-btn').css("bottom", "0px");
+      $('.social-btn').addClass("animated fadeInUp");
     }
-  });
-
-  $(window).scroll(function() {
-    if($(window).scrollTop() < 300) {
-      $('.btn-scroll-top').removeClass("animated fadeInUp");
-      $('.btn-scroll-top').css("bottom", "-62px");
-      $('.btn-scroll-top').addClass("animated fadeOutDown");
-    }
-  });
-
-  $('.btn-scroll-top').on("click", function(){
-    $("html, body").animate({ scrollTop: 0 }, "slow");
-    return false;
   });
 
   $('#angle-down').click(function() {
