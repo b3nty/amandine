@@ -23,62 +23,110 @@
   .container
 .wrapper
   .container
-    %h2.text-left.title-section#athletes
-      Athlètes
+    #athletes
+      .row
+        .col-md-4
+          = image_tag("athletes.png", :alt => "Titre section athlètes", style: "width:100%")
 
 .wrapper
   .container.bloc-effectif
-    .row
-      .col-md-2.col-xs-4
-        = image_tag("alexis-tahet-football.png", :alt => "Alexis Tahet novembre 2019", :class => "img-responsive zoom")
-      .col-md-2.col-xs-4
-        = image_tag("lucie-anastassiou-skeet-olympique.png", :alt => "Lucie Anastassiou septembre 2019", :class => "img-responsive zoom")
-      .col-md-2.col-xs-4
-        = image_tag("carla-mayon-touch-rugby.png", :alt => "Carla Mayon juillet à novembre 2019", :class => "img-responsive zoom")
-      .col-md-2.col-xs-4
-        = image_tag("eliot-merceron-voila-laser-std.png", :alt => "Eliot Merceron juillet 2019", :class => "img-responsive zoom")
-      .col-md-2.col-xs-4
-        = image_tag("xavier-briatte-rugby.png", :alt => "Xavier Briatte juillet 2019", :class => "img-responsive zoom")
-      .col-md-2.col-xs-4
-        = image_tag("gabriel-guemas-handball.png", :alt => "Gabriel Guemas juin 2019", :class => "img-responsive zoom")
-      .col-md-2.col-xs-4
-        = image_tag("lancelot-luteau-rugby.png", :alt => "Lancelot Luteau juin 2019", :class => "img-responsive zoom")
-      .col-md-2.col-xs-4
-        = image_tag("samuel-thebault-rugby.png", :alt => "Samuel Thebault avril 2019", :class => "img-responsive zoom")
-      .col-md-2.col-xs-4
-        = image_tag("camille-pouget-rugby.png", :alt => "Camille Pouget mars 2019", :class => "img-responsive zoom")
-      .col-md-2.col-xs-4
-        = image_tag("maxime-mazard-voile-laser-std.png", :alt => "Maxime Mazard janvier 2019", :class => "img-responsive zoom")
-      .col-md-2.col-xs-4
-        = image_tag("christophe-r-militaire.png", :alt => "Christophe R. octobre 2018", :class => "img-responsive zoom")
-      .col-md-2.col-xs-4
-        = image_tag("john-mc-g-football-gaelique.png", :alt => "John Mc G. otobre 2018", :class => "img-responsive zoom")
-      .col-md-2.col-xs-4
-        = image_tag("ximun-mathis-pelote-basque.png", :alt => "Ximun Mathis septembre 2018", :class => "img-responsive zoom")
-      .col-md-2.col-xs-4
-        = image_tag("pernelle-michon-voila-laser-radial.png", :alt => "Pernelle Michon septembre 2018", :class => "img-responsive zoom")
-      .col-md-2.col-xs-4
-        = image_tag("maxime-bernard-padel-tennis.png", :alt => "Maxime Bernard juillet 2018", :class => "img-responsive zoom")
-
+    %ul.nav.nav-tabs{:role => "tablist"}
+      %li.active{:role => "presentation"}
+        %a{"aria-controls" => "actuels", "data-toggle" => "tab", :href => "#actuels", :role => "tab"} Sportifs actuels
+      %li{:role => "presentation"}
+        %a{"aria-controls" => "anciens", "data-toggle" => "tab", :href => "#anciens", :role => "tab"} Anciens sportifs
+    .tab-content
+      #actuels.tab-pane.active{:role => "tabpanel"}
+        .row
+          .col-md-2.col-xs-4
+            = image_tag("MATHIEU-GIRAUD-RUGBY.jpg", :alt => "Mathieu Giraud, Rugby", :class => "img-responsive zoom")
+          .col-md-2.col-xs-4
+            = image_tag("THIBAUD-PELLETIER-RUGBY.jpg", :alt => "Thibaud Pelletier, Rugby", :class => "img-responsive zoom")
+          .col-md-2.col-xs-4
+            = image_tag("REMI-MOUSSEAU-RUGBY.jpg", :alt => "Remi Mousseau, Rugby", :class => "img-responsive zoom")
+          .col-md-2.col-xs-4
+            = image_tag("PIERRE-SOUCHAUD-RUGBY.jpg", :alt => "Pierre Souchaud, Rugby", :class => "img-responsive zoom")
+          .col-md-2.col-xs-4
+            = image_tag("LUCIE-ANASTASSIOU-SKEET.jpg", :alt => "Lucie Anastassiou, Skeet", :class => "img-responsive zoom")
+          .col-md-2.col-xs-4
+            = image_tag("SAMUEL-THEBAULT-RUGBY.jpg", :alt => "Samuel Thebault, Rugby", :class => "img-responsive zoom")
+          .col-md-2.col-xs-4
+            = image_tag("SANDRINE-POULLAIN.jpg", :alt => "Sandrine Poullain", :class => "img-responsive zoom")
+          .col-md-2.col-xs-4
+            = image_tag("ROHET-FIORENTINO-RUGBY.jpg", :alt => "Rohet Fiorentino, Rugby", :class => "img-responsive zoom")
+          .col-md-2.col-xs-4
+            = image_tag("XAVIERE-BRIATTE-RUGBY.jpg", :alt => "Xavier Briatte, Rugby", :class => "img-responsive zoom")
+          .col-md-2.col-xs-4
+            = image_tag("PERNELLE-MICHON-VOILE-LASER-RADIAL.jpg", :alt => "Pernelle Michon, Voile - Laser - Radial", :class => "img-responsive zoom")
+          .col-md-2.col-xs-4
+            = image_tag("MAXIME-MAZARD-VOILE-LASER-STANDARD.jpg", :alt => "Maxime Mazard, Voile - Laser - STD", :class => "img-responsive zoom")
+          .col-md-2.col-xs-4
+            = image_tag("MATTHIEU-DORIN-RUGBY.jpg", :alt => "Mathieu Dorin, Rugby", :class => "img-responsive zoom")
+          .col-md-2.col-xs-4
+            = image_tag("LAURENT-PESTEL-RUGBY.jpg", :alt => "Laurent Pestel, Rugby", :class => "img-responsive zoom")
+          .col-md-2.col-xs-4
+            = image_tag("KEVIN-DESMIERS-RUGBY.jpg", :alt => "Kevin Desmiers, Rugby", :class => "img-responsive zoom")
+          .col-md-2.col-xs-4
+            = image_tag("Louise-PASSE.jpg", :alt => "Louise Passe", :class => "img-responsive zoom")
+          .col-md-2.col-xs-4
+            = image_tag("ALEXIS-TAHET-FOOTBALL.jpg", :alt => "Alexis Tahet, Football", :class => "img-responsive zoom")
+          .col-md-2.col-xs-4
+            = image_tag("XIMUN-MATHIS-PELOTE-BASQUE.jpg", :alt => "Ximun Mathis, Pelote Basque", :class => "img-responsive zoom")
+          .col-md-2.col-xs-4
+            = image_tag("HELENE-REVERDY.jpg", :alt => "Hélène Reverdy", :class => "img-responsive zoom")
+          .col-md-2.col-xs-4
+            = image_tag("CAMILLE-POUGET-RUGBY.jpg", :alt => "Camille Pouget, Rugby", :class => "img-responsive zoom")
+          .col-md-2.col-xs-4
+            = image_tag("CHARLY-BELLOIR-RUGBY.jpg", :alt => "Charly Belloir, Rugby", :class => "img-responsive zoom")
+          .col-md-2.col-xs-4
+            = image_tag("ELIE-PUYO-RUGBY.jpg", :alt => "Elie Puyo, Rugby", :class => "img-responsive zoom")
+          .col-md-2.col-xs-4
+            = image_tag("DYLAN-ETIEN-RUGBY.jpg", :alt => "Dylan Etien, Rugby", :class => "img-responsive zoom")
+          .col-md-2.col-xs-4
+            = image_tag("ELIOT-MERCERON-VOILE-LASER-STANDARD.jpg", :alt => "Eliot Merceron, Voile - Laser - STD", :class => "img-responsive zoom")
+          .col-md-2.col-xs-4
+            = image_tag("ANTOINE-CORNIC-VOILE.jpg", :alt => "Antoine Cornic, Voile", :class => "img-responsive zoom")
+          .col-md-2.col-xs-4
+            = image_tag("Adrien-SALLET-RUGBY.jpg", :alt => "Adrien Sallet, Rugby", :class => "img-responsive zoom")
+          .col-md-2.col-xs-4
+            = image_tag("ANAIS-GARREAU-RUGBY.jpg", :alt => "Anaïs Garreau, Rugby", :class => "img-responsive zoom")
+          .col-md-2.col-xs-4
+            = image_tag("FABIEN-TEXIER.jpg", :alt => "Fabien Texier", :class => "img-responsive zoom")
+          .col-md-2.col-xs-4
+            = image_tag("ANNE-BAUDELET.jpg", :alt => "Anne Baudelet", :class => "img-responsive zoom")
+      #anciens.tab-pane{:role => "tabpanel"}
+        .row
+          .col-md-2.col-xs-4
+            = image_tag("CARLA-MAYON-TOUCH-RUGBY.jpg", :alt => "Carla Mayon, Touch Rugby", :class => "img-responsive zoom")
+          .col-md-2.col-xs-4
+            = image_tag("LANCELOT-LUTEAU-RUGBY.jpg", :alt => "Lancelot Luteau, Rugby", :class => "img-responsive zoom")
+          .col-md-2.col-xs-4
+            = image_tag("MAXIME-PINAUD-RUGBY.jpg", :alt => "Maxime Pinaud, Rugby", :class => "img-responsive zoom")
 
 .wrapper
   .container
     %hr.hr-grey
 
 .wrapper
+  .container
+    #sportif
+      .row
+        .col-md-4
+          = image_tag("staff-sportif.png", :alt => "Titre section staf sportif", style: "width:100%")
+.wrapper
   .container.bloc-effectif
-    %h2.text-left.text-uppercase.title-section
-      Staff
-    .container
-      %h2.text-left#sportif
-        Sportif
-      .row
-        .col-md-2.col-xs-4
-          = image_tag("amandine-hostynek-responsable-preparation-physique.png", :alt => "Amandine Hostynek la responsable de la préparation physique", :class => "img-responsive zoom")
+    .row
+      .col-md-2.col-xs-4
+        = image_tag("amandine-hostynek-responsable-preparation-physique.png", :alt => "Amandine Hostynek la responsable de la préparation physique", :class => "img-responsive zoom")
 
-    .container
-      %h2.text-left#sportif
-        Médical
+.wrapper
+  .container
+    #medical
       .row
-        .col-md-2.col-xs-4
-          = image_tag("romain-kinesitherapeute.png", :alt => "Romain Kinésithérapeute", :class => "img-responsive zoom")
+        .col-md-4
+          = image_tag("staff-medical.png", :alt => "Titre section staf médical", style: "width:100%")
+.wrapper
+  .container.bloc-effectif
+    .row
+      .col-md-2.col-xs-4
+        = image_tag("romain-kinesitherapeute.png", :alt => "Romain Kinésithérapeute", :class => "img-responsive zoom")
