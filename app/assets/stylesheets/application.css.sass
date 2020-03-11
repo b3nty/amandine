@@ -675,25 +675,32 @@ footer
       transform: none !important
 
 .bloc-effectif
+  .bloc-nom
+    display: none
   .zoom
     -webkit-transition: all 0.35s ease-in-out
     -moz-transition: all 0.35s ease-in-out
     transition: all 0.35s ease-in-out
-
     &:hover, &:active, &:focus
       /**adjust scale to desired size,
        *add browser prefixes*
-      -ms-transform: scale(2.5)
-      -moz-transform: scale(2.5)
-      -webkit-transform: scale(2.5)
-      -o-transform: scale(2.5)
-      transform: scale(2.5)
+      -ms-transform: scale(1.5)
+      -moz-transform: scale(1.5)
+      -webkit-transform: scale(1.5)
+      -o-transform: scale(1.5)
+      transform: scale(1.5)
       position: relative
       z-index: 100
       -moz-box-shadow: 0 0 10px #ccc
       -webkit-box-shadow: 0 0 10px #ccc
       box-shadow: 0 0 10px #ccc
       background-color: rgba(255, 255, 255, 0.5)
+      .bloc-nom
+        display: block
+        position: absolute
+        background: #fff
+        width: 100%
+        margin-top: -1px
   .nav-tabs
     a
       text-decoration: none
