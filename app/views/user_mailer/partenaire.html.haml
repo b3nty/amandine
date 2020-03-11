@@ -1,0 +1,22 @@
+%h2
+  coucou c'est une demande de partenariat
+
+%p
+  Prénom :
+  = @client.first_name
+  %br
+  Nom :
+  = @client.last_name
+  %br
+  mail :
+  = @client.email
+  %br
+  tel :
+  = @client.phone
+  %br
+  Nom de l'entreprise :
+  = @client.company_name
+
+%p
+  commande :
+  = @client.message
