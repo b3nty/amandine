@@ -1,6 +1,6 @@
 class FormPartenaire < ActiveRecord::Migration[5.1]
   def change
-    create_table :form_Partenaires do |t|
+    create_table :form_partenaires do |t|
       t.string :first_name
       t.string :last_name
       t.string :email

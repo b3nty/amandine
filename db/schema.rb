@@ -21,21 +21,21 @@ ActiveRecord::Schema.define(version: 20200311130401) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "form_Partenaires", force: :cascade do |t|
-    t.string "first_name"
-    t.string "last_name"
+  create_table "form_boutiques", force: :cascade do |t|
+    t.string "status"
+    t.string "name"
     t.string "email"
-    t.string "company_name"
     t.string "phone"
     t.string "message"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "form_boutiques", force: :cascade do |t|
-    t.string "status"
-    t.string "name"
+  create_table "form_partenaires", force: :cascade do |t|
+    t.string "first_name"
+    t.string "last_name"
     t.string "email"
+    t.string "company_name"
     t.string "phone"
     t.string "message"
     t.datetime "created_at", null: false
