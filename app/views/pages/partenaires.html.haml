@@ -30,8 +30,6 @@
     %h2.text-left.title-section
       Liste de nos Partenaires
     .text-center
-      = image_tag("1.png", :alt => "Partenaire 1")
-    .text-center
       %span.marge_t10.btn.btn-contact#partenaire{"data-target" => "#partenaireModal", "data-toggle" => "modal", :type => "button"}
         Devenir Partenaire
 
@@ -55,12 +53,14 @@
                       = f.input :last_name, required: true, label: false, placeholder: "Votre Nom", autofocus: false
                 %li.barre
                   = f.input :email, required: true, label: false, placeholder: "Votre adresse e-mail", autofocus: false
+                %li.barre.text-left{style: "margin-bottom: 10px;"}
+                  %i.red{"aria-controls" => "collapseH-PERF", "aria-expanded" => "false", "data-target" => "#collapseH-PERF", "data-toggle" => "collapse", :type => "button", style: "cursor:pointer;"}
+                    Si vous êtes une entreprise ?
+                    .fas.fa-chevron-down
+                  #collapseH-PERF.collapse
+                    = f.input :company_name, required: true, label: false, placeholder: "Le nom de votre entreprise", autofocus: false
                 %li.barre
-                  .row
-                    .col-md-6
-                      = f.input :company_name, required: true, label: false, placeholder: "Le nom de votre entreprise", autofocus: false
-                    .col-md-6
-                      = f.input :phone, required: true, label: false, placeholder: "Votre numéro de téléphone", autofocus: false
+                  = f.input :phone, required: true, label: false, placeholder: "Votre numéro de téléphone", autofocus: false
                 %li.barre
                   = f.input :message, label: false, placeholder: "Votre message", required: false, as: :text, input_html: {rows: 4}
           #okidokki
