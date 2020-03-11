@@ -61,6 +61,29 @@ class PagesController < ApplicationController
     end
   end
 
+  def form_partenaire
+    @form_partenaire = FormPartenaire.new
+    @form_partenaire.first_name = params[:value1]
+    @form_partenaire.last_name = params[:value2]
+    @form_partenaire.email = params[:value3]
+    @form_partenaire.phone = params[:value4]
+    @form_partenaire.company_name = params[:value5]
+    @form_partenaire.message = params[:value6]
+    if ( !@form_partenaire.first_name.blank? && !@form_partenaire.last_name.blank? && EmailValidator.valid?(params[:value3]) && !@form_partenaire.phone.blank? && !@form_partenaire.message.blank? )
+      result = {:status => true}
+      @form_partenaire.save
+      respond_to do |format|
+        format.json { render :json => result.to_json }
+      end
+      UserMailer.partenaire(@form_partenaire).deliver
+    else
+      result = {:status => false}
+      respond_to do |format|
+        format.json { render :json => result.to_json }
+      end
+    end
+  end
+
   def form_service
     @form_service = FormService.new
     @form_service.status = params[:value1]

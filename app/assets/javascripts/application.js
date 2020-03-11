@@ -315,6 +315,39 @@ $( document ).on('turbolinks:load', function() {
   $('#button-boutique').keypress(function(e){
     if ( e.which == 13 ) return false;
   });
+  $("#button-partenaire").click(function() {
+    var l = Ladda.create(this);
+    l.start();
+    $.ajax({
+      url: 'form-partenaire',
+      data: {
+          value1: $('#form_partenaire_first_name').val(),
+          value2: $('#form_partenaire_last_name').val(),
+          value3: $('#form_partenaire_email').val(),
+          value4: $('#form_partenaire_company_name').val(),
+          value5: $('#form_partenaire_phone').val(),
+          value6: $('#form_partenaire_message').val()
+      },
+      type: "GET",
+      success: function(data) {
+        if(data.status == true) {
+          $('#okidokki').html('<li style="list-style: none;"><i style="font-size:16px;color:#5cb85c;margin-bottom:10px;" class="fa fa-check-circle"> Vous serez contacté quand votre achat sera disponible au centre d\'entrainement</i></li>');
+          $('.barre').css('display', 'none');
+          $('#notoki').css('display', 'none');
+          setTimeout(function(){
+            location.reload();
+          }, 5000);
+        }
+        if(data.status == false) {
+          $('#notoki').html('<li style="list-style: none;"><i style="font-size: 16px;color:#ea5656;margin-bottom:10px;margin-top:10px;" class="fa fa-exclamation-circle"> L\'un des champs est manquant ou incorrect</i></li>');
+          l.stop();
+        }
+      }
+    });
+  });
+  $('#button-partenaire').keypress(function(e){
+    if ( e.which == 13 ) return false;
+  });
   $('#exampleModal').on('show.bs.modal', function (event) {
     var button = $(event.relatedTarget) // Button that triggered the modal
     var recipient = button.data('whatever') // Extract info from data-* attributes
