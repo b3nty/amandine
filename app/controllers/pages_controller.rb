@@ -66,8 +66,8 @@ class PagesController < ApplicationController
     @form_partenaire.first_name = params[:value1]
     @form_partenaire.last_name = params[:value2]
     @form_partenaire.email = params[:value3]
-    @form_partenaire.phone = params[:value4]
-    @form_partenaire.company_name = params[:value5]
+    @form_partenaire.company_name = params[:value4]
+    @form_partenaire.phone = params[:value5]
     @form_partenaire.message = params[:value6]
     if ( !@form_partenaire.first_name.blank? && !@form_partenaire.last_name.blank? && EmailValidator.valid?(params[:value3]) && !@form_partenaire.phone.blank? )
       result = {:status => true}
