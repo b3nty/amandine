@@ -236,7 +236,11 @@
   .container.bloc-effectif
     .row
       .col-md-2.col-xs-4
-        = image_tag("amandine-hostynek-responsable-preparation-physique.png", :alt => "Amandine Hostynek la responsable de la préparation physique", :class => "img-responsive zoom")
+        .zoom
+          = image_tag("amandine-hostynek-staff-sportif.jpg", :alt => "Amandine Hostynek, responsable de la préparation physique", :class => "img-responsive")
+          .bloc-nom.text-center
+            %h4 Amandine Hostynek
+            %h5.red Préparatrice Physique
 
 .wrapper
   .container
@@ -248,4 +252,8 @@
   .container.bloc-effectif
     .row
       .col-md-2.col-xs-4
-        = image_tag("romain-kinesitherapeute.png", :alt => "Romain Kinésithérapeute", :class => "img-responsive zoom")
+        .zoom
+          = image_tag("romain-staff-medical.jpg", :alt => "Romain, Kinésithérapeute", :class => "img-responsive")
+          .bloc-nom.text-center
+            %h4 Romain
+            %h5.red Kinésithérapeute
