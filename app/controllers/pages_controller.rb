@@ -45,8 +45,10 @@ class PagesController < ApplicationController
     @form_boutique.email = params[:value2]
     @form_boutique.phone = params[:value3]
     @form_boutique.name = params[:value4]
-    @form_boutique.message = params[:value5]
-    if ( !@form_boutique.status.blank? && EmailValidator.valid?(params[:value2]) && !@form_boutique.phone.blank? && !@form_boutique.name.blank? && !@form_boutique.message.blank? )
+    @form_boutique.quantity = params[:value5]
+    @form_boutique.size = params[:value6]
+    @form_boutique.product = params[:value7]
+    if ( !@form_boutique.status.blank? && EmailValidator.valid?(params[:value2]) && !@form_boutique.phone.blank? && !@form_boutique.name.blank? && !@form_boutique.quantity.blank? && !@form_boutique.size.blank? && !@form_boutique.product.blank? )
       result = {:status => true}
       @form_boutique.save
       respond_to do |format|

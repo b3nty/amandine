@@ -293,7 +293,9 @@ $( document ).on('turbolinks:load', function() {
           value2: $('#form_boutique_email').val(),
           value3: $('#form_boutique_phone').val(),
           value4: $('#form_boutique_name').val(),
-          value5: $('#form_boutique_message').val()
+          value5: $('#form_boutique_quantity').val(),
+          value6: $('#form_boutique_size').val(),
+          value7: $('#form_boutique_product').val()
       },
       type: "GET",
       success: function(data) {
@@ -356,6 +358,27 @@ $( document ).on('turbolinks:load', function() {
     // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
     var modal = $(this)
     modal.find('.modal-title').text('Ma commande : ' + recipient)
-    modal.find('.modal-body textarea').val(message)
+    modal.find('.modal-body #form_partenaire_product').val(message)
   })
+
+  $('#plus').click(function(e){
+    e.preventDefault();
+    fieldName = $(this).attr('field');
+    var currentVal = parseInt($('input[name="form_partenaire[quantity]"]').val());
+    if (!isNaN(currentVal)) {
+        $('input[name="form_partenaire[quantity]"]').val(currentVal + 1);
+    } else {
+        $('input[name="form_partenaire[quantity]"]').val(0);
+    }
+  });
+  $("#minus").click(function(e) {
+    e.preventDefault();
+    fieldName = $(this).attr('field');
+    var currentVal = parseInt($('input[name="form_partenaire[quantity]"]').val());
+    if (!isNaN(currentVal) && currentVal > 0) {
+        $('input[name="form_partenaire[quantity]"]').val(currentVal - 1);
+    } else {
+        $('input[name="form_partenaire[quantity]"]').val(0);
+    }
+  });
 });

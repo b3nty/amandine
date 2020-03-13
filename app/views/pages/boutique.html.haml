@@ -79,7 +79,7 @@
         %br
         %i XS-XXXL
         %br
-        %span.marge_t10.btn.btn-contact#t-shirt_f{"data-target" => "#exampleModal", "data-toggle" => "modal", "data-whatever" => "T-shirt Femme", "data-message" => "T-shirt Femme ; quantité = 1 ; Taille : S", :type => "button"}
+        %span.marge_t10.btn.btn-contact#t-shirt_f{"data-target" => "#exampleModal", "data-toggle" => "modal", "data-whatever" => "T-shirt Femme", "data-message" => "T-shirt Femme", :type => "button"}
           COMMANDER
       .col-md-4.text-center
         = image_tag("image-site-shop-t-shirt-h.png", :alt => "Boutique : T-shirt homme", class: " img-responsive")
@@ -88,7 +88,7 @@
         %br
         %i XS-XXXL
         %br
-        %span.marge_t10.btn.btn-contact#t-shirt_h{"data-target" => "#exampleModal", "data-toggle" => "modal", "data-whatever" => "T-shirt Homme", "data-message" => "T-shirt Homme ; quantité = 1 ; Taille : S", :type => "button"}
+        %span.marge_t10.btn.btn-contact#t-shirt_h{"data-target" => "#exampleModal", "data-toggle" => "modal", "data-whatever" => "T-shirt Homme", "data-message" => "T-shirt Homme", :type => "button"}
           COMMANDER
       .col-md-4.text-center
         = image_tag("Image-shop-sac.png", :alt => "Boutique : sac", class: " img-responsive")
@@ -97,7 +97,7 @@
         %br
         %i Taille unique
         %br
-        %span.marge_t10.btn.btn-contact#sac{"data-target" => "#exampleModal", "data-toggle" => "modal", "data-whatever" => "Sac", "data-message" => "Sac ; quantité = 1", :type => "button"}
+        %span.marge_t10.btn.btn-contact#sac{"data-target" => "#exampleModal", "data-toggle" => "modal", "data-whatever" => "Sac", "data-message" => "Sac", :type => "button"}
           COMMANDER
 
 #exampleModal.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "exampleModalLabel", :role => "dialog", :tabindex => "-1"}
@@ -113,11 +113,7 @@
             .form-inputs.text-center
               %ul.list-unstyled
                 %li.barre
-                  %ul.list-unstyled.list-inline
-                    %li.barre
-
-                    %li.barre
-
+                  = f.select :status,  options_for_select(FormBoutique::STATUS), as: :radio_button, label: false, required: true
                 %li.barre
                   &nbsp;
                 %li.barre
@@ -127,7 +123,19 @@
                 %li.barre
                   = f.input :name, required: true, label: false, placeholder: "Nom / Raison sociale", autofocus: false
                 %li.barre
-                  = f.input :message, label: false, required: false, as: :text, input_html: {rows: 4}
+                  .row
+                    .col-md-4
+                      = f.input :product, required: true, label: false, autofocus: false
+                    .col-md-4
+                      = f.select :size, options_for_select(FormBoutique::SIZE), as: :radio_button, label: false, required: true
+                    .col-md-4.text-center
+                      %ul.list-inline
+                        %li
+                          %input#minus{:field => "quantity", :type => "button", :value => "-"}/
+                        %li
+                          = f.input :quantity, label: false, as: :integer, :class => "qty", input_html: { :value => 1, min: '1' }
+                        %li
+                          %input#plus{:field => "quantity", :type => "button", :value => "+"}/
           #okidokki
           #notoki
       .modal-footer
