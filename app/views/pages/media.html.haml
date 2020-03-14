@@ -28,30 +28,25 @@
   .container
     %h2.text-left.text-uppercase.title-section
       Photothèque
-    .container
-      #centre
-      %h2.text-left.text-uppercase
-        Centre d'entrainement
+.wrapper
+  .container
+    #centre
+    .row
+      .col-md-3
+        .module-centre-media
+          .module.text-center
+            Centre entrainement
+      .col-md-3
+        .module-coeur-media
+          .module.text-center
+            Au cœur de l'action
+      .col-md-3
+        .module-deloc-media
+          .module.text-center
+            En delocalisation
+
 = render partial: "centremedia"
-
-%br
-%br
-.wrapper
-  .container
-    .container
-      #coeur1
-      %h2.text-left.text-uppercase
-        Au cœur de l'action
 = render partial: "coeurmedia"
-
-%br
-%br
-.wrapper
-  .container
-    .container
-      #delocalisation
-      %h2.text-left.text-uppercase
-        Délocalisation
 = render partial: "delocmedia"
 
 %br

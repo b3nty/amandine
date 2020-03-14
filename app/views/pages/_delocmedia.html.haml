@@ -1,63 +1,65 @@
-.container#gallery_deloc
-  .row
-    .col-lg-3.col-sm-4.col-xs-6
-      = image_tag("delocalisation.jpg", :alt => "galerie photos hors centre d'entrainement", class: "thumbnail img-responsive")
-
-    .col-lg-3.col-sm-4.col-xs-6
-      = image_tag("delocalisation-1.jpg", :alt => "galerie photos hors centre d'entrainement", class: "thumbnail img-responsive")
-
-    .col-lg-3.col-sm-4.col-xs-6
-      = image_tag("delocalisation-2.jpg", :alt => "galerie photos hors centre d'entrainement", class: "thumbnail img-responsive")
-
-    .col-lg-3.col-sm-4.col-xs-6
-      = image_tag("delocalisation-3.jpg", :alt => "galerie photos hors centre d'entrainement", class: "thumbnail img-responsive")
-
-    .col-lg-3.col-sm-4.col-xs-6
-      = image_tag("delocalisation-4.jpg", :alt => "galerie photos hors centre d'entrainement", class: "thumbnail img-responsive")
-
-    .col-lg-3.col-sm-4.col-xs-6
-      = image_tag("delocalisation-5.jpg", :alt => "galerie photos hors centre d'entrainement", class: "thumbnail img-responsive")
-
-    .col-lg-3.col-sm-4.col-xs-6
-      = image_tag("delocalisation-6.jpg", :alt => "galerie photos hors centre d'entrainement", class: "thumbnail img-responsive")
-
-    .col-lg-3.col-sm-4.col-xs-6
-      = image_tag("delocalisation-7.jpg", :alt => "galerie photos hors centre d'entrainement", class: "thumbnail img-responsive")
-
-    .col-lg-3.col-sm-4.col-xs-6
-      = image_tag("delocalisation-8.jpg", :alt => "galerie photos hors centre d'entrainement", class: "thumbnail img-responsive")
-
-    .col-lg-3.col-sm-4.col-xs-6
-      = image_tag("delocalisation-9.jpg", :alt => "galerie photos hors centre d'entrainement", class: "thumbnail img-responsive")
-
-    .col-lg-3.col-sm-4.col-xs-6
-      = image_tag("delocalisation-10.jpg", :alt => "galerie photos hors centre d'entrainement", class: "thumbnail img-responsive")
-
-    .col-lg-3.col-sm-4.col-xs-6
-      = image_tag("delocalisation-11.jpg", :alt => "galerie photos hors centre d'entrainement", class: "thumbnail img-responsive")
-
-    .col-lg-3.col-sm-4.col-xs-6
-      = image_tag("delocalisation-12.jpg", :alt => "galerie photos hors centre d'entrainement", class: "thumbnail img-responsive")
-
-    .col-lg-3.col-sm-4.col-xs-6
-      = image_tag("delocalisation-13.jpg", :alt => "galerie photos hors centre d'entrainement", class: "thumbnail img-responsive")
-
-    .col-lg-3.col-sm-4.col-xs-6
-      = image_tag("delocalisation-14.jpg", :alt => "galerie photos hors centre d'entrainement", class: "thumbnail img-responsive")
-
-    .col-lg-3.col-sm-4.col-xs-6
-      = image_tag("delocalisation-15.jpg", :alt => "galerie photos hors centre d'entrainement", class: "thumbnail img-responsive")
-#myModalDeloc.modal.fade{:role => "dialog", :tabindex => "-1"}
+#ModalDelocMedia.modal.fade{"aria-labelledby" => "ModalDelocMedia", :role => "dialog", :tabindex => "-1"}
   .modal-dialog{:role => "document"}
     .modal-content
       .modal-header
         %button.close{"aria-label" => "Close", "data-dismiss" => "modal", :type => "button"}
           %span{"aria-hidden" => "true"} ×
-        %h4.modal-title Photothèque à l'extérieur
+        %h4#ModalDelocMedia.modal-title Au cœur de l'action
       .modal-body
-        #modalCarouselDeloc.carousel.slide
-          .carousel-inner.carousel-inner_deloc
-        %a.carousel-control.left{"data-slide" => "prev", :href => "#modalCarouselDeloc"}
-          %i.glyphicon.glyphicon-chevron-left
-        %a.carousel-control.right{"data-slide" => "next", :href => "#modalCarouselDeloc"}
-          %i.glyphicon.glyphicon-chevron-right
+        #carousel-deloc-media.carousel.slide{"data-ride" => "carousel"}
+          .carousel-inner{:role => "listbox"}
+            .item.active
+              = image_tag("delocalisation.jpg", :alt => "galerie photos hors centre d'entrainement", class: "thumbnail img-responsive")
+
+            .item
+              = image_tag("delocalisation-1.jpg", :alt => "galerie photos hors centre d'entrainement", class: "thumbnail img-responsive")
+
+            .item
+              = image_tag("delocalisation-2.jpg", :alt => "galerie photos hors centre d'entrainement", class: "thumbnail img-responsive")
+
+            .item
+              = image_tag("delocalisation-3.jpg", :alt => "galerie photos hors centre d'entrainement", class: "thumbnail img-responsive")
+
+            .item
+              = image_tag("delocalisation-4.jpg", :alt => "galerie photos hors centre d'entrainement", class: "thumbnail img-responsive")
+
+            .item
+              = image_tag("delocalisation-5.jpg", :alt => "galerie photos hors centre d'entrainement", class: "thumbnail img-responsive")
+
+            .item
+              = image_tag("delocalisation-6.jpg", :alt => "galerie photos hors centre d'entrainement", class: "thumbnail img-responsive")
+
+            .item
+              = image_tag("delocalisation-7.jpg", :alt => "galerie photos hors centre d'entrainement", class: "thumbnail img-responsive")
+
+            .item
+              = image_tag("delocalisation-8.jpg", :alt => "galerie photos hors centre d'entrainement", class: "thumbnail img-responsive")
+
+            .item
+              = image_tag("delocalisation-9.jpg", :alt => "galerie photos hors centre d'entrainement", class: "thumbnail img-responsive")
+
+            .item
+              = image_tag("delocalisation-10.jpg", :alt => "galerie photos hors centre d'entrainement", class: "thumbnail img-responsive")
+
+            .item
+              = image_tag("delocalisation-11.jpg", :alt => "galerie photos hors centre d'entrainement", class: "thumbnail img-responsive")
+
+            .item
+              = image_tag("delocalisation-12.jpg", :alt => "galerie photos hors centre d'entrainement", class: "thumbnail img-responsive")
+
+            .item
+              = image_tag("delocalisation-13.jpg", :alt => "galerie photos hors centre d'entrainement", class: "thumbnail img-responsive")
+
+            .item
+              = image_tag("delocalisation-14.jpg", :alt => "galerie photos hors centre d'entrainement", class: "thumbnail img-responsive")
+
+            .item
+              = image_tag("delocalisation-15.jpg", :alt => "galerie photos hors centre d'entrainement", class: "thumbnail img-responsive")
+          %a.left.carousel-control{"data-slide" => "prev", :href => "#carousel-deloc-media", :role => "button"}
+            %span.glyphicon.glyphicon-chevron-left{"aria-hidden" => "true"}
+            %span.sr-only Previous
+          %a.right.carousel-control{"data-slide" => "next", :href => "#carousel-deloc-media", :role => "button"}
+            %span.glyphicon.glyphicon-chevron-right{"aria-hidden" => "true"}
+            %span.sr-only Next
+      .modal-footer
+        %button.btn.btn-default{"data-dismiss" => "modal", :type => "button"} Close

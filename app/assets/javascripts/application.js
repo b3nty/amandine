@@ -381,4 +381,16 @@ $( document ).on('turbolinks:load', function() {
         $('input[name="form_partenaire[quantity]"]').val(0);
     }
   });
+  $("#sac").click(function() {
+    $("#form_partenaire_size").css('display', 'none');
+    $(".barre .list-inline").css('display', 'none');
+  });
+  $("#t-shirt_h").click(function() {
+    $("#form_partenaire_size").css('display', 'inline-block');
+    $(".barre .list-inline").css('display', 'inline-block');
+  });
+  $("#t-shirt_f").click(function() {
+    $("#form_partenaire_size").css('display', 'inline-block');
+    $(".barre .list-inline").css('display', 'inline-block');
+  });
 });

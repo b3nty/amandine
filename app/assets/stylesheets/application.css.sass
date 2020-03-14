@@ -320,10 +320,12 @@ span.prix
       padding: 0 20px
     #plus, #minus
       width: 28px !important
-      margin: 0px 5px
+      margin: 0px 5px !important
       border: 2px solid #dce4ec
       color: #34495e
       border-radius: 6px
+      height: 35px !important
+      padding-bottom: 31px !important
     .form_partenaire_quantity
       width: 50px
       margin-bottom: 0px
@@ -331,6 +333,69 @@ span.prix
       border: 2px solid #dce4ec
       color: #34495e
       border-radius: 6px
+
+.module-centre-media
+  display: grid
+  place-items: center
+  color: #cc2127
+  position: relative
+  width: 100%
+  height: 100%
+  margin: 5px 0
+  &::before
+    content: ""
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    position: absolute
+    background-image: image-url("centre-entrainement-accueil.jpg")
+    background-size: cover
+    filter: grayscale(100%)
+
+.module-coeur-media
+  display: grid
+  place-items: center
+  color: #cc2127
+  position: relative
+  width: 100%
+  height: 100%
+  margin: 5px 0
+  &::before
+    content: ""
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    position: absolute
+    background-image: image-url("au-coeur-de-laction.jpg")
+    background-size: cover
+    filter: grayscale(100%)
+
+.module-deloc-media
+  display: grid
+  place-items: center
+  color: #cc2127
+  position: relative
+  width: 100%
+  height: 100%
+  margin: 5px 0
+  &::before
+    content: ""
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    position: absolute
+    background-image: image-url("delocalisation.jpg")
+    background-size: cover
+    filter: grayscale(100%)
+
+.module
+  position: relative
+  font: bold 24px "Roboto"
+  padding: 33% 0
+
 
 footer
   color: #777777 !important
@@ -761,3 +826,5 @@ footer
     display: block
     align-items: center
     margin: 25px 0
+  .module
+    font: bold 40px "Roboto"
