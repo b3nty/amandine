@@ -57,58 +57,6 @@ $( document ).on('turbolinks:load', function() {
     $('#modalCarouselCentre').carousel(id_centre); // slide carousel to selected
   });
 
-  /*****************************   Coeur    *****************************************/
-  /* copy loaded thumbnails into carousel */
-  $('#gallery_coeur .row .thumbnail').each(function(i) {
-  	var item_coeur = $('<div class="item item_coeur"></div>');
-    var itemDiv_coeur = $(this).parents('div');
-
-  	$(itemDiv_coeur.html()).appendTo(item_coeur);
-  	item_coeur.appendTo('.carousel-inner_coeur');
-    if (i==0){ // set first item active
-     item_coeur.addClass('active');
-    }
-  });
-  /* activate the carousel */
-  $('#modalCarouselCoeur').carousel({interval:false});
-  /* change modal title when slide changes */
-  $('#modalCarouselCoeur').on('slid.bs.carousel', function () {
-    $('.modal-title').html($(this).find('.active').attr("title"));
-  })
-  /* when clicking a thumbnail */
-  $('#gallery_coeur .row .thumbnail').click(function(){
-    var idx_coeur = $(this).parents('div').index();
-  	var id_coeur = parseInt(idx_coeur);
-  	$('#myModalCoeur').modal('show'); // show the modal
-    $('#modalCarouselCoeur').carousel(id_coeur); // slide carousel to selected
-  });
-
-  /***************************   Deloc   *******************************************/
-  /* copy loaded thumbnails into carousel  */
-  $('#gallery_deloc .row .thumbnail').each(function(i) {
-  	var item_deloc = $('<div class="item item_deloc"></div>');
-    var itemDiv_deloc = $(this).parents('div');
-
-  	$(itemDiv_deloc.html()).appendTo(item_deloc);
-  	item_deloc.appendTo('.carousel-inner_deloc');
-    if (i==0){ // set first item active
-     item_deloc.addClass('active');
-    }
-  });
-  /* activate the carousel */
-  $('#modalCarouselDeloc').carousel({interval:false});
-  /* change modal title when slide changes */
-  $('#modalCarouselDeloc').on('slid.bs.carousel', function () {
-    $('.modal-title').html($(this).find('.active').attr("title"));
-  })
-  /* when clicking a thumbnail */
-  $('#gallery_deloc .row .thumbnail').click(function(){
-    var idx_deloc = $(this).parents('div').index();
-  	var id_deloc = parseInt(idx_deloc);
-  	$('#myModalDeloc').modal('show'); // show the modal
-    $('#modalCarouselDeloc').carousel(id_deloc); // slide carousel to selected
-  });
-
   // for every slide in carousel, copy the next slide's item in the slide.
   // Do the same for the next, next item.
   $('.multi-item-carousel .item').each(function(){
