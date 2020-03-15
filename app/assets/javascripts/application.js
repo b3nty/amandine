@@ -79,6 +79,23 @@ $( document ).on('turbolinks:load', function() {
     wrap: true
   });
 
+ $('[id^=carousel-selector-]').click( function(){
+      var id = this.id.substr(this.id.lastIndexOf("-") + 1);
+      var id = parseInt(id);
+      $('#carousel-centre-media').carousel(id);
+      $('#carousel-coeur-media').carousel(id);
+      $('#carousel-deloc-media').carousel(id);
+  });
+
+  $('#carousel-centre-media').on('slid.bs.carousel', function (e) {
+    var id = $('.item.active').data('slide-number');
+  });
+  $('#carousel-coeur-media').on('slid.bs.carousel', function (e) {
+    var id = $('.item.active').data('slide-number');
+  });
+  $('#carousel-deloc-media').on('slid.bs.carousel', function (e) {
+    var id = $('.item.active').data('slide-number');
+  });
 
   var $animation_elements = $('.animation-element');
   var $window = $(window);
