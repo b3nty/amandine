@@ -358,4 +358,66 @@ $( document ).on('turbolinks:load', function() {
     $("#form_partenaire_size").css('display', 'inline-block');
     $(".barre .list-inline").css('display', 'inline-block');
   });
+
+  /****************************************************************************/
+  /***************************  POPUP HOME PAGE   *****************************/
+  /****************************************************************************/
+
+  function setCookie(cname, cvalue, times) {
+    var d = new Date();
+    d.setTime(d.getTime() + times*1000*60);
+    var expires = "expires="+d.toUTCString();
+    document.cookie = cname + "=" + cvalue + "; " + expires;
+  }
+
+  function getCookie(cname) {
+    var name = cname + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0; i<ca.length; i++) {
+      var c = ca[i];
+      while (c.charAt(0)==' ') c = c.substring(1);
+      if (c.indexOf(name) == 0) return c.substring(name.length,c.length);
+    }
+    return "";
+  }
+
+  var cookie = getCookie('shown');
+  if (!cookie) {
+    showPopup();
+  }
+
+  function showPopup() {
+    setCookie('shown', 'true', 15);
+    $('#MyPopup').modal('show')
+  }
+
+  $("#button-popup").click(function() {
+    var l = Ladda.create(this);
+    l.start();
+    $.ajax({
+      url: 'form-popup',
+      data: {
+          value1: $('#form_popup_email').val(),
+      },
+      type: "GET",
+      success: function(data) {
+        if(data.status == true) {
+          $('#okidokki').html('<li style="list-style: none;"><i style="font-size:16px;color:#5cb85c;margin-bottom:10px;" class="fa fa-check-circle"> Vous serez contacté quand votre achat sera disponible au centre d\'entrainement</i></li>');
+          $('.barre').css('display', 'none');
+          $('#notoki').css('display', 'none');
+          window.open("https://h-training.s3.eu-west-3.amazonaws.com/S%C3%A9ances+pour+Tous+-+COVID19/Entrainement+pour+Tous+-+COVID19++-+Se%CC%81ance+1.pdf", '_blank');
+          setTimeout(function(){
+            location.reload();
+          }, 5000);
+        }
+        if(data.status == false) {
+          $('#notoki').html('<li style="list-style: none;"><i style="font-size: 16px;color:#ea5656;margin-bottom:10px;margin-top:10px;" class="fa fa-exclamation-circle"> L\'un des champs est manquant ou incorrect</i></li>');
+          l.stop();
+        }
+      }
+    });
+  });
+  $('#button-popup').keypress(function(e){
+    if ( e.which == 13 ) return false;
+  });
 });

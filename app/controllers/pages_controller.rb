@@ -39,22 +39,16 @@ class PagesController < ApplicationController
   def boutique
   end
 
-  def form_boutique
-    @form_boutique = FormBoutique.new
-    @form_boutique.status = params[:value1]
-    @form_boutique.email = params[:value2]
-    @form_boutique.phone = params[:value3]
-    @form_boutique.name = params[:value4]
-    @form_boutique.quantity = params[:value5]
-    @form_boutique.size = params[:value6]
-    @form_boutique.product = params[:value7]
-    if ( !@form_boutique.status.blank? && EmailValidator.valid?(params[:value2]) && !@form_boutique.phone.blank? && !@form_boutique.name.blank? && !@form_boutique.quantity.blank? && !@form_boutique.size.blank? && !@form_boutique.product.blank? )
+  def form_popup
+    @form_popup = FormPopup.new
+    @form_popup.email = params[:value1]
+    if ( EmailValidator.valid?(params[:value1]))
       result = {:status => true}
-      @form_boutique.save
+      @form_popup.save
       respond_to do |format|
         format.json { render :json => result.to_json }
       end
-      UserMailer.boutique(@form_boutique).deliver
+      UserMailer.popup(@form_popup).deliver
     else
       result = {:status => false}
       respond_to do |format|
