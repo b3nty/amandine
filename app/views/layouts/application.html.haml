@@ -42,18 +42,20 @@
               .text-center
                 H-TRAINING vous met à disposition des séances d'entraînement pendant la période de confinement : pour nos athlètes, mais pas seulement... profitez-en en accès libre !
                 Maintenez un bon recrutement des muscles posturaux, découvrez une autre forme de travail, ou c'est peut être même l'occasion de commencer !
+                %br
+                %i{style: "font-size:14px;"} Recevez immédiatement votre 1ère séance, et les prochaines chaque jour par e-mail
               %br
               = simple_form_for(:form_popup, html: { class: 'form-horizontal' }) do |f|
                 .form-inputs.text-center
-                  %ul.list-unstyled.list-inline
-                    %li
-                      inscrivez-vous :&nbsp;&nbsp;
-                    %li.barre
+                  .row
+                    .col-md-6
+                      Inscrivez-vous :&nbsp;&nbsp;
+                    .col-md-6
                       = f.input :email, required: true, label: false, placeholder: "Votre adresse e-mail", autofocus: false
 
               #okidokki
               #notoki
-          .modal-footer
-            %span#button-popup.btn.btn-contact{:type => "button", "data-style" => "expand-left" }
+          .modal-footer{style:"text-align:center;"}
+            %span#button-popup.btn.btn-contact{:type => "button"}
               %span.ladda-label
-                Recevoir son programme
+                C'est parti !

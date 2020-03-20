@@ -402,7 +402,7 @@ $( document ).on('turbolinks:load', function() {
       type: "GET",
       success: function(data) {
         if(data.status == true) {
-          $('#okidokki').html('<li style="list-style: none;"><i style="font-size:16px;color:#5cb85c;margin-bottom:10px;" class="fa fa-check-circle"> Vous serez contacté quand votre achat sera disponible au centre d\'entrainement</i></li>');
+          $('#okidokki').html('<li style="list-style: none;"><i style="font-size:16px;color:#5cb85c;margin-bottom:10px;" class="fa fa-check-circle"></i></li>');
           $('.barre').css('display', 'none');
           $('#notoki').css('display', 'none');
           window.open("https://h-training.s3.eu-west-3.amazonaws.com/S%C3%A9ances+pour+Tous+-+COVID19/Entrainement+pour+Tous+-+COVID19++-+Se%CC%81ance+1.pdf", '_blank');
