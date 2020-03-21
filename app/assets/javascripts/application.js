@@ -342,7 +342,7 @@ $( document ).on('turbolinks:load', function() {
 
   function setCookie(cname, cvalue, times) {
     var d = new Date();
-    d.setTime(d.getTime() + times*1000*60);
+    d.setTime(d.getTime() + times);
     var expires = "expires="+d.toUTCString();
     document.cookie = cname + "=" + cvalue + "; " + expires;
   }
@@ -359,12 +359,12 @@ $( document ).on('turbolinks:load', function() {
   }
 
   var cookie = getCookie('shown');
-  if (cookie) {
+  if (!cookie) {
     showPopup();
   }
 
   function showPopup() {
-    setCookie('shown', 'true', 15);
+    setCookie('shown', 'true', 100);
     $('#MyPopup').modal('show')
   }
 

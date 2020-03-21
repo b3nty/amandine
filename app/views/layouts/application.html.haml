@@ -30,35 +30,4 @@
     = render 'layouts/social_btn'
     = render 'layouts/footer'
 
-    #MyPopup.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "MyPopupLabel", :role => "dialog", :tabindex => "-1"}
-      .modal-dialog{:role => "document"}
-        .modal-content
-          .modal-header.text-center
-            %h5#MyPopupLabel.modal-title  ACCÈS LIBRE - SÉANCES pour Tous
-            %button.close{"aria-label" => "Close", "data-dismiss" => "modal", :type => "button"}
-              %span{"aria-hidden" => "true"} ×
-          .modal-body
-            .container-fluid
-              .text-center
-                H-TRAINING vous met à disposition des séances d'entraînement pendant la période de confinement : pour nos athlètes, mais pas seulement... profitez-en en accès libre !
-                %br
-                Maintenez un bon recrutement des muscles posturaux, découvrez une autre forme de travail, ou c'est peut être même l'occasion de commencer !
-                %br
-                %br
-                %i{style: "font-size:14px;"} Recevez immédiatement votre 1ère séance, et les prochaines chaque jour par e-mail
-              %br
-              = simple_form_for(:form_popup, html: { class: 'form-horizontal' }) do |f|
-                .form-inputs.text-center
-                  .row
-                    .col-md-offset-3.col-md-6
-                      Inscrivez-vous :&nbsp;&nbsp;
-                  .row
-                    .col-md-offset-3.col-md-6
-                      = f.input :email, required: true, label: false, placeholder: "Votre adresse e-mail", autofocus: false
-
-              #okidokki
-              #notoki
-          .modal-footer{style:"text-align:center;"}
-            %span#button-popup.btn.btn-contact{:type => "button"}
-              %span.ladda-label
-                C'est parti !
+    
