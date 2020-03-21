@@ -196,29 +196,6 @@ $( document ).on('turbolinks:load', function() {
   };
   juizScrollTo('.wrapper5 a[href^="#"]');
 
-  $("#button-newsletter").click(function() {
-    $.ajax({
-      url: 'newsletter',
-      data: {
-          value: $('#contact_email').val()
-      },
-      type: "GET",
-      success: function(data) {
-        if(data.status == true) {
-          $('#okidokki').html('<li><i style="font-size:16px;color:#5cb85c;margin-bottom:10px;" class="fa fa-check-circle"> C\'est dans la boîte</i></li>');
-          $('.barre').css('display', 'none');
-          $('#notoki').css('display', 'none');
-        }
-        if(data.status == false) {
-          $('#notoki').html('<li><i style="font-size: 16px;color:#ea5656;margin-bottom:10px;" class="fa fa-exclamation-circle"> Email incorrect</i></li>');
-        }
-      }
-    });
-  });
-  $('#button-newsletter').keypress(function(e){
-    if ( e.which == 13 ) return false;
-  });
-
   $("#button-service").click(function() {
     var l = Ladda.create(this);
     l.start();
@@ -382,7 +359,7 @@ $( document ).on('turbolinks:load', function() {
   }
 
   var cookie = getCookie('shown');
-  if (!cookie) {
+  if (cookie) {
     showPopup();
   }
 
@@ -405,7 +382,8 @@ $( document ).on('turbolinks:load', function() {
           $('#okidokki').html('<li style="list-style: none;"><i style="font-size:16px;color:#5cb85c;margin-bottom:10px;" class="fa fa-check-circle"></i></li>');
           $('.barre').css('display', 'none');
           $('#notoki').css('display', 'none');
-          window.open("https://h-training.s3.eu-west-3.amazonaws.com/S%C3%A9ances+pour+Tous+-+COVID19/Entrainement+pour+Tous+-+COVID19++-+Se%CC%81ance+1.pdf", '_blank');
+          window.location.assign("https://h-training.s3.eu-west-3.amazonaws.com/S%C3%A9ances+pour+Tous+-+COVID19/Entrainement+pour+Tous+-+COVID19++-+Se%CC%81ance+1.pdf");
+
           setTimeout(function(){
             location.reload();
           }, 5000);
@@ -417,7 +395,7 @@ $( document ).on('turbolinks:load', function() {
       }
     });
   });
-  $('#button-popup').keypress(function(e){
+  $('#form_popup_email').keypress(function(e){
     if ( e.which == 13 ) return false;
   });
 });
