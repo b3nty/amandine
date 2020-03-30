@@ -379,10 +379,9 @@ $( document ).on('turbolinks:load', function() {
       type: "GET",
       success: function(data) {
         if(data.status == true) {
-          $('#okidokki').html('<li style="list-style: none;"><i style="font-size:16px;color:#5cb85c;margin-bottom:10px;" class="fa fa-check-circle"></i></li>');
+          $('#okidokki').html('<li style="list-style: none;"><i style="font-size:16px;color:#5cb85c;margin-bottom:10px;" class="fa fa-check-circle">Vous êtes bien inscrits, dès demain vous receverez votre programme par E-mail</i></li>');
           $('.barre').css('display', 'none');
           $('#notoki').css('display', 'none');
-          window.location.assign("https://h-training.s3.eu-west-3.amazonaws.com/S%C3%A9ances+pour+Tous+-+COVID19/Entrainement+pour+Tous+-+COVID19++-+Se%CC%81ance+1.pdf");
 
           setTimeout(function(){
             location.reload();

@@ -6,7 +6,7 @@
   %meta{:content => "all", :name => "robots"}/
 
 .wrapper.image-effectif
-  .container
+  .container-fluid
     %section
       %br
       %br
@@ -20,16 +20,16 @@
         Sportif(ve)s de Haut Niveau et sportifs amateurs, du sport de contact aux épreuves d'endurance, des hommes, des femmes, des projets Olympiques et des stages intensifs d'intersaison, les projets se mélangent et ne se ressemblent pas, leurs porteurs non plus mais ils ont tous un même objectif : être meilleur qu'hier.
 
 .wrapper
-  .container
+  .container-fluid
 .wrapper
-  .container
+  .container-fluid
     #athletes
       .row
         .col-md-4
           = image_tag("athletes.png", :alt => "Titre section athlètes", style: "width:100%")
 
 .wrapper
-  .container.bloc-effectif
+  .container-fluid.bloc-effectif
     %ul.nav.nav-tabs{:role => "tablist"}
       %li.active{:role => "presentation"}
         %a{"aria-controls" => "actuels", "data-toggle" => "tab", :href => "#actuels", :role => "tab"} Sportifs actuels
@@ -223,17 +223,17 @@
                 %h5.red Rugby
 
 .wrapper
-  .container
+  .container-fluid
     %hr.hr-grey
 
 .wrapper
-  .container
+  .container-fluid
     #sportif
       .row
         .col-md-4
           = image_tag("staff-sportif.png", :alt => "Titre section staf sportif", style: "width:100%")
 .wrapper
-  .container.bloc-effectif
+  .container-fluid.bloc-effectif
     .row
       .col-md-2.col-xs-4
         .zoom
@@ -243,13 +243,13 @@
             %h5.red Préparatrice Physique
 
 .wrapper
-  .container
+  .container-fluid
     #medical
       .row
         .col-md-4
           = image_tag("staff-medical.png", :alt => "Titre section staf médical", style: "width:100%")
 .wrapper
-  .container.bloc-effectif
+  .container-fluid.bloc-effectif
     .row
       .col-md-2.col-xs-4
         .zoom

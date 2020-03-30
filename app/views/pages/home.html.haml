@@ -25,7 +25,7 @@
         %button.close{"aria-label" => "Close", "data-dismiss" => "modal", :type => "button"}
           %span{"aria-hidden" => "true"} ×
       .modal-body
-        .container-fluid
+        .container-fluid-fluid
           .text-center
             H-TRAINING vous met à disposition des séances d'entraînement pendant la période de confinement : pour nos athlètes, mais pas seulement... profitez-en en accès libre !
             %br
@@ -53,7 +53,7 @@
 
 
 .wrapper.image-training
-  .container
+  .container-fluid
     %section
       %h1.text-left.text-uppercase
         VOTRE STRUCTURE D'ACCOMPAGNEMENT
@@ -76,13 +76,13 @@
       %br
       %br
 .wrapper
-  .container
+  .container-fluid
 .wrapper
-  .container
+  .container-fluid
     %h2.text-center
       Tout ce dont vous avez besoin... Et même plus
 .wrapper1
-  .container
+  .container-fluid
     %br
     %hr.text-center.hr-red
     %br
@@ -110,7 +110,7 @@
   %br
   %br
   %br
-  .container
+  .container-fluid
     %h2.text-center
     .row
       .col-md-3.marge_b30
@@ -135,7 +135,7 @@
   %hr.hr-grey
   %br
   %br
-  .container
+  .container-fluid
     %h2.text-center.uppercase
       Témoignages
     .text-center
@@ -187,6 +187,6 @@
               Un coaching, une implication et un suivi au top pour m'accompagner vers mon objectif. Je recommande H-TRAINING sans hésiter !
 
     .text-center
-      = link_to("https://g.page/h-training-fr/review?rc", title: "Laissez nous votre avis sur Google") do
+      = link_to("https://g.page/h-training-fr/review?rc", title: "Laissez nous votre avis sur Google", :target => "_blank") do
         %span.btn.btn-contact{:type => "button"}
           Laissez nous votre avis sur Google

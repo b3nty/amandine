@@ -1,6 +1,6 @@
 %header
   %nav.navbar.navbar-fixed-top{:role => "navigation"}
-    .container
+    .container-fluid
       / Brand and toggle get grouped for better mobile display
       .navbar-header
         %button.navbar-toggle{"data-target" => "#bs-example-navbar-collapse-1", "data-toggle" => "collapse", :type => "button"}
@@ -12,11 +12,11 @@
         .text-center
           %ul.nav.navbar-nav.navbar-left
             %li.nav-item
-              = link_to 'Notre mission', notre_mission_path, title: "Notre mission", :class => current_page?(notre_mission_path) && 'active'
+              = link_to 'Mission', notre_mission_path, title: "Notre mission", :class => current_page?(notre_mission_path) && 'active'
             %li.nav-item.dropdown
               = link_to 'Services', services_path, title: "Services", :class => "#{current_page?(services_path) && 'active'} nav-link dropdown-toggle", id:"navbarDropdownMenuLink", aria: {haspopup: true, expanded: true}
               .dropdown-menu.text-xs-center.display-mobile{ aria: {labelledby: "navbarDropdownMenuLink"}, role:"menu"}
-                .container.wrapper-dropdown
+                .container-fluid.wrapper-dropdown
                   .row
                     .col-md-4
                       %span SERVICES
@@ -41,7 +41,7 @@
             %li.nav-item.dropdown
               = link_to 'Effectif', effectif_path, title: "effectif", :class => "#{current_page?(effectif_path) && 'active'} nav-link dropdown-toggle", id:"navbarDropdownMenuLink1", aria: {haspopup: true, expanded: true}
               .dropdown-menu.text-xs-center.display-mobile{ aria: {labelledby: "navbarDropdownMenuLink1"}, role:"menu"}
-                .container.wrapper-dropdown
+                .container-fluid.wrapper-dropdown
                   .row
                     .col-md-4
                       %span ATHLÈTES
@@ -59,7 +59,7 @@
             %li.nav-item.dropdown
               = link_to 'Partenaires', partenaires_path, title: "Partenaires", :class => "#{current_page?(partenaires_path) && 'active'} nav-link dropdown-toggle", id:"navbarDropdownMenuLink2", aria: {haspopup: true, expanded: true}
               .dropdown-menu.text-xs-center.display-mobile{ aria: {labelledby: "navbarDropdownMenuLink2"}, role:"menu"}
-                .container.wrapper-dropdown
+                .container-fluid.wrapper-dropdown
                   .row
                     .col-md-4
                       %ul
@@ -71,7 +71,7 @@
             %li.nav-item.dropdown
               = link_to 'Media', media_path, title: "Media", :class => "#{current_page?(media_path) && 'active'} nav-link dropdown-toggle", id:"navbarDropdownMenuLink3", aria: {haspopup: true, expanded: true}
               .dropdown-menu.text-xs-center.display-mobile{ aria: {labelledby: "navbarDropdownMenuLink3"}, role:"menu"}
-                .container.wrapper-dropdown
+                .container-fluid.wrapper-dropdown
                   .row
                     .col-md-4
                       %span PHOTOTHÈQUE

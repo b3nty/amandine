@@ -6,7 +6,7 @@
   %meta{:content => "all", :name => "robots"}/
 
 .wrapper.image-boutique
-  .container
+  .container-fluid
     %section
       %br
       %br
@@ -24,7 +24,7 @@
 
 
 .wrapper
-  .container
+  .container-fluid
 
 #theCarousel.carousel.slide.multi-item-carousel
   .carousel-inner
@@ -64,13 +64,13 @@
     %i.glyphicon.glyphicon-chevron-right
 
 .wrapper
-  .container
+  .container-fluid
 .wrapper
-  .container
+  .container-fluid
     %hr.hr-grey
 
 .wrapper
-  .container
+  .container-fluid
     .row
       .col-md-4.text-center
         = image_tag("image-shop-t-shirt-f.png", :alt => "Boutique : T-shirt femme", class: " img-responsive")
@@ -108,7 +108,7 @@
         %button.close{"aria-label" => "Close", "data-dismiss" => "modal", :type => "button"}
           %span{"aria-hidden" => "true"} ×
       .modal-body
-        .container-fluid
+        .container-fluid-fluid
           = simple_form_for(:form_partenaire, html: { class: 'form-horizontal' }) do |f|
             .form-inputs.text-center
               %ul.list-unstyled
