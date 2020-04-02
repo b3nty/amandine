@@ -45,8 +45,8 @@
 
           #okidokki
           #notoki
-      .modal-footer{style:"text-align:center;"}
-        %span#button-popup.btn.btn-contact{:type => "button"}
+      .modal-footer{style:"text-align:center;height:70px;"}
+        %span#button-popup.btn.btn-contact{:type => "button",style:"margin-left:-55px;"}
           %span.ladda-label
             C'est parti !
 
@@ -147,46 +147,50 @@
         %i.fas.fa-star.gold
     .row
       .col-md-4.text-center
-        .bloc-temoignage
-          .image-temoignage
-            = image_tag("francois-herry-temoignage.jpg", :alt => "Témoignage de François Herry", :class => "img-circle")
-          %section
-            %h3.text-center
-              François HERRY
-            %h4.text-center
-              Rugby
-              %br
-              Actuellement à Nevers (PROD2)
-            %p.text-justify.text-center
-              Préparatrice physique très technique, je recommande fortement. Elle m'a permis de progresser et de franchir un cap.
+        = link_to(effectif_path, title: "François Herry", style: "text-decoration: none;") do
+          .bloc-temoignage
+            .image-temoignage
+              = image_tag("francois-herry-temoignage.jpg", :alt => "Témoignage de François Herry", :class => "img-circle")
+            %section
+              %h3.text-center
+                François HERRY
+              %h4.text-center
+                Rugby
+                %br
+                Actuellement à Nevers (PROD2)
+              %p.text-justify.text-center
+                Préparatrice physique très technique, je recommande fortement. Elle m'a permis de progresser et de franchir un cap.
       .col-md-4.text-center
-        .bloc-temoignage
-          .image-temoignage
-            = image_tag("pernelle-michon-temoignage.jpg", :alt => "Témoignage de Pernelle Michon", :class => "img-circle")
-          %section
-            %h3.text-center
-              Pernelle MICHON
-            %h4.text-center
-              Voile - Lasr Radial
-              %br
-              Équipe de France
-            %p.text-justify.text-center
-              Préparatrice physique professionnelle et extrêmement investie. Je la recommande fortement dans la préparation de projets sportifs.
+        = link_to(effectif_path(anchor: 'michon'), title: "Pernelle Michon", style: "text-decoration: none;") do
+          .bloc-temoignage
+            .image-temoignage
+              = image_tag("pernelle-michon-temoignage.jpg", :alt => "Témoignage de Pernelle Michon", :class => "img-circle")
+            %section
+              %h3.text-center
+                Pernelle MICHON
+              %h4.text-center
+                Voile - Lasr Radial
+                %br
+                Équipe de France
+              %p.text-justify.text-center
+                Préparatrice physique professionnelle et extrêmement investie. Je la recommande fortement dans la préparation de projets sportifs.
       .col-md-4.text-center
-        .bloc-temoignage
-          .image-temoignage
-            = image_tag("lucie-anastassiou-temoignage.jpg", :alt => "Témoignage de Lucie Anastassiou", :class => "img-circle")
-          %section
-            %h3.text-center
-              Lucie ANASTASSIOU
-            %h4.text-center
-              Tir - Skeet Olympique
-              %br
-              Équipe de France
-            %p.text-justify.text-center
-              Un coaching, une implication et un suivi au top pour m'accompagner vers mon objectif. Je recommande H-TRAINING sans hésiter !
+        = link_to(effectif_path(anchor: 'anastassiou'), title: "Lucie Anastassiou", style: "text-decoration: none;") do
+          .bloc-temoignage
+            .image-temoignage
+              = image_tag("lucie-anastassiou-temoignage.jpg", :alt => "Témoignage de Lucie Anastassiou", :class => "img-circle")
+            %section
+              %h3.text-center
+                Lucie ANASTASSIOU
+              %h4.text-center
+                Tir - Skeet Olympique
+                %br
+                Équipe de France
+              %p.text-justify.text-center
+                Un coaching, une implication et un suivi au top pour m'accompagner vers mon objectif. Je recommande H-TRAINING sans hésiter !
 
-    .text-center
-      = link_to("https://g.page/h-training-fr/review?rc", title: "Laissez nous votre avis sur Google", :target => "_blank") do
-        %span.btn.btn-contact{:type => "button"}
-          Laissez nous votre avis sur Google
+    .row
+      .col-md-12.text-center
+        = link_to("https://g.page/h-training-fr/review?rc", title: "Laissez nous votre avis sur Google", :target => "_blank") do
+          %span.btn.btn-contact{:type => "button", style: "margin-left: -140px;"}
+            Laissez nous votre avis sur Google

@@ -79,7 +79,7 @@
         %br
         %i XS-XXXL
         %br
-        %span.marge_t10.btn.btn-contact#t-shirt_f{"data-target" => "#exampleModal", "data-toggle" => "modal", "data-whatever" => "T-shirt Femme", "data-message" => "T-shirt Femme", :type => "button"}
+        %span.marge_t10.btn.btn-contact#t-shirt_f{"data-target" => "#exampleModal", "data-toggle" => "modal", "data-whatever" => "T-shirt Femme", "data-message" => "T-shirt Femme", :type => "button",style:"margin-left: -65px;"}
           COMMANDER
       .col-md-4.text-center
         = image_tag("image-site-shop-t-shirt-h.png", :alt => "Boutique : T-shirt homme", class: " img-responsive")
@@ -88,7 +88,7 @@
         %br
         %i XS-XXXL
         %br
-        %span.marge_t10.btn.btn-contact#t-shirt_h{"data-target" => "#exampleModal", "data-toggle" => "modal", "data-whatever" => "T-shirt Homme", "data-message" => "T-shirt Homme", :type => "button"}
+        %span.marge_t10.btn.btn-contact#t-shirt_h{"data-target" => "#exampleModal", "data-toggle" => "modal", "data-whatever" => "T-shirt Homme", "data-message" => "T-shirt Homme", :type => "button",style:"margin-left: -65px;"}
           COMMANDER
       .col-md-4.text-center
         = image_tag("Image-shop-sac.png", :alt => "Boutique : sac", class: " img-responsive")
@@ -97,7 +97,7 @@
         %br
         %i Taille unique
         %br
-        %span.marge_t10.btn.btn-contact#sac{"data-target" => "#exampleModal", "data-toggle" => "modal", "data-whatever" => "Sac", "data-message" => "Sac", :type => "button"}
+        %span.marge_t10.btn.btn-contact#sac{"data-target" => "#exampleModal", "data-toggle" => "modal", "data-whatever" => "Sac", "data-message" => "Sac", :type => "button",style:"margin-left: -65px;"}
           COMMANDER
 
 #exampleModal.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "exampleModalLabel", :role => "dialog", :tabindex => "-1"}
@@ -138,6 +138,6 @@
                           %input#plus{:field => "quantity", :type => "button", :value => "+"}/
           #okidokki
           #notoki
-      .modal-footer
-        %span#button-boutique.btn.btn-contact{:type => "button", "data-style" => "expand-left" }
+      .modal-footer{style:"text-align:center;height:70px;"}
+        %span#button-boutique.btn.btn-contact{:type => "button", "data-style" => "expand-left",style:"margin-left:-78px;"}
           %span.ladda-label Je passe commande
