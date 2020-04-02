@@ -237,12 +237,13 @@ $( document ).on('turbolinks:load', function() {
           value4: $('#form_boutique_name').val(),
           value5: $('#form_boutique_quantity').val(),
           value6: $('#form_boutique_size').val(),
-          value7: $('#form_boutique_product').val()
+          value7: $('#form_boutique_product').val(),
+          value8: $('#form_boutique_color').val()
       },
       type: "GET",
       success: function(data) {
         if(data.status == true) {
-          $('#okidokki').html('<li style="list-style: none;"><i style="font-size:16px;color:#5cb85c;margin-bottom:10px;" class="fa fa-check-circle"> Vous serez contacté quand votre achat sera disponible au centre d\'entrainement</i></li>');
+          $('#okidokki').html('<li style="list-style: none;"><i style="font-size:16px;color:#5cb85c;margin-bottom:10px;" class="fa fa-check-circle"> Vous serez contactés dans les plus brefs délais pour venir réceptionner votre article au centre d\'entraînement</i></li>');
           $('.barre').css('display', 'none');
           $('#notoki').css('display', 'none');
           setTimeout(function(){
@@ -259,6 +260,55 @@ $( document ).on('turbolinks:load', function() {
   $('#button-boutique').keypress(function(e){
     if ( e.which == 13 ) return false;
   });
+
+  $('#exampleModal').on('show.bs.modal', function (event) {
+    var button = $(event.relatedTarget) // Button that triggered the modal
+    var recipient = button.data('whatever') // Extract info from data-* attributes
+    var message = button.data('message')
+    // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+    // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+    var modal = $(this)
+    modal.find('.modal-title').text('Ma commande : ' + recipient)
+    modal.find('.modal-body #form_boutique_product').val(message)
+  })
+
+  $('#plus').click(function(e){
+    e.preventDefault();
+    fieldName = $(this).attr('field');
+    var currentVal = parseInt($('input[name="form_boutique[quantity]"]').val());
+    if (!isNaN(currentVal)) {
+        $('input[name="form_boutique[quantity]"]').val(currentVal + 1);
+    } else {
+        $('input[name="form_boutique[quantity]"]').val(0);
+    }
+  });
+  $("#minus").click(function(e) {
+    e.preventDefault();
+    fieldName = $(this).attr('field');
+    var currentVal = parseInt($('input[name="form_boutique[quantity]"]').val());
+    if (!isNaN(currentVal) && currentVal > 0) {
+        $('input[name="form_boutique[quantity]"]').val(currentVal - 1);
+    } else {
+        $('input[name="form_boutique[quantity]"]').val(0);
+    }
+  });
+  $("#sac").click(function() {
+    $("#size_form").css('display', 'none');
+    $(".barre .list-inline").css('display', 'block');
+    $("#color_form").css('display', 'none');
+  });
+  $("#t-shirt_h").click(function() {
+    $("#size_form").css('display', 'block');
+    $(".barre .list-inline").css('display', 'block');
+    $("#color_form").css('display', 'block');
+  });
+  $("#t-shirt_f").click(function() {
+    $("#size_form").css('display', 'block');
+    $(".barre .list-inline").css('display', 'block');
+    $("#color_form").css('display', 'none');
+  });
+
+
   $("#button-partenaire").click(function() {
     var l = Ladda.create(this);
     l.start();
@@ -291,49 +341,6 @@ $( document ).on('turbolinks:load', function() {
   });
   $('#button-partenaire').keypress(function(e){
     if ( e.which == 13 ) return false;
-  });
-  $('#exampleModal').on('show.bs.modal', function (event) {
-    var button = $(event.relatedTarget) // Button that triggered the modal
-    var recipient = button.data('whatever') // Extract info from data-* attributes
-    var message = button.data('message')
-    // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
-    // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
-    var modal = $(this)
-    modal.find('.modal-title').text('Ma commande : ' + recipient)
-    modal.find('.modal-body #form_partenaire_product').val(message)
-  })
-
-  $('#plus').click(function(e){
-    e.preventDefault();
-    fieldName = $(this).attr('field');
-    var currentVal = parseInt($('input[name="form_partenaire[quantity]"]').val());
-    if (!isNaN(currentVal)) {
-        $('input[name="form_partenaire[quantity]"]').val(currentVal + 1);
-    } else {
-        $('input[name="form_partenaire[quantity]"]').val(0);
-    }
-  });
-  $("#minus").click(function(e) {
-    e.preventDefault();
-    fieldName = $(this).attr('field');
-    var currentVal = parseInt($('input[name="form_partenaire[quantity]"]').val());
-    if (!isNaN(currentVal) && currentVal > 0) {
-        $('input[name="form_partenaire[quantity]"]').val(currentVal - 1);
-    } else {
-        $('input[name="form_partenaire[quantity]"]').val(0);
-    }
-  });
-  $("#sac").click(function() {
-    $("#form_partenaire_size").css('display', 'none');
-    $(".barre .list-inline").css('display', 'none');
-  });
-  $("#t-shirt_h").click(function() {
-    $("#form_partenaire_size").css('display', 'inline-block');
-    $(".barre .list-inline").css('display', 'inline-block');
-  });
-  $("#t-shirt_f").click(function() {
-    $("#form_partenaire_size").css('display', 'inline-block');
-    $(".barre .list-inline").css('display', 'inline-block');
   });
 
   /****************************************************************************/

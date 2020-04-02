@@ -109,10 +109,11 @@
           %span{"aria-hidden" => "true"} ×
       .modal-body
         .container-fluid-fluid
-          = simple_form_for(:form_partenaire, html: { class: 'form-horizontal' }) do |f|
+          = simple_form_for(:form_boutique, html: { class: 'form-horizontal' }) do |f|
             .form-inputs.text-center
+              = f.input :product, required: true, label: false, autofocus: false, :as => :hidden
               %ul.list-unstyled
-                %li.barre
+                %li.barre.text-left
                   = f.select :status,  options_for_select(FormBoutique::STATUS), as: :radio_button, label: false, required: true
                 %li.barre
                   &nbsp;
@@ -122,20 +123,35 @@
                   = f.input :phone, required: true, label: false, placeholder: "Votre numéro de téléphone", autofocus: false
                 %li.barre
                   = f.input :name, required: true, label: false, placeholder: "Nom / Raison sociale", autofocus: false
+                %li.barre#color_form.text-left
+                  %ul.list-unstyled.list-inline.text-left
+                    %li.barre
+                      Couleurs :
+                    %li.barre
+                      = f.select :color,  options_for_select(FormBoutique::COLORS), as: :radio_button, label: false
+                %li.barre
+                  &nbsp;
                 %li.barre
                   .row
-                    .col-md-4
-                      = f.input :product, required: true, label: false, autofocus: false
-                    .col-md-4
-                      = f.select :size, options_for_select(FormBoutique::SIZE), as: :radio_button, label: false, required: true
-                    .col-md-4.text-center
-                      %ul.list-inline
-                        %li
-                          %input#minus{:field => "quantity", :type => "button", :value => "-"}/
-                        %li
-                          = f.input :quantity, label: false, as: :integer, :class => "qty", input_html: { :value => 1, min: '1' }
-                        %li
-                          %input#plus{:field => "quantity", :type => "button", :value => "+"}/
+                    .col-md-6#size_form
+                      %ul.list-unstyled.list-inline.text-left
+                        %li.barre
+                          Taille :
+                        %li.barre
+                          = f.select :size, options_for_select(FormBoutique::SIZE), as: :radio_button, label: false, required: true
+                    .col-md-6.text-center
+                      %ul.list-unstyled.list-inline.text-left
+                        %li.barre
+                          Quantité :
+                        %li.barre
+                          %ul.list-inline
+                            %li
+                              %input#minus{:field => "quantity", :type => "button", :value => "-"}/
+                            %li
+                              = f.input :quantity, label: false, as: :integer, :class => "qty", input_html: { :value => 1, min: '1' }
+                            %li
+                              %input#plus{:field => "quantity", :type => "button", :value => "+"}/
+
           #okidokki
           #notoki
       .modal-footer{style:"text-align:center;height:70px;"}
