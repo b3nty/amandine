@@ -26,23 +26,27 @@
   .container-fluid
 .wrapper
   .container-fluid
-    %h2.text-left.text-uppercase.title-section
-      Photothèque
+    .row
+      .col-md-4
+        %h2{style:"display:none;"} Photothèque
+        = image_tag("phototheque.png", :alt => "Titre section Photothèque", style: "width:100%")
+
+
 .wrapper
   .container-fluid
     #centre
     .row
-      .col-md-3.video-card{"data-target" => "#ModalCentreMedia", "data-toggle" => "modal", :type => "button", style: "cursor:pointer"}
+      .col-md-5ths.video-card{"data-target" => "#ModalCentreMedia", "data-toggle" => "modal", :type => "button", style: "cursor:pointer"}
         = image_tag("centre-entrainement-accueil.jpg", :alt => "galerie photos centre entrainement", class: "img-responsive")
         .video-text
           %h3 CENTRE D'ENTRAINEMENT
           %h4 Album
-      .col-md-3.video-card{"data-target" => "#ModalCoeurMedia", "data-toggle" => "modal", :type => "button", style: "cursor:pointer"}
+      .col-md-5ths.video-card{"data-target" => "#ModalCoeurMedia", "data-toggle" => "modal", :type => "button", style: "cursor:pointer"}
         = image_tag("au-coeur-de-laction.jpg", :alt => "galerie photos au cœur de l'action", class: "img-responsive")
         .video-text
           %h3 AU CŒUR DE L'ACTION
           %h4 Album
-      .col-md-3.video-card{"data-target" => "#ModalDelocMedia", "data-toggle" => "modal", :type => "button", style: "cursor:pointer"}
+      .col-md-5ths.video-card{"data-target" => "#ModalDelocMedia", "data-toggle" => "modal", :type => "button", style: "cursor:pointer"}
         = image_tag("delocalisation.jpg", :alt => "galerie photos hors centre d'entrainement", class: "img-responsive")
         .video-text
           %h3 EN DÉLOCALISATION
@@ -56,15 +60,18 @@
 %br
 .wrapper
   .container-fluid
-    %h2.text-left.text-uppercase.title-section
-      Videothèque
+    .row
+      .col-md-4
+        %h2{style:"display:none;"} Videothèque
+        = image_tag("videotheque.png", :alt => "Titre section Videothèque", style: "width:100%")
+
     .container-fluid
       #interviews
       %h2.text-left.text-uppercase
         Interviews
       %br
       .row
-        .col-md-3.video-card
+        .col-md-5ths.video-card
           %iframe{:allow => "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture", :allowfullscreen => "", :frameborder => "0", :height => "56%", :src => "https://www.youtube.com/embed/_ALOQyw3SRk?rel=0&showinfo=0", :width => "100%"}
           .video-text
             %h3 Interview : Rémi MOUSSEAU
@@ -72,7 +79,7 @@
             %i.red 02.02.2020
           %br
           %br
-        .col-md-3.video-card
+        .col-md-5ths.video-card
           %iframe{:allow => "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture", :allowfullscreen => "", :frameborder => "0", :height => "56%", :src => "https://www.youtube.com/embed/571kaI9cY_I?rel=0&showinfo=0", :width => "100%"}
           .video-text
             %h3 Interview : Alexis TAHET
@@ -80,7 +87,7 @@
             %i.red 06.01.2020
           %br
           %br
-        .col-md-3.video-card
+        .col-md-5ths.video-card
           %iframe{:allow => "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture", :allowfullscreen => "", :frameborder => "0", :height => "56%", :src => "https://www.youtube.com/embed/b76aL--biEA?rel=0&showinfo=0", :width => "100%"}
           .video-text
             %h3 Interview : Eliot Merceron
@@ -88,7 +95,7 @@
             %i.red 29.12.2019
           %br
           %br
-        .col-md-3.video-card
+        .col-md-5ths.video-card
           %iframe{:allow => "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture", :allowfullscreen => "", :frameborder => "0", :height => "56%", :src => "https://www.youtube.com/embed/jqDPnCAWUiM?rel=0&showinfo=0", :width => "100%"}
           .video-text
             %h3 Interview : Pernelle Michon
@@ -96,7 +103,7 @@
             %i.red 17.02.2019
           %br
           %br
-        .col-md-3.video-card
+        .col-md-5ths.video-card
           %iframe{:allow => "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture", :allowfullscreen => "", :frameborder => "0", :height => "56%", :src => "https://www.youtube.com/embed/Oz1ZF1ug02g?rel=0&showinfo=0", :width => "100%"}
           .video-text
             %h3 Interview : Ximun Mathis
@@ -104,7 +111,7 @@
             %i.red 08.03.2019
           %br
           %br
-        .col-md-3.video-card
+        .col-md-5ths.video-card
           %iframe{:allow => "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture", :allowfullscreen => "", :frameborder => "0", :height => "56%", :src => "https://www.youtube.com/embed/dLAdKL0pujA?rel=0&showinfo=0", :width => "100%"}
           .video-text
             %h3 Interview : Maxime Mazard
@@ -112,7 +119,7 @@
             %i.red 17.02.2019
           %br
           %br
-        .col-md-3.video-card
+        .col-md-5ths.video-card
           %iframe{:allow => "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture", :allowfullscreen => "", :frameborder => "0", :height => "56%", :src => "https://www.youtube.com/embed/rsXlUh6fxWg?rel=0&showinfo=0", :width => "100%"}
           .video-text
             %h3 Interview : Pernelle Michon
@@ -120,7 +127,7 @@
             %i.red 04.02.2019
           %br
           %br
-        .col-md-3.video-card
+        .col-md-5ths.video-card
           %iframe{:allow => "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture", :allowfullscreen => "", :frameborder => "0", :height => "56%", :src => "https://www.youtube.com/embed/BeijGYgNyjI?rel=0&showinfo=0", :width => "100%"}
           .video-text
             %h3 Interview : Forrest Henry
@@ -135,12 +142,12 @@
         Au cœur de l'action
       %br
       .row
-        .col-md-3.video-card
+        .col-md-5ths.video-card
           %iframe{:allow => "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture", :allowfullscreen => "", :frameborder => "0", :height => "56%", :src => "https://www.youtube.com/embed/ls1RZJvTkuo?rel=0&showinfo=0", :width => "100%"}
           .video-text
             %h3 Travail spécifique Appuis / Explosivité (Tennis)
             %h4 Echéance sportive Semaine-3 : activation neuro-musculaire des groupes musculaires concernés, réactivité au sol
-        .col-md-3.video-card
+        .col-md-5ths.video-card
           %iframe{:allow => "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture", :allowfullscreen => "", :frameborder => "0", :height => "56%", :src => "https://www.youtube.com/embed/cd28EfJrdc0?rel=0&showinfo=0", :width => "100%"}
           .video-text
             %h3 Trêve hivernale pour le RCP

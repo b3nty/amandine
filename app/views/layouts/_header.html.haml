@@ -58,9 +58,9 @@
           %ul.nav.navbar-nav.navbar-right
             %li.nav-item.dropdown
               = link_to 'Partenaires', partenaires_path, title: "Partenaires", :class => current_page?(partenaires_path) && 'active'
-                          
+
             %li.nav-item.dropdown
-              = link_to 'Media', media_path, title: "Media", :class => "#{current_page?(media_path) && 'active'} nav-link dropdown-toggle", id:"navbarDropdownMenuLink3", aria: {haspopup: true, expanded: true}
+              = link_to 'Medias', media_path, title: "Medias", :class => "#{current_page?(media_path) && 'active'} nav-link dropdown-toggle", id:"navbarDropdownMenuLink3", aria: {haspopup: true, expanded: true}
               .dropdown-menu.text-xs-center.display-mobile{ aria: {labelledby: "navbarDropdownMenuLink3"}, role:"menu"}
                 .container-fluid.wrapper-dropdown
                   .row

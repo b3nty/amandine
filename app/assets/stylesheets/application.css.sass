@@ -296,16 +296,14 @@ span.btn-contact
 
 
 .video-card
+  opacity: 0.5
   &:hover
     h3
       color: #cc2127
+    opacity: 1
   .video-text
-    border-left: 2px solid #eee
-    border-right: 2px solid #eee
-    border-bottom: 2px solid #eee
     margin-top: -5px
     padding: 10px
-    min-height: 150px
 #gallery_centre, #gallery_coeur, #gallery_deloc
   padding: 0 20px
   .thumbnail
@@ -321,6 +319,8 @@ span.btn-contact
     cursor: pointer
   img
     vertical-align: inherit !important
+  .col-sm-1
+    padding: 1px
 
 span.prix
   font-size: 20px
@@ -790,3 +790,28 @@ h5#MyPopupLabel
     margin: 25px 0
   .module
     font: bold 40px "Roboto"
+
+.col-xs-5ths, .col-sm-5ths, .col-md-5ths, .col-lg-5ths
+  position: relative
+  min-height: 1px
+  padding-right: 15px
+  padding-left: 15px
+
+.col-xs-5ths
+  width: 20%
+  float: left
+
+@media (min-width: 768px)
+  .col-sm-5ths
+    width: 20%
+    float: left
+
+@media (min-width: 992px)
+  .col-md-5ths
+    width: 20%
+    float: left
+
+@media (min-width: 1200px)
+  .col-lg-5ths
+    width: 20%
+    float: left

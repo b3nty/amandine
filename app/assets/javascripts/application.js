@@ -404,4 +404,8 @@ $( document ).on('turbolinks:load', function() {
   $('#form_popup_email').keypress(function(e){
     if ( e.which == 13 ) return false;
   });
+  // 
+  // $(".zoom").mouseover(function() {
+  //   $([document.documentElement, document.body]).animate({ scrollTop: $(this).offset().top-200 }, '500');
+  // });
 });
