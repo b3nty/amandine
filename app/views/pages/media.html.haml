@@ -65,90 +65,90 @@
         %h2{style:"display:none;"} Videothèque
         = image_tag("videotheque.png", :alt => "Titre section Videothèque", style: "width:100%")
 
-    .container-fluid
-      #interviews
-      %h2.text-left.text-uppercase
-        Interviews
-      %br
-      .row
-        .col-md-5ths.video-card
-          %iframe{:allow => "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture", :allowfullscreen => "", :frameborder => "0", :height => "56%", :src => "https://www.youtube.com/embed/_ALOQyw3SRk?rel=0&showinfo=0", :width => "100%"}
-          .video-text
-            %h3 Interview : Rémi MOUSSEAU
-            %h4 Rugby
-            %i.red 02.02.2020
-          %br
-          %br
-        .col-md-5ths.video-card
-          %iframe{:allow => "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture", :allowfullscreen => "", :frameborder => "0", :height => "56%", :src => "https://www.youtube.com/embed/571kaI9cY_I?rel=0&showinfo=0", :width => "100%"}
-          .video-text
-            %h3 Interview : Alexis TAHET
-            %h4 Football
-            %i.red 06.01.2020
-          %br
-          %br
-        .col-md-5ths.video-card
-          %iframe{:allow => "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture", :allowfullscreen => "", :frameborder => "0", :height => "56%", :src => "https://www.youtube.com/embed/b76aL--biEA?rel=0&showinfo=0", :width => "100%"}
-          .video-text
-            %h3 Interview : Eliot Merceron
-            %h4 Voile, Laser Standard
-            %i.red 29.12.2019
-          %br
-          %br
-        .col-md-5ths.video-card
-          %iframe{:allow => "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture", :allowfullscreen => "", :frameborder => "0", :height => "56%", :src => "https://www.youtube.com/embed/jqDPnCAWUiM?rel=0&showinfo=0", :width => "100%"}
-          .video-text
-            %h3 Interview : Pernelle Michon
-            %h4 Voile, Laser Radial, Pôle France, La Rochelle
-            %i.red 17.02.2019
-          %br
-          %br
-        .col-md-5ths.video-card
-          %iframe{:allow => "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture", :allowfullscreen => "", :frameborder => "0", :height => "56%", :src => "https://www.youtube.com/embed/Oz1ZF1ug02g?rel=0&showinfo=0", :width => "100%"}
-          .video-text
-            %h3 Interview : Ximun Mathis
-            %h4 Pelote Basque, La Rochelle, Division ?
-            %i.red 08.03.2019
-          %br
-          %br
-        .col-md-5ths.video-card
-          %iframe{:allow => "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture", :allowfullscreen => "", :frameborder => "0", :height => "56%", :src => "https://www.youtube.com/embed/dLAdKL0pujA?rel=0&showinfo=0", :width => "100%"}
-          .video-text
-            %h3 Interview : Maxime Mazard
-            %h4 Voile, Laser Standard, Pôle France, La Rochelle
-            %i.red 17.02.2019
-          %br
-          %br
-        .col-md-5ths.video-card
-          %iframe{:allow => "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture", :allowfullscreen => "", :frameborder => "0", :height => "56%", :src => "https://www.youtube.com/embed/rsXlUh6fxWg?rel=0&showinfo=0", :width => "100%"}
-          .video-text
-            %h3 Interview : Pernelle Michon
-            %h4 Voile, Laser Radial, Pôle France, La Rochelle
-            %i.red 04.02.2019
-          %br
-          %br
-        .col-md-5ths.video-card
-          %iframe{:allow => "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture", :allowfullscreen => "", :frameborder => "0", :height => "56%", :src => "https://www.youtube.com/embed/BeijGYgNyjI?rel=0&showinfo=0", :width => "100%"}
-          .video-text
-            %h3 Interview : Forrest Henry
-            %h4 Baseball, Les Boucaniers, La Rochelle, Division 1
-            %i.red 17.01.2019
-          %br
-          %br
-
-      %br
-      #coeur2
-      %h2.text-left.text-uppercase
-        Au cœur de l'action
-      %br
-      .row
-        .col-md-5ths.video-card
-          %iframe{:allow => "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture", :allowfullscreen => "", :frameborder => "0", :height => "56%", :src => "https://www.youtube.com/embed/ls1RZJvTkuo?rel=0&showinfo=0", :width => "100%"}
-          .video-text
-            %h3 Travail spécifique Appuis / Explosivité (Tennis)
-            %h4 Echéance sportive Semaine-3 : activation neuro-musculaire des groupes musculaires concernés, réactivité au sol
-        .col-md-5ths.video-card
-          %iframe{:allow => "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture", :allowfullscreen => "", :frameborder => "0", :height => "56%", :src => "https://www.youtube.com/embed/cd28EfJrdc0?rel=0&showinfo=0", :width => "100%"}
-          .video-text
-            %h3 Trêve hivernale pour le RCP
-            %h4 H-TRAINING, au service des clubs
+    .row
+      .col-md-6.col-md-offset-3.video-card
+        %iframe{:allow => "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture", :allowfullscreen => "", :frameborder => "0", :height => "350", :src => "https://www.youtube.com/embed/_ALOQyw3SRk?rel=0&showinfo=0", :width => "100%"}
+        .video-text#video-content
+          %h3 Interview : Rémi MOUSSEAU
+          %h4 Rugby
+          %i.red 02.02.2020
+  .container-fluid
+    .row
+      .col-md-5ths.image-card{"data-url" => "https://www.youtube.com/embed/_ALOQyw3SRk?rel=0&showinfo=0"}
+        = image_tag("interview-remi-mousseau", :alt => "Interview : Rémi MOUSSEAU", style: "width:100%")
+        .video-text
+          %h3 Interview : Rémi MOUSSEAU
+          %h4 Rugby
+          %i.red 02.02.2020
+        %br
+        %br
+      .col-md-5ths.image-card{"data-url" => "https://www.youtube.com/embed/571kaI9cY_I?rel=0&showinfo=0"}
+        = image_tag("interview-alexis-tahet", :alt => "Interview : Alexis TAHET", style: "width:100%")
+        .video-text
+          %h3 Interview : Alexis TAHET
+          %h4 Football
+          %i.red 06.01.2020
+        %br
+        %br
+      .col-md-5ths.image-card{"data-url" => "https://www.youtube.com/embed/b76aL--biEA?rel=0&showinfo=0"}
+        = image_tag("interview-eliot-merceron", :alt => "Interview : Eliot Merceron", style: "width:100%")
+        .video-text
+          %h3 Interview : Eliot Merceron
+          %h4 Voile, Laser Standard
+          %i.red 29.12.2019
+        %br
+        %br
+      .col-md-5ths.image-card{"data-url" => "https://www.youtube.com/embed/jqDPnCAWUiM?rel=0&showinfo=0"}
+        = image_tag("interview-pernelle-michon-2", :alt => "Interview : Pernelle Michon", style: "width:100%")
+        .video-text
+          %h3 Interview : Pernelle Michon
+          %h4 Voile, Laser Radial, Pôle France, La Rochelle
+          %i.red 17.02.2019
+        %br
+        %br
+      .col-md-5ths.image-card{"data-url" => "https://www.youtube.com/embed/Oz1ZF1ug02g?rel=0&showinfo=0"}
+        = image_tag("interview-ximun-mathis", :alt => "Interview : Ximun Mathis", style: "width:100%")
+        .video-text
+          %h3 Interview : Ximun Mathis
+          %h4 Pelote Basque, La Rochelle, Division ?
+          %i.red 08.03.2019
+        %br
+        %br
+      .col-md-5ths.image-card{"data-url" => "https://www.youtube.com/embed/dLAdKL0pujA?rel=0&showinfo=0"}
+        = image_tag("interview-maxime-mazard", :alt => "Interview : Maxime Mazard", style: "width:100%")
+        .video-text
+          %h3 Interview : Maxime Mazard
+          %h4 Voile, Laser Standard, Pôle France, La Rochelle
+          %i.red 17.02.2019
+        %br
+        %br
+      .col-md-5ths.image-card{"data-url" => "https://www.youtube.com/embed/rsXlUh6fxWg?rel=0&showinfo=0"}
+        = image_tag("interview-pernelle-michon-1", :alt => "Interview : Pernelle Michon", style: "width:100%")
+        .video-text
+          %h3 Interview : Pernelle Michon
+          %h4 Voile, Laser Radial, Pôle France, La Rochelle
+          %i.red 04.02.2019
+        %br
+        %br
+      .col-md-5ths.image-card{"data-url" => "https://www.youtube.com/embed/BeijGYgNyjI?rel=0&showinfo=0"}
+        = image_tag("interview-forest-henry", :alt => "Interview : Forrest Henry", style: "width:100%")
+        .video-text
+          %h3 Interview : Forrest Henry
+          %h4 Baseball, Les Boucaniers, La Rochelle, Division 1
+          %i.red 17.01.2019
+        %br
+        %br
+      .col-md-5ths.image-card{"data-url" => "https://www.youtube.com/embed/ls1RZJvTkuo?rel=0&showinfo=0"}
+        = image_tag("travail-specifique-appuis", :alt => "Travail spécifique Appuis / Explosivité (Tennis)", style: "width:100%")
+        .video-text
+          %h3 Travail spécifique Appuis / Explosivité (Tennis)
+          %h4 Echéance sportive Semaine-3 : activation neuro-musculaire des groupes musculaires concernés, réactivité au sol
+          %i &nbsp;
+        %br
+        %br
+      .col-md-5ths.image-card{"data-url" => "https://www.youtube.com/embed/cd28EfJrdc0?rel=0&showinfo=0"}
+        = image_tag("treve-hivernale-pour-rcp", :alt => "Trêve hivernale pour le RCP", style: "width:100%")
+        .video-text
+          %h3 Trêve hivernale pour le RCP
+          %h4 H-TRAINING, au service des clubs
+          %i &nbsp;

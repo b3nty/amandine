@@ -404,8 +404,23 @@ $( document ).on('turbolinks:load', function() {
   $('#form_popup_email').keypress(function(e){
     if ( e.which == 13 ) return false;
   });
-  // 
+  //
   // $(".zoom").mouseover(function() {
   //   $([document.documentElement, document.body]).animate({ scrollTop: $(this).offset().top-200 }, '500');
   // });
+
+  //*********************************************************************************************************
+  //********************************    MEDIA SELECT YOUTUBE    *********************************************
+  //*********************************************************************************************************
+  $('.image-card').on( "click", function(event){
+    var image_card = $(event.delegateTarget);
+    var youtube = image_card.data('url');
+    $("iframe").attr('src',youtube);
+    $(this).children().children().clone().appendTo("#video-content");
+    $("#video-content h3").first().remove();
+    $("#video-content h4").first().remove();
+    $("#video-content i").first().remove();
+    $([document.documentElement, document.body]).animate({ scrollTop: $("iframe").offset().top-160 }, '500');
+  });
+
 });
