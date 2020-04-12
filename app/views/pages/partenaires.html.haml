@@ -30,7 +30,7 @@
     %h2.text-left.title-section
       Liste de nos Partenaires
     .text-center
-      %span.marge_t10.btn.btn-contact#partenaire{"data-target" => "#partenaireModal", "data-toggle" => "modal", :type => "button",style:"margin-left: -80px;"}
+      %span.marge_t10.btn.btn-contact#partenaire{"data-target" => "#partenaireModal", "data-toggle" => "modal", :type => "button"}
         Devenir Partenaire
 
 #partenaireModal.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "partenaireModalLabel", :role => "dialog", :tabindex => "-1"}
@@ -47,24 +47,18 @@
               %ul.list-unstyled
                 %li.barre
                   .row
-                    .col-md-6
-                      = f.input :first_name, required: true, label: false, placeholder: "Votre Prénom", autofocus: true
-                    .col-md-6
-                      = f.input :last_name, required: true, label: false, placeholder: "Votre Nom", autofocus: false
+                    .col-md-6{style: "padding: 0 15px;"}
+                      = f.input :last_name, required: true, label: false, placeholder: "Nom / Raison sociale*", autofocus: false
+                    .col-md-6{style: "padding: 0 15px;"}
+                      = f.input :first_name, required: true, label: false, placeholder: "Votre Prénom*", autofocus: true
                 %li.barre
-                  = f.input :email, required: true, label: false, placeholder: "Votre adresse e-mail", autofocus: false
-                %li.barre.text-left{style: "margin-bottom: 10px;"}
-                  %i.red{"aria-controls" => "collapseH-PERF", "aria-expanded" => "false", "data-target" => "#collapseH-PERF", "data-toggle" => "collapse", :type => "button", style: "cursor:pointer;"}
-                    Si vous êtes une entreprise ?
-                    .fas.fa-chevron-down
-                  #collapseH-PERF.collapse
-                    = f.input :company_name, required: true, label: false, placeholder: "Le nom de votre entreprise", autofocus: false
+                  = f.input :email, required: true, label: false, placeholder: "Votre adresse e-mail*", autofocus: false
                 %li.barre
                   = f.input :phone, required: true, label: false, placeholder: "Votre numéro de téléphone", autofocus: false
                 %li.barre
                   = f.input :message, label: false, placeholder: "Votre message", required: false, as: :text, input_html: {rows: 4}
           #okidokki
           #notoki
-      .modal-footer{style:"text-align:center;height:70px;"}
-        %span#button-partenaire.btn.btn-contact{:type => "button", "data-style" => "expand-left",style:"margin-left:-40px;"}
+      .modal-footer
+        %span#button-partenaire.btn.btn-contact{:type => "button", "data-style" => "expand-left"}
           %span.ladda-label Envoyer

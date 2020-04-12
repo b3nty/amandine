@@ -65,7 +65,7 @@ class PagesController < ApplicationController
     @form_partenaire.company_name = params[:value4]
     @form_partenaire.phone = params[:value5]
     @form_partenaire.message = params[:value6]
-    if ( !@form_partenaire.first_name.blank? && !@form_partenaire.last_name.blank? && EmailValidator.valid?(params[:value3]) && !@form_partenaire.phone.blank? )
+    if ( !@form_partenaire.first_name.blank? && !@form_partenaire.last_name.blank? && EmailValidator.valid?(params[:value3]))
       result = {:status => true}
       @form_partenaire.save
       respond_to do |format|
@@ -112,7 +112,7 @@ class PagesController < ApplicationController
     @form_service.phone = params[:value3]
     @form_service.name = params[:value4]
     @form_service.message = params[:value5]
-    if ( !@form_service.status.blank? && EmailValidator.valid?(params[:value2]) && !@form_service.phone.blank? && !@form_service.name.blank? && !@form_service.message.blank? )
+    if ( EmailValidator.valid?(params[:value2]) && !@form_service.name.blank? )
       result = {:status => true}
       @form_service.save
       respond_to do |format|

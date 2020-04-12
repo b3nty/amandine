@@ -82,6 +82,8 @@
                           = link_to 'AU CŒUR DE L\'ACTION', media_path(anchor: 'coeur2'), title: "Media : AU CŒUR DE L'ACTION"
             %li.nav-item
               = link_to 'Boutique', boutique_path, title: "Boutique", :class => current_page?(boutique_path) && 'active'
+            %li.nav-item
+              = link_to 'Contact', contact_path, title: "Contact", :class => current_page?(contact_path) && 'active'
 
         -# %ul.nav.navbar-nav.navbar-right
         -#   %li.nav-item
