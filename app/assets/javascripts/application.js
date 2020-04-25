@@ -412,6 +412,7 @@ $( document ).on('turbolinks:load', function() {
   //*********************************************************************************************************
   //********************************    MEDIA SELECT YOUTUBE    *********************************************
   //*********************************************************************************************************
+
   $('.image-card').on( "click", function(event){
     var image_card = $(event.delegateTarget);
     var youtube = image_card.data('url');
@@ -421,6 +422,19 @@ $( document ).on('turbolinks:load', function() {
     $("#video-content h4").first().remove();
     $("#video-content i").first().remove();
     $([document.documentElement, document.body]).animate({ scrollTop: $("iframe").offset().top-160 }, '500');
+  });
+
+  //*********************************************************************************************************
+  //********************************       EFFECTIF ZOOM       *********************************************
+  //*********************************************************************************************************
+
+  $('.col-zoom').mouseover(function() {
+    $( this ).parent().children().addClass("no-active");
+    $( this ).addClass("active");
+  });
+  $('.col-zoom').mouseout(function() {
+    $( this ).parent().children().removeClass("no-active");
+    $( this ).removeClass("active");
   });
 
 });

@@ -18,7 +18,7 @@
               .dropdown-menu.text-xs-center.display-mobile{ aria: {labelledby: "navbarDropdownMenuLink"}, role:"menu"}
                 .container-fluid.wrapper-dropdown
                   .row
-                    .col-md-4
+                    .col-md-3
                       %span SERVICES
                       %ul
                         %li.dropdown-item
@@ -27,11 +27,14 @@
                           = link_to 'H-REHAB', services_path(anchor: 'hrehab'), title: "Services : H-REHAB", class: "dropdown-item"
                         %li.dropdown-item
                           = link_to 'H-PRO', services_path(anchor: 'hpro'), title: "Services : H-PRO", class: "dropdown-item"
+                    .col-md-3
+                      %p{style:"margin-bottom:2px;"} &nbsp;
+                      %ul
                         %li.dropdown-item
                           = link_to 'H-2O', services_path(anchor: 'h2o'), title: "Services : H-2O", class: "dropdown-item"
                         %li.dropdown-item
                           = link_to 'H-&Co', services_path(anchor: 'handco'), title: "Services : H-&Co", class: "dropdown-item"
-                    .col-md-4
+                    .col-md-6
                       %span SERVICES ++
                       %ul
                         %li.dropdown-item
