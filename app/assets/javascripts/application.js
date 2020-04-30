@@ -421,7 +421,8 @@ $( document ).on('turbolinks:load', function() {
     $("#video-content h3").first().remove();
     $("#video-content h4").first().remove();
     $("#video-content i").first().remove();
-    $([document.documentElement, document.body]).animate({ scrollTop: $("iframe").offset().top-160 }, '500');
+    $("#video-content p").first().remove();
+    $([document.documentElement, document.body]).animate({ scrollTop: $("iframe").offset().top-140 }, '500');
   });
 
   //*********************************************************************************************************
