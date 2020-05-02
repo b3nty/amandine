@@ -29,5 +29,23 @@
   %body
     = render 'layouts/header'
     = yield
-    = render 'layouts/social_btn'
     = render 'layouts/footer'
+    / Load Facebook SDK for JavaScript
+    #fb-root
+    :javascript
+      window.fbAsyncInit = function() {
+        FB.init({
+          xfbml            : true,
+          version          : 'v6.0'
+        });
+      };
+
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/fr_FR/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    / Your customer chat code
+    .fb-customerchat{:attribution => "install_email", :logged_in_greeting => "Bonjour ! Comment puis-je vous aider ? ", :logged_out_greeting => "Bonjour ! Comment puis-je vous aider ? ", :page_id => "1039779756133318"}
