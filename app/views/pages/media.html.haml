@@ -5,6 +5,7 @@
   %meta{:content => "Préparation physique, objectifs, sportifs, training", :name => "keywords"}/
   %meta{:content => "all", :name => "robots"}/
 
+
 .wrapper.image-medias
   .container-fluid
     %section
@@ -38,19 +39,16 @@
     .row
       .col-md-5ths.video-card{"data-target" => "#ModalCentreMedia", "data-toggle" => "modal", :type => "button", style: "cursor:pointer"}
         = image_tag("centre-entrainement-accueil.jpg", :alt => "galerie photos centre entrainement", class: "img-responsive")
-        .video-text
+        .video-text.text-center
           %h3 CENTRE D'ENTRAINEMENT
-          %h4 Album
       .col-md-5ths.video-card{"data-target" => "#ModalCoeurMedia", "data-toggle" => "modal", :type => "button", style: "cursor:pointer"}
         = image_tag("au-coeur-de-laction.jpg", :alt => "galerie photos au cœur de l'action", class: "img-responsive")
-        .video-text
+        .video-text.text-center
           %h3 AU CŒUR DE L'ACTION
-          %h4 Album
       .col-md-5ths.video-card{"data-target" => "#ModalDelocMedia", "data-toggle" => "modal", :type => "button", style: "cursor:pointer"}
         = image_tag("delocalisation.jpg", :alt => "galerie photos hors centre d'entrainement", class: "img-responsive")
-        .video-text
-          %h3 EN DÉLOCALISATION
-          %h4 Album
+        .video-text.text-center
+          %h3 DÉLOCALISATION
 
 = render partial: "centremedia"
 = render partial: "coeurmedia"
