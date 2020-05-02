@@ -6,7 +6,7 @@
           %span{"aria-hidden" => "true"}
             %i.fas.fa-times.fa-lg
       .modal-body
-        #carousel-deloc-media.carousel.slide{"data-ride" => "carousel"}
+        #carousel-deloc-media.carousel.slide{"data-ride" => "carousel", "data-interval" => "false"}
           .carousel-inner{:role => "listbox"}
             .item.active
               = image_tag("delocalisation.jpg", :alt => "galerie photos hors centre d'entrainement", class: "img-responsive")

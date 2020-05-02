@@ -6,7 +6,7 @@
           %span{"aria-hidden" => "true"}
             %i.fas.fa-times.fa-lg
       .modal-body
-        #carousel-centre-media.carousel.slide{"data-ride" => "carousel"}
+        #carousel-centre-media.carousel.slide{"data-ride" => "carousel", "data-interval" => "false"}
           .carousel-inner{:role => "listbox"}
             .item.active{"data-slide-number" => "0"}
               = image_tag("centre-entrainement-accueil.jpg", :alt => "galerie photos centre entrainement", class: "img-responsive")

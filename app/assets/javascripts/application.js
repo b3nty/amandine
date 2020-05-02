@@ -79,6 +79,7 @@ $( document ).on('turbolinks:load', function() {
     wrap: true
   });
 
+
  $('[id^=carousel-selector-]').click( function(){
       var id = this.id.substr(this.id.lastIndexOf("-") + 1);
       var id = parseInt(id);
