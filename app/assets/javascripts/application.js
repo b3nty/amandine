@@ -244,7 +244,7 @@ $( document ).on('turbolinks:load', function() {
       type: "GET",
       success: function(data) {
         if(data.status == true) {
-          $('#okidokki').html('<li style="list-style: none;"><i style="font-size:16px;color:#5cb85c;margin-bottom:10px;" class="fa fa-check-circle"> La commande est bien passée, il vous reste plus qu\'à suivre Lydia</i></li>');
+          $('#okidokki').html('<li style="list-style: none;"><i style="font-size:16px;color:#5cb85c;margin-bottom:10px;" class="fa fa-check-circle"> Pour finaliser votre commande, il vous suffit de cliquer sur Lydia pour réaliser le paiement.</i></li>');
           $('.barre').css('display', 'none');
           $('#notoki').css('display', 'none');
           $("#button-boutique").css('display', 'none');
