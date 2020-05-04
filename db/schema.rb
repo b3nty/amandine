@@ -32,6 +32,7 @@ ActiveRecord::Schema.define(version: 20200402153249) do
     t.integer "quantity"
     t.string "size"
     t.string "product"
+    t.string "color"
   end
 
   create_table "form_partenaires", force: :cascade do |t|

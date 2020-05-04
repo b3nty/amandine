@@ -24,5 +24,6 @@
 
 # Ignore application configuration
 /config/application.yml
+/config/secrets.yml
 /.DS_store
 .DS_store

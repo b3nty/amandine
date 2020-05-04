@@ -84,7 +84,7 @@
                     %li.barre
                       Couleurs :
                     %li.barre
-                      = f.select :color,  options_for_select(FormBoutique::COLORS), as: :radio_button, label: false
+                      = f.select :color,  options_for_select(FormBoutique::COLORS), label: false
                 %li.barre
                   &nbsp;
                 %li.barre
@@ -113,3 +113,4 @@
       .modal-footer
         %span#button-boutique.btn.btn-contact{:type => "button", "data-style" => "expand-left"}
           %span.ladda-label Je passe commande
+        #lydia_payment_button{:type => "button", "data-style" => "expand-left"}
