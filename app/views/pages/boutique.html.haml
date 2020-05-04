@@ -113,4 +113,4 @@
       .modal-footer
         %span#button-boutique.btn.btn-contact{:type => "button", "data-style" => "expand-left"}
           %span.ladda-label Je passe commande
-        #lydia_payment_button{:type => "button", "data-style" => "expand-left"}
+        #lydia_payment_button{:type => "button", "data-style" => "expand-left", "data-vendor" => "#{Figaro.env.vendor_token_lydia}"}

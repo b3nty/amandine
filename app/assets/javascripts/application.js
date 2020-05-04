@@ -254,10 +254,11 @@ $( document ).on('turbolinks:load', function() {
             var price = 18*$('#form_boutique_quantity').val();
           }
           $('#lydia_payment_button').payWithLYDIA({
+            env: 'test',
             message: $('#form_boutique_product').val(),
             amount: price,
             recipient: $('#form_boutique_phone').val(),
-            vendor_token: ENV["vendor_token_lydia"],
+            vendor_token: $('#lydia_payment_button').data("vendor"),
         		payment_method		: "lydia",
         		currency			: "EUR",
         		type				: "phone"
