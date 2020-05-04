@@ -21,7 +21,8 @@
     - if content_for?(:meta)
       = yield(:meta)
 
-    = stylesheet_link_tag 'application', '//fonts.googleapis.com/css?family=Lato: 400,700,900,400italic', media: 'all', 'data-turbolinks-track' => true
+    %link{:href => "//fonts.googleapis.com/css?family=Lato: 400,700,900,400italic", :rel => "stylesheet", :type => "text/css"}/
+    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
     = javascript_include_tag 'application', media: 'all', "data-turbolinks-track" => true
     = csrf_meta_tags
 
