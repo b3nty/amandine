@@ -118,7 +118,10 @@
                 %br
                 %br
                 %input#cgv{:type => "checkbox", name: "cgv"}
-                  %label{for: "cgv"} &nbsp; J’ai lu et j’accepte les conditions générales de vente
+                  %label{for: "cgv"}
+                    &nbsp; J’ai lu et j’accepte les
+                    = link_to(cgv_path, title: "CGV", target: '_blank', ) do
+                      conditions générales de vente
           #okidokki
           #notoki
       .modal-footer

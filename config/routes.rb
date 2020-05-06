@@ -17,6 +17,7 @@ Rails.application.routes.draw do
   match '/form-popup', :to => 'pages#form_popup', :via => [:get]
   match '/contact', :to => 'pages#contact', :via => [:get]
   match '/mentions-legales', :to => 'pages#mentions_legales', :via => [:get]
+  match '/cgv', :to => 'pages#cgv', :via => [:get]
 
   get "sitemap.xml" => "pages#sitemap", format: :xml, as: :sitemap
 
