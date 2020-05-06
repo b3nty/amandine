@@ -166,6 +166,8 @@ textarea:focus
   color: #ccc
 .gold
   color: #FFD700
+.back-grey
+  background-color: #ccc
 
 input
   &[type="text"]:focus, &[type="password"]:focus, &[type="datetime"]:focus, &[type="datetime-local"]:focus, &[type="date"]:focus, &[type="month"]:focus, &[type="time"]:focus, &[type="week"]:focus, &[type="number"]:focus, &[type="email"]:focus, &[type="url"]:focus, &[type="search"]:focus, &[type="tel"]:focus, &[type="color"]:focus
@@ -416,12 +418,18 @@ span.prix
       padding-bottom: 5px !important
       background: #dce4ec
     .form_boutique_quantity
-      width: 35px
+      width: 38px
       margin-bottom: 0px
     select
       border: 2px solid #dce4ec
       color: #34495e
       border-radius: 6px
+    input#cgv
+      width: auto
+    label
+      display: inline !important
+    .empty
+      border-color: #cc2127 !important
 
 footer
   color: #777777 !important

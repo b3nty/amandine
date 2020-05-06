@@ -31,23 +31,6 @@ setTimeout("ga('send','event','Temps passé sur la page','15 seconds')",15000);
 
 $( document ).on('turbolinks:load', function() {
 
-  /***************************   Facebook messenger   *******************************************/
-
-  window.fbAsyncInit = function() {
-    FB.init({
-      xfbml            : true,
-      version          : 'v6.0'
-    });
-  };
-
-  (function(d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
-    js = d.createElement(s); js.id = id;
-    js.src = 'https://connect.facebook.net/fr_FR/sdk/xfbml.customerchat.js';
-    fjs.parentNode.insertBefore(js, fjs);
-  }(document, 'script', 'facebook-jssdk'));
-
   /***************************   centre   *******************************************/
   /* copy loaded thumbnails into carousel  */
   $('#gallery_centre .row .thumbnail').each(function(i) {
@@ -260,7 +243,7 @@ $( document ).on('turbolinks:load', function() {
       },
       type: "GET",
       success: function(data) {
-        if(data.status == true) {
+        if(data.status == true && $('input#cgv').is(':checked')) {
           $('#okidokki').html('<li style="list-style: none;"><i style="font-size:16px;color:#5cb85c;margin-bottom:10px;" class="fa fa-check-circle"> Pour finaliser votre commande, il vous suffit de cliquer sur Lydia pour réaliser le paiement.</i></li>');
           $('.barre').css('display', 'none');
           $('#notoki').css('display', 'none');
@@ -282,6 +265,21 @@ $( document ).on('turbolinks:load', function() {
         }
         if(data.status == false) {
           $('#notoki').html('<li style="list-style: none;"><i style="font-size: 16px;color:#ea5656;margin-bottom:10px;margin-top:10px;" class="fa fa-exclamation-circle"> L\'un des champs est manquant ou incorrect</i></li>');
+          if(!$('#form_boutique_email').val()){
+            $('#form_boutique_email').addClass("empty");
+          }else {
+            $('#form_boutique_email').removeClass("empty");
+          }
+          if(!$('#form_boutique_phone').val()){
+            $('#form_boutique_phone').addClass("empty");
+          }else {
+            $('#form_boutique_phone').removeClass("empty");
+          }
+          if($('input#cgv').is(':checked')){
+            $('.barre label').removeClass("red");
+          }else {
+            $('.barre label').addClass("red");
+          }
           l.stop();
         }
       }

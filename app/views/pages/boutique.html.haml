@@ -29,7 +29,7 @@
   .container-fluid
     .row
       .col-md-4.text-center
-        = image_tag("image-shop-t-shirt-f.png", :alt => "Boutique : T-shirt femme", class: " img-responsive")
+        = image_tag("t-shirt-homme-h-training.png", :alt => "Boutique : T-shirt femme", class: " img-responsive")
         %h3 T-shirt (F)
         %i 18 €
         %br
@@ -38,7 +38,7 @@
         %span.marge_t10.btn.btn-contact#t-shirt_f{"data-target" => "#exampleModal", "data-toggle" => "modal", "data-whatever" => "T-shirt Femme", "data-message" => "T-shirt Femme", :type => "button"}
           COMMANDER
       .col-md-4.text-center
-        = image_tag("image-site-shop-t-shirt-h.png", :alt => "Boutique : T-shirt homme", class: " img-responsive")
+        = image_tag("t-shirt-femme-h-training.png", :alt => "Boutique : T-shirt homme", class: " img-responsive")
         %h3 T-shirt (H)
         %i 18 €
         %br
@@ -47,7 +47,7 @@
         %span.marge_t10.btn.btn-contact#t-shirt_h{"data-target" => "#exampleModal", "data-toggle" => "modal", "data-whatever" => "T-shirt Homme", "data-message" => "T-shirt Homme", :type => "button"}
           COMMANDER
       .col-md-4.text-center
-        = image_tag("Image-shop-sac.png", :alt => "Boutique : sac", class: " img-responsive")
+        = image_tag("sac-h-taining.png", :alt => "Boutique : sac", class: " img-responsive")
         %h3 Sac
         %i 32 €
         %br
@@ -107,15 +107,40 @@
                               = f.input :quantity, label: false, as: :integer, :class => "qty", input_html: { :value => 1, min: '1' }
                             %li
                               %input#plus{:field => "quantity", :type => "button", :value => "+"}/
-          %br
-          %i *Livraison indisponible, retrait sur place sous 10 jours onvrés
-          %br
-          %i *Vous serez contacter par email ou sms quand votre produit sera disponible
-          %br
-          %br
+              %br
+              .text-left.barre
+                %i
+                  *Livraison indisponible - Réception de l’article directement au
+                  = link_to(contact_path(anchor: 'maps'), title: "Contact", target: '_blank', ) do
+                    centre H-TRAINING
+                %br
+                %i *Vous serez contacté par email ou sms quand votre produit sera disponible
+                %br
+                %br
+                %input#cgv{:type => "checkbox", name: "cgv"}
+                  %label{for: "cgv"} &nbsp; J’ai lu et j’accepte les conditions générales de vente
           #okidokki
           #notoki
       .modal-footer
         %span#button-boutique.btn.btn-contact{:type => "button", "data-style" => "expand-left"}
           %span.ladda-label Je passe commande
         #lydia_payment_button{:type => "button", "data-style" => "expand-left", "data-vendor" => "#{Figaro.env.vendor_token_lydia}"}
+
+.wrapper
+  .container-fluid
+
+.wrapper
+  .container-fluid
+    .row.back-grey.text-center
+      %h2 CARTE CADEAU
+      %h3 À OFFRIR
+      .gift-up-target{"data-platform" => "Other", "data-site-id" => "b03bdd02-5964-450e-ad1b-7a3e9551c895"}
+      :javascript
+        (function (g, i, f, t, u, p, s) {
+            g[u] = g[u] || function() { (g[u].q = g[u].q || []).push(arguments) };
+            p = i.createElement(f);
+            p.async = 1;
+            p.src = t;
+            s = i.getElementsByTagName(f)[0];
+            s.parentNode.insertBefore(p, s);
+        })(window, document, "script", "https://cdn.giftup.app/dist/gift-up.js", "giftup");
