@@ -19,7 +19,8 @@
                 .container-fluid.wrapper-dropdown
                   .row
                     .col-md-3
-                      %span SERVICES
+                      = link_to(services_path(anchor: 'services'), title: "Services") do
+                        %span SERVICES
                       %ul
                         %li.dropdown-item
                           = link_to 'H-PERF', services_path(anchor: 'hperf'), title: "Services : H-PERF", class: "dropdown-item"
@@ -35,7 +36,8 @@
                         %li.dropdown-item
                           = link_to 'H-&Co', services_path(anchor: 'handco'), title: "Services : H-&Co", class: "dropdown-item"
                     .col-md-6
-                      %span SERVICES ++
+                      = link_to(services_path(anchor: 'servicesPlus'), title: "Services") do
+                        %span SERVICES ++
                       %ul
                         %li.dropdown-item
                           = link_to 'SUIVI & ANALYSE DATA GPS', services_path(anchor: 'suivi'), title: "Services+ : SUIVI & ANALYSE DATA GPS"
@@ -47,12 +49,14 @@
                 .container-fluid.wrapper-dropdown
                   .row
                     .col-md-4
-                      %span ATHLÈTES
+                      = link_to(effectif_path(anchor: 'athletes'), title: "Effectif") do
+                        %span ATHLÈTES
                       %ul
                         %li.dropdown-item
                           = link_to 'ATHLÈTES', effectif_path(anchor: 'athletes'), title: "Effectif : ATHLÈTES"
                     .col-md-4
-                      %span STAFF
+                      = link_to(effectif_path(anchor: 'sportif'), title: "STAFF") do
+                        %span STAFF
                       %ul
                         %li.dropdown-item
                           = link_to 'SPORTIF', effectif_path(anchor: 'sportif'), title: "Effectif : SPORTIF"
@@ -68,23 +72,30 @@
                 .container-fluid.wrapper-dropdown
                   .row
                     .col-md-4
-                      %span PHOTOTHÈQUE
-                      %ul
-                        %li.dropdown-item
-                          = link_to 'CENTRE D\'ENTRAINEMENT', media_path(anchor: 'centre'), title: "Media : CENTRE D'ENTRAINEMENT"
-                        %li.dropdown-item
-                          = link_to 'AU CŒUR DE L\'ACTION', media_path(anchor: 'coeur1'), title: "Media : AU CŒUR DE L'ACTION"
-                        %li.dropdown-item
-                          = link_to 'DÉLOCALISATION', media_path(anchor: 'delocalisation'), title: "Media : DÉLOCALISATION"
+                      = link_to(media_path(anchor: 'phototheque'), title: "PHOTOTHÈQUE") do
+                        %span PHOTOTHÈQUE
                     .col-md-4
-                      %span VIDEOTHÈQUE
+                      = link_to(media_path(anchor: 'videotheque'), title: "VIDEOTHÈQUE") do
+                        %span VIDEOTHÈQUE
                       %ul
                         %li.dropdown-item
-                          = link_to 'INTERVIEWS', media_path(anchor: 'interviews'), title: "Media : INTERVIEWS"
+                          = link_to 'À LA UNE', media_path(anchor: 'une'), title: "Media : à la une"
                         %li.dropdown-item
-                          = link_to 'AU CŒUR DE L\'ACTION', media_path(anchor: 'coeur2'), title: "Media : AU CŒUR DE L'ACTION"
-            %li.nav-item
-              = link_to 'Boutique', boutique_path, title: "Boutique", :class => current_page?(boutique_path) && 'active'
+                          = link_to 'PLAYLIST', media_path(anchor: 'playlist'), title: "Media : playlist"
+            %li.nav-item.dropdown
+              = link_to 'Boutique', boutique_path, title: "Boutique", :class => "#{current_page?(boutique_path) && 'active'} nav-link dropdown-toggle", id:"navbarDropdownMenuLink4", aria: {haspopup: true, expanded: true}
+              .dropdown-menu.text-xs-center.display-mobile{ aria: {labelledby: "navbarDropdownMenuLink4"}, role:"menu"}
+                .container-fluid.wrapper-dropdown
+                  .row
+                    .col-md-4
+                      = link_to(boutique_path(anchor: 'shop'), title: "SHOP") do
+                        %span SHOP
+                      %ul
+                        %li.dropdown-item
+                          &nbsp;
+                    .col-md-4
+                      = link_to(boutique_path(anchor: 'carte'), title: "CARTE CADEAU") do
+                        %span CARTE CADEAU
             %li.nav-item
               = link_to 'Contact', contact_path, title: "Contact", :class => current_page?(contact_path) && 'active'
 

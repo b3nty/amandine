@@ -25,7 +25,7 @@
 
 .wrapper
   .container-fluid
-.wrapper
+.wrapper#phototheque
   .container-fluid
     .row
       .col-md-4
@@ -35,19 +35,18 @@
 
 .wrapper
   .container-fluid
-    #centre
     .row
       .col-md-5ths.video-card{"data-target" => "#ModalCentreMedia", "data-toggle" => "modal", :type => "button", style: "cursor:pointer"}
         = image_tag("centre-entrainement-accueil.jpg", :alt => "galerie photos centre entrainement", class: "img-responsive")
-        .video-text.text-center
+        .album.text-center
           %h3 CENTRE D'ENTRAINEMENT
       .col-md-5ths.video-card{"data-target" => "#ModalCoeurMedia", "data-toggle" => "modal", :type => "button", style: "cursor:pointer"}
         = image_tag("au-coeur-de-laction.jpg", :alt => "galerie photos au cœur de l'action", class: "img-responsive")
-        .video-text.text-center
+        .album.text-center
           %h3 AU CŒUR DE L'ACTION
       .col-md-5ths.video-card{"data-target" => "#ModalDelocMedia", "data-toggle" => "modal", :type => "button", style: "cursor:pointer"}
         = image_tag("delocalisation.jpg", :alt => "galerie photos hors centre d'entrainement", class: "img-responsive")
-        .video-text.text-center
+        .album.text-center
           %h3 DÉLOCALISATION
 
 = render partial: "centremedia"
@@ -58,9 +57,10 @@
 %br
 .wrapper
   .container-fluid
-    .row
+    .row#videotheque
       .col-md-4
         %h2{style:"display:none;"} Videothèque
+        #une
         = image_tag("videotheque.png", :alt => "Titre section Videothèque", style: "width:100%")
 
     .row
@@ -76,7 +76,7 @@
         %p Suite à une grave blessure au rugby cette année, Rémi effectue les transitions entre son centre de rééducation à Paris et le CERS de Capbreton ici au centre d'entrainement H-TRAINING. Il échange avec nous sur ses semaines passées et à venir...
   %br
   %br
-  .container-fluid
+  .container-fluid#playlist
     .row
       .col-md-5ths.image-card{"data-url" => "https://www.youtube.com/embed/_ALOQyw3SRk?rel=0&showinfo=0"}
         = image_tag("interview-remi-mousseau.jpg", :alt => "Interview : Rémi MOUSSEAU", style: "width:100%")

@@ -27,7 +27,7 @@
 
 .wrapper
   .container-fluid
-    .row
+    .row#shop
       .col-md-4.text-center
         = image_tag("t-shirt-femme-h-training.png", :alt => "Boutique : T-shirt femme", class: " img-responsive")
         %h3 T-shirt (F)
@@ -107,10 +107,25 @@
                               = f.input :quantity, label: false, as: :integer, :class => "qty", input_html: { :value => 1, min: '1' }
                             %li
                               %input#plus{:field => "quantity", :type => "button", :value => "+"}/
-              %br
+                %li.barre
+                  &nbsp;
+                %li.barre.text-left
+                  %input#address{:type => "checkbox", name: "address"}
+                    %label.text-left{for: "address"}
+                      &nbsp; Livraison en France métropolitaine pour 6 €
+                %li.barre.display-address
+                  &nbsp;
+                %li.barre.display-address
+                  = f.input :address, label: false, placeholder: "Votre adresse postale", autofocus: false
+                %li.barre.display-address
+                  .row
+                    .col-md-4
+                      = f.input :cp, label: false, placeholder: "CP", autofocus: false
+                    .col-md-8.text-center
+                      = f.input :city, label: false, placeholder: "Ville", autofocus: false
               .text-left.barre
                 %i
-                  *Livraison indisponible - Réception de l’article directement au
+                  *Si pas de livraison, réception de l’article directement au
                   = link_to(contact_path(anchor: 'maps'), title: "Contact", target: '_blank', ) do
                     centre H-TRAINING
                 %br
@@ -139,7 +154,7 @@
       %h4 À OFFRIR
       %br
       %br
-      .gift-up-target{"data-platform" => "Other", "data-site-id" => "b03bdd02-5964-450e-ad1b-7a3e9551c895"}
+      .gift-up-target#carte{"data-platform" => "Other", "data-site-id" => "b03bdd02-5964-450e-ad1b-7a3e9551c895"}
       :javascript
         (function (g, i, f, t, u, p, s) {
             g[u] = g[u] || function() { (g[u].q = g[u].q || []).push(arguments) };

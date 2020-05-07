@@ -226,6 +226,13 @@ $( document ).on('turbolinks:load', function() {
   $('#button-service').keypress(function(e){
     if ( e.which == 13 ) return false;
   });
+  $('input#address').change(function() {
+    if (this.checked) {
+      $(".display-address").css('display', 'block');
+    } else {
+      $(".display-address").css('display', 'none');
+    }
+  });
   $("#button-boutique").click(function() {
     var l = Ladda.create(this);
     l.start();
@@ -239,20 +246,31 @@ $( document ).on('turbolinks:load', function() {
           value5: $('#form_boutique_quantity').val(),
           value6: $('#form_boutique_size').val(),
           value7: $('#form_boutique_product').val(),
-          value8: $('#form_boutique_color').val()
+          value8: $('#form_boutique_color').val(),
+          value8: $('#form_boutique_address').val(),
+          value8: $('#form_boutique_cp').val(),
+          value8: $('#form_boutique_city').val()
       },
       type: "GET",
       success: function(data) {
         if(data.status == true && $('input#cgv').is(':checked')) {
-          $('#okidokki').html('<li style="list-style: none;"><i style="font-size:16px;color:#5cb85c;margin-bottom:10px;" class="fa fa-check-circle"> Pour finaliser votre commande, il vous suffit de cliquer sur Lydia pour réaliser le paiement.</i></li>');
           $('.barre').css('display', 'none');
           $('#notoki').css('display', 'none');
           $("#button-boutique").css('display', 'none');
           if ($('#form_boutique_product').val() == "Sac"){
-            var price = 32*$('#form_boutique_quantity').val();
+            if ($('input#address').is(':checked')){
+              var price = 32*$('#form_boutique_quantity').val() + 6;
+            } else {
+              var price = 32*$('#form_boutique_quantity').val()
+            }
           } else {
-            var price = 18*$('#form_boutique_quantity').val();
+            if ($('input#address').is(':checked')){
+              var price = 18*$('#form_boutique_quantity').val() + 6;
+            } else {
+              var price = 18*$('#form_boutique_quantity').val()
+            }
           }
+          $('#okidokki').html('<li style="list-style: none;"><i style="font-size:16px;color:#5cb85c;margin-bottom:10px;" class="fa fa-check-circle"> Pour finaliser votre commande de '+ price +' €, il vous suffit de cliquer sur Lydia pour réaliser le paiement.</i></li>');
           $('#lydia_payment_button').payWithLYDIA({
             message: $('#form_boutique_product').val(),
             amount: price,
@@ -276,9 +294,9 @@ $( document ).on('turbolinks:load', function() {
             $('#form_boutique_phone').removeClass("empty");
           }
           if($('input#cgv').is(':checked')){
-            $('.barre label').removeClass("red");
+            $('#cgv label').removeClass("red");
           }else {
-            $('.barre label').addClass("red");
+            $('#cgv label').addClass("red");
           }
           l.stop();
         }

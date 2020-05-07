@@ -329,14 +329,20 @@ span.btn-service
 
 
 .video-card
+  margin-bottom: 5px
   &:hover
     h3
       color: #cc2127
-  .video-text
-    margin-top: -70px
-    padding: 10px 30px 30px 10px
+  .album
     position: absolute
-    background-color: rgba(255,255,255,0.5)
+    width: 100%
+    height: auto
+    bottom: 0px
+    left: 0px
+    background: rgba(255,255,255,0.7)
+    padding: 10px
+    z-index: 5
+    min-height: 76px
     p
       text-align: justify
 .image-card
@@ -405,9 +411,9 @@ span.prix
 .form-inputs
   .barre
     .col-md-6
-      padding: 0 20px
+      padding: 0 15px
     .col-md-4
-      padding: 0 20px
+      padding: 0 15px
     #plus, #minus
       width: 28px !important
       margin: 0px 0px !important
@@ -424,12 +430,14 @@ span.prix
       border: 2px solid #dce4ec
       color: #34495e
       border-radius: 6px
-    input#cgv
+    input#cgv,input#address
       width: auto
-    label
-      display: inline !important
+      label
+        display: inline !important
     .empty
       border-color: #cc2127 !important
+  .display-address
+    display: none
 
 footer
   color: #777777 !important
@@ -506,6 +514,8 @@ footer
 .modal-body
     position: relative
     padding: 35px
+.modal-backdrop
+  opacity: 0.8 !important
 .bs-example-modal-lg
   .modal-header
     padding: 15px 15px 0 15px !important
@@ -524,6 +534,22 @@ footer
     border: none
   .modal-body
     padding: 0px
+
+#service-suivi-analyse
+  background-image: image-url("service-suivi-analyse.jpg")
+  background-position: center center
+  background-repeat: no-repeat
+  background-size: cover
+  width: 100%
+  height: 170px
+
+#service-soins-et-recuperation
+  background-image: image-url("service-soins-et-recuperation.jpg")
+  background-position: center center
+  background-repeat: no-repeat
+  background-size: cover
+  width: 100%
+  height: 170px
 
 .animation-element
   opacity: 0
@@ -629,7 +655,7 @@ footer
         .right
           float: right
           background-color: #cc2127
-          width: 50%
+          width: 60%
           h2
             padding-right: 60px
             padding-bottom: 10px
