@@ -5,15 +5,15 @@
   %meta{:content => "contact", :name => "keywords"}/
   %meta{:content => "all", :name => "robots"}/
 
-.wrapper
-  .container-fluid
-    %section
-      %h1.text-center.text-uppercase
-        Contact
-        %span .
-
-.container-fluid.service-contact
+.container.service-contact
   .text-center
+    .row
+      .col-md-4
+        %h2{style: "display:none;"} envoyer un message
+        = image_tag("envoyer-un-message.png", :alt => "envoyer un message", style: "width:100%")
+      .col-md-4.col-md-offset-2
+        %h2{style: "display:none;"} prendre un rdv
+        = image_tag("prendre-un-rdv.png", :alt => "prendre un rdv", style: "width:100%")
     .row
       .col-md-6
         = simple_form_for(:form_service, html: { class: 'form-horizontal' }) do |f|
@@ -39,32 +39,43 @@
               #okidokki
               #notoki
       .col-md-6
-
-
+        = image_tag("https://scontent-cdg2-1.xx.fbcdn.net/v/t1.0-9/84140287_2624039004374044_5750217849289310208_o.jpg?_nc_cat=110&_nc_sid=6e5ad9&_nc_ohc=Q4Ma0hmBJIoAX93lYmS&_nc_ht=scontent-cdg2-1.xx&oh=bf04a3ab00ae7875a7d207b5f1079234&oe=5ED896F4", :alt => "Facebook cover", style: "width:100%")
+        .reserver
+          #fb-root
+            %script{:async => "", :crossorigin => "anonymous", :defer => "defer", :src => "https://connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v7.0"}
+            .fb-like{"data-action" => "like", "data-href" => "https://www.facebook.com/h.training.fr/", "data-layout" => "button_count", "data-share" => "true", "data-size" => "large", "data-width" => ""}
+          .btn-reserve
+            = link_to("https://fb.com/book/h.training.fr/", title: "Prendre RDV sur Facebook", target:"_blank") do
+              %span.btn{:type => "button", "data-style" => "expand-left" }
+                %span.ladda-label Réserver
 
 .wrapper1
   %hr.hr-grey
 
-.container-fluid
+.container
   .row
-    .col-lg-10.col-lg-offset-1
-      .row.vcenter
-        .col-lg-4
-          %h4
-            %i.fas.fa-phone
-          %ul.list-unstyled
-            %li +33 6 58 10 45 68
-          %h4
-            %i.fas.fa-at
-          %ul.list-unstyled
-            %li
-              %a{:href => "mailto:amandine@h-training.fr"}amandine@h-training.fr
-          %h4
-            %i.far.fa-envelope
-          %ul.list-unstyled
-            %li Atlantic Stadium Multisports
-            %li 24 Avenue Paul Langevin
-            %li 17180 Perigny
-          = image_tag("atlantic-stadium-multisports-h-training.jpg", :alt => "Atlantic Stadium Multisports", style: "max-width:100%")
-        .col-lg-8#maps
-          %iframe{:allowfullscreen => "", :frameborder => "0", :height => "464", :src => "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2763.4141543340174!2d-1.0939237844190357!3d46.162410879115434!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48014d9ce9ef1733%3A0xc8abe0e18d00cfeb!2s24+Avenue+Paul+Langevin%2C+17180+Perigny!5e0!3m2!1sfr!2sfr!4v1524818603378", :style => "border:0", :width => "100%"}
+    .col-md-4
+      %h2{style: "display:none;"} contact
+      = image_tag("contact.png", :alt => "contact", style: "width:100%")
+  .row.vcenter
+    .col-sm-4
+      %h4
+        %i.fas.fa-phone
+      %ul.list-unstyled
+        %li +33 6 58 10 45 68
+      %h4
+        %i.fas.fa-at
+      %ul.list-unstyled
+        %li
+          = link_to("mailto:amandine@h-training.fr", title: "amandine@h-training.fr") do
+            amandine@h-training.fr
+      %h4
+        %i.far.fa-envelope
+      %ul.list-unstyled
+        %li H-TRAINING
+        %li Atlantic Stadium Multisports
+        %li 24 Avenue Paul Langevin
+        %li 17180 Perigny
+      = image_tag("atlantic-stadium-multisports-h-training.jpg", :alt => "Atlantic Stadium Multisports", style: "max-width:100%")
+    .col-sm-8#maps
+      %iframe{:allowfullscreen => "", :frameborder => "0", :height => "508", :src => "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2763.4141543340174!2d-1.0939237844190357!3d46.162410879115434!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48014d9ce9ef1733%3A0xc8abe0e18d00cfeb!2s24+Avenue+Paul+Langevin%2C+17180+Perigny!5e0!3m2!1sfr!2sfr!4v1524818603378", :style => "border:0", :width => "100%"}
