@@ -14,38 +14,30 @@
   -# %meta{:content => "Libérez-vous de l'espace. Nous récupérons vos affaires, les stockons et les retournons sur demande. ✓ À partir de 5,99€/M ✓ Sécurisé ✓ Assurance incluse", :property => "og:description"}/
   -# %meta{:content => "Boxon, le garde-meuble est mort", :property => "og:site_name"}/
 
--# #MyPopup.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "MyPopupLabel", :role => "dialog", :tabindex => "-1"}
--#   .modal-dialog{:role => "document"}
--#     .modal-content
--#       .modal-header.text-center
--#         %h5#MyPopupLabel.modal-title  ACCÈS LIBRE - SÉANCES pour Tous
--#         %button.close{"aria-label" => "Close", "data-dismiss" => "modal", :type => "button"}
--#           %span{"aria-hidden" => "true"} ×
--#       .modal-body
--#         .container-fluid-fluid
--#           .text-center
--#             H-TRAINING vous met à disposition des séances d'entraînement pendant la période de confinement : pour nos athlètes, mais pas seulement... profitez-en en accès libre !
--#             %br
--#             Maintenez un bon recrutement des muscles posturaux, découvrez une autre forme de travail, ou c'est peut être même l'occasion de commencer !
--#             %br
--#             %br
--#             %i{style: "font-size:14px;"} Dès demain, recevez chaque jour votre programme par e-mail
--#           %br
--#           = simple_form_for(:form_popup, html: { class: 'form-horizontal' }) do |f|
--#             .form-inputs.text-center
--#               .row
--#                 .col-md-offset-3.col-md-6
--#                   Inscrivez-vous :&nbsp;&nbsp;
--#               .row
--#                 .col-md-offset-3.col-md-6
--#                   = f.input :email, required: true, label: false, placeholder: "Votre adresse e-mail", autofocus: false
--#
--#           #okidokki
--#           #notoki
--#       .modal-footer
--#         %span#button-popup.btn.btn-contact{:type => "button"}
--#           %span.ladda-label
--#             C'est parti !
+#MyPopup.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "MyPopupLabel", :role => "dialog", :tabindex => "-1"}
+  .modal-dialog{:role => "document"}
+    .modal-content
+      .modal-header.text-center
+        %h5#MyPopupLabel.modal-title  ENTRAINEZ VOUS jusqu’au 31 Mai avec H-TRAINING
+        %button.close{"aria-label" => "Close", "data-dismiss" => "modal", :type => "button"}
+          %span{"aria-hidden" => "true"} ×
+      .modal-body
+        .container-fluid-fluid
+          .text-center
+            Sportifs compétiteurs (et non compétiteurs)
+            %br
+            %br
+            Vous trouverez toutes les infos en suivant ce lien
+            %br
+            Si vous êtes intéressé, n’hésitez pas à prendre
+            = link_to(contact_path, title: "Choisissez H-Training") do
+              contact avec nous !
+
+      .modal-footer
+        = link_to("https://h-training.s3.eu-west-3.amazonaws.com/Plan+3+semaines+De%CC%81confinement.pdf", title: "Les infos") do
+          %span#button-popup.btn.btn-contact{:type => "button"}
+            %span.ladda-label
+              Les infos ici
 
 
 
