@@ -302,7 +302,7 @@ DEPENDENCIES
   yajl-ruby
 
 RUBY VERSION
-   ruby 2.4.1p111
+   ruby 2.7.0p0
 
 BUNDLED WITH
-   1.17.3
+   2.1.2
