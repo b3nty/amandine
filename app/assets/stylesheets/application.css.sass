@@ -253,7 +253,7 @@ span.btn-contact
   background: #cc2127 !important
   color: #fff !important
   cursor: pointer
-  padding: 5.5px 12px 7px 12px!important
+  padding: 6px 12px!important
   border: 3px solid #fff
   border-radius: 7px
   &:hover
@@ -263,7 +263,7 @@ span.btn-contact-1
   background: #cc2127 !important
   color: #fff !important
   cursor: pointer
-  padding: 5.5px 12px 7px 12px!important
+  padding: 6px 12px!important
   border: 3px solid #eee
   border-radius: 7px
   &:hover
@@ -273,7 +273,7 @@ span.btn-contact-2
   background: #cc2127 !important
   color: #fff !important
   cursor: pointer
-  padding: 5.5px 12px 7px 12px!important
+  padding: 6px 12px!important
   border: 3px solid #b2b2b2
   border-radius: 7px
   &:hover
@@ -283,7 +283,7 @@ span.btn-service
   background: #fff !important
   color: #000 !important
   cursor: pointer
-  padding: 5.5px 12px 7px 12px!important
+  padding: 6px 12px!important
   border: 3px solid #eee
   border-radius: 7px
   &:hover
@@ -293,7 +293,7 @@ span.btn-faq
   background: #fff !important
   box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24) !important
   cursor: pointer
-  padding: 5.5px 12px 7px 12px!important
+  padding: 6px 12px!important
   border: 3px solid #fff
   border-radius: 7px
   color: #000 !important
@@ -302,7 +302,7 @@ span.btn-faq
     -webkit-transition: all 100ms ease
 .active
   span.btn-faq
-    border: 3px solid #cc2127  
+    border: 3px solid #cc2127
 
 .wrapper1
   background: #fff
@@ -401,7 +401,7 @@ span.btn-faq
 span.btn.fb-share-button
   background: #1877F2 !important
   cursor: pointer
-  padding: 5.5px 12px 7px 12px!important
+  padding: 6px 12px!important
   border-radius: 7px
   .fa-facebook-square
     background: #1877F2 !important
@@ -489,6 +489,36 @@ footer
     &:active
       color: #cc2127 !important
       background-color: #fff !important
+
+.popup-footer
+  position: fixed
+  z-index: 99999
+  bottom: 0px
+  left: 0px
+  height: 180px
+  -webkit-animation: expand 3s
+  text-align: center
+  background-color: #ffffff
+  border: solid 1px #dde0e5
+  border-radius: 2px 2px 0 0
+  .popup-footer-body
+    padding: 10px
+  button.close
+    right: 8px
+    top: 5px
+    position: absolute
+
+@-webkit-keyframes expand
+  0%
+    height: 0px
+  100%
+    height: 180px
+
+@-webkit-keyframes restrict
+  0%
+    height: 180px
+  100%
+    height: 0px
 
 .social-btn
   position: fixed

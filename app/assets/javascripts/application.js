@@ -393,67 +393,12 @@ $( document ).on('turbolinks:load', function() {
   /***************************  POPUP HOME PAGE   *****************************/
   /****************************************************************************/
 
-  function setCookie(cname, cvalue, times) {
-    var d = new Date();
-    d.setTime(d.getTime() + times);
-    var expires = "expires="+d.toUTCString();
-    document.cookie = cname + "=" + cvalue + "; " + expires;
-  }
-
-  function getCookie(cname) {
-    var name = cname + "=";
-    var ca = document.cookie.split(';');
-    for(var i=0; i<ca.length; i++) {
-      var c = ca[i];
-      while (c.charAt(0)==' ') c = c.substring(1);
-      if (c.indexOf(name) == 0) return c.substring(name.length,c.length);
-    }
-    return "";
-  }
-
-  var cookie = getCookie('shown');
-  if (!cookie) {
-    showPopup();
-  }
-
-  function showPopup() {
-    setCookie('shown', 'true', 100);
-    $('#MyPopup').modal('show')
-  }
-
-  $("#button-popup").click(function() {
-    var l = Ladda.create(this);
-    l.start();
-    $.ajax({
-      url: 'form-popup',
-      data: {
-          value1: $('#form_popup_email').val(),
-      },
-      type: "GET",
-      success: function(data) {
-        if(data.status == true) {
-          $('#okidokki').html('<li style="list-style: none;"><i style="font-size:16px;color:#5cb85c;margin-bottom:10px;" class="fa fa-check-circle">Vous êtes bien inscrits, dès demain vous receverez votre programme par E-mail</i></li>');
-          $('.barre').css('display', 'none');
-          $('#notoki').css('display', 'none');
-
-          setTimeout(function(){
-            location.reload();
-          }, 5000);
-        }
-        if(data.status == false) {
-          $('#notoki').html('<li style="list-style: none;"><i style="font-size: 16px;color:#ea5656;margin-bottom:10px;margin-top:10px;" class="fa fa-exclamation-circle"> L\'un des champs est manquant ou incorrect</i></li>');
-          l.stop();
-        }
-      }
-    });
+  $('.popup-footer .close').on( "click", function(){
+    $('.popup-footer').css('-webkit-animation', 'restrict 1s');
+    setTimeout(function() {
+        $('.popup-footer').css('display', 'none');
+    }, 900);
   });
-  $('#form_popup_email').keypress(function(e){
-    if ( e.which == 13 ) return false;
-  });
-  //
-  // $(".zoom").mouseover(function() {
-  //   $([document.documentElement, document.body]).animate({ scrollTop: $(this).offset().top-200 }, '500');
-  // });
 
   //*********************************************************************************************************
   //********************************    MEDIA SELECT YOUTUBE    *********************************************
