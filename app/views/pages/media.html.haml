@@ -36,6 +36,14 @@
 .wrapper
   .container-fluid
     .row
+      .col-md-5ths.video-card{"data-target" => "#ModalEtAuDela", "data-toggle" => "modal", :type => "button", style: "cursor:pointer"}
+        = image_tag("et-au-dela-1.jpg", :alt => "galerie photos Et au delà", class: "img-responsive")
+        .album.text-center
+          %h3 ET AU DELÀ
+      .col-md-5ths.video-card{"data-target" => "#ModalDeconfinement", "data-toggle" => "modal", :type => "button", style: "cursor:pointer"}
+        = image_tag("deconfinement-juin-1.jpg", :alt => "galerie photos Déconfinement du 1er juin 2020", class: "img-responsive")
+        .album.text-center
+          %h3 Déconfinement 1er juin 2020
       .col-md-5ths.video-card{"data-target" => "#ModalCentreMedia", "data-toggle" => "modal", :type => "button", style: "cursor:pointer"}
         = image_tag("centre-entrainement-accueil.jpg", :alt => "galerie photos centre entrainement", class: "img-responsive")
         .album.text-center
@@ -48,14 +56,7 @@
         = image_tag("delocalisation.jpg", :alt => "galerie photos hors centre d'entrainement", class: "img-responsive")
         .album.text-center
           %h3 DÉLOCALISATION
-      .col-md-5ths.video-card{"data-target" => "#ModalEtAuDela", "data-toggle" => "modal", :type => "button", style: "cursor:pointer"}
-        = image_tag("et-au-dela-1.jpg", :alt => "galerie photos Et au delà", class: "img-responsive")
-        .album.text-center
-          %h3 ET AU DELÀ
-      .col-md-5ths.video-card{"data-target" => "#ModalDeconfinement", "data-toggle" => "modal", :type => "button", style: "cursor:pointer"}
-        = image_tag("deconfinement-juin-1.jpg", :alt => "galerie photos Déconfinement du 1er juin 2020", class: "img-responsive")
-        .album.text-center
-          %h3 Déconfinement 1er juin 2020
+
 
 = render partial: "centremedia"
 = render partial: "coeurmedia"
@@ -135,7 +136,7 @@
         %br
         %br
       .col-md-5ths.image-card{"data-url" => "https://www.youtube.com/embed/wRfbpF9JHr8?rel=0&showinfo=0"}
-        = image_tag("restons-chez-nous", :alt => "Restons chez nous", style: "width:100%")
+        = image_tag("restons-chez-nous.jpg", :alt => "Restons chez nous", style: "width:100%")
         .video-text
           %h3.descriptif #RESTONSCHEZNOUS 🏠
           %h4
