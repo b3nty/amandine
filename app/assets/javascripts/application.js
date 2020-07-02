@@ -31,48 +31,6 @@ setTimeout("ga('send','event','Temps passé sur la page','15 seconds')",15000);
 
 $( document ).on('turbolinks:load', function() {
 
-  /***************************   centre   *******************************************/
-  /* copy loaded thumbnails into carousel  */
-  $('#gallery_centre .row .thumbnail').each(function(i) {
-    var item_centre = $('<div class="item item_centre"></div>');
-    var itemDiv_centre = $(this).parents('div');
-
-    $(itemDiv_centre.html()).appendTo(item_centre);
-    item_centre.appendTo('.carousel-inner_centre');
-    if (i==0){ // set first item active
-     item_centre.addClass('active');
-    }
-  });
-  /* activate the carousel */
-  $('#modalCarouselCentre').carousel({interval:false});
-  /* change modal title when slide changes */
-  $('#modalCarouselCentre').on('slid.bs.carousel', function () {
-    $('.modal-title').html($(this).find('.active').attr("title"));
-  })
-  /* when clicking a thumbnail */
-  $('#gallery_centre .row .thumbnail').click(function(){
-    var idx_centre = $(this).parents('div').index();
-  	var id_centre = parseInt(idx_centre);
-  	$('#myModalCentre').modal('show'); // show the modal
-    $('#modalCarouselCentre').carousel(id_centre); // slide carousel to selected
-  });
-
-  // for every slide in carousel, copy the next slide's item in the slide.
-  // Do the same for the next, next item.
-  $('.multi-item-carousel .item').each(function(){
-    var next = $(this).next();
-    if (!next.length) {
-      next = $(this).siblings(':first');
-    }
-    next.children(':first-child').clone().appendTo($(this));
-
-    if (next.next().length>0) {
-      next.next().children(':first-child').clone().appendTo($(this));
-    } else {
-    	$(this).siblings(':first').children(':first-child').clone().appendTo($(this));
-    }
-  });
-
   $('#theCarousel').carousel({
     interval: 3000,
     pause: null,
@@ -86,6 +44,8 @@ $( document ).on('turbolinks:load', function() {
       $('#carousel-centre-media').carousel(id);
       $('#carousel-coeur-media').carousel(id);
       $('#carousel-deloc-media').carousel(id);
+      $('#carousel-et-au-dela').carousel(id);
+      $('#carousel-deconfinement').carousel(id);
   });
 
   $('#carousel-centre-media').on('slid.bs.carousel', function (e) {
@@ -95,6 +55,12 @@ $( document ).on('turbolinks:load', function() {
     var id = $('.item.active').data('slide-number');
   });
   $('#carousel-deloc-media').on('slid.bs.carousel', function (e) {
+    var id = $('.item.active').data('slide-number');
+  });
+  $('#carousel-et-au-dela').on('slid.bs.carousel', function (e) {
+    var id = $('.item.active').data('slide-number');
+  });
+  $('#carousel-deconfinement').on('slid.bs.carousel', function (e) {
     var id = $('.item.active').data('slide-number');
   });
 

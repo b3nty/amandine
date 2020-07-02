@@ -1,0 +1,34 @@
+#ModalEtAuDela.modal.fade.bs-example-modal-lg{"aria-labelledby" => "ModalEtAuDela", :role => "dialog", :tabindex => "-1"}
+  .modal-dialog.modal-lg{:role => "document"}
+    .modal-content
+      .modal-header
+        %button.close{"aria-label" => "Close", "data-dismiss" => "modal", :type => "button"}
+          %span{"aria-hidden" => "true"}
+            %i.fas.fa-times.fa-lg
+      .modal-body
+        #carousel-et-au-dela.carousel.slide{"data-ride" => "carousel", "data-interval" => "false"}
+          .carousel-inner{:role => "listbox"}
+            .item.active{"data-slide-number" => "0"}
+              = image_tag("et-au-dela-1.jpg", :alt => "galerie photos Et au delà", class: "img-responsive")
+              .text-center
+                %span.btn.fb-share-button{"data-href" => image_url("et-au-dela-1.jpg"), "data-layout" => "button", "data-size" => "large"}
+                  %i.fab.fa-facebook-square
+                  %a.fb-xfbml-parse-ignore{:href => "https://www.facebook.com/sharer/sharer.php?u="+CGI.escape(image_url("et-au-dela-1.jpg"))+"&amp;src=sdkpreparse", :target => "_blank"} Partager
+            - 20.times do |i|
+              .item{"data-slide-number" => "#{i+1}"}
+                = image_tag("et-au-dela-#{i+2}.jpg", :alt => "galerie photos Et au delà", class: "img-responsive")
+                .text-center
+                  %span.btn.fb-share-button{"data-href" => image_url("et-au-dela-#{i+2}.jpg"), "data-layout" => "button", "data-size" => "large"}
+                    %i.fab.fa-facebook-square
+                    %a.fb-xfbml-parse-ignore{:href => "https://www.facebook.com/sharer/sharer.php?u="+CGI.escape(image_url("et-au-dela-#{i+2}.jpg"))+"&amp;src=sdkpreparse", :target => "_blank"} Partager
+          %a.left.carousel-control{"data-slide" => "prev", :href => "#carousel-et-au-dela", :role => "button"}
+            %span.glyphicon.glyphicon-chevron-left{"aria-hidden" => "true"}
+            %span.sr-only Previous
+          %a.right.carousel-control{"data-slide" => "next", :href => "#carousel-et-au-dela", :role => "button"}
+            %span.glyphicon.glyphicon-chevron-right{"aria-hidden" => "true"}
+            %span.sr-only Next
+        .row.hidden-xs.carousel-selector
+          - 21.times do |i|
+            .col-sm-1
+              %a{id: "carousel-selector-#{i}"}
+                = image_tag("et-au-dela-#{i+1}.jpg", :alt => "galerie photos Et au delà", class: "img-responsive")

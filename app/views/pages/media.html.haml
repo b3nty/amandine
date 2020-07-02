@@ -48,10 +48,20 @@
         = image_tag("delocalisation.jpg", :alt => "galerie photos hors centre d'entrainement", class: "img-responsive")
         .album.text-center
           %h3 DÉLOCALISATION
+      .col-md-5ths.video-card{"data-target" => "#ModalEtAuDela", "data-toggle" => "modal", :type => "button", style: "cursor:pointer"}
+        = image_tag("et-au-dela-1.jpg", :alt => "galerie photos Et au delà", class: "img-responsive")
+        .album.text-center
+          %h3 ET AU DELÀ
+      .col-md-5ths.video-card{"data-target" => "#ModalDeconfinement", "data-toggle" => "modal", :type => "button", style: "cursor:pointer"}
+        = image_tag("deconfinement-juin-1.jpg", :alt => "galerie photos Déconfinement du 1er juin 2020", class: "img-responsive")
+        .album.text-center
+          %h3 Déconfinement 1er juin 2020
 
 = render partial: "centremedia"
 = render partial: "coeurmedia"
 = render partial: "delocmedia"
+= render partial: "etaudela"
+= render partial: "deconfinement"
 
 %br
 %br
