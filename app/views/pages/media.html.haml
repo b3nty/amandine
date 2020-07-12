@@ -76,22 +76,55 @@
 
     .row
       .col-md-7.video-card
-        %iframe{:allow => "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture", :allowfullscreen => "", :frameborder => "0", :height => "350", :src => "https://www.youtube.com/embed/JwJJHOM8dXg?rel=0&showinfo=0", :width => "100%"}
+        %iframe{:allow => "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture", :allowfullscreen => "", :frameborder => "0", :height => "350", :src => "https://www.youtube.com/embed/FvyZ5DjjbJA?rel=0&showinfo=0", :width => "100%"}
       .col-md-5.video-text#video-content
-        %h3 Immersion avec Antoine CORNIC, Skipper Professionnel
+        %h3 Évènement ❗️Stage | 3 joueuses internationales de Rugby à VII à H-TRAINING ❗️
         %h4
           %i.fas.fa-running
           &nbsp;
           Athlète
-        %i.grey 12 mai 2020
+        %i.grey 7 juil. 2020
         %p
-          Après quelques semaines de confinement, une visite s'impose chez les sportifs H-TRAINING ! Retrouvez avec nous le quotidien d'Antoine, qui prépare le Vendée Globe 2024, un tour du monde à la voile...
+          H-TRAINING accueille cet été 3 joueuses de l’Équipe de France de Rugby à VII qui viendront séjourner à La Rochelle le temps de leur préparation, en collaboration avec la Fédération Française de Rugby  🇫🇷
           %br
-          Au RDV .. Joie, bonne humeur et beaucoup de mauvaise foi (de ma part 😈)
+          Pour Montserrat, Séraphine et Lina, une saison intense est à venir avec des Jeux Olympiques à la clé 🧐 !
+          %br
+          Petite présentation en images avant de vous partager prochainement un interview un peu.. disons décalé ! 🎞
+          %br
+          Merci @francerugby pour la confiance et tout son staff avec qui le travail a déjà bien commencé..
   %br
   %br
   .container-fluid#playlist
     .row
+      .col-md-5ths.image-card{"data-url" => "https://www.youtube.com/embed/FvyZ5DjjbJA?rel=0&showinfo=0"}
+        = image_tag("interview-internationales-rugby-vii.jpg", :alt => "Interview de 3 internationales de rugby à VII", style: "width:100%")
+        .video-text
+          %h3.descriptif Évènement ❗️Stage | 3 joueuses internationales de Rugby à VII à H-TRAINING ❗️
+          %h4
+            %i.fas.fa-running
+            &nbsp;
+            Athlète
+          %i.grey 7 juil. 2020
+          %p.descriptif
+            H-TRAINING accueille cet été 3 joueuses de l’Équipe de France de Rugby à VII qui viendront séjourner à La Rochelle le temps de leur préparation, en collaboration avec la Fédération Française de Rugby  🇫🇷
+            Pour Montserrat, Séraphine et Lina, une saison intense est à venir avec des Jeux Olympiques à la clé 🧐 !
+            Petite présentation en images avant de vous partager prochainement un interview un peu.. disons décalé ! 🎞
+            Merci @francerugby pour la confiance et tout son staff avec qui le travail a déjà bien commencé..
+        %br
+        %br
+      .col-md-5ths.image-card{"data-url" => "https://www.youtube.com/embed/QU419utm7Zo?rel=0&showinfo=0"}
+        = image_tag("decathlon-partenaire-h-training.jpg", :alt => "Decathlon, partenaire H-TRAINING", style: "width:100%")
+        .video-text
+          %h3.descriptif 🎥 Decathlon, partenaire H-TRAINING
+          %h4
+            %i.fas.fa-handshake
+            &nbsp;
+            Partenariat
+          %i.grey 5 juil. 2020
+          %p.descriptif
+            Decathlon, notre premier partenaire, a souhaité renouveler son soutien en prolongeant son engagement. De nombreux projets sont à venir, au centre d'entraînement comme au magasin..
+        %br
+        %br
       .col-md-5ths.image-card{"data-url" => "https://www.youtube.com/embed/JwJJHOM8dXg?rel=0&showinfo=0"}
         = image_tag("interview-antoine-cornic.jpg", :alt => "Interview : Antoine CORNIC", style: "width:100%")
         .video-text
@@ -135,6 +168,7 @@
             Feu 👊🏼
         %br
         %br
+    .row
       .col-md-5ths.image-card{"data-url" => "https://www.youtube.com/embed/wRfbpF9JHr8?rel=0&showinfo=0"}
         = image_tag("restons-chez-nous.jpg", :alt => "Restons chez nous", style: "width:100%")
         .video-text
@@ -164,7 +198,6 @@
             \#JOUONSCOLLECTIF
         %br
         %br
-    .row
       .col-md-5ths.image-card{"data-url" => "https://www.youtube.com/embed/_ALOQyw3SRk?rel=0&showinfo=0"}
         = image_tag("interview-remi-mousseau.jpg", :alt => "Interview : Rémi MOUSSEAU", style: "width:100%")
         .video-text
@@ -199,30 +232,6 @@
             Athlète
           %i.grey 29 déc. 2019
           %p.descriptif Retrouvez la réaction de Eliot MERCERON suite à sa victoire à la Semaine Olympique Espagnole : une régate qui clôture 3 mois et demi de préparation avant de s'en aller en Australie pour le Championnat du Monde
-        %br
-        %br
-      .col-md-5ths.image-card{"data-url" => "https://www.youtube.com/embed/jqDPnCAWUiM?rel=0&showinfo=0"}
-        = image_tag("interview-pernelle-michon-2.jpg", :alt => "Interview : Pernelle Michon", style: "width:100%")
-        .video-text
-          %h3 Athlète : Pernelle MICHON
-          %h4
-            %i.fas.fa-running
-            &nbsp;
-            Athlète
-          %i.grey 29 déc. 2019
-          %p.descriptif Il y a quelques mois de ça, Pernelle MICHON s'était confié sur son parcours, ses ambitions, son expérience au centre d'entrainement etc. et avait imaginé avec émotions le titre de son autobiographie. 📕
-        %br
-        %br
-      .col-md-5ths.image-card{"data-url" => "https://www.youtube.com/embed/Oz1ZF1ug02g?rel=0&showinfo=0"}
-        = image_tag("interview-ximun-mathis.jpg", :alt => "Interview : Ximun Mathis", style: "width:100%")
-        .video-text
-          %h3 Ximun Mathis
-          %h4
-            %i.fas.fa-running
-            &nbsp;
-            Athlète
-          %i.grey 28 nov. 2019
-          %p.descriptif Athlète : Ximun MATHIS, Joueur de Pelote Basque 🏏. Ximun évoque avec nous le premier week-end de sa saison, soldé par une belle victoire contre l'équipe de Cestas. Il nous raconte ses meilleurs souvenirs, ses objectifs et la raison pour laquelle son portable lui manquerait le plus.
         %br
         %br
 
