@@ -11,7 +11,7 @@ class PagesController < ApplicationController
     # Setup authorization
     SibApiV3Sdk.configure do |config|
       # Configure API key authorization: api-key
-      config.api_key['api-key'] = Figaro.env.sendinblue_api_key
+      config.api_key['api-key'] = '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'
       # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
       #config.api_key_prefix['api-key'] = 'Bearer'
     end
