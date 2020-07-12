@@ -5,16 +5,31 @@ class PagesController < ApplicationController
   end
 
   def newsletter
-    gibbon = Gibbon::Request.new(api_key: Figaro.env.mailchimp_api_key)
+    # Load the gem
+    require 'sib-api-v3-sdk'
+
+    # Setup authorization
+    SibApiV3Sdk.configure do |config|
+      # Configure API key authorization: api-key
+      config.api_key['api-key'] = Figaro.env.sendinblue_api_key
+      # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+      #config.api_key_prefix['api-key'] = 'Bearer'
+    end
+    api_instance = SibApiV3Sdk::ContactsApi.new
+    create_contact = SibApiV3Sdk::CreateContact.new # CreateContact | Values to create a contact
+
     if EmailValidator.valid?(params[:value])
       result = {:status => true}
       respond_to do |format|
         format.json { render :json => result.to_json }
       end
+      create_contact = params[:value]
       begin
-        gibbon.lists("65bdb69476").members.create(body: {email_address: params[:value], status: "subscribed"})
-      rescue Gibbon::MailChimpError => e
-        puts "Houston, we have a problem: #{e.message} - #{e.raw_body}"
+        #Create a contact
+        result = api_instance.add_contact_to_list(12, create_contact)
+        p result
+      rescue SibApiV3Sdk::ApiError => e
+        puts "Exception when calling ContactsApi->create_contact: #{e}"
       end
     else
       result = {:status => false}

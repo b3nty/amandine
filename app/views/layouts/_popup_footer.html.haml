@@ -1,21 +1,17 @@
 .popup-footer
   .text-center
-    %h5 ENTRAINEZ VOUS avec H-TRAINING
+    %h5 Newsletter
     %button.close
       %span{"aria-hidden" => "true"} ×
   .container-fluid.popup-footer-body
     .text-center
-      Sportifs compétiteurs (et non compétiteurs)
-      %br
-      %br
-      Vous trouverez toutes les infos en suivant ce lien
-      %br
-      Si vous êtes intéressé, n’hésitez pas à prendre
-      = link_to(contact_path, title: "Choisissez H-Training") do
-        contact avec nous !
-  .container-fluid
+      Ne manquez plus une seule info de notre actualité !
     .text-center
-      = link_to("https://h-training.s3.eu-west-3.amazonaws.com/Plan+3+semaines+De%CC%81confinement.pdf", title: "Les infos") do
-        %span#button-popup.btn.btn-contact{:type => "button"}
-          %span.ladda-label
-            Les infos ici
+      = simple_form_for(:newsletter, html: { class: 'form-horizontal' }) do |f|
+        .form-inputs
+          .barre
+            = f.input :email, required: false, label: false, placeholder: "E-mail : John.doe@h-training.com"
+          %span#button-newsletter.btn.btn-contact{:type => "button"}
+            %span.ladda-label
+              JE M'INSCRIS
+          #okidokki
