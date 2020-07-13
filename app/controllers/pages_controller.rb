@@ -15,19 +15,18 @@ class PagesController < ApplicationController
       # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
       #config.api_key_prefix['api-key'] = 'Bearer'
     end
-    api_instance = SibApiV3Sdk::ContactsApi.new
-    create_contact = SibApiV3Sdk::CreateContact.new # CreateContact | Values to create a contact
 
     if EmailValidator.valid?(params[:value])
       result = {:status => true}
       respond_to do |format|
         format.json { render :json => result.to_json }
       end
-      create_contact = params[:value]
       begin
-        #Create a contact
-        result = api_instance.add_contact_to_list(12, create_contact)
-        p result
+        SibApiV3Sdk::ContactsApi.new.create_contact(
+          email: params[:value],
+          listIds: [12],
+          updateEnabled: true,
+        )
       rescue SibApiV3Sdk::ApiError => e
         puts "Exception when calling ContactsApi->create_contact: #{e}"
       end
