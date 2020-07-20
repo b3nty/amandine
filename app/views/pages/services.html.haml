@@ -279,7 +279,7 @@
       %h2.text-right.text-uppercase.blank.display-mobile
         Suivi et Analyse Data GPS
       %h2.text-right.text-uppercase.blank.display-screen
-        Suivi et Analyse
+        Suivi & Analyse
     .left
   .content
     .row.vcenter
@@ -302,13 +302,13 @@
           %span.btn.btn-service#partenaire{"data-target" => "#serviceModal", "data-toggle" => "modal", :type => "button"}
             Contactez-nous
           &nbsp;
-          = link_to("https://h-training.s3.eu-west-3.amazonaws.com/Serices+formules.pdf", target: "_blank", title: "Service Formule", style: "text-decoration: none;") do
+          = link_to("https://h-training.s3.eu-west-3.amazonaws.com/Formules.pdf", target: "_blank", title: "Service Formule", style: "text-decoration: none;") do
             %span.btn.btn-contact-1{:type => "button"}
               SERVICE Suivi et Analyse
           &nbsp;
           À partir de 50 €/mois
 
-#h2o
+#recuperation
 .animation-element.slide-right.service
   .header
     .right
@@ -340,9 +340,81 @@
           %span.btn.btn-service#partenaire{"data-target" => "#serviceModal", "data-toggle" => "modal", :type => "button"}
             Contactez-nous
           &nbsp;
-          = link_to("https://h-training.s3.eu-west-3.amazonaws.com/Serices+formules.pdf", target: "_blank", title: "Service Formule", style: "text-decoration: none;") do
+          = link_to("https://h-training.s3.eu-west-3.amazonaws.com/Formules.pdf", target: "_blank", title: "Service Formule", style: "text-decoration: none;") do
             %span.btn.btn-contact-1{:type => "button"}
               SERVICE Récupération
+          &nbsp;
+          À partir de 50 €/mois
+
+#nutritionnel
+.animation-element.slide-right.service
+  .header
+    .right
+      %h2.text-right.text-uppercase.blank.display-mobile
+        Suivi nutritionnel
+      %h2.text-right.text-uppercase.blank.display-screen
+        Nutritionnel
+    .left
+  .content
+    .row.vcenter
+      .col-md-5.col-sm-5
+        .text-center
+          %br
+          #service-nutritionnel
+      .col-md-7.col-sm-7
+        .text-justify
+          Optez pour un accompagnement global dans l’atteinte de vos objectifs (Rééquilibrage alimentaire, optimisation du ratio masse maigre / masse grasse, boost du système immunitaire etc.).
+          %br
+          %i.red{"aria-controls" => "collapseH-recup", "aria-expanded" => "false", "data-target" => "#collapseNutritionnel", "data-toggle" => "collapse", :type => "button", style: "cursor:pointer;"}
+            En savoir plus
+            .fas.fa-chevron-down
+          #collapseNutritionnel.collapse
+            H-TRAINING s’est entouré de deux experts en nutrition pour optimiser votre entraînement. 1 fois par mois, H-TRAINING vous prend rdv sur place selon vos disponibilités.
+    .row
+      .col-md-12
+        .text-right
+          %span.btn.btn-service#partenaire{"data-target" => "#serviceModal", "data-toggle" => "modal", :type => "button"}
+            Contactez-nous
+          &nbsp;
+          = link_to("https://h-training.s3.eu-west-3.amazonaws.com/Formules.pdf", target: "_blank", title: "Service Formule", style: "text-decoration: none;") do
+            %span.btn.btn-contact-1{:type => "button"}
+              SERVICE Nutritionnel
+          &nbsp;
+          À partir de 50 €/mois
+
+#gym
+.animation-element.slide-right.service
+  .header
+    .right
+      %h2.text-right.text-uppercase.blank.display-mobile
+        Gym douce : yoga, pilates, stretching
+      %h2.text-right.text-uppercase.blank.display-screen
+        Gym douce
+    .left
+  .content
+    .row.vcenter
+      .col-md-5.col-sm-5
+        .text-center
+          %br
+          #service-gym
+      .col-md-7.col-sm-7
+        .text-justify
+          La gym douce permet de s’entraîner sans demander au corps un effort violent mais par le recrutement des muscles profonds et stabilisateurs, elle paraît être une activité complémentaire essentielle à toute autre activité physique.
+          %br
+          %i.red{"aria-controls" => "collapseH-recup", "aria-expanded" => "false", "data-target" => "#collapseGym", "data-toggle" => "collapse", :type => "button", style: "cursor:pointer;"}
+            En savoir plus
+            .fas.fa-chevron-down
+          #collapseGym.collapse
+            1 fois par semaine, prenez du temps avec Sandra, notre experte dans le domaine.
+    .row
+      .col-md-12
+        .text-right
+          %span.btn.btn-service#partenaire{"data-target" => "#serviceModal", "data-toggle" => "modal", :type => "button"}
+            Contactez-nous
+          &nbsp;
+          = link_to("https://h-training.s3.eu-west-3.amazonaws.com/Formules.pdf", target: "_blank", title: "Service Formule", style: "text-decoration: none;") do
+            %span.btn.btn-contact-1{:type => "button"}
+              SERVICE Gym Douce
           &nbsp;
           À partir de 50 €/mois
 
