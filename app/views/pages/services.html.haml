@@ -272,42 +272,6 @@
       SERVICES
       %span ++
 
-#suivi
-.animation-element.slide-right.service
-  .header
-    .right
-      %h2.text-right.text-uppercase.blank.display-mobile
-        Suivi et Analyse Data GPS
-      %h2.text-right.text-uppercase.blank.display-screen
-        Suivi & Analyse
-    .left
-  .content
-    .row.vcenter
-      .col-md-5.col-sm-5
-        .text-center
-          %br
-          #service-suivi-analyse
-      .col-md-7.col-sm-7
-        .text-justify
-          Grâce au contrat souscrit par H-TRAINING avec la marque MacLloyd, louez votre propre GPS à l’année...
-          %br
-          %i.red{"aria-controls" => "collapseH-suivi", "aria-expanded" => "false", "data-target" => "#collapseH-suivi", "data-toggle" => "collapse", :type => "button", style: "cursor:pointer;"}
-            En savoir plus
-            .fas.fa-chevron-down
-          #collapseH-suivi.collapse
-            (avec sa brassière et son chargeur individuel) ou pour une seule occasion (selon disponibilité). Récupérez ainsi toutes les informations nécessaires concernant vos déplacements et leur intensité afin de suivre au plus près votre performance et évaluer la charge de l’entraînement qui vous est imposée. Tout cela nous permet d’ajuster le contenu de votre entraînement et potentiellement de prévenir un état de fatigue...
-    .row
-      .col-md-12
-        .text-right
-          %span.btn.btn-service#partenaire{"data-target" => "#serviceModal", "data-toggle" => "modal", :type => "button"}
-            Contactez-nous
-          &nbsp;
-          = link_to("https://h-training.s3.eu-west-3.amazonaws.com/Formules+.pdf", target: "_blank", title: "Service Formule", style: "text-decoration: none;") do
-            %span.btn.btn-contact-1{:type => "button"}
-              SERVICE Suivi et Analyse
-          &nbsp;
-          À partir de 50 €/mois
-
 #recuperation
 .animation-element.slide-right.service
   .header
@@ -415,6 +379,42 @@
           = link_to("https://h-training.s3.eu-west-3.amazonaws.com/Formules+.pdf", target: "_blank", title: "Service Formule", style: "text-decoration: none;") do
             %span.btn.btn-contact-1{:type => "button"}
               SERVICE Gym Douce
+          &nbsp;
+          À partir de 50 €/mois
+
+#suivi
+.animation-element.slide-right.service
+  .header
+    .right
+      %h2.text-right.text-uppercase.blank.display-mobile
+        Suivi et Analyse Data GPS
+      %h2.text-right.text-uppercase.blank.display-screen
+        Suivi & Analyse
+    .left
+  .content
+    .row.vcenter
+      .col-md-5.col-sm-5
+        .text-center
+          %br
+          #service-suivi-analyse
+      .col-md-7.col-sm-7
+        .text-justify
+          Grâce au contrat souscrit par H-TRAINING avec la marque MacLloyd, louez votre propre GPS à l’année...
+          %br
+          %i.red{"aria-controls" => "collapseH-suivi", "aria-expanded" => "false", "data-target" => "#collapseH-suivi", "data-toggle" => "collapse", :type => "button", style: "cursor:pointer;"}
+            En savoir plus
+            .fas.fa-chevron-down
+          #collapseH-suivi.collapse
+            (avec sa brassière et son chargeur individuel) ou pour une seule occasion (selon disponibilité). Récupérez ainsi toutes les informations nécessaires concernant vos déplacements et leur intensité afin de suivre au plus près votre performance et évaluer la charge de l’entraînement qui vous est imposée. Tout cela nous permet d’ajuster le contenu de votre entraînement et potentiellement de prévenir un état de fatigue...
+    .row
+      .col-md-12
+        .text-right
+          %span.btn.btn-service#partenaire{"data-target" => "#serviceModal", "data-toggle" => "modal", :type => "button"}
+            Contactez-nous
+          &nbsp;
+          = link_to("https://h-training.s3.eu-west-3.amazonaws.com/Formules+.pdf", target: "_blank", title: "Service Formule", style: "text-decoration: none;") do
+            %span.btn.btn-contact-1{:type => "button"}
+              SERVICE Suivi et Analyse
           &nbsp;
           À partir de 50 €/mois
 
