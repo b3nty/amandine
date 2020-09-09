@@ -1,17 +1,28 @@
 .popup-footer
   .text-center
-    %h5 Newsletter
+    %h5 Rejoins un collectif !
     %button.close
       %span{"aria-hidden" => "true"} ×
   .container-fluid.popup-footer-body
     .text-center
-      Ne manquez plus une seule info de notre actualité !
+      = link_to('https://h-training.s3.eu-west-3.amazonaws.com/Rejoins+un+collectif+pr%C3%A9sentation.pdf', target: "_blank", title: "Renseignement sur les cours collectifs") do
+        En savoir plus
     .text-center
-      = simple_form_for(:newsletter, html: { class: 'form-horizontal' }) do |f|
+      = simple_form_for(:form_popup, html: { class: 'form-horizontal' }) do |f|
         .form-inputs
           .barre
             = f.input :email, required: false, label: false, placeholder: "E-mail : John.doe@h-training.com"
-          %span#button-newsletter.btn.btn-contact{:type => "button"}
+          .barre
+            = f.input :name, required: false, label: false, placeholder: "Prénom Nom : John Doe"
+          .barre
+            Je pratique du :
+            = f.select :sport, options_for_select(FormPopup::SPORT), as: :radio_button, label: false, required: false
+            &nbsp; je suis :
+            = f.select :number, options_for_select(FormPopup::NUMBER), as: :radio_button, label: false, required: false
+            %br
+            &nbsp; et disponible pour les créneaux du :
+            = f.select :creneau, options_for_select(FormPopup::CRENEAU), as: :radio_button, label: false, required: false
+          %span#button-popup-form.btn.btn-contact{:type => "button"}
             %span.ladda-label
               JE M'INSCRIS
           #okidokki

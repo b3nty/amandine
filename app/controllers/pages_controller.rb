@@ -56,6 +56,10 @@ class PagesController < ApplicationController
   def form_popup
     @form_popup = FormPopup.new
     @form_popup.email = params[:value1]
+    @form_popup.name = params[:value2]
+    @form_popup.sport = params[:value3]
+    @form_popup.number = params[:value4]
+    @form_popup.creneau = params[:value5]
     if ( EmailValidator.valid?(params[:value1]))
       result = {:status => true}
       @form_popup.save

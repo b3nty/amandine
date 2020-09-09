@@ -11,7 +11,7 @@ class UserMailer < ApplicationMailer
 
   def popup(client)
     @client = client
-    mail(to: "amandine@h-training.fr", subject: 'h-training | ACCES LIBRE', :from => @client.email)
+    mail(to: "amandine@h-training.fr", subject: 'h-training | Rejoins un collectif', :from => @client.email)
   end
 
   def partenaire(client)

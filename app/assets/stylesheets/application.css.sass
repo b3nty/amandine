@@ -507,18 +507,20 @@ footer
 .popup-footer
   position: fixed
   z-index: 99999
-  bottom: 0px
-  left: 0px
-  height: 180px
-  -webkit-animation: expand 3s
+  bottom: 100px
+  left: 20px
+  height: 285px
+  -webkit-animation: expand 0.7s
   text-align: center
   background-color: #ffffff
   border: solid 1px #dde0e5
-  border-radius: 2px 2px 0 0
+  border-radius: 18px
   .popup-footer-body
-    padding: 10px
+    padding: 0 10px
     .form-inputs
       padding: 20px
+    .btn
+      margin-top: 10px
   button.close
     right: 8px
     top: 5px
@@ -526,15 +528,47 @@ footer
 
 @-webkit-keyframes expand
   0%
-    height: 0px
+    transform: scale(1)
+
+  50%
+    transform: scale(1.4)
+
+  60%
+    transform: scale(1.1)
+
+  70%
+    transform: scale(1.2)
+
+  80%
+    transform: scale(1)
+
+  90%
+    transform: scale(1.1)
+
   100%
-    height: 180px
+    transform: scale(1)
 
 @-webkit-keyframes restrict
   0%
-    height: 180px
+    transform: scale(1)
+
+  50%
+    transform: scale(1.4)
+
+  60%
+    transform: scale(1.1)
+
+  70%
+    transform: scale(1.2)
+
+  80%
+    transform: scale(1)
+
+  90%
+    transform: scale(1.1)
+
   100%
-    height: 0px
+    transform: scale(1)
 
 .social-btn
   position: fixed
