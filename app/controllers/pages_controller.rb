@@ -66,7 +66,7 @@ class PagesController < ApplicationController
       respond_to do |format|
         format.json { render :json => result.to_json }
       end
-      UserMailer.popup(@form_popup).deliver
+      # UserMailer.popup(@form_popup).deliver
     else
       result = {:status => false}
       respond_to do |format|
