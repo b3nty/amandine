@@ -41,6 +41,7 @@ body
       width: 132px
   .nav ul a
     padding: 0px !important
+    font-weight: 300 !important
 .navbar-brand
   text-decoration: none !important
   margin: 0 auto !important
@@ -164,6 +165,8 @@ textarea:focus
   margin-bottom: 30px
 .red
   color: #cc2127
+.green
+  color: green
 .blank
   color: #fff
 .grey
@@ -509,7 +512,7 @@ footer
   z-index: 99999
   bottom: 100px
   left: 20px
-  height: 285px
+  height: 290px
   -webkit-animation: expand 0.7s
   text-align: center
   background-color: #ffffff
@@ -525,6 +528,11 @@ footer
     right: 8px
     top: 5px
     position: absolute
+  i
+    font-size: 12px
+  h5
+    margin-bottom: 0px !important
+
 
 @-webkit-keyframes expand
   0%
@@ -710,6 +718,7 @@ footer
           h2
             padding-left: 60px
             padding-bottom: 10px
+
         .right
           float: left
           width: 0
@@ -723,6 +732,24 @@ footer
         float: left
         width: 100%
         margin-bottom: 10px
+        table
+          margin: 40px auto 0px
+          thead
+            tr
+              th
+                padding: 15px
+              td
+                padding: 15px
+          tbody
+            tr
+              th
+                padding: 15px 30px 15px 0
+              .border
+                border-top: 2px solid #cc2127
+                border-bottom: 2px solid #cc2127
+              td
+                padding: 15px 30px 15px 30px
+
 
   &.slide-right
     opacity: 0
@@ -806,6 +833,22 @@ h5#MyPopupLabel
     .content
       text-align: center
       float: none
+      table
+        thead
+          tr
+            th
+              padding: 5px
+            td
+              padding: 5px
+        tbody
+          tr
+            th
+              padding: 5px 10px 5px 0
+            .border
+              border-top: 2px solid #cc2127
+              border-bottom: 2px solid #cc2127
+            td
+              padding: 10px 15px 10px 15px
 
 
 

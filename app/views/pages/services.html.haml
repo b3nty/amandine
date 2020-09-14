@@ -163,7 +163,7 @@
             %span.btn.btn-contact-1{:type => "button"}
               TARIFS H-(2)O
           &nbsp;
-          = link_to("https://h-training.s3.eu-west-3.amazonaws.com/Copie+de+H-TRAINING+(1).pdf", target: "_blank", title: "Planning H-PRO", style: "text-decoration: none;") do
+          = link_to("https://h-training.s3.eu-west-3.amazonaws.com/Planning+H2O.pdf", target: "_blank", title: "Planning H-PRO", style: "text-decoration: none;") do
             %span.btn.btn-contact-1{:type => "button"}
               PLANNING
           &nbsp;
@@ -259,6 +259,129 @@
           &nbsp;
           %span.btn.btn-service#partenaire{"data-target" => "#serviceModal", "data-toggle" => "modal", :type => "button"}
             Contactez-nous
+
+.wrapper
+  .container-fluid
+
+.animation-element.slide-left.service
+  .header
+    .left
+      %h2.text-left.text-uppercase.blank
+        Comparatif
+    .right
+  .content
+    .row.vcenter
+      %table
+        %thead
+          %tr
+            %th{:scope => "col"}
+            %th.text-center{:scope => "col"} H-PERF
+            %th.text-center{:scope => "col"} H-(2)o
+            %th.text-center{:scope => "col"} H-REHAB
+            %th.text-center{:scope => "col"} H-PRO
+            %th.text-center{:scope => "col"} Collectif
+        %tbody
+          %tr
+            %th{:scope => "row"} Flexibilité des créneaux horaires
+            %td.text-center
+              %i.fa.fa-check.green{"aria-hidden" => "true"}
+            %td.text-center
+              %i.fa.fa-times.red{"aria-hidden" => "true"}
+            %td.text-center
+              %i.fa.fa-check.green{"aria-hidden" => "true"}
+            %td.text-center
+              %i.fa.fa-times.red{"aria-hidden" => "true"}
+            %td.text-center
+              %i.fa.fa-times.red{"aria-hidden" => "true"}
+          %tr
+            %th.border{:scope => "row"} Suivi de la composition corporelle
+            %td.text-center
+              %i.fa.fa-check.green{"aria-hidden" => "true"}
+            %td.text-center
+              %i.fa.fa-check.green{"aria-hidden" => "true"}
+            %td.text-center
+              %i.fa.fa-check.green{"aria-hidden" => "true"}
+            %td.text-center
+              %i.fa.fa-check.green{"aria-hidden" => "true"}
+            %td.text-center
+              %i.fa.fa-check.green{"aria-hidden" => "true"}
+          %tr
+            %th.border{:scope => "row"} Travail en groupe
+            %td.text-center
+              %i.fas.fa-plus{"aria-hidden" => "true"}
+            %td.text-center
+              %i.fas.fa-plus{"aria-hidden" => "true"}
+              %i.fas.fa-plus{"aria-hidden" => "true"}
+              %i.fas.fa-plus{"aria-hidden" => "true"}
+            %td.text-center
+              %i.fas.fa-plus{"aria-hidden" => "true"}
+            %td.text-center
+              %i.fas.fa-plus{"aria-hidden" => "true"}
+              %i.fas.fa-plus{"aria-hidden" => "true"}
+              %i.fas.fa-plus{"aria-hidden" => "true"}
+            %td.text-center
+              %i.fas.fa-plus{"aria-hidden" => "true"}
+              %i.fas.fa-plus{"aria-hidden" => "true"}
+              %i.fas.fa-plus{"aria-hidden" => "true"}
+          %tr
+            %th.border{:scope => "row"} Suivi personnalisé
+            %td.text-center
+              %i.fas.fa-plus{"aria-hidden" => "true"}
+              %i.fas.fa-plus{"aria-hidden" => "true"}
+              %i.fas.fa-plus{"aria-hidden" => "true"}
+            %td.text-center
+              %i.fas.fa-plus{"aria-hidden" => "true"}
+
+            %td.text-center
+              %i.fas.fa-plus{"aria-hidden" => "true"}
+              %i.fas.fa-plus{"aria-hidden" => "true"}
+              %i.fas.fa-plus{"aria-hidden" => "true"}
+            %td.text-center
+              %i.fas.fa-plus{"aria-hidden" => "true"}
+              %i.fas.fa-plus{"aria-hidden" => "true"}
+            %td.text-center
+              %i.fas.fa-plus{"aria-hidden" => "true"}
+              %i.fas.fa-plus{"aria-hidden" => "true"}
+          %tr
+            %th.border{:scope => "row"} Mise à disposition de matérie
+            %td.text-center
+              %i.fas.fa-plus{"aria-hidden" => "true"}
+              %i.fas.fa-plus{"aria-hidden" => "true"}
+              %i.fas.fa-plus{"aria-hidden" => "true"}
+            %td.text-center
+              %i.fas.fa-plus{"aria-hidden" => "true"}
+              %i.fas.fa-plus{"aria-hidden" => "true"}
+              %i.fas.fa-plus{"aria-hidden" => "true"}
+            %td.text-center
+              %i.fas.fa-plus{"aria-hidden" => "true"}
+              %i.fas.fa-plus{"aria-hidden" => "true"}
+              %i.fas.fa-plus{"aria-hidden" => "true"}
+            %td.text-center
+              %i.fas.fa-plus{"aria-hidden" => "true"}
+              %i.fas.fa-plus{"aria-hidden" => "true"}
+              %i.fas.fa-plus{"aria-hidden" => "true"}
+            %td.text-center
+              %i.fas.fa-plus{"aria-hidden" => "true"}
+              %i.fas.fa-plus{"aria-hidden" => "true"}
+              %i.fas.fa-plus{"aria-hidden" => "true"}
+          %tr
+            %th{:scope => "row"} Mise à disposition de matérie
+            %td.text-center
+              %i.fas.fa-dollar-sign{"aria-hidden" => "true"}
+              %i.fas.fa-dollar-sign{"aria-hidden" => "true"}
+              %i.fas.fa-dollar-sign{"aria-hidden" => "true"}
+            %td.text-center
+              %i.fas.fa-dollar-sign{"aria-hidden" => "true"}
+            %td.text-center
+              %i.fas.fa-dollar-sign{"aria-hidden" => "true"}
+              %i.fas.fa-dollar-sign{"aria-hidden" => "true"}
+              %i.fas.fa-dollar-sign{"aria-hidden" => "true"}
+            %td.text-center
+              %i.fas.fa-dollar-sign{"aria-hidden" => "true"}
+            %td.text-center
+              %i.fas.fa-dollar-sign{"aria-hidden" => "true"}
+              %i.fas.fa-dollar-sign{"aria-hidden" => "true"}
+
 
 .wrapper
   .container-fluid
