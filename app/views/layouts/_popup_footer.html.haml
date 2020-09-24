@@ -16,6 +16,8 @@
           .barre
             = f.input :name, required: false, label: false, placeholder: "Prénom Nom : John Doe"
           .barre
+            = f.input :phone_number, required: false, label: false, placeholder: "Numéro de portable : 0606060606"
+          .barre
             Je pratique du :
             = f.select :sport, options_for_select(FormPopup::SPORT), as: :radio_button, label: false, required: false
             &nbsp; je suis :

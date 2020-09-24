@@ -544,7 +544,8 @@ $( document ).on('turbolinks:load', function() {
           value2: $('#form_popup_name').val(),
           value3: $('#form_popup_sport').val(),
           value4: $('#form_popup_number').val(),
-          value5: $('#form_popup_creneau').val()
+          value5: $('#form_popup_creneau').val(),
+          value6: $('#form_popup_phone_number').val()
       },
       type: "GET",
       success: function(data) {

@@ -60,6 +60,7 @@ class PagesController < ApplicationController
     @form_popup.sport = params[:value3]
     @form_popup.number = params[:value4]
     @form_popup.creneau = params[:value5]
+    @form_popup.phone_number = params[:value6]
     if ( EmailValidator.valid?(params[:value1]))
       result = {:status => true}
       @form_popup.save
