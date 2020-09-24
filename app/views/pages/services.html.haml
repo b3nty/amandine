@@ -235,12 +235,24 @@
           %br
           %br
           %br
-          %br
-          %br
-          %br
-          %br
-          %br
-          %br
+          = simple_form_for(:form_popup, html: { class: 'form-horizontal' }) do |f|
+            .form-inputs
+              .barre
+                = f.input :email, required: false, label: false, placeholder: "E-mail : John.doe@h-training.com"
+              .barre
+                = f.input :name, required: false, label: false, placeholder: "Prénom Nom : John Doe"
+              .barre
+                = f.input :phone_number, required: false, label: false, placeholder: "Numéro de portable : 0606060606"
+              .barre
+                Je pratique du :
+                = f.select :sport, options_for_select(FormPopup::SPORT), as: :radio_button, label: false, required: false
+                &nbsp; je suis :
+                = f.select :number, options_for_select(FormPopup::NUMBER), as: :radio_button, label: false, required: false
+                %br
+                &nbsp; et disponible pour les créneaux du :
+                = f.select :creneau, options_for_select(FormPopup::CRENEAU), as: :radio_button, label: false, required: false
+
+              #okidokki
           %br
           %br
           %br
@@ -252,8 +264,8 @@
             %span.btn.btn-contact-1{:type => "button"}
               TARIF REJOINS UN COLLECTIF
           &nbsp;
-          %span.btn.btn-service#partenaire{"data-target" => "#serviceModal", "data-toggle" => "modal", :type => "button"}
-            Contactez-nous
+          %span.btn.btn-service#button-popup-form
+            JE M'INSCRIS
 
 .wrapper
   .container-fluid
