@@ -36,6 +36,8 @@
         %a{"aria-controls" => "actuels", "data-toggle" => "tab", :href => "#actuels", :role => "tab"} Sportifs actuels
       %li{:role => "presentation"}
         %a{"aria-controls" => "anciens", "data-toggle" => "tab", :href => "#anciens", :role => "tab"} Anciens sportifs
+      %li{:role => "presentation"}
+        %a{"aria-controls" => "autres", "data-toggle" => "tab", :href => "#autres", :role => "tab"} Autres
     .tab-content
       #actuels.tab-pane.active{:role => "tabpanel"}
         .row.row-zoom
@@ -45,11 +47,6 @@
               .bloc-nom.text-center
                 %h4 Lucie Anastassiou
                 %h5.red Skeet
-          .col-zoom
-            .zoom
-              = image_tag("ANNE-BAUDELET.jpg", :alt => "Anne Baudelet", :class => "img-responsive")
-              .bloc-nom.text-center
-                %h4 Anne Baudelet
           .col-zoom
             .zoom
               = image_tag("BERTRAND-Marc-Rugby.jpg", :alt => "Marc Bertrand, Rugby", :class => "img-responsive")
@@ -67,13 +64,13 @@
               .bloc-nom.text-center
                 %h4 Rohet Fiorentino
                 %h5.red Rugby
-        .row.row-zoom
           .col-zoom
             .zoom
               = image_tag("GABRIEL-GUEMAS-HANDBALL.jpg", :alt => "Gabriel Guemas, Rugby", :class => "img-responsive")
               .bloc-nom.text-center
                 %h4 Gabriel Guemas
                 %h5.red Handball
+        .row.row-zoom
           .col-zoom
             .zoom
               = image_tag("XIMUN-MATHIS-PELOTE-BASQUE.jpg", :alt => "Ximun Mathis, Pelote Basque", :class => "img-responsive")
@@ -98,13 +95,13 @@
               .bloc-nom.text-center
                 %h4 Laurent Pestel
                 %h5.red Rugby
-        .row.row-zoom
           .col-zoom
             .zoom
               = image_tag("Adrien-SALLET-RUGBY.jpg", :alt => "Adrien Sallet, Rugby", :class => "img-responsive")
               .bloc-nom.text-center
                 %h4 Adrien Sallet
                 %h5.red Rugby
+        .row.row-zoom
           .col-zoom
             .zoom
               = image_tag("SPAGNOL-Martin-Rugby.jpg", :alt => "Martin Spagnol, Rugby", :class => "img-responsive")
@@ -227,11 +224,6 @@
                 %h5.red Rugby
           .col-zoom
             .zoom
-              = image_tag("Louise-PASSE.jpg", :alt => "Louise Passe", :class => "img-responsive")
-              .bloc-nom.text-center
-                %h4 Louise Passe
-          .col-zoom
-            .zoom
               = image_tag("THIBAUD-PELLETIER-RUGBY.jpg", :alt => "Thibaud Pelletier, Rugby", :class => "img-responsive")
               .bloc-nom.text-center
                 %h4 Thibaud Pelletier
@@ -248,11 +240,6 @@
               .bloc-nom.text-center
                 %h4 Camille Pouget
                 %h5.red Rugby
-          .col-zoom
-            .zoom
-              = image_tag("SANDRINE-POULLAIN.jpg", :alt => "Sandrine Poullain", :class => "img-responsive")
-              .bloc-nom.text-center
-                %h4 Sandrine Poullain
           .col-zoom
             .zoom
               = image_tag("MAXIME-PINAUD-RUGBY.jpg", :alt => "Maxime Pinaud, Rugby", :class => "img-responsive")
@@ -282,6 +269,23 @@
               = image_tag("FABIEN-TEXIER.jpg", :alt => "Fabien Texier", :class => "img-responsive")
               .bloc-nom.text-center
                 %h4 Fabien Texier
+      #autres.tab-pane{:role => "tabpanel"}
+        .row.row-zoom
+          .col-zoom
+            .zoom
+              = image_tag("ANNE-BAUDELET.jpg", :alt => "Anne Baudelet", :class => "img-responsive")
+              .bloc-nom.text-center
+                %h4 Anne Baudelet
+          .col-zoom
+            .zoom
+              = image_tag("Louise-PASSE.jpg", :alt => "Louise Passe", :class => "img-responsive")
+              .bloc-nom.text-center
+                %h4 Louise Passe
+          .col-zoom
+            .zoom
+              = image_tag("SANDRINE-POULLAIN.jpg", :alt => "Sandrine Poullain", :class => "img-responsive")
+              .bloc-nom.text-center
+                %h4 Sandrine Poullain
 
 .wrapper
   .container-fluid
