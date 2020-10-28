@@ -76,32 +76,74 @@
 
     .row
       .col-md-7.video-card
-        %iframe{:allow => "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture", :allowfullscreen => "", :frameborder => "0", :height => "350", :src => "https://www.youtube.com/embed/AsBMJqUFemE?rel=0&showinfo=0", :width => "100%"}
+        %iframe{:allow => "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture", :allowfullscreen => "", :frameborder => "0", :height => "350", :src => "https://www.youtube.com/embed/rk6oPwxt2Xk?rel=0&showinfo=0", :width => "100%"}
       .col-md-5.video-text#video-content
-        %h3 Premier départ pour le Skipper Antoine Cornic
+        %h3 H-TRAINING s'agrandit !
         %h4
           %i.fas.fa-calendar-day
           &nbsp;
           Évènement
-        %i.grey 23 sept. 2020
+        %i.grey 27 oct. 2020
         %p
-          Premier départ ⎮ 
+          🎞 H-training vous dévoile son nouveau centre de performance ⚡️✊🏼
           %br
-          Il est 23h. La journée a commencé il y a maintenant 16h. Elle aurait pu s’arrêter là et puis voilà que l’un d’entre nous quitte le port et que les autres accompagnent sa sortie. 
+          Vous l’attendiez, il est enfin arrivé. Retrouvez un plus grand espace avec du matériel haute technologie.
           %br
-          Après quelques mois de préparation, Antoine qui prépare le Vendée Globe 2024, fait sa première sortie.
-          Ils seront 3 dans un premier temps. Il la finira en solitaire.  
+          Piste synthétique inclinée, Vertimax, GPS, et toujours avec nos incontournables Wattbike !
           %br
-          Autour de lui ce soir, voileux, rugbyman, handballeur, tireuse, montrent leur soutien par leur présence. 
+          Et bien d’autres qui arrivent...
           %br
-          Chacun avait quelques questions à poser... 
-          On les écoute ! 🤨😁 
-          %br
-          Bon vent Antoine ! À dans un mois !
+          Venez partager l’expérience H-training avec nous. 🤝
   %br
   %br
   .container-fluid#playlist
     .row
+      .col-md-5ths.image-card{"data-url" => "https://www.youtube.com/embed/rk6oPwxt2Xk?rel=0&showinfo=0"}
+        = image_tag("h-training-s-agrandit.jpg", :alt => "H-TRAINING s'agrandit !", style: "width:100%")
+        .video-text
+          %h3.descriptif H-TRAINING s'agrandit !
+          %h4
+            %i.fas.fa-calendar-day
+            &nbsp;
+            Évènement
+          %i.grey 27 oct. 2020
+          %p.descriptif
+            🎞 H-training vous dévoile son nouveau centre de performance ⚡️✊🏼
+            Vous l’attendiez, il est enfin arrivé. Retrouvez un plus grand espace avec du matériel haute technologie.
+            Piste synthétique inclinée, Vertimax, GPS, et toujours avec nos incontournables Wattbike !
+            Et bien d’autres qui arrivent...
+            Venez partager l’expérience H-training avec nous. 🤝
+        %br
+        %br
+      .col-md-5ths.image-card{"data-url" => "https://www.youtube.com/embed/KNVNvRRPj8M?rel=0&showinfo=0"}
+        = image_tag("h-training-next-step.jpg", :alt => "H-Training, next step", style: "width:100%")
+        .video-text
+          %h3.descriptif Next - 🙏🏼
+          %h4
+            %i.fas.fa-calendar-day
+            &nbsp;
+            Évènement
+          %i.grey 22 oct. 2020
+          %p.descriptif
+            Chapitre 1. ✔️
+            Je ne saurai remercier suffisamment tout ceux qui ont participer à ces premières pages.
+        %br
+        %br
+      .col-md-5ths.image-card{"data-url" => "https://www.youtube.com/embed/iJT_emQrjKY?rel=0&showinfo=0"}
+        = image_tag("vision-360-rose-alaoui.jpg", :alt => "Vision 360°, Rose Alaoui", style: "width:100%")
+        .video-text
+          %h3.descriptif VISION 360° 📺 ⎮Rose ALAOUI ⚽️
+          %h4
+            %i.fas.fa-running
+            &nbsp;
+            Athlète
+          %i.grey 23 oct. 2020
+          %p.descriptif
+            Retrouvez chaque semaine l'un de nos athlètes dans le format " VISION 360°" 📽⏯
+            L'occasion pour vous de découvrir le portrait de nos athlètes : sport, profil, parcours, objectifs ..
+            Mais qui est Rose ALAOUI ..? 🧐
+        %br
+        %br
       .col-md-5ths.image-card{"data-url" => "https://www.youtube.com/embed/AsBMJqUFemE?rel=0&showinfo=0"}
         = image_tag("premier-depart-skipper-antoine-cornic.jpg", :alt => "Premier départ pour le Skipper Antoine Cornic", style: "width:100%")
         .video-text
@@ -138,6 +180,7 @@
             Découvrez en images les premiers pas et les premières impressions de Morgan!
         %br
         %br
+    .row
       .col-md-5ths.image-card{"data-url" => "https://www.youtube.com/embed/ofYRDQhzDwg?rel=0&showinfo=0"}
         = image_tag("rentree-h-training-2020.jpg", :alt => "La rentrée H-TRAINING 2020", style: "width:100%")
         .video-text
@@ -187,7 +230,6 @@
             Merci @francerugby pour la confiance et tout son staff avec qui le travail a déjà bien commencé..
         %br
         %br
-    .row
       .col-md-5ths.image-card{"data-url" => "https://www.youtube.com/embed/QU419utm7Zo?rel=0&showinfo=0"}
         = image_tag("decathlon-partenaire-h-training.jpg", :alt => "Decathlon, partenaire H-TRAINING", style: "width:100%")
         .video-text
@@ -213,49 +255,6 @@
           %p.descriptif
             Après quelques semaines de confinement, une visite s'impose chez les sportifs H-TRAINING ! Retrouvez avec nous le quotidien d'Antoine, qui prépare le Vendée Globe 2024, un tour du monde à la voile...
             Au RDV .. Joie, bonne humeur et beaucoup de mauvaise foi (de ma part 😈)
-        %br
-        %br
-      .col-md-5ths.image-card{"data-url" => "https://www.youtube.com/embed/9YXaije3XS4?rel=0&showinfo=0"}
-        = image_tag("gym-hypopressive.jpg", :alt => "Gym hypopressive", style: "width:100%")
-        .video-text
-          %h3.descriptif Gym hypopressive
-          %h4
-            %i.fas.fa-child
-            &nbsp;
-            Exercices
-          %i.grey 12 avril 2020
-          %p.descriptif
-            En collaboration avec Sandra Guignot, éducatrice sportive spécialisée : Yoga, Pilates, Gym Hypopressive
-        %br
-        %br
-      .col-md-5ths.image-card{"data-url" => "https://www.youtube.com/embed/5HVurRKDAMg?rel=0&showinfo=0"}
-        = image_tag("presse-lucie-anastassiou.jpg", :alt => "Presse : Lucie Anastassiou", style: "width:100%")
-        .video-text
-          %h3.descriptif Reportage sur France 3 Poitou-Charentes ce soir : Jeux Olympiques en ligne de mir
-          %h4
-            %i.fas.fa-microphone-alt
-            &nbsp;
-            Presse
-          %i.grey 7 avr. 2020
-          %p.descriptif
-            On attaque les derniers mois et les plus intéressants ... place aux détails !
-            On accentue la communication athlete-coach 💬
-            Comprendre l’athlète pour mieux le servir.. l’échange doit être bilatéral !
-            Feu 👊🏼
-        %br
-        %br
-      .col-md-5ths.image-card{"data-url" => "https://www.youtube.com/embed/wRfbpF9JHr8?rel=0&showinfo=0"}
-        = image_tag("restons-chez-nous.jpg", :alt => "Restons chez nous", style: "width:100%")
-        .video-text
-          %h3.descriptif #RESTONSCHEZNOUS 🏠
-          %h4
-            %i.fab.fa-angellist
-            &nbsp;
-            Ambiance
-          %i.grey 3 avr. 2020
-          %p.descriptif
-            Ensemble, malgré tout ✊🏼❤️
-            Après 3 semaines de confinement, il était temps de vérifier que les athlètes et le staff se portent bien !
         %br
         %br
 
