@@ -1,13 +1,9 @@
 .popup-footer
   .text-center
     %h5 Rejoins un collectif !
-    %i Début : Octobre 2020
     %button.close
       %span{"aria-hidden" => "true"} ×
   .container-fluid.popup-footer-body
-    .text-center
-      = link_to('https://h-training.s3.eu-west-3.amazonaws.com/Rejoins+un+collectif+pr%C3%A9sentation.pdf', target: "_blank", title: "Renseignement sur les cours collectifs") do
-        En savoir plus
     .text-center
       = simple_form_for(:form_popup, html: { class: 'form-horizontal' }) do |f|
         .form-inputs
@@ -18,14 +14,17 @@
           .barre
             = f.input :phone_number, required: false, label: false, placeholder: "Numéro de portable : 0606060606"
           .barre
-            Je pratique du :
-            = f.select :sport, options_for_select(FormPopup::SPORT), as: :radio_button, label: false, required: false
-            &nbsp; je suis :
-            = f.select :number, options_for_select(FormPopup::NUMBER), as: :radio_button, label: false, required: false
+            Choix du sport :
+            = f.select :sport, options_for_select(FormPopup::SPORT), as: :radio_button, label: false, required: false, prompt: "Option"
+            &nbsp; Nombre :
+            = f.select :number, options_for_select(FormPopup::NUMBER), as: :radio_button, label: false, required: false, prompt: "Option"
             %br
-            &nbsp; et disponible pour les créneaux du :
-            = f.select :creneau, options_for_select(FormPopup::CRENEAU), as: :radio_button, label: false, required: false
+            &nbsp; Je choisis mon créneau :
+            = f.select :creneau, options_for_select(FormPopup::CRENEAU), as: :radio_button, label: false, required: false, prompt: "Option"
+          .text-center
+            = link_to('https://h-training.s3.eu-west-3.amazonaws.com/Rejoins+un+collectif+pr%C3%A9sentation.pdf', target: "_blank", title: "Renseignement sur les cours collectifs") do
+              En savoir plus
           %span#button-popup-form.btn.btn-contact{:type => "button"}
             %span.ladda-label
-              JE M'INSCRIS
+              JE RENTRE EN CONTACT
           #okidokki

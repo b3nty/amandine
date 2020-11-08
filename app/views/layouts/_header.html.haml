@@ -38,7 +38,7 @@
                         %li.dropdown-item
                           = link_to 'REJOINS UN COLLECTIF', services_path(anchor: 'rejoins-un-collectif'), title: "Services : REJOINS UN COLLECTIF", class: "dropdown-item"
                         %li.dropdown-item
-                          = link_to 'COMP', services_path(anchor: 'comp'), title: "Services : COMPARATIF", class: "dropdown-item"
+                          = link_to 'COMPARATIF DES SERVICES', services_path(anchor: 'comp'), title: "Services : COMPARATIF", class: "dropdown-item"
                     .col-md-6
                       = link_to(services_path(anchor: 'servicesPlus'), title: "Services") do
                         %span SERVICES ++
@@ -104,8 +104,23 @@
                     .col-md-4
                       = link_to(boutique_path(anchor: 'carte'), title: "CARTE CADEAU") do
                         %span CARTE CADEAU
-            %li.nav-item
-              = link_to 'Contact', contact_path, title: "Contact", :class => current_page?(contact_path) && 'active'
+            %li.nav-item.dropdown
+              = link_to 'Contact', contact_path, title: "Contact", :class => "#{current_page?(contact_path) && 'active'} nav-link dropdown-toggle", id:"navbarDropdownMenuLink5", aria: {haspopup: true, expanded: true}
+              .dropdown-menu.text-xs-center.display-mobile{ aria: {labelledby: "navbarDropdownMenuLink5"}, role:"menu"}
+                .container-fluid.wrapper-dropdown
+                  .row
+                    .col-md-4
+                      = link_to(contact_path(anchor: 'message'), title: "PRENDRE CONTACT") do
+                        %span PRENDRE CONTACT
+                      %ul
+                        %li.dropdown-item
+                          &nbsp;
+                    .col-md-4
+                      = link_to(contact_path(anchor: 'localisation'), title: "LOCALISATION") do
+                        %span LOCALISATION
+                    .col-md-4
+                      = link_to(contact_path(anchor: 'faq'), title: "FAQ") do
+                        %span FAQ
 
         -# %ul.nav.navbar-nav.navbar-right
         -#   %li.nav-item

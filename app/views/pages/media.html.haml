@@ -76,28 +76,43 @@
 
     .row
       .col-md-7.video-card
-        %iframe{:allow => "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture", :allowfullscreen => "", :frameborder => "0", :height => "350", :src => "https://www.youtube.com/embed/rk6oPwxt2Xk?rel=0&showinfo=0", :width => "100%"}
+        %iframe{:allow => "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture", :allowfullscreen => "", :frameborder => "0", :height => "350", :src => "https://www.youtube.com/embed/cyojpuElU5Q?rel=0&showinfo=0", :width => "100%"}
       .col-md-5.video-text#video-content
-        %h3 H-TRAINING s'agrandit !
+        %h3 VISION 360° 📺 ⎮ Kais MATHE
         %h4
-          %i.fas.fa-calendar-day
+          %i.fas.fa-running
           &nbsp;
-          Évènement
-        %i.grey 27 oct. 2020
+          Athlète
+        %i.grey 28 oct. 2020
         %p
-          🎞 H-training vous dévoile son nouveau centre de performance ⚡️✊🏼
+          Retrouvez chaque semaine l'un de nos athlètes dans le format " VISION 360°" 📽⏯
           %br
-          Vous l’attendiez, il est enfin arrivé. Retrouvez un plus grand espace avec du matériel haute technologie.
+          L'occasion pour vous de découvrir le portrait de nos athlètes : sport, profil, parcours, objectifs ..
           %br
-          Piste synthétique inclinée, Vertimax, GPS, et toujours avec nos incontournables Wattbike !
+          Mais qui est Kais MATHE ..? 🧐
           %br
-          Et bien d’autres qui arrivent...
-          %br
-          Venez partager l’expérience H-training avec nous. 🤝
+          Découvrez le en images 📺 ⏯
   %br
   %br
   .container-fluid#playlist
     .row
+      .col-md-5ths.image-card{"data-url" => "https://www.youtube.com/embed/cyojpuElU5Q?rel=0&showinfo=0"}
+        = image_tag("vision-360-kais-mathe.jpg", :alt => "VISION 360°, Kais MATHE", style: "width:100%")
+        .video-text
+          %h3.descriptif VISION 360° 📺 ⎮ Kais MATHE
+          %h4
+            %i.fas.fa-running
+            &nbsp;
+            Athlète
+          %i.grey 28 oct. 2020
+          %p.descriptif
+            Retrouvez chaque semaine l'un de nos athlètes dans le format " VISION 360°" 📽⏯
+            L'occasion pour vous de découvrir le portrait de nos athlètes : sport, profil, parcours, objectifs ..
+            Mais qui est Kais MATHE ..? 🧐
+
+            Découvrez le en images 📺 ⏯
+        %br
+        %br
       .col-md-5ths.image-card{"data-url" => "https://www.youtube.com/embed/rk6oPwxt2Xk?rel=0&showinfo=0"}
         = image_tag("h-training-s-agrandit.jpg", :alt => "H-TRAINING s'agrandit !", style: "width:100%")
         .video-text
@@ -164,6 +179,7 @@
             Bon vent Antoine ! À dans un mois !
         %br
         %br
+    .row
       .col-md-5ths.image-card{"data-url" => "https://www.youtube.com/embed/B3SwHGqzoD4?rel=0&showinfo=0"}
         = image_tag("staff-grandit-morgan-preparateur-physique.jpg", :alt => "Le Staff s'agrandit Morgan - Préparateur Physique", style: "width:100%")
         .video-text
@@ -180,7 +196,6 @@
             Découvrez en images les premiers pas et les premières impressions de Morgan!
         %br
         %br
-    .row
       .col-md-5ths.image-card{"data-url" => "https://www.youtube.com/embed/ofYRDQhzDwg?rel=0&showinfo=0"}
         = image_tag("rentree-h-training-2020.jpg", :alt => "La rentrée H-TRAINING 2020", style: "width:100%")
         .video-text
@@ -241,20 +256,6 @@
           %i.grey 5 juil. 2020
           %p.descriptif
             Decathlon, notre premier partenaire, a souhaité renouveler son soutien en prolongeant son engagement. De nombreux projets sont à venir, au centre d'entraînement comme au magasin..
-        %br
-        %br
-      .col-md-5ths.image-card{"data-url" => "https://www.youtube.com/embed/JwJJHOM8dXg?rel=0&showinfo=0"}
-        = image_tag("interview-antoine-cornic.jpg", :alt => "Interview : Antoine CORNIC", style: "width:100%")
-        .video-text
-          %h3.descriptif Immersion avec Antoine CORNIC, Skipper Professionnel
-          %h4
-            %i.fas.fa-running
-            &nbsp;
-            Athlète
-          %i.grey 12 mai 2020
-          %p.descriptif
-            Après quelques semaines de confinement, une visite s'impose chez les sportifs H-TRAINING ! Retrouvez avec nous le quotidien d'Antoine, qui prépare le Vendée Globe 2024, un tour du monde à la voile...
-            Au RDV .. Joie, bonne humeur et beaucoup de mauvaise foi (de ma part 😈)
         %br
         %br
 

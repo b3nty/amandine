@@ -537,37 +537,64 @@ $( document ).on('turbolinks:load', function() {
 //*********************************************************************************************************
 
   $("#button-popup-form").click(function() {
-    $.ajax({
-      url: 'form-popup',
-      data: {
-          value1: $('#form_popup_email').val(),
-          value2: $('#form_popup_name').val(),
-          value3: $('#form_popup_sport').val(),
-          value4: $('#form_popup_number').val(),
-          value5: $('#form_popup_creneau').val(),
-          value6: $('#form_popup_phone_number').val()
-      },
-      type: "GET",
-      success: function(data) {
-        if(data.status == true) {
-          $('#okidokki').html('<br><i style="font-size: 16px;color:#5cb85c;" class="fa fa-check-circle"> C\'est dans la boîte</i>');
-          $('.barre').css('display', 'none');
-          $('.oki').css('visibility', 'hidden');
-          $('.oki').css('height', '0px');
-          $("#positif").html('<i style="font-size: 16px;color:#5cb85c;margin-top:50px"> Bienvenue dans le collectif H-Training</i>');
-          setTimeout(function(){
-            $('.popup-footer').css('-webkit-animation', 'restrict 1s');
-            setTimeout(function() {
-                $('.popup-footer').css('display', 'none');
-            }, 900);
-          }, 2000);
-        }
-        if(data.status == false) {
-          $('#notoki').html('<li><i style="font-size: 16px;color:#ea5656;" class="fa fa-exclamation-circle"> Email incorrect</i></li>');
-          $("#negatif").html('<i style="font-size: 16px;color:#3a4cbc;;"> Votre E-mail est vide</i>');
-        }
+    $("#form_popup_email").css('border-color', '#dce4ec');
+    $("#form_popup_name").css('border-color', '#dce4ec');
+    $("#form_popup_phone_number").css('border-color', '#dce4ec');
+    $("#form_popup_sport").css('border-color', '#dce4ec');
+    $("#form_popup_number").css('border-color', '#dce4ec');
+    $("#form_popup_creneau").css('border-color', '#dce4ec');
+    if ($('#form_popup_email').val() === "" || $('#form_popup_name').val() === "" || $('#form_popup_phone_number').val() === "" || $('#form_popup_sport').val() === "" || $('#form_popup_sport').val() === "" || $('#form_popup_number').val() === "" || $('#form_popup_creneau').val() === ""){
+      if ($('#form_popup_email').val() === ""){
+        $("#form_popup_email").css('border-color', '#cc2127');
       }
-    });
+      if ($('#form_popup_name').val() === "") {
+        $("#form_popup_name").css('border-color', '#cc2127');
+      }
+      if ($('#form_popup_phone_number').val() === "") {
+        $("#form_popup_phone_number").css('border-color', '#cc2127');
+      }
+      if ($('#form_popup_sport').val() === "") {
+        $("#form_popup_sport").css('border-color', '#cc2127');
+      }
+      if ($('#form_popup_number').val() === "") {
+        $("#form_popup_number").css('border-color', '#cc2127');
+      }
+      if ($('#form_popup_creneau').val() === "") {
+        $("#form_popup_creneau").css('border-color', '#cc2127');
+      }
+    } else {
+      $.ajax({
+        url: 'form-popup',
+        data: {
+            value1: $('#form_popup_email').val(),
+            value2: $('#form_popup_name').val(),
+            value3: $('#form_popup_sport').val(),
+            value4: $('#form_popup_number').val(),
+            value5: $('#form_popup_creneau').val(),
+            value6: $('#form_popup_phone_number').val()
+        },
+        type: "GET",
+        success: function(data) {
+          if(data.status == true) {
+            $('#okidokki').html('<br><i style="font-size: 16px;color:#5cb85c;" class="fa fa-check-circle"> C\'est dans la boîte</i>');
+            $('.barre').css('display', 'none');
+            $('.oki').css('visibility', 'hidden');
+            $('.oki').css('height', '0px');
+            $("#positif").html('<i style="font-size: 16px;color:#5cb85c;margin-top:50px"> Bienvenue dans le collectif H-Training</i>');
+            setTimeout(function(){
+              $('.popup-footer').css('-webkit-animation', 'restrict 1s');
+              setTimeout(function() {
+                  $('.popup-footer').css('display', 'none');
+              }, 900);
+            }, 2000);
+          }
+          if(data.status == false) {
+            $('#notoki').html('<li><i style="font-size: 16px;color:#ea5656;" class="fa fa-exclamation-circle"> Email incorrect</i></li>');
+            $("#negatif").html('<i style="font-size: 16px;color:#3a4cbc;;"> Votre E-mail est vide</i>');
+          }
+        }
+      });
+    }
   });
 
   $('#button-popup-form').keypress(function(e){
