@@ -33,6 +33,42 @@
       %span.marge_t10.btn.btn-contact#partenaire{"data-target" => "#partenaireModal", "data-toggle" => "modal", :type => "button"}
         Devenir Partenaire
 
+.wrapper
+  .container-fluid
+
+.wrapper
+  .container-fluid
+    .row.partenaire-social
+      .col-md-2.space
+        .text-center
+          = image_tag("https://scontent-cdt1-1.xx.fbcdn.net/v/t1.0-9/118421522_3335361793153403_8227368907562569044_n.png?_nc_cat=103&ccb=2&_nc_sid=09cbfe&_nc_ohc=WzQ1HR0gCa4AX-ELiS_&_nc_ht=scontent-cdt1-1.xx&oh=d50939c68195a8f3797dd031a354e40d&oe=5FF3A2F1", :alt => "Decathlon Puilboreau La Rochelle", style: "width:100%")
+          %br
+          %br
+          %ul.text-center.list-unstyled.list-inline
+            %li
+              = link_to('https://www.facebook.com/decathlonlarochelle', target: "_blank", title: "Facebook Decathlon Puilboreau La Rochelle") do
+                %i.fab.fa-2x.fa-facebook-square
+            %li
+              = link_to('https://www.instagram.com/decathlon_larochelle/?hl=fr', target: "_blank", title: "Instagram Decathlon Puilboreau La Rochelle") do
+                %i.fab.fa-2x.fa-instagram
+            %li
+              = link_to('https://www.decathlon.fr/store-view/magasin-de-sports-puilboreau-0070003600036', target: "_blank", title: "Youtube Decathlon Puilboreau La Rochelle") do
+                %i.fas.fa-2x.fa-globe
+      .col-md-5.space
+        %h3.blue Decathlon La Rochelle Puilboreau
+        %i Zone Commerciale Beaulieu, 2 Rue de Belgique, 17138 Puilboreau
+        %br
+        %br
+        %p Donner la possibilité aux athlètes H-TRAINING de bénéficier de matériel adapté à leur pratique et à la hauteur de leur exigence est une des missions de Décathlon La Rochelle. Ensemble nous répondons aux besoin de chaque structure grâce à un échange régulier.
+        %br
+        %p
+          %strong.red Avantage sportif H-TRAINING :
+          \-10% à chaque passage en caisse.
+      .col-md-1.display-mobile
+        #barre
+      .col-md-4.space
+        %iframe{:allow => "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture", :allowfullscreen => "", :frameborder => "0", :height => "222em", :src => "https://www.youtube.com/embed/QU419utm7Zo", :width => "100%"}
+
 #partenaireModal.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "partenaireModalLabel", :role => "dialog", :tabindex => "-1"}
   .modal-dialog{:role => "document"}
     .modal-content
