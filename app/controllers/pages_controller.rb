@@ -112,6 +112,9 @@ class PagesController < ApplicationController
     @form_boutique.address = params[:value9]
     @form_boutique.cp = params[:value10]
     @form_boutique.city = params[:value11]
+    @form_boutique.size_l = params[:value12]
+    @form_boutique.size_s = params[:value13]
+    @form_boutique.color_s = params[:value14]
     if ( EmailValidator.valid?(params[:value2]) && !@form_boutique.phone.blank? && !@form_boutique.name.blank? )
       result = {:status => true}
       @form_boutique.save

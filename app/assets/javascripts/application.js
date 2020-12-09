@@ -214,9 +214,12 @@ $( document ).on('turbolinks:load', function() {
             value6: $('#form_boutique_size').val(),
             value7: $('#form_boutique_product').val(),
             value8: $('#form_boutique_color').val(),
-            value8: $('#form_boutique_address').val(),
-            value8: $('#form_boutique_cp').val(),
-            value8: $('#form_boutique_city').val()
+            value9: $('#form_boutique_address').val(),
+            value10: $('#form_boutique_cp').val(),
+            value11: $('#form_boutique_city').val(),
+            value12: $('#form_boutique_size_l').val(),
+            value13: $('#form_boutique_size_s').val(),
+            value14: $('#form_boutique_color_s').val()
         },
         type: "GET",
         success: function(data) {
@@ -377,7 +380,7 @@ $( document ).on('turbolinks:load', function() {
     $("#size_S_form").css('display', 'none');
     $(".barre .list-inline").css('display', 'block');
     $("#color_form").css('display', 'none');
-    $("#color_S_form").css('display', 'block');
+    $("#color_S_form").css('display', 'none');
   });
   $("#casquette").click(function() {
     $("#size_form").css('display', 'none');
@@ -385,7 +388,7 @@ $( document ).on('turbolinks:load', function() {
     $("#size_S_form").css('display', 'none');
     $(".barre .list-inline").css('display', 'block');
     $("#color_form").css('display', 'none');
-    $("#color_S_form").css('display', 'block');
+    $("#color_S_form").css('display', 'none');
   });
 /***************************************************************************************/
 /****************************** Element boutique ***************************************/

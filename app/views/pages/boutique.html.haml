@@ -165,7 +165,7 @@
                     %li.barre
                       Couleurs :
                     %li.barre
-                      = f.select :color,  options_for_select(FormBoutique::COLORS_S), label: false
+                      = f.select :color_s,  options_for_select(FormBoutique::COLORS_S), label: false
                 %li.barre
                   &nbsp;
                 %li.barre
@@ -181,13 +181,13 @@
                         %li.barre
                           Taille :
                         %li.barre
-                          = f.select :size, options_for_select(FormBoutique::SIZE_L), as: :radio_button, label: false, required: true
+                          = f.select :size_l, options_for_select(FormBoutique::SIZE_L), as: :radio_button, label: false, required: true
                     .col-md-6#size_S_form
                       %ul.list-unstyled.list-inline.text-left
                         %li.barre
                           Taille :
                         %li.barre
-                          = f.select :size, options_for_select(FormBoutique::SIZE_S), as: :radio_button, label: false, required: true
+                          = f.select :size_s, options_for_select(FormBoutique::SIZE_S), as: :radio_button, label: false, required: true
                     .col-md-6.text-center
                       %ul.list-unstyled.list-inline.text-left
                         %li.barre

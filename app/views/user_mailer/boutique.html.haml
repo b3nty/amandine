@@ -14,10 +14,36 @@
   Produit :
   = @client.product
   Quantité :
-  = @client.product
-  Couleurs :
-  = @client.color
+  = @client.quantity
+  %br
+  - if @client.product == "Sweat"
+    Couleurs :
+    = @client.color_s
+    %br
+  - if @client.product == "T-shirt Homme"
+    Couleurs :
+    = @client.color
+    %br
+  - if @client.product == "Sweat"
+    Taille :
+    = @client.size_s
+    %br
+  - if @client.product == "T-shirt Homme"
+    Taille :
+    = @client.size
+    %br
+  - if @client.product == "T-shirt Femme"
+    Taille :
+    = @client.size
+    %br
+  - if @client.product == "Legging"
+    Taille :
+    = @client.size_l
+    %br
 
-%p
-  commande :
-  = @client.message
+  - if !@client.address.empty?
+    Adresse de livraison :
+    = @client.address
+    = @client.city
+    = @client.cp
+    %br
