@@ -341,36 +341,48 @@ $( document ).on('turbolinks:load', function() {
   });
   $("#sac").click(function() {
     $("#size_form").css('display', 'none');
+    $("#size_L_form").css('display', 'none');
+    $("#size_S_form").css('display', 'none');
     $(".barre .list-inline").css('display', 'block');
     $("#color_form").css('display', 'none');
     $("#color_S_form").css('display', 'none');
   });
   $("#t-shirt_h").click(function() {
     $("#size_form").css('display', 'block');
+    $("#size_L_form").css('display', 'none');
+    $("#size_S_form").css('display', 'none');
     $(".barre .list-inline").css('display', 'block');
     $("#color_form").css('display', 'block');
     $("#color_S_form").css('display', 'none');
   });
   $("#t-shirt_f").click(function() {
     $("#size_form").css('display', 'block');
+    $("#size_L_form").css('display', 'none');
+    $("#size_S_form").css('display', 'none');
     $(".barre .list-inline").css('display', 'block');
     $("#color_form").css('display', 'none');
     $("#color_S_form").css('display', 'none');
   });
   $("#sweat").click(function() {
-    $("#size_form").css('display', 'block');
+    $("#size_form").css('display', 'none');
+    $("#size_L_form").css('display', 'none');
+    $("#size_S_form").css('display', 'block');
     $(".barre .list-inline").css('display', 'block');
     $("#color_form").css('display', 'none');
     $("#color_S_form").css('display', 'block');
   });
   $("#legging").click(function() {
-    $("#size_form").css('display', 'block');
+    $("#size_form").css('display', 'none');
+    $("#size_L_form").css('display', 'block');
+    $("#size_S_form").css('display', 'none');
     $(".barre .list-inline").css('display', 'block');
     $("#color_form").css('display', 'none');
     $("#color_S_form").css('display', 'block');
   });
   $("#casquette").click(function() {
     $("#size_form").css('display', 'none');
+    $("#size_L_form").css('display', 'none');
+    $("#size_S_form").css('display', 'none');
     $(".barre .list-inline").css('display', 'block');
     $("#color_form").css('display', 'none');
     $("#color_S_form").css('display', 'block');

@@ -5,6 +5,10 @@
   %meta{:content => "Préparation physique, objectifs, sportifs, training", :name => "keywords"}/
   %meta{:content => "all", :name => "robots"}/
 
+.bandeau
+  .text-center
+    Récupérez vos commandes en click&collect au centre d’entraînement ou en livraison à domicile 7 jours ouvrés pour 6 €
+
 .wrapper.image-boutique
   .container-fluid
     %section
@@ -58,7 +62,7 @@
         %h3 Sweat
         %i 30 €
         %br
-        %i XS-XXXL
+        %i S-XXXL
         %br
         %span.marge_t10.btn.btn-contact#sweat{"data-target" => "#exampleModal", "data-toggle" => "modal", "data-whatever" => "Sweat", "data-message" => "Sweat", :type => "button"}
           COMMANDER
@@ -91,7 +95,7 @@
         %h3 Legging
         %i 26 €
         %br
-        %i XS-XXXL
+        %i S-L
         %br
         %span.marge_t10.btn.btn-contact#legging{"data-target" => "#exampleModal", "data-toggle" => "modal", "data-whatever" => "Legging", "data-message" => "Legging", :type => "button"}
           COMMANDER
@@ -172,6 +176,18 @@
                           Taille :
                         %li.barre
                           = f.select :size, options_for_select(FormBoutique::SIZE), as: :radio_button, label: false, required: true
+                    .col-md-6#size_L_form
+                      %ul.list-unstyled.list-inline.text-left
+                        %li.barre
+                          Taille :
+                        %li.barre
+                          = f.select :size, options_for_select(FormBoutique::SIZE_L), as: :radio_button, label: false, required: true
+                    .col-md-6#size_S_form
+                      %ul.list-unstyled.list-inline.text-left
+                        %li.barre
+                          Taille :
+                        %li.barre
+                          = f.select :size, options_for_select(FormBoutique::SIZE_S), as: :radio_button, label: false, required: true
                     .col-md-6.text-center
                       %ul.list-unstyled.list-inline.text-left
                         %li.barre
