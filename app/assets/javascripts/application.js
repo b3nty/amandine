@@ -231,6 +231,27 @@ $( document ).on('turbolinks:load', function() {
               } else {
                 var price = 32*$('#form_boutique_quantity').val()
               }
+            }
+            if ($('#form_boutique_product').val() == "Casquette"){
+              if ($('input#address').is(':checked')){
+                var price = 14*$('#form_boutique_quantity').val() + 6;
+              } else {
+                var price = 14*$('#form_boutique_quantity').val()
+              }
+            }
+            if ($('#form_boutique_product').val() == "Legging"){
+              if ($('input#address').is(':checked')){
+                var price = 26*$('#form_boutique_quantity').val() + 6;
+              } else {
+                var price = 26*$('#form_boutique_quantity').val()
+              }
+            }
+            if ($('#form_boutique_product').val() == "Sweat"){
+              if ($('input#address').is(':checked')){
+                var price = 30*$('#form_boutique_quantity').val() + 6;
+              } else {
+                var price = 30*$('#form_boutique_quantity').val()
+              }
             } else {
               if ($('input#address').is(':checked')){
                 var price = 18*$('#form_boutique_quantity').val() + 6;
@@ -322,16 +343,37 @@ $( document ).on('turbolinks:load', function() {
     $("#size_form").css('display', 'none');
     $(".barre .list-inline").css('display', 'block');
     $("#color_form").css('display', 'none');
+    $("#color_S_form").css('display', 'none');
   });
   $("#t-shirt_h").click(function() {
     $("#size_form").css('display', 'block');
     $(".barre .list-inline").css('display', 'block');
     $("#color_form").css('display', 'block');
+    $("#color_S_form").css('display', 'none');
   });
   $("#t-shirt_f").click(function() {
     $("#size_form").css('display', 'block');
     $(".barre .list-inline").css('display', 'block');
     $("#color_form").css('display', 'none');
+    $("#color_S_form").css('display', 'none');
+  });
+  $("#sweat").click(function() {
+    $("#size_form").css('display', 'block');
+    $(".barre .list-inline").css('display', 'block');
+    $("#color_form").css('display', 'none');
+    $("#color_S_form").css('display', 'block');
+  });
+  $("#legging").click(function() {
+    $("#size_form").css('display', 'block');
+    $(".barre .list-inline").css('display', 'block');
+    $("#color_form").css('display', 'none');
+    $("#color_S_form").css('display', 'block');
+  });
+  $("#casquette").click(function() {
+    $("#size_form").css('display', 'none');
+    $(".barre .list-inline").css('display', 'block');
+    $("#color_form").css('display', 'none');
+    $("#color_S_form").css('display', 'block');
   });
 /***************************************************************************************/
 /****************************** Element boutique ***************************************/
@@ -376,6 +418,20 @@ $( document ).on('turbolinks:load', function() {
     var image2 = $(".gallery-image-s #img-2-S").attr('src')
     $(this).attr('src',image1).fadeIn( "slow" ).fadeIn(400);
     $(".gallery-image-s #img-3-S").attr('src',image2).fadeIn(400);
+  });
+
+  $(".gallery-image-sw #img-1-SW").click(function() {
+    var image1 = $(".gallery-image-sw #img-3-SW").attr('src')
+    var image2 = $(".gallery-image-sw #img-1-SW").attr('src')
+    $(this).attr('src',image1).fadeIn( "slow" ).fadeIn(400);
+    $(".gallery-image-sw #img-3-SW").attr('src',image2).fadeIn(400);
+  });
+
+  $(".gallery-image-sw #img-2-SW").click(function() {
+    var image1 = $(".gallery-image-sw #img-3-SW").attr('src')
+    var image2 = $(".gallery-image-sw #img-2-SW").attr('src')
+    $(this).attr('src',image1).fadeIn( "slow" ).fadeIn(400);
+    $(".gallery-image-sw #img-3-SW").attr('src',image2).fadeIn(400);
   });
 
 /***************************************************************************************/

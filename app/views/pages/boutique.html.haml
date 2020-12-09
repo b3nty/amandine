@@ -46,6 +46,23 @@
         %span.marge_t10.btn.btn-contact#t-shirt_f{"data-target" => "#exampleModal", "data-toggle" => "modal", "data-whatever" => "T-shirt Femme", "data-message" => "T-shirt Femme", :type => "button"}
           COMMANDER
       .col-md-4.text-center
+        .row.gallery-image-sw
+          .col-xs-4
+            = image_tag("sweat-sport-h-training.jpg", :alt => "Boutique : Sweat de sport", class: "img-responsive img-pointer", id: "img-1-SW")
+            %br
+            = image_tag("sweat-h-training.jpg", :alt => "Boutique : Sweat de sport", class: "img-responsive img-pointer", id: "img-2-SW")
+          .col-xs-8
+            = image_tag("shop-sweat-h-training.jpg", :alt => "Boutique : Sweat de sport", class: "img-responsive", id: "img-3-SW")
+        %br
+        %br
+        %h3 Sweat
+        %i 30 €
+        %br
+        %i XS-XXXL
+        %br
+        %span.marge_t10.btn.btn-contact#sweat{"data-target" => "#exampleModal", "data-toggle" => "modal", "data-whatever" => "Sweat", "data-message" => "Sweat", :type => "button"}
+          COMMANDER
+      .col-md-4.text-center
         .row.gallery-image-h
           .col-xs-4
             = image_tag("shop-t-shirt-masculin.jpg", :alt => "Boutique : T-shirt homme", class: "img-responsive img-pointer", id: "img-1-H")
@@ -61,6 +78,35 @@
         %i XS-XXXL
         %br
         %span.marge_t10.btn.btn-contact#t-shirt_h{"data-target" => "#exampleModal", "data-toggle" => "modal", "data-whatever" => "T-shirt Homme", "data-message" => "T-shirt Homme", :type => "button"}
+          COMMANDER
+    %br
+    %br
+    .row#shop
+      .col-md-4.text-center
+        .row.gallery-image-l
+          .col-xs-8.col-xs-offset-2
+            = image_tag("legging-h-training.jpg", :alt => "Boutique : Legging", class: "img-responsive")
+        %br
+        %br
+        %h3 Legging
+        %i 26 €
+        %br
+        %i XS-XXXL
+        %br
+        %span.marge_t10.btn.btn-contact#legging{"data-target" => "#exampleModal", "data-toggle" => "modal", "data-whatever" => "Legging", "data-message" => "Legging", :type => "button"}
+          COMMANDER
+      .col-md-4.text-center
+        .row.gallery-image-c
+          .col-xs-8.col-xs-offset-2
+            = image_tag("casquette-h-training.jpg", :alt => "Boutique : Casquette", class: "img-responsive")
+        %br
+        %br
+        %h3 Casquette
+        %i 14 €
+        %br
+        %i Taille unique
+        %br
+        %span.marge_t10.btn.btn-contact#casquette{"data-target" => "#exampleModal", "data-toggle" => "modal", "data-whatever" => "Casquette", "data-message" => "Casquette", :type => "button"}
           COMMANDER
       .col-md-4.text-center
         .row.gallery-image-s
@@ -79,6 +125,7 @@
         %br
         %span.marge_t10.btn.btn-contact#sac{"data-target" => "#exampleModal", "data-toggle" => "modal", "data-whatever" => "Sac", "data-message" => "Sac", :type => "button"}
           COMMANDER
+
 
 #exampleModal.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "exampleModalLabel", :role => "dialog", :tabindex => "-1"}
   .modal-dialog{:role => "document"}
@@ -109,6 +156,12 @@
                       Couleurs :
                     %li.barre
                       = f.select :color,  options_for_select(FormBoutique::COLORS), label: false
+                %li.barre#color_S_form.text-left
+                  %ul.list-unstyled.list-inline.text-left
+                    %li.barre
+                      Couleurs :
+                    %li.barre
+                      = f.select :color,  options_for_select(FormBoutique::COLORS_S), label: false
                 %li.barre
                   &nbsp;
                 %li.barre
@@ -136,7 +189,7 @@
                 %li.barre.text-left
                   %input#pickup{:type => "checkbox", name: "pickup"}
                     %label.text-left{for: "pickup"}
-                      &nbsp; Click & Collect au center
+                      &nbsp; Click & Collect au centre
                 %li.barre
                   &nbsp;
                 %li.barre.text-left

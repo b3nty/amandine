@@ -118,7 +118,7 @@ class PagesController < ApplicationController
       respond_to do |format|
         format.json { render :json => result.to_json }
       end
-      # UserMailer.boutique(@form_boutique).deliver
+      UserMailer.boutique(@form_boutique).deliver
     else
       result = {:status => false}
       respond_to do |format|
