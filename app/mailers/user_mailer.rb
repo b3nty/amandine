@@ -6,7 +6,7 @@ class UserMailer < ApplicationMailer
 
   def boutique(client)
     @client = client
-    mail(to: "contact@h-training.fr", subject: 'h-training | Demande d\'achat', :from => @client.email)
+    mail(to: ["amandine@h-training.fr", "communication@h-training.fr"], subject: 'h-training | Demande d\'achat', :from => @client.email)
   end
 
   def popup(client)
