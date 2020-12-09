@@ -200,74 +200,88 @@ $( document ).on('turbolinks:load', function() {
     }
   });
   $("#button-boutique").click(function() {
-    var l = Ladda.create(this);
-    l.start();
-    $.ajax({
-      url: 'form-boutique',
-      data: {
-          value1: $('#form_boutique_status').val(),
-          value2: $('#form_boutique_email').val(),
-          value3: $('#form_boutique_phone').val(),
-          value4: $('#form_boutique_name').val(),
-          value5: $('#form_boutique_quantity').val(),
-          value6: $('#form_boutique_size').val(),
-          value7: $('#form_boutique_product').val(),
-          value8: $('#form_boutique_color').val(),
-          value8: $('#form_boutique_address').val(),
-          value8: $('#form_boutique_cp').val(),
-          value8: $('#form_boutique_city').val()
-      },
-      type: "GET",
-      success: function(data) {
-        if(data.status == true && $('input#cgv').is(':checked')) {
-          $('.barre').css('display', 'none');
-          $('#notoki').css('display', 'none');
-          $("#button-boutique").css('display', 'none');
-          if ($('#form_boutique_product').val() == "Sac"){
-            if ($('input#address').is(':checked')){
-              var price = 32*$('#form_boutique_quantity').val() + 6;
+    if($('input#cgv').is(':checked') && ($('input#address').is(':checked') || $('input#pickup').is(':checked'))){
+      var l = Ladda.create(this);
+      l.start();
+      $.ajax({
+        url: 'form-boutique',
+        data: {
+            value1: $('#form_boutique_status').val(),
+            value2: $('#form_boutique_email').val(),
+            value3: $('#form_boutique_phone').val(),
+            value4: $('#form_boutique_name').val(),
+            value5: $('#form_boutique_quantity').val(),
+            value6: $('#form_boutique_size').val(),
+            value7: $('#form_boutique_product').val(),
+            value8: $('#form_boutique_color').val(),
+            value8: $('#form_boutique_address').val(),
+            value8: $('#form_boutique_cp').val(),
+            value8: $('#form_boutique_city').val()
+        },
+        type: "GET",
+        success: function(data) {
+          if(data.status == true) {
+            $('.barre').css('display', 'none');
+            $('#notoki').css('display', 'none');
+            $('#notoki-collect').css('display', 'none');
+            $("#button-boutique").css('display', 'none');
+            if ($('#form_boutique_product').val() == "Sac"){
+              if ($('input#address').is(':checked')){
+                var price = 32*$('#form_boutique_quantity').val() + 6;
+              } else {
+                var price = 32*$('#form_boutique_quantity').val()
+              }
             } else {
-              var price = 32*$('#form_boutique_quantity').val()
+              if ($('input#address').is(':checked')){
+                var price = 18*$('#form_boutique_quantity').val() + 6;
+              } else {
+                var price = 18*$('#form_boutique_quantity').val()
+              }
             }
-          } else {
-            if ($('input#address').is(':checked')){
-              var price = 18*$('#form_boutique_quantity').val() + 6;
-            } else {
-              var price = 18*$('#form_boutique_quantity').val()
-            }
+            $('#okidokki').html('<li style="list-style: none;"><i style="font-size:16px;color:#5cb85c;margin-bottom:10px;" class="fa fa-check-circle"> Pour finaliser votre commande de '+ price +' €, il vous suffit de cliquer sur Lydia pour réaliser le paiement.</i></li>');
+            $('#lydia_payment_button').payWithLYDIA({
+              message: $('#form_boutique_product').val(),
+              amount: price,
+              recipient: $('#form_boutique_phone').val(),
+              vendor_token: $('#lydia_payment_button').data("vendor"),
+          		payment_method		: "lydia",
+          		currency			: "EUR",
+          		type				: "phone"
+            });
           }
-          $('#okidokki').html('<li style="list-style: none;"><i style="font-size:16px;color:#5cb85c;margin-bottom:10px;" class="fa fa-check-circle"> Pour finaliser votre commande de '+ price +' €, il vous suffit de cliquer sur Lydia pour réaliser le paiement.</i></li>');
-          $('#lydia_payment_button').payWithLYDIA({
-            message: $('#form_boutique_product').val(),
-            amount: price,
-            recipient: $('#form_boutique_phone').val(),
-            vendor_token: $('#lydia_payment_button').data("vendor"),
-        		payment_method		: "lydia",
-        		currency			: "EUR",
-        		type				: "phone"
-          });
+          if(data.status == false) {
+            l.stop();
+          }
         }
-        if(data.status == false) {
-          $('#notoki').html('<li style="list-style: none;"><i style="font-size: 16px;color:#ea5656;margin-bottom:10px;margin-top:10px;" class="fa fa-exclamation-circle"> L\'un des champs est manquant ou incorrect</i></li>');
-          if(!$('#form_boutique_email').val()){
-            $('#form_boutique_email').addClass("empty");
-          }else {
-            $('#form_boutique_email').removeClass("empty");
-          }
-          if(!$('#form_boutique_phone').val()){
-            $('#form_boutique_phone').addClass("empty");
-          }else {
-            $('#form_boutique_phone').removeClass("empty");
-          }
-          if($('input#cgv').is(':checked')){
-            $('#cgv label').removeClass("red");
-          }else {
-            $('#cgv label').addClass("red");
-          }
-          l.stop();
-        }
+      });
+    }
+    else {
+      $('#notoki').html('<li style="list-style: none;"><i style="font-size: 16px;color:#ea5656;margin-bottom:10px;margin-top:10px;" class="fa fa-exclamation-circle"> L\'un des champs est manquant ou incorrect</i></li>');
+      if(!$('#form_boutique_email').val()){
+        $('#form_boutique_email').addClass("empty");
+      }else {
+        $('#form_boutique_email').removeClass("empty");
       }
-    });
+      if(!$('#form_boutique_phone').val()){
+        $('#form_boutique_phone').addClass("empty");
+      }else {
+        $('#form_boutique_phone').removeClass("empty");
+      }
+      if($('input#cgv').is(':checked')){
+        $('#cgv').removeClass("empty-box");
+      }else {
+        $('#cgv').addClass("empty-box");
+      }
+      if($('input#address').is(':checked') || $('input#pickup').is(':checked')){
+        $('#address').removeClass("empty-box");
+        $('#pickup').removeClass("empty-box");
+        $('#notoki-collect').css('display', 'none');
+      }else {
+        $('#address').addClass("empty-box");
+        $('#pickup').addClass("empty-box");
+        $('#notoki-collect').html('<li style="list-style: none;"><i style="font-size: 16px;color:#ea5656;margin-bottom:10px;margin-top:10px;" class="fa fa-exclamation-circle"> Selectionner le Click & Collect ou livraison</i></li>');
+      }
+    }
   });
   $('#button-boutique').keypress(function(e){
     if ( e.which == 13 ) return false;
@@ -319,7 +333,52 @@ $( document ).on('turbolinks:load', function() {
     $(".barre .list-inline").css('display', 'block');
     $("#color_form").css('display', 'none');
   });
+/***************************************************************************************/
+/****************************** Element boutique ***************************************/
 
+  $(".gallery-image-f #img-1-F").click(function() {
+    var image1 = $(".gallery-image-f #img-3-F").attr('src')
+    var image2 = $(".gallery-image-f #img-1-F").attr('src')
+    $(this).attr('src',image1).fadeIn( "slow" ).fadeIn(400);
+    $(".gallery-image-f #img-3-F").attr('src',image2).fadeIn(400);
+  });
+
+  $(".gallery-image-f #img-2-F").click(function() {
+    var image1 = $(".gallery-image-f #img-3-F").attr('src')
+    var image2 = $(".gallery-image-f #img-2-F").attr('src')
+    $(this).attr('src',image1).fadeIn( "slow" ).fadeIn(400);
+    $(".gallery-image-f #img-3-F").attr('src',image2).fadeIn(400);
+  });
+
+  $(".gallery-image-h #img-1-H").click(function() {
+    var image1 = $(".gallery-image-h #img-3-H").attr('src')
+    var image2 = $(".gallery-image-h #img-1-H").attr('src')
+    $(this).attr('src',image1).fadeIn( "slow" ).fadeIn(400);
+    $(".gallery-image-h #img-3-H").attr('src',image2).fadeIn(400);
+  });
+
+  $(".gallery-image-h #img-2-H").click(function() {
+    var image1 = $(".gallery-image-h #img-3-H").attr('src')
+    var image2 = $(".gallery-image-h #img-2-H").attr('src')
+    $(this).attr('src',image1).fadeIn( "slow" ).fadeIn(400);
+    $(".gallery-image-h #img-3-H").attr('src',image2).fadeIn(400);
+  });
+
+  $(".gallery-image-s #img-1-S").click(function() {
+    var image1 = $(".gallery-image-s #img-3-S").attr('src')
+    var image2 = $(".gallery-image-s #img-1-S").attr('src')
+    $(this).attr('src',image1).fadeIn( "slow" ).fadeIn(400);
+    $(".gallery-image-s #img-3-S").attr('src',image2).fadeIn(400);
+  });
+
+  $(".gallery-image-s #img-2-S").click(function() {
+    var image1 = $(".gallery-image-s #img-3-S").attr('src')
+    var image2 = $(".gallery-image-s #img-2-S").attr('src')
+    $(this).attr('src',image1).fadeIn( "slow" ).fadeIn(400);
+    $(".gallery-image-s #img-3-S").attr('src',image2).fadeIn(400);
+  });
+
+/***************************************************************************************/
 
   $("#button-partenaire").click(function() {
     var l = Ladda.create(this);

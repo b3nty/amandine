@@ -29,7 +29,15 @@
   .container-fluid
     .row#shop
       .col-md-4.text-center
-        = image_tag("t-shirt-femme-h-training.png", :alt => "Boutique : T-shirt femme", class: " img-responsive")
+        .row.gallery-image-f
+          .col-xs-4
+            = image_tag("shop-femme-t-shirt-top.jpg", :alt => "Boutique : T-shirt femme", class: "img-responsive img-pointer", id: "img-1-F")
+            %br
+            = image_tag("t-shirt-feminin-h-training.jpg", :alt => "Boutique : T-shirt femme", class: "img-responsive img-pointer", id: "img-2-F")
+          .col-xs-8
+            = image_tag("shop-t-shirt-feminin.jpg", :alt => "Boutique : T-shirt femme", class: "img-responsive", id: "img-3-F")
+        %br
+        %br
         %h3 T-shirt (F)
         %i 18 €
         %br
@@ -38,7 +46,15 @@
         %span.marge_t10.btn.btn-contact#t-shirt_f{"data-target" => "#exampleModal", "data-toggle" => "modal", "data-whatever" => "T-shirt Femme", "data-message" => "T-shirt Femme", :type => "button"}
           COMMANDER
       .col-md-4.text-center
-        = image_tag("t-shirt-homme-h-training.png", :alt => "Boutique : T-shirt homme", class: " img-responsive")
+        .row.gallery-image-h
+          .col-xs-4
+            = image_tag("shop-t-shirt-masculin.jpg", :alt => "Boutique : T-shirt homme", class: "img-responsive img-pointer", id: "img-1-H")
+            %br
+            = image_tag("t-shirt-masculin-h-training.jpg", :alt => "Boutique : T-shirt homme", class: "img-responsive img-pointer", id: "img-2-H")
+          .col-xs-8
+            = image_tag("t-shirt-homme-h-training.jpg", :alt => "Boutique : T-shirt homme", class: "img-responsive", id: "img-3-H")
+        %br
+        %br
         %h3 T-shirt (H)
         %i 18 €
         %br
@@ -47,7 +63,15 @@
         %span.marge_t10.btn.btn-contact#t-shirt_h{"data-target" => "#exampleModal", "data-toggle" => "modal", "data-whatever" => "T-shirt Homme", "data-message" => "T-shirt Homme", :type => "button"}
           COMMANDER
       .col-md-4.text-center
-        = image_tag("sac-h-taining.png", :alt => "Boutique : sac", class: " img-responsive")
+        .row.gallery-image-s
+          .col-xs-4
+            = image_tag("shop-h-training.jpg", :alt => "Boutique : Sac de sport", class: "img-responsive img-pointer", id: "img-1-S")
+            %br
+            = image_tag("sac-sport-h-training.jpg", :alt => "Boutique : Sac de sport", class: "img-responsive img-pointer", id: "img-2-S")
+          .col-xs-8
+            = image_tag("shop-sac-h-training.jpg", :alt => "Boutique : Sac de sport", class: "img-responsive", id: "img-3-S")
+        %br
+        %br
         %h3 Sac
         %i 32 €
         %br
@@ -110,6 +134,12 @@
                 %li.barre
                   &nbsp;
                 %li.barre.text-left
+                  %input#pickup{:type => "checkbox", name: "pickup"}
+                    %label.text-left{for: "pickup"}
+                      &nbsp; Click & Collect au center
+                %li.barre
+                  &nbsp;
+                %li.barre.text-left
                   %input#address{:type => "checkbox", name: "address"}
                     %label.text-left{for: "address"}
                       &nbsp; Livraison en France métropolitaine pour 6 €
@@ -124,11 +154,6 @@
                     .col-md-8.text-center
                       = f.input :city, label: false, placeholder: "Ville", autofocus: false
               .text-left.barre
-                %i
-                  *Si pas de livraison, réception de l’article directement au
-                  = link_to(contact_path(anchor: 'maps'), title: "Contact", target: '_blank', ) do
-                    centre H-TRAINING
-                %br
                 %i *Vous serez contacté par email ou sms quand votre produit sera disponible
                 %br
                 %br
@@ -139,6 +164,7 @@
                       conditions générales de vente
           #okidokki
           #notoki
+          #notoki-collect
       .modal-footer
         %span#button-boutique.btn.btn-contact{:type => "button", "data-style" => "expand-left"}
           %span.ladda-label Je passe commande

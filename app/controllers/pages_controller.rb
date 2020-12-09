@@ -112,13 +112,13 @@ class PagesController < ApplicationController
     @form_boutique.address = params[:value9]
     @form_boutique.cp = params[:value10]
     @form_boutique.city = params[:value11]
-    if ( EmailValidator.valid?(params[:value2]) && !@form_boutique.phone.blank? )
+    if ( EmailValidator.valid?(params[:value2]) && !@form_boutique.phone.blank? && !@form_boutique.name.blank? )
       result = {:status => true}
       @form_boutique.save
       respond_to do |format|
         format.json { render :json => result.to_json }
       end
-      UserMailer.boutique(@form_boutique).deliver
+      # UserMailer.boutique(@form_boutique).deliver
     else
       result = {:status => false}
       respond_to do |format|
