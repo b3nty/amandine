@@ -255,6 +255,13 @@ $( document ).on('turbolinks:load', function() {
               } else {
                 var price = 30*$('#form_boutique_quantity').val()
               }
+            }
+            if ($('#form_boutique_product').val() == "Serviette"){
+              if ($('input#address').is(':checked')){
+                var price = 25*$('#form_boutique_quantity').val() + 6;
+              } else {
+                var price = 25*$('#form_boutique_quantity').val()
+              }
             } else {
               if ($('input#address').is(':checked')){
                 var price = 18*$('#form_boutique_quantity').val() + 6;
@@ -390,6 +397,14 @@ $( document ).on('turbolinks:load', function() {
     $("#color_form").css('display', 'none');
     $("#color_S_form").css('display', 'none');
   });
+  $("#serviette").click(function() {
+    $("#size_form").css('display', 'none');
+    $("#size_L_form").css('display', 'none');
+    $("#size_S_form").css('display', 'none');
+    $(".barre .list-inline").css('display', 'block');
+    $("#color_form").css('display', 'none');
+    $("#color_S_form").css('display', 'none');
+  });
 /***************************************************************************************/
 /****************************** Element boutique ***************************************/
 
@@ -447,6 +462,13 @@ $( document ).on('turbolinks:load', function() {
     var image2 = $(".gallery-image-sw #img-2-SW").attr('src')
     $(this).attr('src',image1).fadeIn( "slow" ).fadeIn(400);
     $(".gallery-image-sw #img-3-SW").attr('src',image2).fadeIn(400);
+  });
+
+  $(".gallery-image-se #img-1-Se").click(function() {
+    var image1 = $(".gallery-image-se #img-3-Se").attr('src')
+    var image2 = $(".gallery-image-se #img-1-Se").attr('src')
+    $(this).attr('src',image1).fadeIn( "slow" ).fadeIn(400);
+    $(".gallery-image-se #img-3-Se").attr('src',image2).fadeIn(400);
   });
 
 /***************************************************************************************/

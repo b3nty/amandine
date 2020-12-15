@@ -36,8 +36,6 @@
         %a{"aria-controls" => "actuels", "data-toggle" => "tab", :href => "#actuels", :role => "tab"} Sportifs actuels
       %li{:role => "presentation"}
         %a{"aria-controls" => "anciens", "data-toggle" => "tab", :href => "#anciens", :role => "tab"} Anciens sportifs
-      %li{:role => "presentation"}
-        %a{"aria-controls" => "autres", "data-toggle" => "tab", :href => "#autres", :role => "tab"} Autres
     .tab-content
       #actuels.tab-pane.active{:role => "tabpanel"}
         .row.row-zoom
@@ -149,6 +147,11 @@
                 %h5 Rugby
           .col-zoom
             .zoom
+              = image_tag("ANNE-BAUDELET.jpg", :alt => "Anne Baudelet", :class => "img-responsive")
+              .bloc-nom.text-center
+                %h4 Anne Baudelet
+          .col-zoom
+            .zoom
               = image_tag("XAVIERE-BRIATTE-RUGBY.jpg", :alt => "Xavier Briatte, Rugby", :class => "img-responsive")
               .bloc-nom.text-center
                 %h4 Xavier Briatte
@@ -171,13 +174,13 @@
               .bloc-nom.text-center
                 %h4 Mathieu Dorin
                 %h5 Rugby
+        .row.row-zoom
           .col-zoom
             .zoom
               = image_tag("DYLAN-ETIEN-RUGBY.jpg", :alt => "Dylan Etien, Rugby", :class => "img-responsive")
               .bloc-nom.text-center
                 %h4 Dylan Etien
                 %h5 Rugby
-        .row.row-zoom
           .col-zoom
             .zoom
               = image_tag("MATHIS-GARNIER-RUGBY.jpg", :alt => "Mathis Garnier, Rugby", :class => "img-responsive")
@@ -214,13 +217,13 @@
               .bloc-nom.text-center
                 %h4 Carla Mayon
                 %h5 Touch Rugby
+        .row.row-zoom
           .col-zoom
             .zoom
               = image_tag("MAXIME-MAZARD-VOILE-LASER-STANDARD.jpg", :alt => "Maxime Mazard, Voile - Laser - STD", :class => "img-responsive")
               .bloc-nom.text-center
                 %h4 Maxime Mazard
                 %h5 Voile - Laser - STD
-        .row.row-zoom
           .col-zoom
             .zoom
               = image_tag("REMI-MOUSSEAU-RUGBY.jpg", :alt => "Remi Mousseau, Rugby", :class => "img-responsive")
@@ -233,6 +236,11 @@
               .bloc-nom.text-center
                 %h4 Séraphine Okemba
                 %h5 Rugby
+          .col-zoom
+            .zoom
+              = image_tag("Louise-PASSE.jpg", :alt => "Louise Passe", :class => "img-responsive")
+              .bloc-nom.text-center
+                %h4 Louise Passe
           .col-zoom
             .zoom
               = image_tag("THIBAUD-PELLETIER-RUGBY.jpg", :alt => "Thibaud Pelletier, Rugby", :class => "img-responsive")
@@ -251,6 +259,12 @@
               .bloc-nom.text-center
                 %h4 Maxime Pinaud
                 %h5 Rugby
+        .row.row-zoom
+          .col-zoom
+            .zoom
+              = image_tag("SANDRINE-POULLAIN.jpg", :alt => "Sandrine Poullain", :class => "img-responsive")
+              .bloc-nom.text-center
+                %h4 Sandrine Poullain
           .col-zoom
             .zoom
               = image_tag("ELIE-PUYO-RUGBY.jpg", :alt => "Elie Puyo, Rugby", :class => "img-responsive")
@@ -262,7 +276,6 @@
               = image_tag("HELENE-REVERDY.jpg", :alt => "Hélène Reverdy", :class => "img-responsive")
               .bloc-nom.text-center
                 %h4 Hélène Reverdy
-        .row.row-zoom
           .col-zoom
             .zoom
               = image_tag("PIERRE-SOUCHAUD-RUGBY.jpg", :alt => "Pierre Souchaud, Rugby", :class => "img-responsive")
@@ -274,23 +287,7 @@
               = image_tag("FABIEN-TEXIER.jpg", :alt => "Fabien Texier", :class => "img-responsive")
               .bloc-nom.text-center
                 %h4 Fabien Texier
-      #autres.tab-pane{:role => "tabpanel"}
-        .row.row-zoom
-          .col-zoom
-            .zoom
-              = image_tag("ANNE-BAUDELET.jpg", :alt => "Anne Baudelet", :class => "img-responsive")
-              .bloc-nom.text-center
-                %h4 Anne Baudelet
-          .col-zoom
-            .zoom
-              = image_tag("Louise-PASSE.jpg", :alt => "Louise Passe", :class => "img-responsive")
-              .bloc-nom.text-center
-                %h4 Louise Passe
-          .col-zoom
-            .zoom
-              = image_tag("SANDRINE-POULLAIN.jpg", :alt => "Sandrine Poullain", :class => "img-responsive")
-              .bloc-nom.text-center
-                %h4 Sandrine Poullain
+
 
 .wrapper
   .container-fluid
@@ -312,6 +309,12 @@
           .bloc-nom.text-center
             %h4 Amandine Hostynek
             %h5 Préparatrice Physique
+      .col-zoom
+        .zoom
+          = image_tag("morgan-preparateur-physique.jpg", :alt => "Morgan, préparation physique", :class => "img-responsive")
+          .bloc-nom.text-center
+            %h4 Morgan
+            %h5 Préparateur Physique
 
 .wrapper
   .container-fluid

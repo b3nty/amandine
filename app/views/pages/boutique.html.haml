@@ -129,6 +129,27 @@
         %br
         %span.marge_t10.btn.btn-contact#sac{"data-target" => "#exampleModal", "data-toggle" => "modal", "data-whatever" => "Sac", "data-message" => "Sac", :type => "button"}
           COMMANDER
+    %br
+    %br
+    .row#shop
+      .col-md-4.text-center
+      .col-md-4.text-center
+        .row.gallery-image-se
+          .col-xs-4
+            = image_tag("shop-serviette-h-training.jpg", :alt => "Boutique : Serviette de sport", class: "img-responsive img-pointer", id: "img-1-Se")
+            %br
+            -# = image_tag("serviette-h-training.jpg", :alt => "Boutique : Sac de sport", class: "img-responsive img-pointer", id: "img-2-S")
+          .col-xs-8
+            = image_tag("serviette-h-training.jpg", :alt => "Boutique : Serviette de sport", class: "img-responsive", id: "img-3-Se")
+        %br
+        %br
+        %h3 Serviette
+        %i 25 €
+        %br
+        %i Taille unique
+        %br
+        %span.marge_t10.btn.btn-contact#serviette{"data-target" => "#exampleModal", "data-toggle" => "modal", "data-whatever" => "Serviette", "data-message" => "Serviette", :type => "button"}
+          COMMANDER
 
 
 #exampleModal.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "exampleModalLabel", :role => "dialog", :tabindex => "-1"}
