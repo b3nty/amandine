@@ -318,6 +318,13 @@ $( document ).on('turbolinks:load', function() {
     if ( e.which == 13 ) return false;
   });
 
+  $('#sponsorModal').on('show.bs.modal', function (event) {
+    var button = $(event.relatedTarget) // Button that triggered the modal
+    var title = button.data('whatever') // Extract info from data-* attributes
+    var modal = $(this)
+    modal.find('.modal-title').text(title)
+  });
+
   $('#exampleModal').on('show.bs.modal', function (event) {
     var button = $(event.relatedTarget) // Button that triggered the modal
     var recipient = button.data('whatever') // Extract info from data-* attributes
@@ -327,7 +334,7 @@ $( document ).on('turbolinks:load', function() {
     var modal = $(this)
     modal.find('.modal-title').text('Ma commande : ' + recipient)
     modal.find('.modal-body #form_boutique_product').val(message)
-  })
+  });
 
   $('#plus').click(function(e){
     e.preventDefault();
