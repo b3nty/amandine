@@ -70,6 +70,8 @@
                           = link_to 'SPORTIF', effectif_path(anchor: 'sportif'), title: "Effectif : SPORTIF"
                         %li.dropdown-item
                           = link_to 'MÉDICAL', effectif_path(anchor: 'medical'), title: "Effectif : MÉDICAL"
+            %li.nav-item.dropdown
+              = link_to 'Sponsors', sponsors_path, title: "Sponsors", :class => current_page?(sponsors_path) && 'active'
           %ul.nav.navbar-nav.navbar-right
             %li.nav-item.dropdown
               = link_to 'Partenaires', partenaires_path, title: "Partenaires", :class => current_page?(partenaires_path) && 'active'

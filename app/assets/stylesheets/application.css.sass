@@ -159,6 +159,54 @@ select:focus
   transition: .1s
   margin-top: 5px
 
+.title-sponsors
+  position: relative
+  background: #fff
+  width: fit-content
+  z-index: 9
+
+.title-sponsors-right
+  position: relative
+  background: #fff
+  width: fit-content
+  z-index: 9
+  float: right
+  padding-right: 15px
+
+.arrow-right
+  display: inline-block
+  width: 0
+  height: 0
+  border-top: 7px solid transparent
+  border-bottom: 7px solid transparent
+  border-left: 12px solid #cc2127
+
+.arrow-left
+  display: inline-block
+  width: 0
+  height: 0
+  border-top: 7px solid transparent
+  border-bottom: 7px solid transparent
+  border-right: 12px solid #cc2127
+
+.arrow-line
+  display: inline-block
+  height: 3px
+  width: 100%
+  background-color: #cc2127
+  position: absolute
+  z-index: 1
+  margin-top: -15px
+
+.arrow-line-right
+  display: inline-block
+  height: 3px
+  width: 100%
+  background-color: #cc2127
+  position: absolute
+  z-index: 1
+  margin-top: 35px
+
 .vcenter
   display: flex
   align-items: center
@@ -171,6 +219,8 @@ textarea:focus
 
 .marge_t10
   margin-top: 10px
+.marge_t45
+  margin-top: 45px
 .marge_b30
   margin-bottom: 30px
 .blue
@@ -659,6 +709,17 @@ footer
     &:active
       color: #cc2127 !important
       background-color: #fff !important
+
+.row.sponsors
+  margin-right: 0
+  margin-left: 0
+  margin-top: 15px
+  .col-md-4
+    padding-right: 0
+    padding-left: 0
+    .thumbnail
+      padding: 0
+      border: none
 
 /********************************************************************************/
 /********************************************************************************/

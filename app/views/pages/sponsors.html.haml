@@ -1,0 +1,124 @@
+- content_for :title do
+  H-training | Nos sponsors qui nous font confiance
+- content_for :meta do
+  %meta{:content => "De par son caractère multifactoriel, la performance naît de l’entrainement (...) athlètes vers leurs objectifs au sein d’une équipe pluridisciplinaire et dédiée", :name => "description"}/
+  %meta{:content => "Préparation physique, objectifs, sportifs, training", :name => "keywords"}/
+  %meta{:content => "all", :name => "robots"}/
+
+.wrapper.image-partenaires
+  .container-fluid
+    %section
+      %br
+      %br
+      %br
+      %br
+      %br
+      %h1.text-left.text-uppercase
+        %span Sponsors
+        %span .
+      %br
+      %p.text-left.font-italic.white.text-justify
+        Les entreprises / les collectivités / les particuliers peuvent désormais contribuer au financement d'un projet sportif local de leur choix. L'occasion pour eux de profiter d'une relation privilégiée avec nos sportifs et de communiquer différemment sur son identité en véhiculant les valeurs du sport et de la solidarité.
+        %span.red Vivez au plus proche des compétitions tel que le Vendée globe...
+
+.wrapper
+  .container-fluid
+
+.wrapper
+  .container-fluid
+    %h2.text-left.title-sponsors
+      LE SPORTIF
+      &nbsp;
+      .arrow-left
+    .arrow-line
+    .row.sponsors
+      .col-md-4
+        .thumbnail
+          = image_tag("sponsors-presentation.jpg", :alt => "La présentation de nos sportis à nos sponsors", style: "width:100%")
+          .caption
+            %h3 PRÉSENTATION
+            %p Le sportif présente son projet sportif de façon détaillée : objectifs, parcours, palmarès, plans d'actions, engagements, moyens mis à sa disposition au moment de la candidature...
+      .col-md-4
+        .thumbnail
+          = image_tag("sponsors-service-premium.jpg", :alt => "Le service premium de nos sportis à nos sponsors", style: "width:100%")
+          .caption
+            %h3 SERVICE PREMIUM
+            %p Chaque sportif s'engage pleinement dans son projet en bénéficiant du service premium à tarif réduit, de manière à atteindre ses objectifs sportifs et de faire bon usage des moyens mis à disposition.
+      .col-md-4
+        .thumbnail
+          = image_tag("sponsors-criteres-deligibilite.jpg", :alt => "Les critères d'éligibilité de nos sportis à nos sponsors", style: "width:100%")
+          .caption
+            %h3 CRITÈRES D'ÉLIGIBILITÉ
+            %p
+              Sportif compétiteur
+              %br
+              Engagement de 2 ans minimum
+              %br
+              À partir de 12 ans
+              %br
+              Niveau de pratique : National, excellence fédérale, statut professionnel, espoir, figurant sur la liste ministérielle de sportifs
+
+    .text-center.marge_b30
+      %span.btn.btn-contact#partenaire{"data-target" => "#partenaireModal", "data-toggle" => "modal", :type => "button"}
+        Je veux présenter mon projet sportif
+
+  .arrow-line-right
+  %h2.text-right.title-sponsors-right
+    .arrow-right
+    &nbsp;
+    LE SPONSOR
+
+  .container-fluid.marge_t45
+    .row.sponsors
+      .col-md-4
+        .thumbnail
+          = image_tag("sponsors-choix.jpg", :alt => "Le choix pour nos sponsors", style: "width:100%")
+          .caption
+            %h3 CHOIX
+            %p Avoir le choix de "parrainer" un sportif(ve) c'est se donner l'opportunité d'optimiser son image selon les valeurs qu'il(elle) véhicule, augmenter sa notoriété grâce à sa communauté et devenir un acteur de sa réussite.
+      .col-md-4
+        .thumbnail
+          = image_tag("sponsors-engagement.jpg", :alt => "L'engagement pour nos sponsors", style: "width:100%")
+          .caption
+            %h3 ENGAGEMENT
+            %p Participation financière à la préparation du ou des sportif(s) choisi(s) : à hauteur de 60% de l'offre PREMIUM sur une durée déterminée dans le contrat de partenariat.
+      .col-md-4
+        .thumbnail
+          = image_tag("sponsors-vivre-une-relation-unique.jpg", :alt => "Vivre une relation unique pour nos sponsors", style: "width:100%")
+          .caption
+            %h3 VIVRE UNE RELATION UNIQUE
+            %p
+              L'entreprise profite de la visibilité donnée par le sportif et le centre de performance H-TRAINING et des actions menées par le/la/les sportif(s) qu'elle accompagne.
+    .text-center.marge_b30
+      %span.btn.btn-contact#partenaire{"data-target" => "#partenaireModal", "data-toggle" => "modal", :type => "button"}
+        Je veux devenir sponsor
+
+#partenaireModal.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "partenaireModalLabel", :role => "dialog", :tabindex => "-1"}
+  .modal-dialog{:role => "document"}
+    .modal-content
+      .modal-header
+        %h5#partenaireModalLabel.modal-title Mon projet Sportif
+        %button.close{"aria-label" => "Close", "data-dismiss" => "modal", :type => "button"}
+          %span{"aria-hidden" => "true"} ×
+      .modal-body
+        .container-fluid-fluid
+          = simple_form_for(:form_partenaire, html: { class: 'form-horizontal' }) do |f|
+            .form-inputs.text-center
+              %ul.list-unstyled
+                %li.barre
+                  .row
+                    .col-md-6{style: "padding: 0 15px;"}
+                      = f.input :last_name, required: true, label: false, placeholder: "Nom / Raison sociale*", autofocus: false
+                    .col-md-6{style: "padding: 0 15px;"}
+                      = f.input :first_name, required: true, label: false, placeholder: "Votre Prénom*", autofocus: true
+                %li.barre
+                  = f.input :email, required: true, label: false, placeholder: "Votre adresse e-mail*", autofocus: false
+                %li.barre
+                  = f.input :phone, required: true, label: false, placeholder: "Votre numéro de téléphone", autofocus: false
+                %li.barre
+                  = f.input :message, label: false, placeholder: "Votre message", required: false, as: :text, input_html: {rows: 4}
+          #okidokki
+          #notoki
+      .modal-footer
+        %span#button-partenaire.btn.btn-contact{:type => "button", "data-style" => "expand-left"}
+          %span.ladda-label Envoyer

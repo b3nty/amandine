@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   # match '/actualites', :to => 'pages#actualites', :via => [:get]
   # match '/reservation', :to => 'pages#reservation', :via => [:get]
   # match '/espace-perso', :to => 'pages#espace_perso', :via => [:get]
+  match '/sponsors', :to => 'pages#sponsors', :via => [:get]
   match '/partenaires', :to => 'pages#partenaires', :via => [:get]
   match '/media', :to => 'pages#media', :via => [:get]
   match '/boutique', :to => 'pages#boutique', :via => [:get]

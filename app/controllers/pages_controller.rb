@@ -47,6 +47,9 @@ class PagesController < ApplicationController
   def media
   end
 
+  def sponsors
+  end
+
   def partenaires
   end
 
