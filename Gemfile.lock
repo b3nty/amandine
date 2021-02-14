@@ -265,6 +265,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  addressable
   bootstrap-sass
   byebug
   capybara (~> 2.13)
