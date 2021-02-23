@@ -26,11 +26,51 @@
 
 .wrapper
   .container-fluid
+    .row
+      .col-md-8.col-md-offset-2
+        %iframe{:allow => "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture", :allowfullscreen => "", :frameborder => "0", :height => "350", :src => "https://www.youtube.com/embed/-k4EQv87-HU", :width => "100%"}
+
+.wrapper
+  .container-fluid
     %h2.text-left.title-sponsors
-      LE SPORTIF
+      LE SPONSOR
       &nbsp;
       .arrow-left
     .arrow-line
+    .row.sponsors
+      .logo-sponsors
+        = image_tag("Logo-sponsors.png", :alt => "logo sponsors")
+      .col-md-4
+        .thumbnail
+          = image_tag("sponsors-choix.jpg", :alt => "Le choix pour nos sponsors", style: "width:100%")
+          .caption
+            %h3 CHOIX
+            %p Avoir le choix de "parrainer" un sportif(ve) c'est se donner l'opportunité d'optimiser son image selon les valeurs qu'il(elle) véhicule, augmenter sa notoriété grâce à sa communauté et devenir un acteur de sa réussite.
+      .col-md-4
+        .thumbnail
+          = image_tag("sponsors-engagement.jpg", :alt => "L'engagement pour nos sponsors", style: "width:100%")
+          .caption
+            %h3 ENGAGEMENT
+            %p Participation financière à la préparation du ou des sportif(s) choisi(s) : à hauteur de 60% de l'offre PREMIUM sur une durée déterminée dans le contrat de partenariat.
+      .col-md-4
+        .thumbnail
+          = image_tag("sponsors-vivre-une-relation-unique.jpg", :alt => "Vivre une relation unique pour nos sponsors", style: "width:100%")
+          .caption
+            %h3 VIVRE UNE RELATION UNIQUE
+            %p
+              L'entreprise profite de la visibilité donnée par le sportif et le centre de performance H-TRAINING et des actions menées par le/la/les sportif(s) qu'elle accompagne.
+
+    .text-center.marge_b30
+      %span.btn.btn-contact#partenaire{"data-target" => "#sponsorModal", "data-toggle" => "modal", "data-whatever" => "Devenir Sponsor", :type => "button"}
+        Devenir Sponsor
+
+  .arrow-line-right
+  %h2.text-right.title-sponsors-right
+    .arrow-right
+    &nbsp;
+    LE SPORTIF
+
+  .container-fluid.marge_t45
     .row.sponsors
       .col-md-4
         .thumbnail
@@ -60,38 +100,8 @@
 
     .text-center.marge_b30
       %span.btn.btn-contact#partenaire{"data-target" => "#sponsorModal", "data-toggle" => "modal", "data-whatever" => "Mon projet Sportif", :type => "button"}
-        Je veux présenter mon projet sportif
+        Présenter mon projet
 
-  .arrow-line-right
-  %h2.text-right.title-sponsors-right
-    .arrow-right
-    &nbsp;
-    LE SPONSOR
-
-  .container-fluid.marge_t45
-    .row.sponsors
-      .col-md-4
-        .thumbnail
-          = image_tag("sponsors-choix.jpg", :alt => "Le choix pour nos sponsors", style: "width:100%")
-          .caption
-            %h3 CHOIX
-            %p Avoir le choix de "parrainer" un sportif(ve) c'est se donner l'opportunité d'optimiser son image selon les valeurs qu'il(elle) véhicule, augmenter sa notoriété grâce à sa communauté et devenir un acteur de sa réussite.
-      .col-md-4
-        .thumbnail
-          = image_tag("sponsors-engagement.jpg", :alt => "L'engagement pour nos sponsors", style: "width:100%")
-          .caption
-            %h3 ENGAGEMENT
-            %p Participation financière à la préparation du ou des sportif(s) choisi(s) : à hauteur de 60% de l'offre PREMIUM sur une durée déterminée dans le contrat de partenariat.
-      .col-md-4
-        .thumbnail
-          = image_tag("sponsors-vivre-une-relation-unique.jpg", :alt => "Vivre une relation unique pour nos sponsors", style: "width:100%")
-          .caption
-            %h3 VIVRE UNE RELATION UNIQUE
-            %p
-              L'entreprise profite de la visibilité donnée par le sportif et le centre de performance H-TRAINING et des actions menées par le/la/les sportif(s) qu'elle accompagne.
-    .text-center.marge_b30
-      %span.btn.btn-contact#partenaire{"data-target" => "#sponsorModal", "data-toggle" => "modal", "data-whatever" => "Devenir Sponsor", :type => "button"}
-        Je veux devenir sponsor
 
 #sponsorModal.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "sponsorModalLabel", :role => "dialog", :tabindex => "-1"}
   .modal-dialog{:role => "document"}

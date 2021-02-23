@@ -496,7 +496,7 @@ $( document ).on('turbolinks:load', function() {
       type: "GET",
       success: function(data) {
         if(data.status == true) {
-          $('#okidokki').html('<li style="list-style: none;"><i style="font-size:16px;color:#5cb85c;margin-bottom:10px;" class="fa fa-check-circle"> Vous serez contacté quand votre achat sera disponible au centre d\'entrainement</i></li>');
+          $('#okidokki').html('<li style="list-style: none;"><i style="font-size:16px;color:#5cb85c;margin-bottom:10px;" class="fa fa-check-circle"> Merci de votre message, nous revenons vers vous au plus vite.</i></li>');
           $('.barre').css('display', 'none');
           $('#notoki').css('display', 'none');
           setTimeout(function(){
