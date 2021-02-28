@@ -19,7 +19,8 @@
       %br
       %p.text-left.font-italic.white.text-justify
         Les entreprises / les collectivités / les particuliers peuvent désormais contribuer au financement d'un projet sportif local de leur choix. L'occasion pour eux de profiter d'une relation privilégiée avec nos sportifs et de communiquer différemment sur son identité en véhiculant les valeurs du sport et de la solidarité.
-        %span.red Vivez au plus proche des compétitions tel que le Vendée globe...
+        %br
+        Vivez au plus proche des compétitions tels que les Jeux Olympiques et le Vendée Globe...
 
 .wrapper
   .container-fluid
@@ -32,11 +33,8 @@
 
 .wrapper
   .container-fluid
-    %h2.text-left.title-sponsors
-      LE SPONSOR
-      &nbsp;
-      .arrow-left
-    .arrow-line
+    %h2.text-center
+      LE SPONSORING
     .row.sponsors
       .logo-sponsors
         = image_tag("Logo-sponsors.png", :alt => "logo sponsors")
@@ -64,13 +62,10 @@
       %span.btn.btn-contact#partenaire{"data-target" => "#sponsorModal", "data-toggle" => "modal", "data-whatever" => "Devenir Sponsor", :type => "button"}
         Devenir Sponsor
 
-  .arrow-line-right
-  %h2.text-right.title-sponsors-right
-    .arrow-right
-    &nbsp;
+  %h2.text-center
     LE SPORTIF
 
-  .container-fluid.marge_t45
+  .container-fluid
     .row.sponsors
       .col-md-4
         .thumbnail
