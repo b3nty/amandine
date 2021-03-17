@@ -28,13 +28,43 @@
 .wrapper
   .container-fluid
     %h2.text-left.title-section
-      Liste de nos Partenaires
-    .text-center
-      %span.marge_t10.btn.btn-contact#partenaire{"data-target" => "#partenaireModal", "data-toggle" => "modal", :type => "button"}
-        Devenir Partenaire
+      Partenaires Techniques
+    %p.marge_t10
+      Les entreprises peuvent désormais nous rejoindre !
+      %br
+      Devenez notre partenaire technique et contribuez pleinement à la réussite de nos projets sportifs !
 
 .wrapper
   .container-fluid
+    %h3.red.text-uppercase.marge_b30 Votre engagement
+    .row.marge_b30
+      .col-md-4.space.text-center
+        = image_tag("communication.jpg", :alt => "communication")
+        .marge_t10
+          %h4.text-uppercase Communication
+          %p Soutenons ensemble la communication de nos deux structures à travers nos réseaux.
+      .col-md-4.space.text-center
+        = image_tag("apport.jpg", :alt => "communication")
+        .marge_t10
+          %h4.text-uppercase Apport de biens / matériels / compétences
+          %p Répondez au mieux aux besoins de nos sportifs. Rendez les privilégiés à travers notre collaboration.
+      .col-md-4.space.text-center
+        = image_tag("avantages-sportifs.jpg", :alt => "communication")
+        .marge_t10
+          %h4.text-uppercase Avantages pour nos sportifs
+          %p Offrez des avantages aux sportifs H-TRAINING et devenez un véritable partenaire à leurs yeux ! (remises, produits d'essai, prix exclusifs)
+  .text-center
+    %span.marge_t10.btn.btn-contact#partenaire{"data-target" => "#partenaireModal", "data-toggle" => "modal", :type => "button"}
+      Devenir Partenaire technique
+    %p.marge_t10
+      %strong Nous personnalisons chacun de nos partenariats !
+      %br
+      Nous resterons en contact régulier pour optimiser chacune de nos opérations !
+
+.wrapper
+  .container-fluid
+    %h2.text-left.title-section
+      Liste de nos Partenaires
 
 .wrapper
   .container-fluid
