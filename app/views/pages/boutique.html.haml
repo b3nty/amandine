@@ -47,8 +47,9 @@
         %br
         %i XS-XXXL
         %br
-        %span.marge_t10.btn.btn-contact#t-shirt_f{"data-target" => "#exampleModal", "data-toggle" => "modal", "data-whatever" => "T-shirt Femme", "data-message" => "T-shirt Femme", :type => "button"}
-          COMMANDER
+        = link_to("https://h-training.sumup.link/t-shirt", title: "commande T-shirt", :target => "_blank") do
+          %span.marge_t10.btn.btn-contact
+            COMMANDER
       .col-md-4.text-center
         .row.gallery-image-sw
           .col-xs-4
@@ -64,8 +65,9 @@
         %br
         %i S-XXXL
         %br
-        %span.marge_t10.btn.btn-contact#sweat{"data-target" => "#exampleModal", "data-toggle" => "modal", "data-whatever" => "Sweat", "data-message" => "Sweat", :type => "button"}
-          COMMANDER
+        = link_to("https://h-training.sumup.link/sweat", title: "commande Sweat", :target => "_blank") do
+          %span.marge_t10.btn.btn-contact
+            COMMANDER
       .col-md-4.text-center
         .row.gallery-image-h
           .col-xs-4
@@ -81,8 +83,9 @@
         %br
         %i XS-XXXL
         %br
-        %span.marge_t10.btn.btn-contact#t-shirt_h{"data-target" => "#exampleModal", "data-toggle" => "modal", "data-whatever" => "T-shirt Homme", "data-message" => "T-shirt Homme", :type => "button"}
-          COMMANDER
+        = link_to("https://h-training.sumup.link/t-shirt", title: "commande T-Shirt", :target => "_blank") do
+          %span.marge_t10.btn.btn-contact
+            COMMANDER
     %br
     %br
     .row#shop
@@ -97,8 +100,9 @@
         %br
         %i S-L
         %br
-        %span.marge_t10.btn.btn-contact#legging{"data-target" => "#exampleModal", "data-toggle" => "modal", "data-whatever" => "Legging", "data-message" => "Legging", :type => "button"}
-          COMMANDER
+        = link_to("https://h-training.sumup.link/legging", title: "commande Legging", :target => "_blank") do
+          %span.marge_t10.btn.btn-contact
+            COMMANDER
       .col-md-4.text-center
         .row.gallery-image-c
           .col-xs-8.col-xs-offset-2
@@ -110,8 +114,9 @@
         %br
         %i Taille unique
         %br
-        %span.marge_t10.btn.btn-contact#casquette{"data-target" => "#exampleModal", "data-toggle" => "modal", "data-whatever" => "Casquette", "data-message" => "Casquette", :type => "button"}
-          COMMANDER
+        = link_to("https://h-training.sumup.link/casquette", title: "commande Casquette", :target => "_blank") do
+          %span.marge_t10.btn.btn-contact
+            COMMANDER
       .col-md-4.text-center
         .row.gallery-image-s
           .col-xs-4
@@ -127,8 +132,9 @@
         %br
         %i Taille unique
         %br
-        %span.marge_t10.btn.btn-contact#sac{"data-target" => "#exampleModal", "data-toggle" => "modal", "data-whatever" => "Sac", "data-message" => "Sac", :type => "button"}
-          COMMANDER
+        = link_to("https://h-training.sumup.link/sac", title: "commande Sac", :target => "_blank") do
+          %span.marge_t10.btn.btn-contact
+            COMMANDER
     %br
     %br
     .row#shop
@@ -148,117 +154,17 @@
         %br
         %i Taille unique (L. 90 cm x l. 50 cm)
         %br
-        %span.marge_t10.btn.btn-contact#serviette{"data-target" => "#exampleModal", "data-toggle" => "modal", "data-whatever" => "Serviette", "data-message" => "Serviette", :type => "button"}
-          COMMANDER
+        = link_to("https://h-training.sumup.link/serviette", title: "commande Serviette", :target => "_blank") do
+          %span.marge_t10.btn.btn-contact
+            COMMANDER
+.wrapper
+  .container-fluid
+    .row#shop
+      .col-md-4.col-md-offset-4.text-center
+        = link_to("https://h-training.sumup.link/?sortField=name&sortDirection=asc&categorySlug=shop", title: "Voir plus sur le shop", :target => "_blank") do
+          %span.marge_t10.btn.btn-contact
+            Je découvre l’intégralité du shop
 
-
-#exampleModal.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "exampleModalLabel", :role => "dialog", :tabindex => "-1"}
-  .modal-dialog{:role => "document"}
-    .modal-content
-      .modal-header
-        %h5#exampleModalLabel.modal-title Je commande :
-        %button.close{"aria-label" => "Close", "data-dismiss" => "modal", :type => "button"}
-          %span{"aria-hidden" => "true"} ×
-      .modal-body
-        .container-fluid-fluid
-          = simple_form_for(:form_boutique, html: { class: 'form-horizontal' }) do |f|
-            .form-inputs.text-center
-              = f.input :product, required: true, label: false, autofocus: false, :as => :hidden
-              %ul.list-unstyled
-                %li.barre.text-left
-                  = f.select :status,  options_for_select(FormBoutique::STATUS), as: :radio_button, label: false, required: true
-                %li.barre
-                  &nbsp;
-                %li.barre
-                  = f.input :email, required: true, label: false, placeholder: "Votre adresse e-mail", autofocus: false
-                %li.barre
-                  = f.input :phone, required: true, label: false, placeholder: "Votre numéro de téléphone", autofocus: false
-                %li.barre
-                  = f.input :name, required: true, label: false, placeholder: "Nom / Raison sociale", autofocus: false
-                %li.barre#color_form.text-left
-                  %ul.list-unstyled.list-inline.text-left
-                    %li.barre
-                      Couleurs :
-                    %li.barre
-                      = f.select :color,  options_for_select(FormBoutique::COLORS), label: false
-                %li.barre#color_S_form.text-left
-                  %ul.list-unstyled.list-inline.text-left
-                    %li.barre
-                      Couleurs :
-                    %li.barre
-                      = f.select :color_s,  options_for_select(FormBoutique::COLORS_S), label: false
-                %li.barre
-                  &nbsp;
-                %li.barre
-                  .row
-                    .col-md-6#size_form
-                      %ul.list-unstyled.list-inline.text-left
-                        %li.barre
-                          Taille :
-                        %li.barre
-                          = f.select :size, options_for_select(FormBoutique::SIZE), as: :radio_button, label: false, required: true
-                    .col-md-6#size_L_form
-                      %ul.list-unstyled.list-inline.text-left
-                        %li.barre
-                          Taille :
-                        %li.barre
-                          = f.select :size_l, options_for_select(FormBoutique::SIZE_L), as: :radio_button, label: false, required: true
-                    .col-md-6#size_S_form
-                      %ul.list-unstyled.list-inline.text-left
-                        %li.barre
-                          Taille :
-                        %li.barre
-                          = f.select :size_s, options_for_select(FormBoutique::SIZE_S), as: :radio_button, label: false, required: true
-                    .col-md-6.text-center
-                      %ul.list-unstyled.list-inline.text-left
-                        %li.barre
-                          Quantité :
-                        %li.barre
-                          %ul.list-inline
-                            %li
-                              %input#minus{:field => "quantity", :type => "button", :value => "-"}/
-                            %li
-                              = f.input :quantity, label: false, as: :integer, :class => "qty", input_html: { :value => 1, min: '1' }
-                            %li
-                              %input#plus{:field => "quantity", :type => "button", :value => "+"}/
-                %li.barre
-                  &nbsp;
-                %li.barre.text-left
-                  %input#pickup{:type => "checkbox", name: "pickup"}
-                    %label.text-left{for: "pickup"}
-                      &nbsp; Click & Collect au centre
-                %li.barre
-                  &nbsp;
-                %li.barre.text-left
-                  %input#address{:type => "checkbox", name: "address"}
-                    %label.text-left{for: "address"}
-                      &nbsp; Livraison en France métropolitaine pour 6 €
-                %li.barre.display-address
-                  &nbsp;
-                %li.barre.display-address
-                  = f.input :address, label: false, placeholder: "Votre adresse postale", autofocus: false
-                %li.barre.display-address
-                  .row
-                    .col-md-4
-                      = f.input :cp, label: false, placeholder: "CP", autofocus: false
-                    .col-md-8.text-center
-                      = f.input :city, label: false, placeholder: "Ville", autofocus: false
-              .text-left.barre
-                %i *Vous serez contacté par email ou sms quand votre produit sera disponible
-                %br
-                %br
-                %input#cgv{:type => "checkbox", name: "cgv"}
-                  %label{for: "cgv"}
-                    &nbsp; J’ai lu et j’accepte les
-                    = link_to(cgv_path, title: "CGV", target: '_blank', ) do
-                      conditions générales de vente
-          #okidokki
-          #notoki
-          #notoki-collect
-      .modal-footer
-        %span#button-boutique.btn.btn-contact{:type => "button", "data-style" => "expand-left"}
-          %span.ladda-label Je passe commande
-        #lydia_payment_button{:type => "button", "data-style" => "expand-left", "data-vendor" => "#{Figaro.env.vendor_token_lydia}"}
 
 .wrapper
   .container-fluid

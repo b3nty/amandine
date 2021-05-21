@@ -31,41 +31,9 @@
       .col-md-4
         %h2{style:"display:none;"} Photothèque
         = image_tag("phototheque.png", :alt => "Titre section Photothèque", style: "width:100%")
+    %script{:defer => "defer", :src => "https://apps.elfsight.com/p/platform.js"}
+    .elfsight-app-46a265da-994d-49f6-a039-4e84173fa858
 
-
-.wrapper
-  .container-fluid
-    .row
-      .col-md-5ths.video-card{"data-target" => "#ModalEtAuDela", "data-toggle" => "modal", :type => "button", style: "cursor:pointer"}
-        = image_tag("et-au-dela-1.jpg", :alt => "galerie photos Et au delà", class: "img-responsive")
-        .album.text-center
-          %h3 ET AU DELÀ
-      .col-md-5ths.video-card{"data-target" => "#ModalDeconfinement", "data-toggle" => "modal", :type => "button", style: "cursor:pointer"}
-        = image_tag("deconfinement-juin-1.jpg", :alt => "galerie photos Déconfinement du 1er juin 2020", class: "img-responsive")
-        .album.text-center
-          %h3 Déconfinement 1er juin 2020
-      .col-md-5ths.video-card{"data-target" => "#ModalCentreMedia", "data-toggle" => "modal", :type => "button", style: "cursor:pointer"}
-        = image_tag("centre-entrainement-accueil.jpg", :alt => "galerie photos centre entrainement", class: "img-responsive")
-        .album.text-center
-          %h3 CENTRE D'ENTRAINEMENT
-      .col-md-5ths.video-card{"data-target" => "#ModalCoeurMedia", "data-toggle" => "modal", :type => "button", style: "cursor:pointer"}
-        = image_tag("au-coeur-de-laction.jpg", :alt => "galerie photos au cœur de l'action", class: "img-responsive")
-        .album.text-center
-          %h3 AU CŒUR DE L'ACTION
-      .col-md-5ths.video-card{"data-target" => "#ModalDelocMedia", "data-toggle" => "modal", :type => "button", style: "cursor:pointer"}
-        = image_tag("delocalisation.jpg", :alt => "galerie photos hors centre d'entrainement", class: "img-responsive")
-        .album.text-center
-          %h3 DÉLOCALISATION
-
-
-= render partial: "centremedia"
-= render partial: "coeurmedia"
-= render partial: "delocmedia"
-= render partial: "etaudela"
-= render partial: "deconfinement"
-
-%br
-%br
 .wrapper
   .container-fluid
     .row#videotheque
@@ -76,27 +44,161 @@
 
     .row
       .col-md-7.video-card
-        %iframe{:allow => "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture", :allowfullscreen => "", :frameborder => "0", :height => "350", :src => "https://www.youtube.com/embed/A4FZYhLS0ww?rel=0&showinfo=0", :width => "100%"}
+        %iframe{:allow => "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture", :allowfullscreen => "", :frameborder => "0", :height => "350", :src => "https://www.youtube.com/embed/s1LDxWPtXa0?rel=0&showinfo=0", :width => "100%"}
       .col-md-5.video-text#video-content
-        %h3.descriptif TRACK AND FIELD
+        %h3.descriptif VISION 360° 📺 ⎮Martin DUGAZ prépare le Concours d'Officier de Gendarmerie
         %h4
           %i.fas.fa-running
           &nbsp;
           Athlète
-        %i.grey 2 mars 2021
+        %i.grey 12 mai 2021
         %p.descriptif
-          🙏🏼🌟 À l’image de cette séance,  H-TRAINING devient doucement ce que nous avions espéré :
+          Martin DUGAZ, nous a rejoint il y a 1 an dans le cadre de sa préparation spécifique "rugby". Aujourd'hui il change d'objectifs et nous parle de ses prochaines échéances qui auront lieu l'année prochaine, découvrez-les en image !
           %br
-          ✅ Des projets sportifs qui se mélangent, mêlant les sports collectifs aux sports individuels, les femmes aux hommes et de tous les âges.
-          Du sport amateur au sport professionnel, tous n’ont qu’un but... atteindre leurs propres performances, aux côtés de ceux qui partagent la même envie. ⚡️
+          Retrouvez chaque semaine l'un de nos athlètes dans le format " VISION 360°" 📽⏯
           %br
-          Chaque séance est individualisée, mais l’énergie du collectif fait grimper les chiffres. 🥵📈🤓
-          %br
-          🔊 SOUND ON 😏
+          L'occasion pour vous de découvrir le portrait de nos athlètes en images : sport, profil, parcours, objectifs ..
   %br
   %br
   .container-fluid#playlist
     .row
+      .col-md-5ths.image-card{"data-url" => "https://www.youtube.com/embed/s1LDxWPtXa0?rel=0&showinfo=0"}
+        = image_tag("lina-guerin-intersaison.jpg", :alt => "Lina Guerin | Intersaison", style: "width:100%")
+        .video-text
+          %h3.descriptif VISION 360° 📺 ⎮Martin DUGAZ prépare le Concours d'Officier de Gendarmerie
+          %h4
+            %i.fas.fa-running
+            &nbsp;
+            Athlète
+          %i.grey 12 mai 2021
+          %p.descriptif
+            Martin DUGAZ, nous a rejoint il y a 1 an dans le cadre de sa préparation spécifique "rugby". Aujourd'hui il change d'objectifs et nous parle de ses prochaines échéances qui auront lieu l'année prochaine, découvrez-les en image !
+            %br
+            Retrouvez chaque semaine l'un de nos athlètes dans le format " VISION 360°" 📽⏯
+            %br
+            L'occasion pour vous de découvrir le portrait de nos athlètes en images : sport, profil, parcours, objectifs ..
+        %br
+        %br
+      .col-md-5ths.image-card{"data-url" => "https://www.youtube.com/embed/3l-AnwslFnM?rel=0&showinfo=0"}
+        = image_tag("lina-guerin-intersaison.jpg", :alt => "Lina Guerin | Intersaison", style: "width:100%")
+        .video-text
+          %h3.descriptif Lina Guerin | Intersaison Rugby 2020 - vol 3/3
+          %h4
+            %i.fas.fa-running
+            &nbsp;
+            Athlète
+          %i.grey 6 mai 2021
+          %p.descriptif
+            Revivez avec nous la préparation spécifique rugby de Lina Guerin lors de l'intersaison 2020. 🏃🏻‍♀️🏉🏋🏽‍♀️
+            %br
+            D’ici là, on prépare 2021. ⏳
+            Rugby(wo)man ? C’est le moment de vous manifester pour Juin, Juillet, ou Août !
+            Durée, objectifs, niveau de pratique.. chaque suivi est individualisé !
+            On organise les groupes. C’est parti ! 💥🏉
+        %br
+        %br
+      .col-md-5ths.image-card{"data-url" => "https://www.youtube.com/embed/Jrg2e4gopZM?rel=0&showinfo=0"}
+        = image_tag("seraphine-okemba-intersaison.jpg", :alt => "Seraphine Okemba | Intersaison", style: "width:100%")
+        .video-text
+          %h3.descriptif Seraphine Okemba | Intersaison Rugby 2020 - vol 2/3
+          %h4
+            %i.fas.fa-running
+            &nbsp;
+            Athlète
+          %i.grey 5 mai 2021
+          %p.descriptif
+            Revivez avec nous la préparation spécifique rugby de Seraphine Okemba lors de l'intersaison 2020. 🏃🏻‍♀️🏉🏋🏽‍♀️
+            %br
+            Restez connectés, 1 autre épisode est encore à venir dans la semaine ! ⏳
+            D’ici là, on prépare 2021.
+            Joueuse / Joueur de rugby ? C’est le moment de vous manifester pour Juin, Juillet, ou Août !
+            Durée, objectifs, niveau de pratique.. chaque suivi est individualisé !
+            On organise les groupes. C’est parti ! 💥🏉
+        %br
+        %br
+      .col-md-5ths.image-card{"data-url" => "https://www.youtube.com/embed/YSkbh46R670?rel=0&showinfo=0"}
+        = image_tag("montserrat-amedee-intersaison.jpg", :alt => "Montserrat Amédée | Intersaison", style: "width:100%")
+        .video-text
+          %h3.descriptif Montserrat Amédée | Intersaison Rugby 2020 - vol 1/3
+          %h4
+            %i.fas.fa-running
+            &nbsp;
+            Athlète
+          %i.grey 3 mai 2021
+          %p.descriptif
+            Revivez avec nous la préparation spécifique rugby de Montserrat Amédée lors de l'intersaison 2020. 🏃🏻‍♀️🏉🏋🏽‍♀️
+            %br
+            Restez connectés, 2 autres épisodes sont à venir dans la semaine ! ⏳
+            D’ici là, on prépare 2021.
+            Rugby(wo)man ? C’est le moment de vous manifester pour Juin, Juillet, ou Août !
+            Durée, objectifs, niveau de pratique.. chaque suivi est individualisé !
+            On organise les groupes. C’est parti ! 💥🏉
+        %br
+        %br
+      .col-md-5ths.image-card{"data-url" => "https://www.youtube.com/embed/HyIb9_wPeaQ?rel=0&showinfo=0"}
+        = image_tag("evolution-camille-pouget.jpg", :alt => "EVOLUTION Camille POUGET", style: "width:100%")
+        .video-text
+          %h3.descriptif EVOLUTION 📺 ⎮Camille POUGET
+          %h4
+            %i.fas.fa-running
+            &nbsp;
+            Athlète
+          %i.grey 27 avr. 2021
+          %p.descriptif
+            Camille POUGET,  nous a rejoint en février 2019. Elle nous raconte son histoire et revient sur ses progressions au centre ainsi que les raisons qui l'avaient conduite jusqu'à nous ce jour là !
+            %br
+            ✅ Des résultats spectaculaires 💥
+            %br
+            Le mieux, c'est de vous laisser regarder les images 🎞😉🔥
+            %br
+            Retrouvez chaque semaine l'un de nos athlètes dans le format " EVOLUTION" ou "VISION 360°" 📽⏯
+            %br
+            L'occasion pour vous de découvrir le portrait de nos athlètes en images : sport, profil, parcours, objectifs ..
+        %br
+        %br
+    .row
+      .col-md-5ths.image-card{"data-url" => "https://www.youtube.com/embed/JZwHqpk_ZeM?rel=0&showinfo=0"}
+        = image_tag("echauffement-avant-course.jpg", :alt => "Échauffement avant Course à pied", style: "width:100%")
+        .video-text
+          %h3.descriptif Échauffement avant Course à pied 🦵🏼🏃🏽‍♂️
+          %h4
+            %i.fas.fa-swimmer
+            &nbsp;
+            Exercices
+          %i.grey 27 mars 2021
+          %p.descriptif
+            ⚠️ ÉCHAUFFEZ-VOUS pour COURIR ! ⚠️
+            Ne courrez pas pour vous échauffer ! Ça vient après 😉
+            %br
+            ✅ Recrutement des muscles stabilisateurs, échauffement articulaire, coordination, synchronisation.. décontextualisé puis recontextualisé, on y ajoute progressivement de l'intention de vitesse pour se rapprocher doucement de l'activité de course à pied ...
+        %br
+        %br
+      .col-md-5ths.image-card{"data-url" => "https://www.youtube.com/embed/wqaYIkyBI_U?rel=0&showinfo=0"}
+        = image_tag("stage-h-training-1.jpg", :alt => "Stage H TRAINING 1ère édition", style: "width:100%")
+        .video-text
+          %h3.descriptif Stage H TRAINING 1ère édition
+          %h4
+            %i.fas.fa-calendar-day
+            &nbsp;
+            Évènement
+          %i.grey 23 mars 2021
+          %p.descriptif
+            Sur l’île d’Aix - 1ère édition ☀️
+            %br
+            3 binômes se sont retrouvés ce week-end sur l’île d’Aix.
+            %br
+            Entre rires et partages, ils auront réalisé sur 2 jours : 20km de course, 18km en run&bike et 5km de canoë.
+            %br
+            Bravo à tous pour votre engagement et merci pour votre bonne humeur 🙏🏼
+            %br
+            « Tout le long je lui ai dit qu’on aurait jamais fait ça de notre vie »
+            @lau_mumu
+            « Faut que tu me les partages (les données), parce que c’est sur mes potes ils me croiront jamais »
+            @malo_true
+            %br
+            Si tu candidates pour la prochaine édition ... post un « 🔥 »  !!!
+        %br
+        %br
       .col-md-5ths.image-card{"data-url" => "https://www.youtube.com/embed/A4FZYhLS0ww?rel=0&showinfo=0"}
         = image_tag("track-and-field-2.jpg", :alt => "TRACK AND FIELD", style: "width:100%")
         .video-text
@@ -154,122 +256,6 @@
 
             Nous sommes à l'écoute de tous les projets, qu'ils soient portés par des sportifs, ou par de futurs collaborateurs. Nous aimons agrandir la famille et n'attendons que la suite avec vous !
 
-        %br
-        %br
-      .col-md-5ths.image-card{"data-url" => "https://www.youtube.com/embed/sZCISGi8uxQ?rel=0&showinfo=0"}
-        = image_tag("vision-360-romain-baudelet.jpg", :alt => "VISION 360°, Romain BAUDELET", style: "width:100%")
-        .video-text
-          %h3.descriptif VISION 360° 📺 ⎮ Romain BAUDELET
-          %h4
-            %i.fas.fa-running
-            &nbsp;
-            Athlète
-          %i.grey 25 nov. 2020
-          %p.descriptif
-            Romain BAUDELET, rugbyman qui nous a rejoint suite à une blessure à la colonne vertébrale , évoque son arrivée au centre et ses raisons d'être parmi nous !
-
-            Retrouvez chaque semaine l'un de nos athlètes dans le format " VISION 360°" 📽⏯
-
-            L'occasion pour vous de découvrir le portrait de nos athlètes en images : sport, profil, parcours, objectifs ..
-        %br
-        %br
-      .col-md-5ths.image-card{"data-url" => "https://www.youtube.com/embed/w_RV39ZrHoM?rel=0&showinfo=0"}
-        = image_tag("vision-360-simon-caland.jpg", :alt => "VISION 360°, Simon CALAND", style: "width:100%")
-        .video-text
-          %h3.descriptif VISION 360° 📺 ⎮ Simon CALAND
-          %h4
-            %i.fas.fa-running
-            &nbsp;
-            Athlète
-          %i.grey 18 nov. 2020
-          %p.descriptif
-            Simon CALAND, golfeur professionnel , en pleine rééducation suite à une blessure du genou, évoque son arrivée au centre et ses raisons d'être parmi nous !
-
-            Retrouvez chaque semaine l'un de nos athlètes dans le format " VISION 360°" 📽⏯
-
-            L'occasion pour vous de découvrir le portrait de nos athlètes en images : sport, profil, parcours, objectifs ..
-        %br
-        %br
-    .row
-      .col-md-5ths.image-card{"data-url" => "https://www.youtube.com/embed/oQG4jcvH7LM?rel=0&showinfo=0"}
-        = image_tag("vision-360-paul-dagault.jpg", :alt => "VISION 360°, Paul DAGAULT", style: "width:100%")
-        .video-text
-          %h3.descriptif VISION 360° 📺 ⎮ Paul DAGAULT
-          %h4
-            %i.fas.fa-running
-            &nbsp;
-            Athlète
-          %i.grey 12 nov. 2020
-          %p.descriptif
-            ⛵️ ⎮
-            Paul DAGAULT, voileux professionnel sur des catamarans volants, en pleine préparation hivernale, évoque son arrivée au centre et ses raisons d'être parmi nous !
-
-            Retrouvez chaque semaine l'un de nos athlètes dans le format " VISION 360°" 📽⏯
-
-            L'occasion pour vous de découvrir le portrait de nos athlètes en images : sport, profil, parcours, objectifs ..
-        %br
-        %br
-      .col-md-5ths.image-card{"data-url" => "https://www.youtube.com/embed/cyojpuElU5Q?rel=0&showinfo=0"}
-        = image_tag("vision-360-kais-mathe.jpg", :alt => "VISION 360°, Kais MATHE", style: "width:100%")
-        .video-text
-          %h3.descriptif VISION 360° 📺 ⎮ Kais MATHE
-          %h4
-            %i.fas.fa-running
-            &nbsp;
-            Athlète
-          %i.grey 28 oct. 2020
-          %p.descriptif
-            Retrouvez chaque semaine l'un de nos athlètes dans le format " VISION 360°" 📽⏯
-            L'occasion pour vous de découvrir le portrait de nos athlètes : sport, profil, parcours, objectifs ..
-            Mais qui est Kais MATHE ..? 🧐
-
-            Découvrez le en images 📺 ⏯
-        %br
-        %br
-      .col-md-5ths.image-card{"data-url" => "https://www.youtube.com/embed/rk6oPwxt2Xk?rel=0&showinfo=0"}
-        = image_tag("h-training-s-agrandit.jpg", :alt => "H-TRAINING s'agrandit !", style: "width:100%")
-        .video-text
-          %h3.descriptif H-TRAINING s'agrandit !
-          %h4
-            %i.fas.fa-calendar-day
-            &nbsp;
-            Évènement
-          %i.grey 27 oct. 2020
-          %p.descriptif
-            🎞 H-training vous dévoile son nouveau centre de performance ⚡️✊🏼
-            Vous l’attendiez, il est enfin arrivé. Retrouvez un plus grand espace avec du matériel haute technologie.
-            Piste synthétique inclinée, Vertimax, GPS, et toujours avec nos incontournables Wattbike !
-            Et bien d’autres qui arrivent...
-            Venez partager l’expérience H-training avec nous. 🤝
-        %br
-        %br
-      .col-md-5ths.image-card{"data-url" => "https://www.youtube.com/embed/KNVNvRRPj8M?rel=0&showinfo=0"}
-        = image_tag("h-training-next-step.jpg", :alt => "H-Training, next step", style: "width:100%")
-        .video-text
-          %h3.descriptif Next - 🙏🏼
-          %h4
-            %i.fas.fa-calendar-day
-            &nbsp;
-            Évènement
-          %i.grey 22 oct. 2020
-          %p.descriptif
-            Chapitre 1. ✔️
-            Je ne saurai remercier suffisamment tout ceux qui ont participer à ces premières pages.
-        %br
-        %br
-      .col-md-5ths.image-card{"data-url" => "https://www.youtube.com/embed/iJT_emQrjKY?rel=0&showinfo=0"}
-        = image_tag("vision-360-rose-alaoui.jpg", :alt => "Vision 360°, Rose Alaoui", style: "width:100%")
-        .video-text
-          %h3.descriptif VISION 360° 📺 ⎮Rose ALAOUI ⚽️
-          %h4
-            %i.fas.fa-running
-            &nbsp;
-            Athlète
-          %i.grey 23 oct. 2020
-          %p.descriptif
-            Retrouvez chaque semaine l'un de nos athlètes dans le format " VISION 360°" 📽⏯
-            L'occasion pour vous de découvrir le portrait de nos athlètes : sport, profil, parcours, objectifs ..
-            Mais qui est Rose ALAOUI ..? 🧐
         %br
         %br
 
