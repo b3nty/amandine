@@ -9,14 +9,13 @@
   #message
   .text-center
     .row
-      .col-md-4
-        %h2{style: "display:none;"} envoyer un message
-        = image_tag("envoyer-un-message.png", :alt => "envoyer un message", style: "width:100%")
-      .col-md-4.col-md-offset-2
-        %h2{style: "display:none;"} prendre un rdv
-        = image_tag("prendre-un-rdv.png", :alt => "prendre un rdv", style: "width:100%")
+      .col-md-12
+        %h2 Contactez-nous
+        %h4 Pour échanger, prendre un RDV, collaborer...
+    %br
+    %br
     .row
-      .col-md-6
+      .col-md-6.col-md-offset-3
         = simple_form_for(:form_service, html: { class: 'form-horizontal' }) do |f|
           .form-inputs.text-center
             %ul.list-unstyled
@@ -34,21 +33,11 @@
                 = f.input :message, label: false, placeholder: "Précisez le type d’offre et les informations que vous jugerez utiles afin que l’on se rapproche au plus près de vos besoins (nombre de personnes concernées, disponibilité, fréquence d'entraînement hebdomadaire, durée d’engagement…)", required: false, as: :text, input_html: {rows: 4}
               %li.barre
                 &nbsp;
-              %li.barre.text-right
+              %li.barre.text-center
                 %span#button-service.btn.btn-contact{:type => "button", "data-style" => "expand-left" }
                   %span.ladda-label Envoyer
               #okidokki
               #notoki
-      .col-md-6
-        .fb-page{"data-hide-cover" => "false", "data-href" => "https://www.facebook.com/h.training.fr/", "data-show-facepile" => "false", "data-width" => "380"}
-        .reserver
-          #fb-root
-            %script{:async => "", :crossorigin => "anonymous", :defer => "defer", :src => "https://connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v7.0"}
-            .fb-like{"data-action" => "like", "data-href" => "https://www.facebook.com/h.training.fr/", "data-layout" => "button_count", "data-share" => "true", "data-size" => "large", "data-width" => ""}
-          .btn-reserve
-            = link_to("https://fb.com/book/h.training.fr/", title: "Prendre RDV sur Facebook", target:"_blank") do
-              %span.btn{:type => "button", "data-style" => "expand-left" }
-                %span.ladda-label Réserver
 
 .wrapper1
   %hr.hr-grey
