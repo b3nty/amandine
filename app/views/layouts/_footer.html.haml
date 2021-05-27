@@ -17,6 +17,15 @@
         %li.nav-item
           = link_to('https://www.linkedin.com/company/h-training-fr/', target: "_blank", title: "Linkedin h-training") do
             %i.fab.fa-2x.fa-linkedin
+      .footer-logo
+        .row
+          .col-xs-4.col-xs-offset-2.col-md-3.col-md-offset-3.text-right
+            = link_to("https://apps.apple.com/us/app/h-training/id1561959285", title: "Téléchargement de l'app H-training sur App Store", :target => "_blank") do
+              = image_tag("logo-app-store.png", :alt => "logo app store")
+          .col-xs-4.col-md-3.text-left
+            = link_to("https://play.google.com/store/apps/details?id=com.goodbarber.htraining1", title: "Téléchargement de l'app H-training sur Google Play", :target => "_blank") do
+              = image_tag("logo-google-play.png", :alt => "logo google play")
+      %br
       © Copyright 2018-2020 &nbsp; H-Training, tous droits réservés
       |
       = link_to 'contact', contact_path, title: "contact"

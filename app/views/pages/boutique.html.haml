@@ -169,20 +169,16 @@
 .wrapper
   .container-fluid
 
-.wrapper
+.wrapper.back-grey
   .container-fluid
-    .row.back-grey.text-center
+    .row.text-center
       %h2 CARTE CADEAU
       %h4 À OFFRIR
       %br
       %br
-      .gift-up-target#carte{"data-platform" => "Other", "data-site-id" => "b03bdd02-5964-450e-ad1b-7a3e9551c895"}
-      :javascript
-        (function (g, i, f, t, u, p, s) {
-            g[u] = g[u] || function() { (g[u].q = g[u].q || []).push(arguments) };
-            p = i.createElement(f);
-            p.async = 1;
-            p.src = t;
-            s = i.getElementsByTagName(f)[0];
-            s.parentNode.insertBefore(p, s);
-        })(window, document, "script", "https://cdn.giftup.app/dist/gift-up.js", "giftup");
+      = image_tag("carte-cadeau.png", :alt => "Boutique : carte cadeau", class: "img-responsive img-pointer")
+    .row.marge_t10
+      .col-md-4.col-md-offset-4.text-center
+        = link_to("https://giftcard.sumup.io/order/GN5ZB71/h-training", title: "Carte Cadeau", :target => "_blank") do
+          %span.marge_t10.btn.btn-contact-3
+            J'en profite
