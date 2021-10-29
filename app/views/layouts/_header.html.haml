@@ -44,13 +44,13 @@
                         %span SERVICES ++
                       %ul
                         %li.dropdown-item
-                          = link_to 'SUIVI & ANALYSE DATA GPS', services_path(anchor: 'suivi'), title: "Services+ : SUIVI & ANALYSE DATA GPS"
-                        %li.dropdown-item
                           = link_to 'RÉCUPÉRATION : SOIN & PRESSOTHÉRAPIE', services_path(anchor: 'recuperation'), title: "Services+ : RÉCUPÉRATION : SOIN & PRESSOTHÉRAPIE"
                         %li.dropdown-item
                           = link_to 'SUIVI NUTRITIONNEL', services_path(anchor: 'nutritionnel'), title: "Services+ : SUIVI NUTRITIONNEL"
                         %li.dropdown-item
                           = link_to 'GYM DOUCE : YOGA, PILATES, STRETCHING', services_path(anchor: 'gym'), title: "Services+ : GYM DOUCE : YOGA, PILATES, STRETCHING"
+                        %li.dropdown-item
+                          = link_to 'SUIVI & ANALYSE DATA GPS', services_path(anchor: 'suivi'), title: "Services+ : SUIVI & ANALYSE DATA GPS"
             %li.nav-item.dropdown
               = link_to 'Effectif', effectif_path, title: "effectif", :class => "#{current_page?(effectif_path) && 'active'} nav-link dropdown-toggle", id:"navbarDropdownMenuLink1", aria: {haspopup: true, expanded: true}
               .dropdown-menu.text-xs-center.display-mobile{ aria: {labelledby: "navbarDropdownMenuLink1"}, role:"menu"}
