@@ -88,11 +88,15 @@
             COMMANDER
     %br
     %br
-    .row#shop
+    .row
       .col-md-4.text-center
-        .row.gallery-image-l
-          .col-xs-8.col-xs-offset-2
-            = image_tag("legging-h-training.jpg", :alt => "Boutique : Legging", class: "img-responsive")
+        .row.gallery-image-leg
+          .col-xs-4
+            = image_tag("Legging-2.jpg", :alt => "Boutique : Legging", class: "img-responsive img-pointer", id: "img-1-leg")
+            %br
+            = image_tag("Legging-1.jpg", :alt => "Boutique : Legging", class: "img-responsive img-pointer", id: "img-2-leg")
+          .col-xs-8
+            = image_tag("legging-h-training.jpg", :alt => "Boutique : Legging", class: "img-responsive", id: "img-3-leg")
         %br
         %br
         %h3 Legging
@@ -105,8 +109,12 @@
             COMMANDER
       .col-md-4.text-center
         .row.gallery-image-c
-          .col-xs-8.col-xs-offset-2
-            = image_tag("casquette-h-training.jpg", :alt => "Boutique : Casquette", class: "img-responsive")
+          .col-xs-4
+            = image_tag("Casquette-2.jpg", :alt => "Boutique : Casquette", class: "img-responsive img-pointer", id: "img-1-c")
+            %br
+            = image_tag("Casquette-1.jpg", :alt => "Boutique : Casquette", class: "img-responsive img-pointer", id: "img-2-c")
+          .col-xs-8
+            = image_tag("casquette-h-training.jpg", :alt => "Boutique : Casquette", class: "img-responsive", id: "img-3-c")
         %br
         %br
         %h3 Casquette
@@ -139,14 +147,13 @@
     %br
     .row#shop
       .col-md-4.text-center
-      .col-md-4.text-center
         .row.gallery-image-se
           .col-xs-4
-            = image_tag("shop-serviette-h-training.jpg", :alt => "Boutique : Serviette de sport", class: "img-responsive img-pointer", id: "img-1-Se")
+            = image_tag("Serviette-2.jpg", :alt => "Boutique : Serviette de sport", class: "img-responsive img-pointer", id: "img-1-se")
             %br
-            -# = image_tag("serviette-h-training.jpg", :alt => "Boutique : Sac de sport", class: "img-responsive img-pointer", id: "img-2-S")
+            = image_tag("Serviette-1.jpg", :alt => "Boutique : Serviette de sport", class: "img-responsive img-pointer", id: "img-2-se")
           .col-xs-8
-            = image_tag("serviette-h-training.jpg", :alt => "Boutique : Serviette de sport", class: "img-responsive", id: "img-3-Se")
+            = image_tag("serviette-h-training.jpg", :alt => "Boutique : Serviette de sport", class: "img-responsive", id: "img-3-se")
         %br
         %br
         %h3 Serviette
@@ -157,14 +164,17 @@
         = link_to("https://h-training.sumup.link/serviette", title: "commande Serviette", :target => "_blank") do
           %span.marge_t10.btn.btn-contact
             COMMANDER
-.wrapper
-  .container-fluid
-    .row
-      .col-md-4.col-md-offset-4.text-center
-        = link_to("https://h-training.sumup.link/?sortField=name&sortDirection=asc&categorySlug=shop", title: "Voir plus sur le shop", :target => "_blank") do
-          %span.marge_t10.btn.btn-contact
-            Je découvre l’intégralité du shop
-
+      .col-md-8.text-center
+        %br
+        %br
+        %br
+        %br
+        .container-fluid
+          .row
+            .col-md-4.col-md-offset-4.text-center
+              = link_to("https://h-training.sumup.link/?sortField=name&sortDirection=asc&categorySlug=shop", title: "Voir plus sur le shop", :target => "_blank") do
+                %span.marge_t10.btn.btn-contact.bounce
+                  Je découvre l’intégralité du shop
 
 .wrapper
   .container-fluid

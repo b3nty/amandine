@@ -1,30 +1,14 @@
-.popup-footer
+.popup-footer{:style => "width:25%"}
   .text-center
-    %h5 Rejoins un collectif !
+    %h5 Téléchargez l’application
     %button.close
       %span{"aria-hidden" => "true"} ×
   .container-fluid.popup-footer-body
     .text-center
-      = simple_form_for(:form_popup, html: { class: 'form-horizontal' }) do |f|
-        .form-inputs
-          .barre
-            = f.input :email, required: false, label: false, placeholder: "E-mail : John.doe@h-training.com"
-          .barre
-            = f.input :name, required: false, label: false, placeholder: "Prénom Nom : John Doe"
-          .barre
-            = f.input :phone_number, required: false, label: false, placeholder: "Numéro de portable : 0606060606"
-          .barre
-            Choix du sport :
-            = f.select :sport, options_for_select(FormPopup::SPORT), as: :radio_button, label: false, required: false, prompt: "Option"
-            &nbsp; Nombre :
-            = f.select :number, options_for_select(FormPopup::NUMBER), as: :radio_button, label: false, required: false, prompt: "Option"
-            %br
-            &nbsp; Je choisis mon créneau :
-            = f.select :creneau, options_for_select(FormPopup::CRENEAU), as: :radio_button, label: false, required: false, prompt: "Option"
-          .text-center
-            = link_to('https://h-training.s3.eu-west-3.amazonaws.com/Rejoins+un+collectif+pr%C3%A9sentation.pdf', target: "_blank", title: "Renseignement sur les cours collectifs") do
-              En savoir plus
-          %span#button-popup-form.btn.btn-contact{:type => "button"}
-            %span.ladda-label
-              JE RENTRE EN CONTACT
-          #okidokki
+      .row
+        .col-xs-6.text-right
+          = link_to("https://apps.apple.com/us/app/h-training/id1561959285", title: "Téléchargement de l'app H-training sur App Store", :target => "_blank") do
+            = image_tag("logo-app-store.png", :alt => "logo app store")
+        .col-xs-6.text-left
+          = link_to("https://play.google.com/store/apps/details?id=com.goodbarber.htraining1", title: "Téléchargement de l'app H-training sur Google Play", :target => "_blank") do
+            = image_tag("logo-google-play.png", :alt => "logo google play")

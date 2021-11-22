@@ -395,6 +395,22 @@ span.btn-faq
   span.btn-faq
     border: 3px solid #cc2127
 
+.bounce
+  -webkit-animation: bounce 1s infinite
+
+@-webkit-keyframes bounce
+  0%
+    transform: scale(1.05)
+
+  25%, 75%
+    transform: scale(1.1)
+
+  50%
+    transform: scale(1.075)
+
+  100%
+    transform: scale(1)
+
 .wrapper1
   background: #fff
   padding-bottom: 60px
@@ -512,7 +528,7 @@ span.btn-faq
     padding: 1px
 .img-pointer
   cursor: pointer
-.gallery-image-s, .gallery-image-h, .gallery-image-f, .gallery-image-sw, .gallery-image-l, .gallery-image-c
+.gallery-image-s, .gallery-image-h, .gallery-image-f, .gallery-image-sw, .gallery-image-leg, .gallery-image-c, .gallery-image-se
   margin: 10px 0
   .col-xs-8
     padding-left: 0 !important
@@ -617,15 +633,16 @@ footer
   position: fixed
   z-index: 99999
   bottom: 100px
-  left: 20px
-  height: 345px
+  right: 20px
+  height: 100px
+  width: 25%
   -webkit-animation: expand 0.7s
   text-align: center
   background-color: #ffffff
   border: solid 1px #dde0e5
   border-radius: 18px
   .popup-footer-body
-    padding: 0 10px
+    padding: 10px 10px
     .form-inputs
       padding: 20px
       a
@@ -640,6 +657,8 @@ footer
           background-color: #fff !important
     .btn
       margin-top: 10px
+    img
+      width: 100%
   button.close
     right: 8px
     top: 5px
@@ -1223,7 +1242,9 @@ h5#MyPopupLabel
 @media (max-width: 767px)
   .popup-footer
     left: auto !important
-    height: 365px !important
+    right: auto !important
+    height: 130px !important
+    width: 100% !important
   .navbar
     .navbar-collapse
       margin-top: 0px

@@ -478,6 +478,48 @@ $( document ).on('turbolinks:load', function() {
     $(".gallery-image-se #img-3-Se").attr('src',image2).fadeIn(400);
   });
 
+  $(".gallery-image-leg #img-1-leg").click(function() {
+    var image1 = $(".gallery-image-leg #img-3-leg").attr('src')
+    var image2 = $(".gallery-image-leg #img-1-leg").attr('src')
+    $(this).attr('src',image1).fadeIn( "slow" ).fadeIn(400);
+    $(".gallery-image-leg #img-3-leg").attr('src',image2).fadeIn(400);
+  });
+
+  $(".gallery-image-leg #img-2-leg").click(function() {
+    var image1 = $(".gallery-image-leg #img-3-leg").attr('src')
+    var image2 = $(".gallery-image-leg #img-2-leg").attr('src')
+    $(this).attr('src',image1).fadeIn( "slow" ).fadeIn(400);
+    $(".gallery-image-leg #img-3-leg").attr('src',image2).fadeIn(400);
+  });
+
+  $(".gallery-image-c #img-1-c").click(function() {
+    var image1 = $(".gallery-image-c #img-3-c").attr('src')
+    var image2 = $(".gallery-image-c #img-1-c").attr('src')
+    $(this).attr('src',image1).fadeIn( "slow" ).fadeIn(400);
+    $(".gallery-image-c #img-3-c").attr('src',image2).fadeIn(400);
+  });
+
+  $(".gallery-image-c #img-2-c").click(function() {
+    var image1 = $(".gallery-image-c #img-3-c").attr('src')
+    var image2 = $(".gallery-image-c #img-2-c").attr('src')
+    $(this).attr('src',image1).fadeIn( "slow" ).fadeIn(400);
+    $(".gallery-image-c #img-3-c").attr('src',image2).fadeIn(400);
+  });
+
+  $(".gallery-image-se #img-1-se").click(function() {
+    var image1 = $(".gallery-image-se #img-3-se").attr('src')
+    var image2 = $(".gallery-image-se #img-1-se").attr('src')
+    $(this).attr('src',image1).fadeIn( "slow" ).fadeIn(400);
+    $(".gallery-image-se #img-3-se").attr('src',image2).fadeIn(400);
+  });
+
+  $(".gallery-image-se #img-2-se").click(function() {
+    var image1 = $(".gallery-image-se #img-3-se").attr('src')
+    var image2 = $(".gallery-image-se #img-2-se").attr('src')
+    $(this).attr('src',image1).fadeIn( "slow" ).fadeIn(400);
+    $(".gallery-image-se #img-3-se").attr('src',image2).fadeIn(400);
+  });
+
 /***************************************************************************************/
 
   $("#button-partenaire").click(function() {
