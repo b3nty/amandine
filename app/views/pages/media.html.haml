@@ -31,8 +31,9 @@
       .col-md-4
         %h2{style:"display:none;"} Photothèque
         = image_tag("phototheque.png", :alt => "Titre section Photothèque", style: "width:100%")
-    %script{:defer => "defer", :src => "https://apps.elfsight.com/p/platform.js"}
-    %div{:class => "elfsight-app-46a265da-994d-49f6-a039-4e84173fa858"}
+    %div{:class => "embedsocial-hashtag", "data-ref" => "27359c2ed76dcf6d24534e2b36c196fee4eb1378"}
+    :javascript
+      (function(d, s, id){var js; if (d.getElementById(id)) {return;} js = d.createElement(s); js.id = id; js.src = 'https://embedsocial.com/cdn/ht.js'; d.getElementsByTagName('head')[0].appendChild(js);}(document, 'script', 'EmbedSocialHashtagScript'));
 
 .wrapper
   .container-fluid
