@@ -590,10 +590,12 @@ $( document ).on('turbolinks:load', function() {
   $('.col-zoom').mouseover(function() {
     $( this ).parent().children().addClass("no-active");
     $( this ).addClass("active");
+    $('>.zoom > .bloc-nom', this ).hide();
   });
   $('.col-zoom').mouseout(function() {
     $( this ).parent().children().removeClass("no-active");
     $( this ).removeClass("active");
+    $('>.zoom > .bloc-nom', this ).show();
   });
 
   //*********************************************************************************************************
