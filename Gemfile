@@ -11,7 +11,7 @@ gem 'rails', '~> 5.2.0'
 # Use postgresql as the database for Active Record
 gem 'pg', '>= 0.18'
 # Use Puma as the app server
-gem "puma", ">= 5.5.1"
+gem "puma", ">= 5.6.4"
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 gem 'sass', '~> 3.5.1'
@@ -52,7 +52,7 @@ gem 'figaro'
 gem 'gibbon'
 gem 'email_validator'
 gem 'responders'
-gem 'ladda-bootstrap-rails', :git => 'git://github.com/vendji/ladda-bootstrap-rails.git'
+gem 'ladda-bootstrap-rails', :git => 'https://github.com/vendji/ladda-bootstrap-rails'
 
 gem 'yajl-ruby'
 
