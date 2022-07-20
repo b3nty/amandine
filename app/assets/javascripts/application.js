@@ -706,34 +706,34 @@ $( document ).on('turbolinks:load', function() {
   //*********************************************************************************************************
 
 
-  $("#button-newsletter").click(function() {
-    $.ajax({
-      url: 'newsletter',
-      data: {
-          value: $('#newsletter_email').val()
-      },
-      type: "GET",
-      success: function(data) {
-        if(data.status == true) {
-          $('#okidokki').html('<br><i style="font-size: 16px;color:#5cb85c;" class="fa fa-check-circle"> C\'est dans la boîte</i>');
-          $('.barre').css('display', 'none');
-          $('.oki').css('visibility', 'hidden');
-          $('.oki').css('height', '0px');
-          $("#positif").html('<i style="font-size: 16px;color:#5cb85c;margin-top:50px"> Bienvenue dans la communauté H-Training</i>');
-          setTimeout(function(){
-            $('.popup-footer').css('-webkit-animation', 'restrict 1s');
-            setTimeout(function() {
-                $('.popup-footer').css('display', 'none');
-            }, 900);
-          }, 2000);
-        }
-        if(data.status == false) {
-          $('#notoki').html('<li><i style="font-size: 16px;color:#ea5656;" class="fa fa-exclamation-circle"> Email incorrect</i></li>');
-          $("#negatif").html('<i style="font-size: 16px;color:#3a4cbc;;"> Votre E-mail est vide</i>');
-        }
-      }
-    });
-  });
+  // $("#button-newsletter").click(function() {
+  //   $.ajax({
+  //     url: 'newsletter',
+  //     data: {
+  //         value: $('#newsletter_email').val()
+  //     },
+  //     type: "GET",
+  //     success: function(data) {
+  //       if(data.status == true) {
+  //         $('#okidokki').html('<br><i style="font-size: 16px;color:#5cb85c;" class="fa fa-check-circle"> C\'est dans la boîte</i>');
+  //         $('.barre').css('display', 'none');
+  //         $('.oki').css('visibility', 'hidden');
+  //         $('.oki').css('height', '0px');
+  //         $("#positif").html('<i style="font-size: 16px;color:#5cb85c;margin-top:50px"> Bienvenue dans la communauté H-Training</i>');
+  //         setTimeout(function(){
+  //           $('.popup-footer').css('-webkit-animation', 'restrict 1s');
+  //           setTimeout(function() {
+  //               $('.popup-footer').css('display', 'none');
+  //           }, 900);
+  //         }, 2000);
+  //       }
+  //       if(data.status == false) {
+  //         $('#notoki').html('<li><i style="font-size: 16px;color:#ea5656;" class="fa fa-exclamation-circle"> Email incorrect</i></li>');
+  //         $("#negatif").html('<i style="font-size: 16px;color:#3a4cbc;;"> Votre E-mail est vide</i>');
+  //       }
+  //     }
+  //   });
+  // });
 
 //*********************************************************************************************************
 //*************************************    POPUP FORM   ***************************************************
